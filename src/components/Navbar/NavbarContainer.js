@@ -1,7 +1,7 @@
 const NavbarContainer = (props) => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark py-lg-4">
-			<div className="container px-5">
+			<div className="container px-3 px-md-5">
 				<a className="navbar-brand">
 					{/* Websit Logo */}
 					<img

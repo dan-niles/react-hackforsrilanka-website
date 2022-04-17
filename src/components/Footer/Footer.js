@@ -6,7 +6,7 @@ const Footer = () => {
 		<FooterContainer>
 			<FooterItem label="Privacy" href="#" />
 			<FooterItem label="Terms" href="#" />
-			<FooterItem label="Contact" href="contact" />
+			<FooterItem label="Contact" href="contact" lastItem={true} />
 		</FooterContainer>
 	);
 };

@@ -80,7 +80,7 @@ const About = () => {
 				</div>
 			</section>
 			{/* <!-- Team members section--> */}
-			<section className="py-5">
+			<section className="py-5 bg-light">
 				<div className="container px-5 my-5">
 					<div className="text-center">
 						<h2 className="fw-bolder text-white">The Teams</h2>

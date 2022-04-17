@@ -20,7 +20,7 @@ const Home = () => {
 
 	return (
 		<AnimatedPage>
-			<header className="bg-dark pt-0 pb-2">
+			<header className="pt-0 pb-2">
 				<div className="container px-5">
 					<div className="row gx-5 align-items-center justify-content-center">
 						<div className="col-lg-8 col-xl-7 col-xxl-6">
@@ -38,7 +38,7 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						<div className="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+						<div className="col-xl-5 col-xxl-6 d-none1 d-xl-block text-center">
 							<img
 								className="img-fluid rounded-3 my-3"
 								src={require("../assets/img/lightbulb.jpeg")}
@@ -55,7 +55,7 @@ const Home = () => {
 					</div>
 					<div className="row gx-5 align-items-center justify-content-center">
 						<div className="col-lg-6 col-xl-6 col-xxl-6">
-							<div className="card p-5">
+							<div className="card p-md-5 p-4">
 								<form action="schedule" method="get">
 									<div className="form-row">
 										<div className="form-group col-12">
@@ -87,7 +87,7 @@ const Home = () => {
 							</div>
 						</div>
 						<div className="col-lg-6 col-xl-6 col-xxl-6">
-							<div className="card mt-4 mt-lg-0 p-5">
+							<div className="card mt-4 mt-lg-0 p-md-5 p-4">
 								<form action="" method="post">
 									<div className="form-row">
 										<h3 className="fw-bolder">Search by Location</h3>
