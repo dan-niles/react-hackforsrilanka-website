@@ -13,7 +13,7 @@ import "./assets/css/styles.css";
 
 function App() {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<main className="flex-shrink-0">
 				<Navbar />
 				<Routes>
