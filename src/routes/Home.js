@@ -41,7 +41,7 @@ const Home = () => {
 						<div className="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
 							<img
 								className="img-fluid rounded-3 my-3"
-								src={require("../img/lightbulb.jpeg")}
+								src={require("../assets/img/lightbulb.jpeg")}
 								alt="..."
 							/>
 						</div>
@@ -68,11 +68,13 @@ const Home = () => {
 												name="group"
 												id="group"
 											>
-												{groups.map((group, index) => (
-													<option value={group} key={index}>
-														{group}
-													</option>
-												))}
+												{groups
+													.filter((i) => i.length == 1)
+													.map((group, index) => (
+														<option value={group} key={index}>
+															{group}
+														</option>
+													))}
 											</select>
 										</div>
 										<div className="form-group col-12 mt-4 text-center">

@@ -48,6 +48,8 @@ const Schedule = () => {
 		);
 	});
 
+	console.log(scheduleItems);
+
 	return (
 		<AnimatedPage>
 			<header className="bg-dark pt-2 pb-5">

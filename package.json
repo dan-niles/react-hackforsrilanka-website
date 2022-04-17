@@ -2,7 +2,7 @@
 	"name": "hackforsrilanka",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://dan-niles.github.io/react-hackforsrilanka-website",
+	"homepage": "http://dan-niles.github.io/react-hackforsrilanka-website/",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.4",
 		"@testing-library/react": "^13.1.1",

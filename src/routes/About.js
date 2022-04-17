@@ -35,7 +35,7 @@ const About = () => {
 						<div className="col-lg-6">
 							<img
 								className="img-fluid rounded-3 my-5"
-								src={require("../img/protest.jpeg")}
+								src={require("../assets/img/protest.jpeg")}
 								alt="..."
 							/>
 						</div>
@@ -72,7 +72,7 @@ const About = () => {
 						<div className="col-lg-6">
 							<img
 								className="img-fluid rounded-3 my-5"
-								src={require("../img/home.jpeg")}
+								src={require("../assets/img/home.jpeg")}
 								alt="..."
 							/>
 						</div>
@@ -93,7 +93,7 @@ const About = () => {
 							<div className="text-center">
 								<img
 									className="img-fluid rounded-circle mb-4 px-4"
-									src={require("../img/teams/spider.png")}
+									src={require("../assets/img/teams/spider.png")}
 									alt="..."
 								/>
 								<h5 className="fw-bolder text-white">
@@ -115,7 +115,7 @@ const About = () => {
 							<div className="text-center">
 								<img
 									className="img-fluid rounded-circle mb-4 px-4"
-									src={require("../img/teams/db.png")}
+									src={require("../assets/img/teams/db.png")}
 									alt="..."
 								/>
 								<h5 className="fw-bolder text-white">
@@ -137,7 +137,7 @@ const About = () => {
 							<div className="text-center">
 								<img
 									className="img-fluid rounded-circle mb-4 px-4"
-									src={require("../img/teams/web.png")}
+									src={require("../assets/img/teams/web.png")}
 									alt="..."
 								/>
 								<h5 className="fw-bolder text-white">Web - Team Facade</h5>
@@ -156,7 +156,7 @@ const About = () => {
 							<div className="text-center">
 								<img
 									className="img-fluid rounded-circle mb-4 px-4"
-									src={require("../img/teams/bulb-illuminati.png")}
+									src={require("../assets/img/teams/bulb-illuminati.png")}
 									alt="..."
 								/>
 								<h5 className="fw-bolder text-white">
@@ -180,7 +180,7 @@ const About = () => {
 							<div className="text-center">
 								<img
 									className="img-fluid rounded-circle mb-4 px-4"
-									src={require("../img/teams/brainstorm.png")}
+									src={require("../assets/img/teams/brainstorm.png")}
 									alt="..."
 								/>
 								<h5 className="fw-bolder text-white">

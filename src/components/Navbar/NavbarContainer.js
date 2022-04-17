@@ -6,7 +6,7 @@ const NavbarContainer = (props) => {
 					{/* Websit Logo */}
 					<img
 						className="nav-logo"
-						src={require("../../img/logo.png")}
+						src={require("../../assets/img/logo.png")}
 						alt="site logo"
 					/>
 				</a>

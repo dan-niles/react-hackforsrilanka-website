@@ -9,7 +9,7 @@ import ErrorPage from "./routes/ErrorPage";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
-import "./css/styles.css";
+import "./assets/css/styles.css";
 
 function App() {
 	return (
