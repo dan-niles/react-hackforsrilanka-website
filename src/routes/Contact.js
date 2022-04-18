@@ -3,8 +3,8 @@ import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
 const Contact = () => {
 	return (
 		<AnimatedPage>
-			<section className="py-5">
-				<div className="container px-5">
+			<section className="py-3 py-md-5">
+				<div className="container px-3 px-md-5">
 					{/* <!-- Contact form--> */}
 					<div className="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
 						<div className="text-center mb-5">

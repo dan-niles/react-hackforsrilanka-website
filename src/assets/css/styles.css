@@ -566,6 +566,15 @@ progress {
 	font-size: 1.25rem;
 	font-weight: 300;
 }
+@media (max-width: 576px) {
+	.lead {
+		font-size: 1rem;
+	}
+
+	.team-img {
+		width: 50%;
+	}
+}
 
 .display-1 {
 	font-size: calc(1.625rem + 4.5vw);
@@ -4409,7 +4418,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-toggler {
-	padding: 0.25rem 0.75rem;
+	padding: 0.25rem;
 	font-size: 1.25rem;
 	line-height: 1;
 	background-color: transparent;
@@ -4822,6 +4831,14 @@ fieldset:disabled .btn {
 	color: #fece30;
 	border-bottom: 1px solid #fccc2f;
 }
+
+@media (max-width: 991px) {
+	.navbar-dark .navbar-nav .show > .nav-link,
+	.navbar-dark .navbar-nav .nav-link.active {
+		border-bottom: 0;
+	}
+}
+
 .navbar-dark .navbar-toggler {
 	color: rgba(255, 255, 255, 0.55);
 	border-color: rgba(255, 255, 255, 0.1);
