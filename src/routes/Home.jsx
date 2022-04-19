@@ -18,7 +18,7 @@ const Home = () => {
 			<header
 				className="pt-0 pb-2"
 				style={{
-					background: `url("${require("../assets/img/bulb-bg.webp")}")`,
+					background: `url("${require("../assets/img/bulb-bg.png")}")`,
 				}}
 			>
 				<div className="container px-5">
