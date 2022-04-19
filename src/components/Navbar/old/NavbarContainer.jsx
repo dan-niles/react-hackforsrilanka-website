@@ -1,3 +1,5 @@
+import MenuIcon from "@mui/icons-material/Menu";
+
 const NavbarContainer = (props) => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3 py-lg-4">
@@ -16,10 +18,14 @@ const NavbarContainer = (props) => {
 					data-bs-toggle="collapse"
 					data-bs-target="#navbarSupportedContent"
 				>
-					<span className="navbar-toggler-icon"></span>
+					<span className="navbar-toggler-icon">
+						<MenuIcon fontSize="medium" />
+					</span>
 				</button>
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul className="navbar-nav ms-auto mb-2 mb-lg-0">{props.children}</ul>
+					<ul className="navbar-nav ms-auto mb-2 mb-lg-0 mt-3 mt-lg-0 align-items-center">
+						{props.children}
+					</ul>
 				</div>
 			</div>
 		</nav>

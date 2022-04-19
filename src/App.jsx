@@ -17,6 +17,20 @@ function App() {
 		palette: {
 			mode: "dark",
 		},
+		typography: {
+			fontFamily: [
+				"-apple-system",
+				"BlinkMacSystemFont",
+				'"Segoe UI"',
+				"Roboto",
+				'"Helvetica Neue"',
+				"Arial",
+				"sans-serif",
+				'"Apple Color Emoji"',
+				'"Segoe UI Emoji"',
+				'"Segoe UI Symbol"',
+			].join(","),
+		},
 	});
 
 	return (
@@ -24,6 +38,7 @@ function App() {
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<main className="flex-shrink-0">
 					<Navbar />
+					{/* <Navbar /> */}
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="schedule" element={<Schedule />} />

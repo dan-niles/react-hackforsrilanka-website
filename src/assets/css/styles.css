@@ -90,6 +90,10 @@
 	background-color: #414444;
 }
 
+footer {
+	font-weight: 500;
+}
+
 .card {
 	background-color: rgb(23, 24, 24) !important;
 	border-color: rgba(128, 120, 107, 0.13) !important;
@@ -4284,9 +4288,8 @@ fieldset:disabled .btn {
 		transition: none;
 	}
 }
-.nav-link:hover,
-.nav-link:focus {
-	color: #0a58ca;
+.nav-link:hover {
+	color: #febf0a;
 }
 .nav-link.disabled {
 	color: #6c757d;
@@ -4424,11 +4427,11 @@ fieldset:disabled .btn {
 	background-color: transparent;
 	border: 1px solid transparent;
 	border-radius: 0.25rem;
-	transition: box-shadow 0.15s ease-in-out;
+	transition: all 300ms ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
 	.navbar-toggler {
-		transition: none;
+		transition: all 300ms ease-in-out;
 	}
 }
 .navbar-toggler:hover {
@@ -4437,13 +4440,18 @@ fieldset:disabled .btn {
 .navbar-toggler:focus {
 	text-decoration: none;
 	outline: 0;
-	box-shadow: 0 0 0 0.25rem;
+	/* border-color: rgba(255, 255, 255, 0.214) !important; */
+	/* box-shadow: 0 0 0 0.25rem; */
+}
+.navbar-toggler:active {
+	border-color: rgba(255, 255, 255, 0.214) !important;
+	/* box-shadow: 0 0 0 0.25rem; */
 }
 
 .navbar-toggler-icon {
 	display: inline-block;
-	width: 1.5em;
-	height: 1.5em;
+	/* width: 1.5em;
+	height: 1.5em; */
 	vertical-align: middle;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -4797,9 +4805,9 @@ fieldset:disabled .btn {
 	color: rgba(0, 0, 0, 0.55);
 	border-color: rgba(0, 0, 0, 0.1);
 }
-.navbar-light .navbar-toggler-icon {
+/* .navbar-light .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
+} */
 .navbar-light .navbar-text {
 	color: rgba(0, 0, 0, 0.55);
 }
@@ -4832,6 +4840,10 @@ fieldset:disabled .btn {
 	border-bottom: 1px solid #fccc2f;
 }
 
+.nav-link.active {
+	color: #fece30;
+}
+
 @media (max-width: 991px) {
 	.navbar-dark .navbar-nav .show > .nav-link,
 	.navbar-dark .navbar-nav .nav-link.active {
@@ -4841,11 +4853,11 @@ fieldset:disabled .btn {
 
 .navbar-dark .navbar-toggler {
 	color: rgba(255, 255, 255, 0.55);
-	border-color: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0);
 }
-.navbar-dark .navbar-toggler-icon {
+/* .navbar-dark .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
+} */
 .navbar-dark .navbar-text {
 	color: rgba(255, 255, 255, 0.55);
 }

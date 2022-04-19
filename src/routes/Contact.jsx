@@ -16,7 +16,7 @@ const Contact = () => {
 								We'd love to hear from you
 							</p>
 						</div>
-						<div className="row gx-5 justify-content-center">
+						<div className="row justify-content-center">
 							<div className="col-lg-8 col-xl-6">
 								<form id="contactForm" data-sb-form-api-token="API_TOKEN">
 									{/* <!-- Name input--> */}
@@ -137,7 +137,7 @@ const Contact = () => {
 					<div className="form-group col-12 mt-4 text-center">
 						<h1>Coming Soon...</h1>
 					</div>
-					<div className="row gx-5 row-cols-2 row-cols-lg-4 py-5">
+					<div className="row row-cols-2 row-cols-lg-4 py-5">
 						<div className="col">
 							<div className="feature bg-warning bg-gradient text-dark rounded-3 mb-3">
 								<i className="bi bi-chat-dots"></i>
