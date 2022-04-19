@@ -2,7 +2,7 @@
 	"name": "hackforsrilanka",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://dan-niles.github.io/react-hackforsrilanka-website/",
+	"homepage": "https://react-hackforsrilanka-website.vercel.app",
 	"dependencies": {
 		"@emotion/react": "^11.9.0",
 		"@emotion/styled": "^11.8.1",
