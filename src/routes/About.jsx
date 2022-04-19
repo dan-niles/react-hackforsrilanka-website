@@ -14,7 +14,7 @@ const About = () => {
 				title="Hack For The Globe"
 				bgImg="globe-bg.png"
 				btn={{
-					btnText: "Read our story",
+					btnText: "Read Our Story",
 					target: "_blank",
 					href: "https://change-via-data.wixsite.com/hack-for-the-globe/team",
 				}}

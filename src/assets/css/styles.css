@@ -123,9 +123,9 @@
 	width: max-content;
 }
 
-.btn {
-	border-radius: 1em !important;
-}
+/* .btn {
+	border-radius: 0.5em !important;
+} */
 
 body {
 	margin: 0;
