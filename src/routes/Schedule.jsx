@@ -22,7 +22,6 @@ const Schedule = () => {
 		<AnimatedPage>
 			<ScheduleForm groupName={groupName} />
 			{groupName && <ScheduleView groupName={groupName} />}
-			{/* {!groupName && <ScheduleForm groupName={groupName} />} */}
 		</AnimatedPage>
 	);
 };

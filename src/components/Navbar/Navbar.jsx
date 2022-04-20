@@ -40,7 +40,7 @@ const Navbar = () => {
 				backgroundImage: "none",
 				px: { xs: 0, md: "3rem" },
 				mx: "auto",
-				py: { xs: 1, md: "1rem" },
+				py: { xs: 1, md: 0.5 },
 			}}
 		>
 			<Container maxWidth="xl">

@@ -9,6 +9,8 @@ import { enUS } from "date-fns/locale";
 import { DatePickerCalendar as ScheduleCalendar } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
 
+import ScheduleDatePicker from "./ScheduleDatePicker";
+
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
@@ -72,13 +74,18 @@ const Schedule = (props) => {
 					/>
 				))}
 			</ScheduleItemsContainer>
-			<div className="col-sm-6 col-12 my-3 order-md-1">
+			<div className="col-sm-6 col-12 my-3 order-md-1 d-none d-md-block">
 				<ScheduleCalendar
 					date={date}
 					onDateChange={setDate}
 					locale={enUS}
 					touchDragEnabled={false}
 				/>
+			</div>
+
+			{/* Hide the calendar on mobile and show a datepicker */}
+			<div className="col-12 mt-5 mb-4 order-md-1 d-block d-md-none">
+				<ScheduleDatePicker date={date} setDate={setDate} />
 			</div>
 		</ScheduleContainer>
 	);

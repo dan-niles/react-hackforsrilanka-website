@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import Button from "@mui/material/Button";
 
 const AreaForm = () => {
 	let navigate = useNavigate();
@@ -65,9 +64,7 @@ const AreaForm = () => {
 					</FormControl>
 				</div>
 				<div className="form-group col-12 mt-4 text-center">
-					<button className="btn btn-warning px-4" href="#features">
-						Search
-					</button>
+					<button className="btn btn-warning px-4 fw-bold">Search</button>
 				</div>
 			</div>
 		</form>

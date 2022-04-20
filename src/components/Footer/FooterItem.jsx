@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const FooterItem = (props) => {
 	return (
 		<>
-			<a className="link-light small" href={props.href}>
+			<Link className="link-light small" to={props.href}>
 				{props.label}
-			</a>
+			</Link>
 			{props.lastItem == true ? (
 				""
 			) : (

@@ -11756,3 +11756,17 @@ html {
 	background-repeat: no-repeat;
 	min-height: 15rem;
 }
+
+/* React Nice Dates Calendar Overrides */
+
+.nice-dates-day {
+	color: #999 !important;
+}
+
+.nice-dates-day.-outside {
+	color: #333 !important;
+}
+
+.nice-dates-navigation {
+	color: #999 !important;
+}

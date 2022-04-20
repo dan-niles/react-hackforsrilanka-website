@@ -5,7 +5,6 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import Button from "@mui/material/Button";
 
 const GroupForm = (props) => {
 	let navigate = useNavigate();
@@ -34,6 +33,7 @@ const GroupForm = (props) => {
 
 	const submitHandler = (e) => {
 		e.preventDefault();
+		localStorage.setItem("pc-group", groupSelect);
 		navigate({
 			pathname: "/schedule",
 			search: "?group=" + groupSelect,
@@ -70,7 +70,7 @@ const GroupForm = (props) => {
 					{/* <Button color="warning" variant="contained">
         Search
     </Button> */}
-					<button type="submit" className="btn btn-warning px-4">
+					<button type="submit" className="btn btn-warning px-4 fw-bold">
 						Search
 					</button>
 				</div>

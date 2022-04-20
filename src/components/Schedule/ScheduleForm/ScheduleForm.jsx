@@ -10,10 +10,12 @@ const ScheduleForm = (props) => {
 	const [showAreaForm, setShowAreaForm] = useState(false);
 
 	const handleToggleChange = (event, newVal) => {
-		setToggle(newVal);
+		if (newVal !== null) {
+			setToggle(newVal);
+		}
 		if (newVal == "groupToggle") {
 			setShowAreaForm(false);
-		} else {
+		} else if (newVal == "areaToggle") {
 			setShowAreaForm(true);
 		}
 	};

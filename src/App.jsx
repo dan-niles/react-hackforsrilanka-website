@@ -10,12 +10,14 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import grey from "@mui/material/colors/grey";
 import "./assets/css/styles.css";
 
 function App() {
 	const darkTheme = createTheme({
 		palette: {
 			mode: "dark",
+			secondary: grey,
 		},
 		typography: {
 			fontFamily: [
