@@ -14,6 +14,7 @@ import grey from "@mui/material/colors/grey";
 import "./assets/css/styles.css";
 
 function App() {
+	// dark theme for material ui modules
 	const darkTheme = createTheme({
 		palette: {
 			mode: "dark",
@@ -40,11 +41,10 @@ function App() {
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<main className="flex-shrink-0">
 					<Navbar />
-					{/* <Navbar /> */}
 					<Routes>
+						{/* these pages can be found within the './routes' folder */}
 						<Route path="/" element={<Home />} />
 						<Route path="schedule" element={<Schedule />} />
-						<Route path="schedule/:groupname" element={<Schedule />} />
 						<Route path="about" element={<About />} />
 						<Route path="contact" element={<Contact />} />
 						<Route path="*" element={<ErrorPage />} />

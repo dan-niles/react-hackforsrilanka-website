@@ -1,4 +1,4 @@
-import { useSearchParams, useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
 import ScheduleView from "../components/Schedule/ScheduleView/ScheduleView";
@@ -8,11 +8,6 @@ const Schedule = () => {
 	// selecting group from URL
 	let groupName = "";
 
-	const params = useParams();
-	if (params.groupname != null) {
-		groupName = params.groupname;
-	}
-
 	const [searchParams, setSearchParams] = useSearchParams();
 	if (searchParams.get("group") != null) {
 		groupName = searchParams.get("group");
@@ -21,6 +16,8 @@ const Schedule = () => {
 	return (
 		<AnimatedPage>
 			<ScheduleForm groupName={groupName} />
+
+			{/* shows calender and power-cut times after the group is selected */}
 			{groupName && <ScheduleView groupName={groupName} />}
 		</AnimatedPage>
 	);

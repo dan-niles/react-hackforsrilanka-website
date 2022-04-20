@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
 import HelpSlider from "../components/HelpSlider/HelpSlider";
@@ -10,14 +9,15 @@ import Button from "@mui/material/Button";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 
 const Home = () => {
-	const [imageLoading, setImageLoading] = useState(true);
-	const [openGuide, setOpenGuide] = useState(false);
+	const [imageLoading, setImageLoading] = useState(true); // for animating light bulb img
+	const [openGuide, setOpenGuide] = useState(false); // for help guide modal
 	const navigate = useNavigate();
 
 	const imageLoaded = () => {
 		setImageLoading(false);
 	};
 
+	// handling the help guide modal
 	const handleOpenGuide = () => {
 		setOpenGuide(true);
 	};
@@ -66,10 +66,8 @@ const Home = () => {
 								<div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
 									<Button
 										className="btn-warning text-capitalize text-lowercase fw-bold fs-5"
-										// component={Link}
 										variant="contained"
 										size="large"
-										// to="schedule"
 										onClick={handleCTA}
 									>
 										Get Started
