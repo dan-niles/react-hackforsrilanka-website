@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# HackForSriLanka - Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a rebuild in React JS of [hackfortheglobe/hackforsrilanka_website](https://github.com/hackfortheglobe/hackforsrilanka_website), which was previously built with PHP and Jquery.
 
-## Available Scripts
+### Demo Link
+
+View the site at [https://react-hackforsrilanka-website.vercel.app/](https://react-hackforsrilanka-website.vercel.app/)
+
+### Technologies
+
+Built with React v18.0.0, Material UI v5.6.1 and Bootstrap v5.1.3.
+
+## Development Setup
+
+You need [npm](https://www.npmjs.com/package/npm) to install dependancies. To clone the repository, run:
+
+    git clone https://github.com/dan-niles/react-hackforsrilanka-website.git
+    cd react-hackforsrilanka-website
 
 In the project directory, you can run:
 
-### `npm start`
+    npm install
 
-Runs the app in the development mode.\
+then run:
+
+    npm start
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Things To Do
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Integrate Alert System:** Created a form for users to subscribe to a particular group. Need to integrate it with Team Illuminati's alert system.
+- **Contact:** Contact form needs to be set up with a recipient email address.
+- **Privacy/Terms:** Need to decide whether to create new pages for privacy/terms or else remove links from footer.
+- **Language Translation:** Add option to translate page into Sinhala and Tamil languages.
+- **Help:** I added a Help Dialog Modal, need to fill it in with screenshots and directions for users on how to use the app.

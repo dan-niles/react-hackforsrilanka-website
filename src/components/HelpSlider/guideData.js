@@ -3,7 +3,7 @@ const guideSteps = [
 		title: "Step 1",
 		label:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi",
-		imgPath: "../../assets/img/guide/guide0.jpg",
+		imgPath: "../../assets/img/guide/guide0.png",
 	},
 	{
 		title: "Step 2",
