@@ -57,7 +57,7 @@ const GroupForm = (props) => {
 							required
 						>
 							{groups
-								.filter((i) => i.length == 1)
+								.filter((i) => i.length === 1)
 								.map((group, index) => (
 									<MenuItem value={group} key={index}>
 										{group}

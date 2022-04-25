@@ -49,6 +49,7 @@ const ScheduleItemsContainer = (props) => {
 									<img
 										className="error-img mx-auto d-block"
 										src={require("../../../assets/img/no-data.png")}
+										alt="No Data Found"
 									/>
 									<p className="text-center">No Data Found</p>
 								</div>

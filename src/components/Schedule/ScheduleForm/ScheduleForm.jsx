@@ -13,16 +13,16 @@ const ScheduleForm = (props) => {
 		if (newVal !== null) {
 			setToggle(newVal);
 		}
-		if (newVal == "groupToggle") {
+		if (newVal === "groupToggle") {
 			setShowAreaForm(false);
-		} else if (newVal == "areaToggle") {
+		} else if (newVal === "areaToggle") {
 			setShowAreaForm(true);
 		}
 	};
 
 	return (
 		<header
-			className="py-5"
+			className="header-center py-5"
 			// style={{
 			// 	background: `url("${require("../../../assets/img/bulb-bg.webp")}")`,
 			// }}

@@ -46,6 +46,7 @@ function HelpSlider(props) {
 					<img
 						className="w-100 guide-img"
 						src={require(`../../assets/img/guide/guide${activeStepSwipe}.png`)}
+						alt={guideData[activeStepSwipe].title}
 					/>
 				</div>
 				<article>

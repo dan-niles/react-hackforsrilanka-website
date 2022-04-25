@@ -20,26 +20,20 @@ const ScheduleItem = (props) => {
 	const hourDiff = Math.abs(startPeriod - endPeriod) / 36e5;
 
 	return (
-		<li className="list-group-item d-flex justify-content-between align-items-center py-3">
+		<li className="bg-light text-light border-1 list-group-item d-flex justify-content-between align-items-center py-3 my-2">
 			<div>
 				<div className="d-inline">
-					<span className="fs-5zz">{startTime1}</span>
-					<span className="text-muted fs-6 text-lowercase fw-light">
-						{" "}
-						{startTime2}
-					</span>
+					<span className="fs-5">{startTime1}</span>
+					<span className="fs-6 text-lowercase fw-light"> {startTime2}</span>
 				</div>
 				<span>{" - "}</span>
 				<div className="d-inline">
-					<span className="fs-5zz">{endTime1}</span>
-					<span className="text-muted fs-6 text-lowercase fw-light">
-						{" "}
-						{endTime2}
-					</span>
+					<span className="fs-5">{endTime1}</span>
+					<span className="fs-6 text-lowercase fw-light"> {endTime2}</span>
 				</div>
 			</div>
 
-			<span className="badge bg-secondary rounded-pill">{hourDiff} hrs</span>
+			<span className="badge bg-secondary">{hourDiff} hrs</span>
 		</li>
 	);
 };

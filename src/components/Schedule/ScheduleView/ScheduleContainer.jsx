@@ -27,7 +27,7 @@ const ScheduleContainer = (props) => {
 				handleClose={handleClose}
 				groupName={props.groupName}
 			/>
-			<header className="py-4 bg-dark" ref={myRef}>
+			<header className="header-center py-4 bg-dark" ref={myRef}>
 				<div className="container my-2">
 					<div className="row mt-0 mb-4">
 						<div className="col-12 col-md-6 text-center text-md-start">

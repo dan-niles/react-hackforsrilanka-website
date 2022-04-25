@@ -6,7 +6,7 @@ const FooterItem = (props) => {
 			<Link className="link-light small" to={props.href}>
 				{props.label}
 			</Link>
-			{props.lastItem == true ? (
+			{props.lastItem === true ? (
 				""
 			) : (
 				<span className="text-white mx-1">&middot;</span>

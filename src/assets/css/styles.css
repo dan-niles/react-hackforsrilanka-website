@@ -113,6 +113,20 @@ footer {
 	width: 275px;
 }
 
+.header-center {
+	height: 85vh;
+	display: flex;
+	align-items: center;
+}
+
+.schedule-list .list-group-item {
+	border: 1px solid rgb(255 193 7 / 60%);
+}
+
+.bg-light .badge {
+	background-color: #343434 !important;
+}
+
 @media only screen and (max-width: 468px) {
 	.nav-logo {
 		width: 180px;
@@ -120,6 +134,10 @@ footer {
 
 	.error-img {
 		width: 120px;
+	}
+
+	.header-center {
+		height: 80vh;
 	}
 }
 

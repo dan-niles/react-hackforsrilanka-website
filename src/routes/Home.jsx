@@ -27,27 +27,33 @@ const Home = () => {
 	};
 
 	// pre-selects group if user has previously selected a group
+	// const handleCTA = () => {
+	// 	let savedGroup = localStorage.getItem("pc-group")
+	// 		? localStorage.getItem("pc-group")
+	// 		: "";
+	// 	if (savedGroup !== "") {
+	// 		navigate({
+	// 			pathname: "/schedule",
+	// 			search: "?group=" + savedGroup,
+	// 		});
+	// 	} else {
+	// 		navigate({
+	// 			pathname: "/schedule",
+	// 		});
+	// 	}
+	// };
+
 	const handleCTA = () => {
-		let savedGroup = localStorage.getItem("pc-group")
-			? localStorage.getItem("pc-group")
-			: "";
-		if (savedGroup != "") {
-			navigate({
-				pathname: "/schedule",
-				search: "?group=" + savedGroup,
-			});
-		} else {
-			navigate({
-				pathname: "/schedule",
-			});
-		}
+		navigate({
+			pathname: "/schedule",
+		});
 	};
 
 	return (
 		<AnimatedPage>
 			<HelpSlider openGuide={openGuide} closeGuide={handleCloseGuide} />
 			<header
-				className="pt-0 pb-2"
+				className="header-center"
 				style={{
 					background: `url("${require("../assets/img/bulbBg.png")}")`,
 				}}
