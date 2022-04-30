@@ -29,6 +29,7 @@ const ScheduleDatePicker = (props) => {
 		);
 	};
 
+	console.log("--------date-------",date);
 	return (
 		<Stack
 			direction="row"

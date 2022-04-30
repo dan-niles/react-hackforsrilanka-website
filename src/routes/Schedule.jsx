@@ -11,6 +11,7 @@ const Schedule = () => {
 	const [searchParams, setSearchParams] = useSearchParams();
 	if (searchParams.get("group") != null) {
 		groupName = searchParams.get("group");
+		console.log("-------group name----------",groupName);
 	}
 
 	return (
