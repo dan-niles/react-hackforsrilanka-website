@@ -9,35 +9,13 @@ import ErrorPage from "./routes/ErrorPage";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import grey from "@mui/material/colors/grey";
 import "./assets/css/styles.css";
 
-function App() {
-	// dark theme for material ui modules
-	const darkTheme = createTheme({
-		palette: {
-			mode: "dark",
-			secondary: grey,
-		},
-		typography: {
-			fontFamily: [
-				"-apple-system",
-				"BlinkMacSystemFont",
-				'"Segoe UI"',
-				"Roboto",
-				'"Helvetica Neue"',
-				"Arial",
-				"sans-serif",
-				'"Apple Color Emoji"',
-				'"Segoe UI Emoji"',
-				'"Segoe UI Symbol"',
-			].join(","),
-		},
-	});
+import { ColorModeContextProvider } from "./contexts/color-mode";
 
+function App() {
 	return (
-		<ThemeProvider theme={darkTheme}>
+		<ColorModeContextProvider>
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<main className="flex-shrink-0">
 					<Navbar />
@@ -52,7 +30,7 @@ function App() {
 				</main>
 				<Footer />
 			</BrowserRouter>
-		</ThemeProvider>
+		</ColorModeContextProvider>
 	);
 }
 

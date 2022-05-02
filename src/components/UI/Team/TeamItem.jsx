@@ -7,7 +7,7 @@ const TeamItem = (props) => {
 					src={require("../../../assets/img/" + props.img)}
 					alt="..."
 				/>
-				<h6 className="fw-bolder text-white">{props.teamName}</h6>
+				<h6 className="fw-bolder">{props.teamName}</h6>
 				<p className="fst-italic text-white-50">{props.teamLeader}</p>
 				<p>
 					{props.teamMembers.map((m, i) => (

@@ -1,6 +1,9 @@
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
+import { useTheme } from "@mui/material/styles";
 
 const Contact = () => {
+	const appTheme = useTheme();
+
 	return (
 		<AnimatedPage>
 			<section className="py-3 py-md-5">
@@ -8,10 +11,16 @@ const Contact = () => {
 					{/* <!-- Contact form--> */}
 					<div className="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
 						<div className="text-center mb-5">
-							<div className="feature bg-warning bg-gradient text-dark rounded-3 mb-3">
+							<div
+								className={`feature ${
+									appTheme.palette.mode === "dark"
+										? "bg-warning text-dark"
+										: "bg-danger text-light"
+								} rounded-3 mb-3`}
+							>
 								<i className="bi bi-envelope"></i>
 							</div>
-							<h1 className="fw-bolder text-white">Get in touch</h1>
+							<h1 className="fw-bolder">Get in touch</h1>
 							<p className="lead fw-normal text-white-50 mb-0">
 								We'd love to hear from you
 							</p>
@@ -122,7 +131,11 @@ const Contact = () => {
 									{/* <!-- Submit Button--> */}
 									<div className="d-grid">
 										<button
-											className="btn btn-warning btn-lg disabled"
+											className={`btn ${
+												appTheme.palette.mode === "dark"
+													? "btn-warning"
+													: "btn-danger"
+											} btn-lg disabled fs-6 fw-bold`}
 											id="submitButton"
 											type="submit"
 										>
@@ -139,37 +152,61 @@ const Contact = () => {
 					</div>
 					<div className="row row-cols-2 row-cols-lg-4 py-5">
 						<div className="col">
-							<div className="feature bg-warning bg-gradient text-dark rounded-3 mb-3">
+							<div
+								className={`feature ${
+									appTheme.palette.mode === "dark"
+										? "bg-warning text-dark"
+										: "bg-danger text-light"
+								} rounded-3 mb-3`}
+							>
 								<i className="bi bi-chat-dots"></i>
 							</div>
-							<div className="h5 text-white mb-2">Chat with us</div>
+							<div className="h5 mb-2">Chat with us</div>
 							<p className="text-white-50 mb-0">
 								Chat live with one of our support specialists.
 							</p>
 						</div>
 						<div className="col">
-							<div className="feature bg-warning bg-gradient text-dark rounded-3 mb-3">
+							<div
+								className={`feature ${
+									appTheme.palette.mode === "dark"
+										? "bg-warning text-dark"
+										: "bg-danger text-light"
+								} rounded-3 mb-3`}
+							>
 								<i className="bi bi-people"></i>
 							</div>
-							<div className="h5 text-white">Ask the community</div>
+							<div className="h5">Ask the community</div>
 							<p className="text-white-50 mb-0">
 								Explore our community forums and communicate with other users.
 							</p>
 						</div>
 						<div className="col">
-							<div className="feature bg-warning bg-gradient text-dark rounded-3 mb-3">
+							<div
+								className={`feature ${
+									appTheme.palette.mode === "dark"
+										? "bg-warning text-dark"
+										: "bg-danger text-light"
+								} rounded-3 mb-3`}
+							>
 								<i className="bi bi-question-circle"></i>
 							</div>
-							<div className="h5 text-white">Support center</div>
+							<div className="h5">Support center</div>
 							<p className="text-white-50 mb-0">
 								Browse FAQ's and support articles to find solutions.
 							</p>
 						</div>
 						<div className="col">
-							<div className="feature bg-warning bg-gradient text-dark rounded-3 mb-3">
+							<div
+								className={`feature ${
+									appTheme.palette.mode === "dark"
+										? "bg-warning text-dark"
+										: "bg-danger text-light"
+								} rounded-3 mb-3`}
+							>
 								<i className="bi bi-telephone"></i>
 							</div>
-							<div className="h5 text-white">Call us</div>
+							<div className="h5">Call us</div>
 							<p className="text-white-50 mb-0">
 								Call us during normal business hours at (555) 892-9403.
 							</p>

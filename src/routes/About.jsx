@@ -6,13 +6,20 @@ import TeamRow from "../components/UI/Team/TeamRow";
 import TeamItem from "../components/UI/Team/TeamItem";
 
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
+import { useTheme } from "@mui/material/styles";
 
 const About = () => {
+	const appTheme = useTheme();
+
 	return (
 		<AnimatedPage>
 			<Header
 				title="Hack For The Globe"
-				bgImg="globe-bg.png"
+				bgImg={
+					appTheme.palette.mode === "dark"
+						? "globe-bg.png"
+						: "globe-bg-light.png"
+				}
 				btn={{
 					btnText: "Read Our Story",
 					target: "_blank",
@@ -56,7 +63,11 @@ const About = () => {
 							"Selena Sun",
 							"Amanbir Singh",
 						]}
-						img="teams/spider.png"
+						img={
+							appTheme.palette.mode === "dark"
+								? "teams/spider.png"
+								: "teams/spider-light.png"
+						}
 					/>
 					<TeamItem
 						teamName="API & DB - The Dispatchers"
@@ -67,14 +78,22 @@ const About = () => {
 							"Arjun Balasingam",
 							"Akhilesh Balasingam",
 						]}
-						img="teams/db.png"
+						img={
+							appTheme.palette.mode === "dark"
+								? "teams/db.png"
+								: "teams/db-light.png"
+						}
 					/>
 
 					<TeamItem
 						teamName="Web - Team Facade"
 						teamLeader="Tharuka Kannaruka"
 						teamMembers={["Dan Niles", "Elizabeth Feldman"]}
-						img="teams/web.png"
+						img={
+							appTheme.palette.mode === "dark"
+								? "teams/web.png"
+								: "teams/web-light.png"
+						}
 					/>
 				</TeamRow>
 				<TeamRow>
@@ -88,7 +107,11 @@ const About = () => {
 							"Amanda Bakerlee",
 							"Pratheepa Jeganathan",
 						]}
-						img="teams/bulb-illuminati.png"
+						img={
+							appTheme.palette.mode === "dark"
+								? "teams/bulb-illuminati.png"
+								: "teams/bulb-illuminati-light.png"
+						}
 					/>
 					<TeamItem
 						teamName="Brainstorm - Slam Dunkers"
@@ -98,7 +121,11 @@ const About = () => {
 							"Alex Godwin",
 							"Rashmi Tippalagama",
 						]}
-						img="teams/brainstorm.png"
+						img={
+							appTheme.palette.mode === "dark"
+								? "teams/brainstorm.png"
+								: "teams/brainstorm-light.png"
+						}
 					/>
 				</TeamRow>
 			</TeamContainer>

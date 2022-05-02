@@ -34,6 +34,7 @@ function HelpSlider(props) {
 
 	return (
 		<Dialog
+			className="help-slider"
 			TransitionComponent={Transition}
 			keepMounted
 			open={openGuide}
@@ -41,7 +42,7 @@ function HelpSlider(props) {
 			aria-labelledby="alert-dialog-title"
 			aria-describedby="alert-dialog-description"
 		>
-			<DialogContent className="bg-dark">
+			<DialogContent>
 				<div className="mb-2">
 					<img
 						className="w-100 guide-img"
@@ -56,20 +57,30 @@ function HelpSlider(props) {
 					<Typography>{guideData[activeStepSwipe].label}</Typography>
 				</article>
 				<MobileStepper
-					sx={{ maxWidth: 400, flexGrow: 1 }}
-					className="bg-dark mt-3 text-center"
+					// sx={{ maxWidth: 400, flexGrow: 1 }}
+					className="mt-3 text-center"
 					variant="progress"
 					steps={maxStepsSwipe}
 					position="static"
 					activeStep={activeStepSwipe}
 					nextButton={
 						activeStepSwipe === maxStepsSwipe - 1 ? (
-							<Button size="small" color="secondary" onClick={handleClose}>
+							<Button
+								sx={{ ml: 1 }}
+								size="small"
+								color="secondary"
+								onClick={handleClose}
+							>
 								Done
 								<KeyboardArrowRightIcon />
 							</Button>
 						) : (
-							<Button size="small" onClick={handleNextSwipe}>
+							<Button
+								sx={{ ml: 1 }}
+								size="small"
+								color="info"
+								onClick={handleNextSwipe}
+							>
 								Next
 								<KeyboardArrowRightIcon />
 							</Button>
@@ -77,7 +88,9 @@ function HelpSlider(props) {
 					}
 					backButton={
 						<Button
+							sx={{ mr: 1 }}
 							size="small"
+							color="info"
 							onClick={handleBackSwipe}
 							disabled={activeStepSwipe === 0}
 						>
