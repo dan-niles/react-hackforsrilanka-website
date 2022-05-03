@@ -11886,7 +11886,7 @@ html {
 }
 
 .nice-dates-day.-orange-ring span {
-	background: #f0842614;
+	background: rgb(255 119 0 / 2%);
 	border-radius: 999px;
 	display: flex;
 	position: absolute;
@@ -11923,6 +11923,10 @@ html {
 
 .nice-dates-grid_container {
 	margin-top: 0.5em;
+}
+
+.nice-dates-day:before {
+	background-color: #3c3c3c;
 }
 
 .calendar-legend {
