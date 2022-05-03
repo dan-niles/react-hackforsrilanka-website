@@ -69,7 +69,20 @@ const Navbar = () => {
 							alt="site logo"
 						/>
 					</Link>
-
+					<Link to="/" style={{ textDecoration: "none" }}>
+						<Typography
+							variant="h5"
+							component="div"
+							sx={{
+								flexGrow: 1,
+								ml: 1,
+								color: appTheme.palette.mode === "dark" ? "white" : "black",
+								fontWeight: 600,
+							}}
+						>
+							Ekata
+						</Typography>
+					</Link>
 					<Box
 						sx={{
 							flexGrow: 1,
