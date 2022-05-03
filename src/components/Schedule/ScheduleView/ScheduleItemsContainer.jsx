@@ -131,7 +131,7 @@ const ScheduleItemsContainer = (props) => {
 						<div className="col">
 							<div className="text-end">
 								<h5 className="d-inline">
-									{props.children.length === 0 && (
+									{props.children.length > 0 && (
 										<Button
 											variant="outlined"
 											startIcon={<ShareIcon />}

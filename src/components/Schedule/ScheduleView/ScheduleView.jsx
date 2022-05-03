@@ -87,8 +87,11 @@ const Schedule = (props) => {
 			return seledate.includes(moment(new Date(date)).format("yyyy-MM-DD"));
 		},
 		orangeClass: (date) => {
+			console.log("TESTING++++++++++++", scheduleItems);
 			if (scheduleItems.length > 0) {
 				scheduleItems.forEach((i) => {
+					console.log("1....", i.starting_period.substring(0, 9));
+					console.log("2....", moment(new Date(date)).format("yyyy-MM-DD"));
 					return (
 						i.starting_period.substring(0, 9) ===
 						moment(new Date(date)).format("yyyy-MM-DD")
