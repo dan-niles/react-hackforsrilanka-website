@@ -11871,7 +11871,7 @@ html {
 	height: 11em !important;
 }
 
-.nice-dates-day.-green-ring span {
+.nice-dates-day.-green-ring .nice-dates-day_date {
 	border-radius: 999px;
 	display: flex;
 	position: absolute;
@@ -11885,7 +11885,7 @@ html {
 	align-items: center;
 }
 
-.nice-dates-day.-orange-ring span {
+.nice-dates-day.-orange-ring .nice-dates-day_date {
 	background: rgb(255 119 0 / 2%);
 	border-radius: 999px;
 	display: flex;
@@ -11900,7 +11900,7 @@ html {
 	align-items: center;
 }
 
-.nice-dates-day.-gray-ring span {
+.nice-dates-day.-gray-ring .nice-dates-day_date {
 	border-radius: 999px;
 	display: flex;
 	position: absolute;
@@ -11927,6 +11927,10 @@ html {
 
 .nice-dates-day:before {
 	background-color: #3c3c3c;
+}
+
+.nice-dates-day_today {
+	top: 60% !important;
 }
 
 .calendar-legend {

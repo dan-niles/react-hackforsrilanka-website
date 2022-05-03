@@ -118,6 +118,16 @@ const Schedule = (props) => {
 		grayClass: "-gray-ring",
 	};
 
+	useEffect(() => {
+		if (document.getElementsByClassName("nice-dates-day_today").length === 0) {
+			const para = document.createElement("span");
+			para.classList.add("nice-dates-day_month");
+			para.classList.add("nice-dates-day_today");
+			const node = document.createTextNode("---");
+			para.append(node);
+			document.getElementsByClassName("-today")[0].appendChild(para);
+		}
+	});
 	// For opening/closing subscribe modal
 	const [open, setOpen] = React.useState(false);
 
