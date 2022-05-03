@@ -88,12 +88,12 @@ const Schedule = (props) => {
 		},
 		orangeClass: (date) => {
 			if (scheduleItems.length > 0) {
-				scheduleItems.forEach((i) => {
-					return (
+				let obj = scheduleItems.find(
+					(i) =>
 						i.starting_period.substring(0, 10) ===
 						moment(new Date(date)).format("yyyy-MM-DD")
-					);
-				});
+				);
+				if (obj !== undefined) return true;
 			}
 		},
 		grayClass: (date) => true,
