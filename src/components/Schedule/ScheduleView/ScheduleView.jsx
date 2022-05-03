@@ -4,7 +4,15 @@ import ScheduleContainer from "./ScheduleContainer";
 import ScheduleItemsContainer from "./ScheduleItemsContainer";
 import ScheduleItem from "./ScheduleItem";
 
-import { format, isThisWeek, nextDay, getDay, isSameWeek } from "date-fns";
+import {
+	format,
+	isThisWeek,
+	nextDay,
+	getDay,
+	isSameWeek,
+	startOfWeek,
+	endOfWeek,
+} from "date-fns";
 import { enGB } from "date-fns/locale";
 import { DatePickerCalendar as ScheduleCalendar } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
@@ -19,12 +27,18 @@ import AlertDialog from "../../Alert/AlertDialog";
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
+	const today = new Date();
 
 	// Fetch schedule data from api
 	const fetchScheduleItems = () => {
 		console.log("date--------", date, "----schedul----", scheduleItems);
-		const startDate = moment(new Date(date)).format("yyyy-MM-DD");
-		const endDate = moment(new Date(date)).format("yyyy-MM-DD");
+		const startDate = moment(
+			startOfWeek(new Date(), { weekStartsOn: 1 })
+		).format("yyyy-MM-DD");
+
+		const endDate = moment(
+			endOfWeek(nextDay(today, getDay(today)), { weekStartsOn: 1 })
+		).format("yyyy-MM-DD");
 		console.log("-------datees ---------", startDate, endDate);
 		return axios
 			.get(
@@ -70,7 +84,6 @@ const Schedule = (props) => {
 		0
 	);
 
-	const today = new Date();
 	const modifiers = {
 		// Displays only two weeks (Current week and next week)
 		hideDays: (date) => {
