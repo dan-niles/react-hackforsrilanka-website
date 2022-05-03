@@ -151,7 +151,7 @@ const Schedule = (props) => {
 						modifiers={modifiers}
 						modifiersClassNames={modifiersClassNames}
 					/>
-					<div className="container">
+					<div className="container mt-3">
 						<div className="card">
 							<div className="card-body">
 								<div className="calendar-legend">

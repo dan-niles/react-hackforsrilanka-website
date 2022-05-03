@@ -111,7 +111,7 @@ const ScheduleItemsContainer = (props) => {
 									startIcon={<NotificationsActiveIcon />}
 									size="large"
 									onClick={props.handleClickOpen}
-									color="info"
+									color="secondary"
 								>
 									Subscribe
 								</Button>

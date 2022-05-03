@@ -11855,6 +11855,7 @@ html {
 }
 
 .nice-dates-day {
+	margin-top: 0.3em;
 	color: #999 !important;
 }
 
@@ -11885,6 +11886,7 @@ html {
 }
 
 .nice-dates-day.-orange-ring span {
+	background: #f0842614;
 	border-radius: 999px;
 	display: flex;
 	position: absolute;
@@ -11902,7 +11904,7 @@ html {
 	border-radius: 999px;
 	display: flex;
 	position: absolute;
-	border: 2px solid #909090;
+	border: 2px solid #6c757d70;
 	top: 0;
 	bottom: 0;
 	left: 12.5%;
@@ -11919,9 +11921,14 @@ html {
 	pointer-events: none;
 }
 
+.nice-dates-grid_container {
+	margin-top: 0.5em;
+}
+
 .calendar-legend {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .calender-legend-item {
@@ -11945,11 +11952,11 @@ html {
 	border: 2px solid #1fa66b;
 }
 .calender-legend-ring.gray {
-	border: 2px solid #909090;
+	border: 2px solid #6c757d70;
 }
 
 .calender-legend-item span {
-	font-size: 0.9em;
+	font-size: 0.8em;
 }
 
 .help-slider .MuiDialog-paperScrollPaper {
@@ -11971,4 +11978,8 @@ html {
 .subsribe-button .MuiButton-startIcon {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.light-mode .MuiButton-outlinedSecondary {
+	color: #676868;
 }
