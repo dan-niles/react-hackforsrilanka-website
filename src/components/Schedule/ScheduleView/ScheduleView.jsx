@@ -48,7 +48,6 @@ const Schedule = (props) => {
 	);
 
 	// Remove duplicates
-
 	filteredScheduleItems = Array.from(
 		new Set(filteredScheduleItems.map((a) => a.starting_period))
 	).map((starting_period) => {
@@ -81,9 +80,21 @@ const Schedule = (props) => {
 				})
 			);
 		},
+		greenClass: (date) => {
+			let seledate = ["2022-05-04"];
+			return seledate.includes(moment(new Date(date)).format("yyyy-MM-DD"));
+		},
+		orangeClass: (date) => {
+			let seledate = ["2022-05-03", "2022-05-02"];
+			return seledate.includes(moment(new Date(date)).format("yyyy-MM-DD"));
+		},
+		grayClass: (date) => true,
 	};
 	const modifiersClassNames = {
 		hideDays: "d-none",
+		greenClass: "-green-ring",
+		orangeClass: "-orange-ring",
+		grayClass: "-gray-ring",
 	};
 
 	return (
@@ -111,6 +122,26 @@ const Schedule = (props) => {
 					modifiers={modifiers}
 					modifiersClassNames={modifiersClassNames}
 				/>
+				<div className="container">
+					<div className="card">
+						<div className="card-body">
+							<div className="calendar-legend">
+								<div className="calender-legend-item">
+									<div className="calender-legend-ring orange"></div>
+									<span className="mb-0">Schedule Available</span>
+								</div>
+								<div className="calender-legend-item">
+									<div className="calender-legend-ring gray"></div>
+									<span className="mb-0">Not Available</span>
+								</div>
+								<div className="calender-legend-item">
+									<div className="calender-legend-ring green"></div>
+									<span className="mb-0">No Power Cuts</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			{/* Hide the calendar on mobile and show a datepicker */}
