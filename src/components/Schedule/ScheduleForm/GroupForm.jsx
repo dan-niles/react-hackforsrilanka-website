@@ -5,81 +5,101 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import { useTheme } from "@mui/material/styles";
+
+import GroupsIcon from "@mui/icons-material/Groups";
 
 import { baseURL } from "../../../BaseApi";
 import axios from "axios";
 
 const GroupForm = (props) => {
-  let navigate = useNavigate();
+	const appTheme = useTheme();
 
-  // Fetch Group Names
-  const [groups, setGroups] = useState([]);
-  const [getSchedule, setGetSchedule] = useState();
+	let navigate = useNavigate();
 
-  const fetchGroupNames = () => {
-    return axios.get(baseURL + "/api/all-group/").then((res) => {
-      console.log(res);
-      setGroups(res.data.data);
-    });
-  };
+	// Fetch Group Names
+	const [groups, setGroups] = useState([]);
+	const [getSchedule, setGetSchedule] = useState();
 
-  useEffect(() => {
-    fetchGroupNames();
-  }, []);
+	const fetchGroupNames = () => {
+		return axios.get(baseURL + "/api/all-group/").then((res) => {
+			console.log(res);
+			setGroups(res.data.data);
+		});
+	};
 
-  const [groupSelect, setGroupSelect] = useState(props.groupName);
-  const handleGroupSelectChange = (event) => {
-    setGroupSelect(event.target.value);
-  };
+	useEffect(() => {
+		fetchGroupNames();
+	}, []);
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    navigate(
-      {
-        pathname: "/schedule",
-        search: "?group=" + groupSelect,
-      },
-      { state: { data: getSchedule } }
-    );
-  };
+	const [groupSelect, setGroupSelect] = useState(props.groupName);
+	const handleGroupSelectChange = (event) => {
+		setGroupSelect(event.target.value);
+	};
 
-  return (
-    <form action="" method="get" onSubmit={submitHandler}>
-      <div className="form-row">
-        <div className="form-group col-12">
-          <h3 className="fw-bolder mb-4">Search by Group</h3>
-          <FormControl fullWidth>
-            <InputLabel id="group-select">Select your group</InputLabel>
-            <Select
-              labelId="group-select-label"
-              id="group-select"
-              label="Select your group"
-              value={groupSelect}
-              onChange={handleGroupSelectChange}
-              name="group"
-              required
-            >
-              {groups?.map((item, index) => {
-                return (
-                  <MenuItem value={item} key={index}>
-                    {item}
-                  </MenuItem>
-                );
-              })}
-            </Select>
-          </FormControl>
-        </div>
-        <div className="form-group col-12 mt-4 text-center">
-          {/* <Button color="warning" variant="contained">
-        Search
-    </Button> */}
-          <button type="submit" className="btn btn-warning px-4 fw-bold">
-            Search
-          </button>
-        </div>
-      </div>
-    </form>
-  );
+	const submitHandler = (e) => {
+		e.preventDefault();
+		navigate(
+			{
+				pathname: "/schedule",
+				search: "?group=" + groupSelect,
+			},
+			{ state: { data: getSchedule } }
+		);
+	};
+
+	return (
+		<form action="" method="get" onSubmit={submitHandler}>
+			<div className="form-row my-3">
+				<div className="form-group col-12">
+					<h4
+						className="fw-bolder mb-4"
+						style={{
+							display: "flex",
+							alignItems: "center",
+							justifyContent: "space-between",
+						}}
+					>
+						Search by Group <GroupsIcon />
+					</h4>
+					<p className="text-white-50 fw-light mb-2">
+						Pick the pre-assigned group letter for your area...
+					</p>
+					<FormControl fullWidth>
+						<InputLabel id="group-select">Group Name</InputLabel>
+						<Select
+							labelId="group-select-label"
+							id="group-select"
+							label="Group Name"
+							value={groupSelect}
+							onChange={handleGroupSelectChange}
+							name="group"
+							required
+						>
+							{groups?.map((item, index) => {
+								return (
+									<MenuItem value={item} key={index}>
+										{item}
+									</MenuItem>
+								);
+							})}
+							{/* <MenuItem value="A">A</MenuItem> */}
+						</Select>
+					</FormControl>
+				</div>
+				<div className="form-group col-12 mt-4 text-center">
+					<button
+						type="submit"
+						className={`btn ${
+							appTheme.palette.mode === "dark" ? "btn-warning" : "btn-danger"
+						} px-4 fw-bold`}
+					>
+						Search
+					</button>
+				</div>
+			</div>
+		</form>
+	);
 };
 
 export default GroupForm;
