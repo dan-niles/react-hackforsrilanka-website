@@ -41,6 +41,24 @@ const ScheduleItemsContainer = (props) => {
 
 	console.log("---------data--------", scheduleTime);
 
+	const shareClickHandler = async () => {
+		const title = `${document.title} - Power Cut Schedule for Group ${props.groupName}`;
+		const text = "Check this out!";
+		const url = window.location.href;
+		if (navigator.share !== undefined) {
+			await navigator
+				.share({
+					title,
+					text,
+					url,
+				})
+				.then(() => console.log("Shared!"))
+				.catch((err) => console.error(err));
+		} else {
+			window.location = `mailto:?subject=${title}&body=${text}%0A${url}`;
+		}
+	};
+
 	return (
 		<div className="col-sm-6 col-12 d-flex pa-sm order-md-2">
 			<div className="card border-0 mt-0 flex-fill">
@@ -82,9 +100,11 @@ const ScheduleItemsContainer = (props) => {
 						<div className="row h-100">
 							<div className="d-flex justify-content-center align-items-center flex-column">
 								<p className="text-center">
-									Schedule has not been published yet for the selected date.
+									Schedule not published yet
 									<br />
-									Come back later or subcribe to receive a notification
+									<span className="text-muted">
+										Come back later or subcribe to receive a notification
+									</span>
 								</p>
 								<Button
 									variant="outlined"
@@ -111,12 +131,13 @@ const ScheduleItemsContainer = (props) => {
 						<div className="col">
 							<div className="text-end">
 								<h5 className="d-inline">
-									{props.children.length > 0 && (
+									{props.children.length === 0 && (
 										<Button
 											variant="outlined"
 											startIcon={<ShareIcon />}
 											size="small"
 											color="success"
+											onClick={shareClickHandler}
 										>
 											Share
 										</Button>

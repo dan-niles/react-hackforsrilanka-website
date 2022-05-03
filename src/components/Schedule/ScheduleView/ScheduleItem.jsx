@@ -19,7 +19,7 @@ const ScheduleItem = (props) => {
 		})
 		.split(" ");
 
-	const hourDiff = differenceInHours(startPeriod, endPeriod);
+	const hourDiff = differenceInHours(endPeriod, startPeriod);
 
 	return (
 		<li className="border-1 list-group-item d-flex justify-content-between align-items-center py-3 my-2">
