@@ -14,6 +14,8 @@ import ScheduleDatePicker from "./ScheduleDatePicker";
 import axios from "axios";
 import { baseURL } from "../../../BaseApi";
 
+import AlertDialog from "../../Alert/AlertDialog";
+
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
@@ -56,7 +58,6 @@ const Schedule = (props) => {
 		);
 	});
 
-	//	console.log("------filtred schedule item---",filteredScheduleItems);
 	// Calculating total hours of power cuts
 	const totalHrs = filteredScheduleItems.reduce(
 		(a, item) =>
@@ -69,9 +70,9 @@ const Schedule = (props) => {
 		0
 	);
 
-	// Displays only two weeks (Current week and next week)
 	const today = new Date();
 	const modifiers = {
+		// Displays only two weeks (Current week and next week)
 		hideDays: (date) => {
 			return (
 				!isThisWeek(date, { weekStartsOn: 1 }) &&
@@ -80,13 +81,20 @@ const Schedule = (props) => {
 				})
 			);
 		},
+		// Colour key system for dates
 		greenClass: (date) => {
-			let seledate = ["2022-05-04"];
+			let seledate = [];
 			return seledate.includes(moment(new Date(date)).format("yyyy-MM-DD"));
 		},
 		orangeClass: (date) => {
-			let seledate = ["2022-05-03", "2022-05-02"];
-			return seledate.includes(moment(new Date(date)).format("yyyy-MM-DD"));
+			if (scheduleItems.length > 0) {
+				scheduleItems.forEach((i) => {
+					return (
+						i.starting_period.substring(0, 9) ===
+						moment(new Date(date)).format("yyyy-MM-DD")
+					);
+				});
+			}
 		},
 		grayClass: (date) => true,
 	};
@@ -97,58 +105,80 @@ const Schedule = (props) => {
 		grayClass: "-gray-ring",
 	};
 
+	// For opening/closing subscribe modal
+	const [open, setOpen] = React.useState(false);
+
+	const handleClickOpen = () => {
+		setOpen(true);
+	};
+
+	const handleClose = () => {
+		setOpen(false);
+	};
+
 	return (
-		<ScheduleContainer groupName={props.groupName}>
-			<ScheduleItemsContainer
-				scheduleItemData={scheduleItems}
-				date={date}
+		<>
+			<AlertDialog
+				open={open}
+				handleClose={handleClose}
 				groupName={props.groupName}
-				totalHrs={totalHrs}
+			/>
+			<ScheduleContainer
+				groupName={props.groupName}
+				handleClickOpen={handleClickOpen}
 			>
-				{filteredScheduleItems.map((i) => (
-					<ScheduleItem
-						key={i.unique_id}
-						starting_period={i.starting_period}
-						ending_period={i.ending_period}
-					/>
-				))}
-			</ScheduleItemsContainer>
-			<div className="col-sm-6 col-12 my-3 order-md-1 d-none d-md-block">
-				<ScheduleCalendar
+				<ScheduleItemsContainer
+					scheduleItemData={scheduleItems}
 					date={date}
-					onDateChange={setDate}
-					locale={enGB}
-					touchDragEnabled={false}
-					modifiers={modifiers}
-					modifiersClassNames={modifiersClassNames}
-				/>
-				<div className="container">
-					<div className="card">
-						<div className="card-body">
-							<div className="calendar-legend">
-								<div className="calender-legend-item">
-									<div className="calender-legend-ring orange"></div>
-									<span className="mb-0">Schedule Available</span>
-								</div>
-								<div className="calender-legend-item">
-									<div className="calender-legend-ring gray"></div>
-									<span className="mb-0">Not Available</span>
-								</div>
-								<div className="calender-legend-item">
-									<div className="calender-legend-ring green"></div>
-									<span className="mb-0">No Power Cuts</span>
+					groupName={props.groupName}
+					totalHrs={totalHrs.toFixed(1)}
+					handleClickOpen={handleClickOpen}
+				>
+					{filteredScheduleItems.map((i) => (
+						<ScheduleItem
+							key={i.unique_id}
+							starting_period={i.starting_period}
+							ending_period={i.ending_period}
+						/>
+					))}
+				</ScheduleItemsContainer>
+				<div className="col-sm-6 col-12 my-3 order-md-1 d-none d-md-block">
+					<ScheduleCalendar
+						date={date}
+						onDateChange={setDate}
+						locale={enGB}
+						touchDragEnabled={false}
+						modifiers={modifiers}
+						modifiersClassNames={modifiersClassNames}
+					/>
+					<div className="container">
+						<div className="card">
+							<div className="card-body">
+								<div className="calendar-legend">
+									<div className="calender-legend-item">
+										<div className="calender-legend-ring orange"></div>
+										<span className="mb-0">Schedule Available</span>
+									</div>
+									<div className="calender-legend-item">
+										<div className="calender-legend-ring gray"></div>
+										<span className="mb-0">Not Available</span>
+									</div>
+									<div className="calender-legend-item">
+										<div className="calender-legend-ring green"></div>
+										<span className="mb-0">No Power Cuts</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			{/* Hide the calendar on mobile and show a datepicker */}
-			<div className="col-12 mt-5 mb-4 order-md-1 d-block d-md-none">
-				<ScheduleDatePicker date={date} setDate={setDate} />
-			</div>
-		</ScheduleContainer>
+				{/* Hide the calendar on mobile and show a datepicker */}
+				<div className="col-12 mt-4 mb-4 order-md-1 d-block d-md-none">
+					<ScheduleDatePicker date={date} setDate={setDate} />
+				</div>
+			</ScheduleContainer>
+		</>
 	);
 };
 

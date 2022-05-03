@@ -29,7 +29,7 @@ const ScheduleDatePicker = (props) => {
 		);
 	};
 
-	console.log("--------date-------",date);
+	// console.log("--------date-------",date);
 	return (
 		<Stack
 			direction="row"
@@ -37,26 +37,27 @@ const ScheduleDatePicker = (props) => {
 			alignItems="center"
 			spacing={1}
 		>
-			<IconButton onClick={handlePrevClick}>
+			<IconButton className="date-picker-button" onClick={handlePrevClick}>
 				<ChevronLeftIcon />
 			</IconButton>
 			<LocalizationProvider dateAdapter={AdapterDateFns}>
 				<MobileDatePicker
+					className="helllooo"
 					label="Date"
 					inputFormat="dd-MM-yyyy"
 					value={date}
 					onChange={handleDateChange}
 					renderInput={(params) => (
 						<TextField
-							style={{ textAlign: "center" }}
-							color="warning"
+							className="mobile-date-picker"
+							color="secondary"
 							{...params}
 						/>
 					)}
-					color="warning"
+					color="secondary"
 				/>
 			</LocalizationProvider>
-			<IconButton onClick={handleNextClick}>
+			<IconButton className="date-picker-button" onClick={handleNextClick}>
 				<ChevronRightIcon />
 			</IconButton>
 		</Stack>
