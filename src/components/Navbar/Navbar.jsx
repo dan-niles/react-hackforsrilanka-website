@@ -123,7 +123,7 @@ const Navbar = () => {
 								</MenuItem>
 							))}
 							{/* Dark/Light mode switcher */}
-							{/* <MenuItem onClick={colorMode.toggleColorMode}>
+							<MenuItem onClick={colorMode.toggleColorMode}>
 								<IconButton
 									className="nav-link px-3"
 									sx={{
@@ -137,7 +137,7 @@ const Navbar = () => {
 										<Brightness4Icon />
 									)}
 								</IconButton>
-							</MenuItem> */}
+							</MenuItem>
 						</Menu>
 					</Box>
 					{/* Desktop NavBar				 */}
@@ -169,7 +169,7 @@ const Navbar = () => {
 							</Button>
 						))}
 						{/* Dark/Light mode switcher */}
-						{/* <IconButton
+						<IconButton
 							className="nav-link"
 							sx={{
 								ml: 2,
@@ -182,7 +182,7 @@ const Navbar = () => {
 							) : (
 								<Brightness4Icon />
 							)}
-						</IconButton> */}
+						</IconButton>
 					</Box>
 				</Toolbar>
 			</Container>

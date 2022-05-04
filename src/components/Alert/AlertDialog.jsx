@@ -16,68 +16,104 @@ import Loader from "react-js-loader";
 import { baseURL } from "../../BaseApi";
 
 const AlertDialog = (props) => {
-  const [name, setName] = useState("");
-  const [areaName, setAreaName] = useState("");
-  const [phoneNum, setPhoneNum] = useState("");
-  const [groupName, setGroupName] = useState(props.groupName);
-  const [otp, setOtp] = useState();
-  const [otpErr, setOtpErr] = useState();
-  const [showOtpBox, setShowOtpBox] = useState(false);
-  const [secretKey, setSecretKey] = useState();
-  const [error, setError] = useState();
-  const [nameErr, setNameErr] = useState();
-  const [showLoad, setShowLoad] = useState(false);
-  const [allRegErr, setAllRegErr] = useState();
+	const [name, setName] = useState("");
+	const [areaName, setAreaName] = useState("");
+	const [phoneNum, setPhoneNum] = useState("");
+	const [groupName, setGroupName] = useState(props.groupName);
+	const [otp, setOtp] = useState();
+	const [otpErr, setOtpErr] = useState();
+	const [showOtpBox, setShowOtpBox] = useState(false);
+	const [secretKey, setSecretKey] = useState();
+	const [error, setError] = useState();
+	const [nameErr, setNameErr] = useState();
+	const [showLoad, setShowLoad] = useState(false);
+	const [allRegErr, setAllRegErr] = useState();
 
+
+	useEffect(() => {
+		setGroupName(props.areaGroup);
+	}, [props.areaGroup]);
+
+	useEffect(() => {
+		setGroupName(props.groupName);
+	}, [props.groupName]);
+
+	useEffect(() => {
+		setNameErr("");
+	}, [name]);
+
+	const getSubscription = () => {
+		let username = name.trim();
+		if (username === undefined || username === "" || username == null) {
+			setNameErr("Please enter a name");
+		} else if (phoneNum.toString().length !== 9) {
+			setError("Please Enter a 9 digit valid number");
+		} else {
+			setShowLoad(true);
+			return axios
+				.post(
+					baseURL + "/api/subscribe/",
+					{
+						mobile_number: phoneNum,
+						name: name,
+						group_name: groupName,
+					},
+					{
+						headers: { Accept: "application/json" },
+					}
+				)
+				.then((res) => {
+					setShowLoad(false);
+					setError("");
+					setShowOtpBox(true);
+					setSecretKey(res.data.secret_key);
+				})
+				.catch((errr) => {
+          console.log("-------errr-------------",errr.response)
+					setShowLoad(false);
+					setAllRegErr(errr.response.data.errors);
+				});
+		}
+	};
+
+	const verifyOtp = () => {
+		const data = { otp, name, areaName, groupName, phoneNum, secretKey };
+		const number = data.phoneNum.toString().slice(0, 4);
+		return axios
+			.post(
+				baseURL + "/api/verify-otp/",
+				{
+					otp: data.otp,
+					secret_key: data.secretKey,
+					mobile_number: data.phoneNum,
+					name: data.name,
+					group_name: data.groupName,
+				},
+				{
+					headers: { Accept: "application/json" },
+				}
+			)
+			.then((res) => {
+				props.handleClose();
+				Swal.fire({
+					position: "top-center",
+					icon: "info",
+					title: `Cell phone number ${number}xxxxx has been successfully subscribed to group ${data.groupName}`,
+					showConfirmButton: true,
+				});
+				setName("");
+				setPhoneNum("");
+				setShowOtpBox(false);
+				setShowLoad(false);
+				setAllRegErr("");
+			})
+			.catch((errr) => {
+				setOtpErr(errr.response.data.message);
+			});
+	};
 
   
-
-  useEffect(() => {
-    setGroupName(props.areaGroup);
-  }, [props.areaGroup]);
-
-  useEffect(() => {
-    setGroupName(props.groupName);
-  }, [props.groupName]);
-
-  useEffect(() => {
-    setNameErr("");
-  }, [name]);
-
-  
-  const getSubscription = () => {
-    let username = name.trim();
-    if (username === undefined || username === "" || username == null) {
-      setNameErr("Please enter a name");
-    } else if (phoneNum.toString().length !== 9) {
-      setError("Please Enter a 9 digit valid number");
-    } else {
-      setShowLoad(true);
-      return axios
-        .post(
-          baseURL + "/api/subscribe/",
-          {
-            mobile_number: phoneNum,
-            name: name,
-            group_name: groupName,
-          },
-          {
-            headers: { Accept: "application/json" },
-          }
-        )
-        .then((res) => {
-          setShowLoad(false);
-          setError("");
-          setShowOtpBox(true);
-          setSecretKey(res.data.secret_key);
-        })
-        .catch((errr) => {
-          setShowLoad(false);
-          setAllRegErr(errr.response.data.errors);
-        });
-    }
-  };
-  // const ReSubscription = ()=>{
+  // const getSubscription = () => {
   //   let username = name.trim();
   //   if (username === undefined || username === "" || username == null) {
   //     setNameErr("Please enter a name");
@@ -87,7 +123,7 @@ const AlertDialog = (props) => {
   //     setShowLoad(true);
   //     return axios
   //       .post(
-  //         baseURL + "/api/change-group/",
+  //         baseURL + "/api/subscribe/",
   //         {
   //           mobile_number: phoneNum,
   //           name: name,
@@ -108,52 +144,52 @@ const AlertDialog = (props) => {
   //         setAllRegErr(errr.response.data.errors);
   //       });
   //   }
-  // }
+  // };
 
 
-  const verifyOtp = () => {
-    const data = { otp, name, areaName, groupName, phoneNum, secretKey };
-    const number = data.phoneNum.toString().slice(0, 4);
-    return axios
-      .post(
-        baseURL + "/api/verify-otp/",
-        {
-          otp: data.otp,
-          secret_key: data.secretKey,
-          mobile_number: data.phoneNum,
-          name: data.name,
-          group_name: data.groupName,
-        },
-        {
-          headers: { Accept: "application/json" },
-        }
-      )
-      .then((res) => {
-        props.handleClose();
-        Swal.fire({
-          position: "top-center",
-          icon: "success",
-          title: `Cell phone number ${number}xxxxx has been successfully subscribed to group ${data.groupName}`,
-          showConfirmButton: true,
-        });
-        setName("");
-        setPhoneNum("");
-        setShowOtpBox(false);
-        setShowLoad(false);
-        setAllRegErr("")
-      })
-      .catch((errr) => {
-        setOtpErr(errr.response.data.message);
-      });
-  };
+  // const verifyOtp = () => {
+  //   const data = { otp, name, areaName, groupName, phoneNum, secretKey };
+  //   const number = data.phoneNum.toString().slice(0, 4);
+  //   return axios
+  //     .post(
+  //       baseURL + "/api/verify-otp/",
+  //       {
+  //         otp: data.otp,
+  //         secret_key: data.secretKey,
+  //         mobile_number: data.phoneNum,
+  //         name: data.name,
+  //         group_name: data.groupName,
+  //       },
+  //       {
+  //         headers: { Accept: "application/json" },
+  //       }
+  //     )
+  //     .then((res) => {
+  //       props.handleClose();
+  //       Swal.fire({
+  //         position: "top-center",
+  //         icon: "success",
+  //         title: `Cell phone number ${number}xxxxx has been successfully subscribed to group ${data.groupName}`,
+  //         showConfirmButton: true,
+  //       });
+  //       setName("");
+  //       setPhoneNum("");
+  //       setShowOtpBox(false);
+  //       setShowLoad(false);
+  //       setAllRegErr("")
+  //     })
+  //     .catch((errr) => {
+  //       setOtpErr(errr.response.data.message);
+  //     });
+  // };
 
   return (
     <Dialog open={props.open} onClose={props.handleClose}>
       <FormControl>
-        <DialogTitle className="bg-dark">
+        <DialogTitle >
           Subscribe to Group {props.groupName}
         </DialogTitle>
-        <DialogContent className="bg-dark">
+        <DialogContent >
           <DialogContentText>
             To subscribe to this group, please enter your phone numbers here. We
             will send updates occasionally.
@@ -176,7 +212,7 @@ const AlertDialog = (props) => {
             fullWidth
             variant="standard"
             autoComplete="off"
-            color="success"
+            color="info"
             required
           />
           <span className="text-danger">{nameErr}</span>
@@ -202,14 +238,14 @@ const AlertDialog = (props) => {
             }}
             variant="standard"
             autoComplete="off"
-            color="success"
+            color="info"
           />
           <span className="text-danger">{error}</span>
           {showOtpBox && (
             <div className="py-3">
               <h5>Enter Otp</h5>
               <OtpInput
-                hasErrored="true"
+               // hasErrored="true"
                 className="otp_value"
                 name="otp"
                 isInputNum={true}
@@ -242,7 +278,7 @@ const AlertDialog = (props) => {
             </div>
           )}
         </DialogContent>
-        <DialogActions className="bg-dark">
+        <DialogActions >
           {showLoad && (
             <Loader
               type="spinner-default"
@@ -262,7 +298,7 @@ const AlertDialog = (props) => {
           {!showOtpBox && (
             <Button
               onClick={getSubscription}
-              color="success"
+              color="info"
               disabled={showLoad}
             >
               {/* onClick={props.handleClose} */}

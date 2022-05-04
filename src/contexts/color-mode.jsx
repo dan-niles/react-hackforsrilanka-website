@@ -6,17 +6,29 @@ import grey from "@mui/material/colors/grey";
 const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 export const ColorModeContextProvider = (props) => {
-	const [mode, setMode] = useState("dark");
+	let appColorMode = "dark";
+	if (localStorage.getItem("color-mode") !== null) {
+		appColorMode = localStorage.getItem("color-mode");
+		if (appColorMode === "light") {
+			document.getElementsByTagName("html")[0].classList.add("light-mode");
+		} else {
+			document.getElementsByTagName("html")[0].classList.remove("light-mode");
+		}
+	}
+
+	const [mode, setMode] = useState(appColorMode);
 	const colorMode = useMemo(
 		() => ({
 			toggleColorMode: () => {
 				setMode((prevMode) => {
 					if (prevMode === "light") {
+						localStorage.setItem("color-mode", "dark");
 						document
 							.getElementsByTagName("html")[0]
 							.classList.remove("light-mode");
 						return "dark";
 					} else {
+						localStorage.setItem("color-mode", "light");
 						document
 							.getElementsByTagName("html")[0]
 							.classList.add("light-mode");
