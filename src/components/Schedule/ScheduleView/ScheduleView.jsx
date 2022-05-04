@@ -28,16 +28,18 @@ const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
 	const [areaGroup, setAreaGroup] = useState("");
+
 	const today = new Date();
+	const minDate = startOfWeek(today, { weekStartsOn: 1 });
+	const maxDate = endOfWeek(nextDay(today, getDay(today)), {
+		weekStartsOn: 1,
+	});
 
 	// Fetch schedule data from api
 	const fetchScheduleItems = () => {
-		const startDate = moment(
-			startOfWeek(new Date(), { weekStartsOn: 1 })
-		).format("yyyy-MM-DD");
-		const endDate = moment(
-			endOfWeek(nextDay(today, getDay(today)), { weekStartsOn: 1 })
-		).format("yyyy-MM-DD");
+		const startDate = moment(minDate).format("yyyy-MM-DD");
+
+		const endDate = moment(maxDate).format("yyyy-MM-DD");
 		return axios
 			.get(
 				baseURL +
@@ -50,13 +52,9 @@ const Schedule = (props) => {
 
 	// Fetch schedule data from api using state and city
 	const fetchDistrictAreaScheduleItems = () => {
-		const startDate = moment(
-			startOfWeek(new Date(), { weekStartsOn: 1 })
-		).format("yyyy-MM-DD");
+		const startDate = moment(minDate).format("yyyy-MM-DD");
 
-		const endDate = moment(
-			endOfWeek(nextDay(today, getDay(today)), { weekStartsOn: 1 })
-		).format("yyyy-MM-DD");
+		const endDate = moment(maxDate).format("yyyy-MM-DD");
 		return axios
 			.get(
 				baseURL +
@@ -223,7 +221,12 @@ const Schedule = (props) => {
 
 				{/* Hide the calendar on mobile and show a datepicker */}
 				<div className="col-12 mt-4 mb-4 order-md-1 d-block d-md-none">
-					<ScheduleDatePicker date={date} setDate={setDate} />
+					<ScheduleDatePicker
+						date={date}
+						setDate={setDate}
+						maxDate={maxDate}
+						minDate={minDate}
+					/>
 				</div>
 			</ScheduleContainer>
 		</>

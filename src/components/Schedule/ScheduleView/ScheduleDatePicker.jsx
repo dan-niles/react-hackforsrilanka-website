@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
@@ -7,9 +9,20 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 
+import { isThisWeek, nextDay, getDay, isSameWeek } from "date-fns";
+import add from "date-fns/add";
+import sub from "date-fns/sub";
+
 const ScheduleDatePicker = (props) => {
 	const setDate = props.setDate;
 	const date = props.date;
+	const today = new Date();
+
+	const minDate = props.minDate;
+	const maxDate = props.maxDate;
+
+	const [disablePrev, setDisablePrev] = useState(false);
+	const [disableNext, setDisableNext] = useState(false);
 
 	// For mobile date picker
 	const handleDateChange = (newValue) => {
@@ -17,19 +30,47 @@ const ScheduleDatePicker = (props) => {
 	};
 
 	const handlePrevClick = () => {
-		setDate(
-			(currrentDate) =>
-				new Date(currrentDate.setDate(currrentDate.getDate() - 1))
-		);
-	};
-	const handleNextClick = () => {
-		setDate(
-			(currrentDate) =>
-				new Date(currrentDate.setDate(currrentDate.getDate() + 1))
-		);
+		if (
+			isThisWeek(sub(date, { days: 1 }), { weekStartsOn: 1 }) ||
+			isSameWeek(nextDay(today, getDay(today)), sub(date, { days: 1 }), {
+				weekStartsOn: 1,
+			})
+		) {
+			setDate(
+				(currrentDate) =>
+					new Date(currrentDate.setDate(currrentDate.getDate() - 1))
+			);
+		}
+
+		if (minDate.toDateString() === date.toDateString()) {
+			setDisablePrev(true);
+		} else {
+			setDisableNext(false);
+			setDisablePrev(false);
+		}
 	};
 
-	// console.log("--------date-------",date);
+	const handleNextClick = () => {
+		if (
+			isThisWeek(add(date, { days: 1 }), { weekStartsOn: 1 }) ||
+			isSameWeek(nextDay(today, getDay(today)), add(date, { days: 1 }), {
+				weekStartsOn: 1,
+			})
+		) {
+			setDate(
+				(currrentDate) =>
+					new Date(currrentDate.setDate(currrentDate.getDate() + 1))
+			);
+		}
+
+		if (maxDate.toDateString() === date.toDateString()) {
+			setDisableNext(true);
+		} else {
+			setDisableNext(false);
+			setDisablePrev(false);
+		}
+	};
+
 	return (
 		<Stack
 			direction="row"
@@ -37,11 +78,17 @@ const ScheduleDatePicker = (props) => {
 			alignItems="center"
 			spacing={1}
 		>
-			<IconButton className="date-picker-button" onClick={handlePrevClick}>
+			<IconButton
+				className="date-picker-button"
+				onClick={handlePrevClick}
+				disabled={disablePrev}
+			>
 				<ChevronLeftIcon />
 			</IconButton>
 			<LocalizationProvider dateAdapter={AdapterDateFns}>
 				<MobileDatePicker
+					minDate={minDate}
+					maxDate={maxDate}
 					className="helllooo"
 					label="Date"
 					inputFormat="dd-MM-yyyy"
@@ -57,7 +104,11 @@ const ScheduleDatePicker = (props) => {
 					color="secondary"
 				/>
 			</LocalizationProvider>
-			<IconButton className="date-picker-button" onClick={handleNextClick}>
+			<IconButton
+				className="date-picker-button"
+				onClick={handleNextClick}
+				disabled={disableNext}
+			>
 				<ChevronRightIcon />
 			</IconButton>
 		</Stack>
