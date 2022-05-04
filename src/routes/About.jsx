@@ -14,7 +14,7 @@ const About = () => {
 	return (
 		<AnimatedPage>
 			<Header
-				title="Hack For The Globe"
+				title="Code For The Globe"
 				bgImg={
 					appTheme.palette.mode === "dark"
 						? "globe-bg.png"
@@ -52,7 +52,7 @@ const About = () => {
 				upates.
 			</ContentSection>
 			{/* <!-- Team members section--> */}
-			<TeamContainer title="The Teams" subTitle="Hack For Sri Lanka">
+			<TeamContainer title="The Teams" subTitle="Code For Sri Lanka">
 				<TeamRow>
 					<TeamItem
 						teamName="Scrapers - The Creepy Spiders"

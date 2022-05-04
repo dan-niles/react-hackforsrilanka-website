@@ -1,3 +1,5 @@
+import differenceInHours from "date-fns/differenceInHours";
+
 const ScheduleItem = (props) => {
 	const startPeriod = new Date(props.starting_period);
 	const endPeriod = new Date(props.ending_period);
@@ -17,10 +19,10 @@ const ScheduleItem = (props) => {
 		})
 		.split(" ");
 
-	const hourDiff = Math.abs(startPeriod - endPeriod) / 36e5;
+	const hourDiff = differenceInHours(endPeriod, startPeriod);
 
 	return (
-		<li className="bg-light text-light border-1 list-group-item d-flex justify-content-between align-items-center py-3 my-2">
+		<li className="border-1 list-group-item d-flex justify-content-between align-items-center py-3 my-2">
 			<div>
 				<div className="d-inline">
 					<span className="fs-5">{startTime1}</span>
@@ -33,7 +35,7 @@ const ScheduleItem = (props) => {
 				</div>
 			</div>
 
-			<span className="badge bg-secondary">{hourDiff} hrs</span>
+			<span className="badge bg-secondary">{hourDiff.toFixed(1)} hrs</span>
 		</li>
 	);
 };

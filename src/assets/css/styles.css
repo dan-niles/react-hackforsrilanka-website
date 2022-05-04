@@ -111,7 +111,7 @@ footer {
 }
 
 .nav-logo {
-	width: 275px;
+	width: 50px;
 }
 
 .header-center {
@@ -122,7 +122,7 @@ footer {
 
 @media only screen and (max-width: 468px) {
 	.nav-logo {
-		width: 180px;
+		width: 40px;
 	}
 
 	.error-img {
@@ -11855,6 +11855,7 @@ html {
 }
 
 .nice-dates-day {
+	margin-top: 0.3em;
 	color: #999 !important;
 }
 
@@ -11870,7 +11871,7 @@ html {
 	height: 11em !important;
 }
 
-.nice-dates-day.-green-ring span {
+.nice-dates-day.-green-ring .nice-dates-day_date {
 	border-radius: 999px;
 	display: flex;
 	position: absolute;
@@ -11884,7 +11885,8 @@ html {
 	align-items: center;
 }
 
-.nice-dates-day.-orange-ring span {
+.nice-dates-day.-orange-ring .nice-dates-day_date {
+	background: rgb(255 119 0 / 2%);
 	border-radius: 999px;
 	display: flex;
 	position: absolute;
@@ -11898,11 +11900,11 @@ html {
 	align-items: center;
 }
 
-.nice-dates-day.-gray-ring span {
+.nice-dates-day.-gray-ring .nice-dates-day_date {
 	border-radius: 999px;
 	display: flex;
 	position: absolute;
-	border: 2px solid #909090;
+	border: 2px solid #6c757d70;
 	top: 0;
 	bottom: 0;
 	left: 12.5%;
@@ -11919,9 +11921,22 @@ html {
 	pointer-events: none;
 }
 
+.nice-dates-grid_container {
+	margin-top: 0.5em;
+}
+
+.nice-dates-day:before {
+	background-color: #3c3c3c;
+}
+
+.nice-dates-day_today {
+	top: 60% !important;
+}
+
 .calendar-legend {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .calender-legend-item {
@@ -11945,11 +11960,11 @@ html {
 	border: 2px solid #1fa66b;
 }
 .calender-legend-ring.gray {
-	border: 2px solid #909090;
+	border: 2px solid #6c757d70;
 }
 
 .calender-legend-item span {
-	font-size: 0.9em;
+	font-size: 0.8em;
 }
 
 .help-slider .MuiDialog-paperScrollPaper {
@@ -11971,4 +11986,8 @@ html {
 .subsribe-button .MuiButton-startIcon {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.light-mode .MuiButton-outlinedSecondary {
+	color: #676868;
 }
