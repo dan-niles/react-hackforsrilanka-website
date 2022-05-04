@@ -13,6 +13,7 @@ import { baseURL } from "../../../BaseApi";
 
 const AreaForm = () => {
 	const appTheme = useTheme();
+	const [isLoading, setisLoading] = useState(true);
 
 	let navigate = useNavigate();
 	const [areaList, setAreaList] = useState();
@@ -39,31 +40,33 @@ const AreaForm = () => {
 		axios
 			.get(baseURL + "/api/all-gcc/?gcc=")
 			.then((res) => {
-				 
 				setDistrictList(res.data.data);
+				setisLoading(false);
 			})
-			.catch((errr) => {
-				
-			});
+			.catch((errr) => {});
 	}, []);
 
 	useEffect(() => {
-		if(districtSelect){
+		if (districtSelect) {
 			axios
 				.get(baseURL + `/api/all-area/?gcc=${districtSelect}`)
 				.then((res) => {
-					
 					setAreaList(res.data.data);
 				})
-				.catch((errr) => {
-					
-				});
+				.catch((errr) => {});
 		}
 	}, [districtSelect]);
 
 	return (
 		<form action="" method="post" onSubmit={submitHandler}>
-			<div className="form-row my-3">
+			{isLoading && (
+				<div className="row d-flex align-items-center justify-content-center">
+					<div className="spinner-border text-center" role="status">
+						<span className="visually-hidden">Loading...</span>
+					</div>
+				</div>
+			)}
+			<div className={`${isLoading ? "d-none" : ""} form-row my-3`}>
 				<h4
 					className="fw-bolder mb-4"
 					style={{
@@ -90,7 +93,7 @@ const AreaForm = () => {
 							required
 						>
 							{districtList?.map((item, index) => {
-								// 
+								//
 								return (
 									<MenuItem value={item} key={index}>
 										{item}

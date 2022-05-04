@@ -11975,6 +11975,10 @@ html {
 	text-align: center;
 }
 
+.mobile-date-picker legend {
+	display: none;
+}
+
 .date-picker-button {
 	border: 1px solid rgb(64 64 64) !important;
 }

@@ -89,8 +89,7 @@ const ScheduleDatePicker = (props) => {
 				<MobileDatePicker
 					minDate={minDate}
 					maxDate={maxDate}
-					className="helllooo"
-					label="Date"
+					label=" "
 					inputFormat="dd-MM-yyyy"
 					value={date}
 					onChange={handleDateChange}
