@@ -111,10 +111,6 @@ const AlertDialog = (props) => {
         setAllRegErr("")
       })
       .catch((errr) => {
-        console.log(
-          "-------verify otp-error-------",
-          errr.response.data.message
-        );
         setOtpErr(errr.response.data.message);
       });
   };
@@ -134,9 +130,9 @@ const AlertDialog = (props) => {
           <TextField
             autoFocus
             margin="dense"
-            id="phone-number"
+            id="name"
             label="Name"
-            type="tel"
+            type="text"
             disabled={showOtpBox}
             value={name}
             onChange={(event) => {
@@ -156,6 +152,7 @@ const AlertDialog = (props) => {
             margin="dense"
             id="phone-number"
             label="Phone Number"
+            type="tel"
             disabled={showOtpBox}
             value={phoneNum}
             onChange={(event) => {
