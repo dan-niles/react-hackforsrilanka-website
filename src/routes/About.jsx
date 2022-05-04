@@ -23,7 +23,7 @@ const About = () => {
 				btn={{
 					btnText: "Read Our Story",
 					target: "_blank",
-					href: "https://change-via-data.wixsite.com/hack-for-the-globe/team",
+					href: "https://codefortheglobe.org",
 				}}
 			>
 				We are a team of data scientists and computer programmers with a vision

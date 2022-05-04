@@ -11991,3 +11991,7 @@ html {
 .light-mode .MuiButton-outlinedSecondary {
 	color: #676868;
 }
+
+.MuiPickersDay-root.Mui-disabled {
+	color: rgb(255 255 255 / 11%) !important;
+}

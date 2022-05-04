@@ -172,6 +172,7 @@ const Schedule = (props) => {
 				handleClickOpen={handleClickOpen}
 			>
 				<ScheduleItemsContainer
+					handleClickOpen={handleClickOpen}
 					scheduleItemData={scheduleItems}
 					date={date}
 					groupName={props.groupName}
