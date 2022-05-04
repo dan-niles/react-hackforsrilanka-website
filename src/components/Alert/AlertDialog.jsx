@@ -77,6 +77,38 @@ const AlertDialog = (props) => {
         });
     }
   };
+  // const ReSubscription = ()=>{
+  //   let username = name.trim();
+  //   if (username === undefined || username === "" || username == null) {
+  //     setNameErr("Please enter a name");
+  //   } else if (phoneNum.toString().length !== 9) {
+  //     setError("Please Enter a 9 digit valid number");
+  //   } else {
+  //     setShowLoad(true);
+  //     return axios
+  //       .post(
+  //         baseURL + "/api/change-group/",
+  //         {
+  //           mobile_number: phoneNum,
+  //           name: name,
+  //           group_name: groupName,
+  //         },
+  //         {
+  //           headers: { Accept: "application/json" },
+  //         }
+  //       )
+  //       .then((res) => {
+  //         setShowLoad(false);
+  //         setError("");
+  //         setShowOtpBox(true);
+  //         setSecretKey(res.data.secret_key);
+  //       })
+  //       .catch((errr) => {
+  //         setShowLoad(false);
+  //         setAllRegErr(errr.response.data.errors);
+  //       });
+  //   }
+  // }
 
 
   const verifyOtp = () => {

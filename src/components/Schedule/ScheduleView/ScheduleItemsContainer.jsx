@@ -15,7 +15,7 @@ const ScheduleItemsContainer = (props) => {
 	const appTheme = useTheme();
 
 	const [scheduleData, setScheduleData] = useState(true);
-	console.log("---------schedule data-------", scheduleData);
+	// console.log("---------schedule data-------", scheduleData);
 	const [scheduleTime, setScheduleTime] = useState();
 	const [startTime, setStartTime] = useState();
 	const [endTime, setEndTime] = useState();

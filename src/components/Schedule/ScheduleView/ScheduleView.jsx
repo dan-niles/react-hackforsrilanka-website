@@ -24,10 +24,16 @@ import { baseURL } from "../../../BaseApi";
 
 import AlertDialog from "../../Alert/AlertDialog";
 
+export function useForceUpdate() {
+  const [value, setValue] = useState(0);
+  return () => setValue((value) => value + 1); // update the state to force render
+}
+
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
 	const [areaGroup, setAreaGroup] = useState('');
+	const forceUpdate = useForceUpdate();
 	const today = new Date();
 
 	// Fetch schedule data from api
@@ -65,26 +71,43 @@ const Schedule = (props) => {
 			)
 			.then((res) => {
 				setScheduleItems(res.data.data);
+				console.log("-----sechdule----------",scheduleItems)
+				forceUpdate();
 			});
 	};
 
+	console.log("------area group name--------------",props.groupName)
 	useEffect(() => {
+		forceUpdate();
 		if (props.district && props.area){
+			console.log("--------call area district api")
+			fetchDistrictAreaScheduleItems();
+		} 
+	}, [props.district || props.area]);
+    
+	useEffect(()=>{
+		console.log("--------call area district api")
+		if(props.area){
 			fetchDistrictAreaScheduleItems();
 		}
-	}, [props.district || props.area]);
+	},[props.area])
 
 	useEffect(() => {
-		fetchScheduleItems();
+		console.log("------search group name api")
+		if(props.groupName){
+			fetchScheduleItems();
+		}
 	}, [props.groupName]);
 
 	
 	// Filter according to group and selected date
+	
 	let filteredScheduleItems = scheduleItems.filter(
 		(i) => {
 			// set initial areaGroup
 			if (scheduleItems.length > 1 && !areaGroup){
 				setAreaGroup(scheduleItems[0].group_name);
+				console.log("--group__",scheduleItems[0].group_name)
 			}
 			if (props.groupName && i.group_name === props.groupName){
 				return format(new Date(i.starting_period), "dd MMM yyyy", { locale: enGB }) ===
@@ -194,13 +217,15 @@ const Schedule = (props) => {
 					setAreaGroup={setAreaGroup}
 				>
 					{/* {console.log('------------filteredScheduleItems: ', filteredScheduleItems)} */}
-					{filteredScheduleItems.map((i) => (
+					{filteredScheduleItems.map((i) => {
+						console.log("----------------0----",i)
+						return(
 						<ScheduleItem
 							key={i.unique_id}
 							starting_period={i.starting_period}
 							ending_period={i.ending_period}
-						/>
-					))}
+						/>)
+					})}
 				</ScheduleItemsContainer>
 				<div className="col-sm-6 col-12 my-3 order-md-1 d-none d-md-block">
 					<ScheduleCalendar
