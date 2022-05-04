@@ -76,7 +76,7 @@ const Schedule = (props) => {
 
 	useEffect(() => {
 		fetchScheduleItems();
-	}, []);
+	}, [props.groupName]);
 
 	
 	// Filter according to group and selected date
