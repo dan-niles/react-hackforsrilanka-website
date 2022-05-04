@@ -15,7 +15,7 @@ const Schedule = () => {
 		groupName = searchParams.get("group");
 		district = searchParams.get("district");
 		area = searchParams.get("area")
-		console.log("-------group name----------",groupName);
+		
 	}
 
 	return (

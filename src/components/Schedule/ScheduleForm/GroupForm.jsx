@@ -22,8 +22,7 @@ const GroupForm = (props) => {
 	const [getSchedule, setGetSchedule] = useState();
 
 	const fetchGroupNames = () => {
-		return axios.get(baseURL + "/api/all-group/").then((res) => {
-			console.log(res);
+		return axios.get(baseURL + "/api/all-group/").then((res) => {	
 			setGroups(res.data.data);
 		});
 	};

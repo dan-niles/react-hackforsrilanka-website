@@ -29,6 +29,7 @@ const AlertDialog = (props) => {
   const [showLoad, setShowLoad] = useState(false);
   const [allRegErr, setAllRegErr] = useState();
 
+
   
 
   useEffect(() => {
@@ -65,14 +66,12 @@ const AlertDialog = (props) => {
           }
         )
         .then((res) => {
-          console.log("------response------", res);
           setShowLoad(false);
           setError("");
           setShowOtpBox(true);
           setSecretKey(res.data.secret_key);
         })
         .catch((errr) => {
-          console.log("--------error----", errr);
           setShowLoad(false);
           setAllRegErr(errr.response.data.errors);
         });
@@ -98,16 +97,18 @@ const AlertDialog = (props) => {
         }
       )
       .then((res) => {
-        console.log("------verify otp -respose-------", res);
-        localStorage.setItem("status", res.status);
         props.handleClose();
         Swal.fire({
           position: "top-center",
           icon: "success",
           title: `Cell phone number ${number}xxxxx has been successfully subscribed to group ${data.groupName}`,
           showConfirmButton: true,
-          timer: 3000,
         });
+        setName("");
+        setPhoneNum("");
+        setShowOtpBox(false);
+        setShowLoad(false);
+        setAllRegErr("")
       })
       .catch((errr) => {
         console.log(
@@ -136,6 +137,7 @@ const AlertDialog = (props) => {
             id="phone-number"
             label="Name"
             type="tel"
+            disabled={showOtpBox}
             value={name}
             onChange={(event) => {
               const regex = /^[a-zA-Z]*$/;
@@ -154,7 +156,7 @@ const AlertDialog = (props) => {
             margin="dense"
             id="phone-number"
             label="Phone Number"
-            type=""
+            disabled={showOtpBox}
             value={phoneNum}
             onChange={(event) => {
               const regex = /^[0-9]*$/;
@@ -232,7 +234,7 @@ const AlertDialog = (props) => {
             <Button
               onClick={getSubscription}
               color="success"
-              disabled={showLoad ? true : false}
+              disabled={showLoad}
             >
               {/* onClick={props.handleClose} */}
               Subscribe

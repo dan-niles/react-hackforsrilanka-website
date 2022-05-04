@@ -39,24 +39,26 @@ const AreaForm = () => {
 		axios
 			.get(baseURL + "/api/all-gcc/?gcc=")
 			.then((res) => {
-				 console.log("-------district--------", res);
+				 
 				setDistrictList(res.data.data);
 			})
 			.catch((errr) => {
-				console.log("--------error-------", errr.response);
+				
 			});
 	}, []);
 
 	useEffect(() => {
-		axios
-			.get(baseURL + `/api/all-area/?gcc=${districtSelect}`)
-			.then((res) => {
-				console.log(res);
-				setAreaList(res.data.data);
-			})
-			.catch((errr) => {
-				console.log("--------error-------", errr.response);
-			});
+		if(districtSelect){
+			axios
+				.get(baseURL + `/api/all-area/?gcc=${districtSelect}`)
+				.then((res) => {
+					
+					setAreaList(res.data.data);
+				})
+				.catch((errr) => {
+					
+				});
+		}
 	}, [districtSelect]);
 
 	return (
@@ -88,7 +90,7 @@ const AreaForm = () => {
 							required
 						>
 							{districtList?.map((item, index) => {
-								// console.log("------dist namesssss", item);
+								// 
 								return (
 									<MenuItem value={item} key={index}>
 										{item}
