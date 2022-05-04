@@ -11841,7 +11841,7 @@ html {
 }
 
 .light-mode .nice-dates-day:before {
-	background-color: #3333333b;
+	background-color: #6c6c6c2e;
 }
 
 .light-mode .nice-dates-day.-selected:not(:hover) *,

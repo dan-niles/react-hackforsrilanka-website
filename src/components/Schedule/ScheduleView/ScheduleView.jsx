@@ -27,7 +27,7 @@ import AlertDialog from "../../Alert/AlertDialog";
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
-	const [areaGroup, setAreaGroup] = useState('');
+	const [areaGroup, setAreaGroup] = useState("");
 	const today = new Date();
 
 	// Fetch schedule data from api
@@ -35,7 +35,6 @@ const Schedule = (props) => {
 		const startDate = moment(
 			startOfWeek(new Date(), { weekStartsOn: 1 })
 		).format("yyyy-MM-DD");
-
 		const endDate = moment(
 			endOfWeek(nextDay(today, getDay(today)), { weekStartsOn: 1 })
 		).format("yyyy-MM-DD");
@@ -69,7 +68,7 @@ const Schedule = (props) => {
 	};
 
 	useEffect(() => {
-		if (props.district && props.area){
+		if (props.district && props.area) {
 			fetchDistrictAreaScheduleItems();
 		}
 	}, [props.district || props.area]);
@@ -78,23 +77,24 @@ const Schedule = (props) => {
 		fetchScheduleItems();
 	}, [props.groupName]);
 
-	
 	// Filter according to group and selected date
-	let filteredScheduleItems = scheduleItems.filter(
-		(i) => {
-			// set initial areaGroup
-			if (scheduleItems.length > 1 && !areaGroup){
-				setAreaGroup(scheduleItems[0].group_name);
-			}
-			if (props.groupName && i.group_name === props.groupName){
-				return format(new Date(i.starting_period), "dd MMM yyyy", { locale: enGB }) ===
-				format(date, "dd MMM yyyy", { locale: enGB })
-			}else if(areaGroup && i.group_name === areaGroup){
-				return format(new Date(i.starting_period), "dd MMM yyyy", { locale: enGB }) ===
-				format(date, "dd MMM yyyy", { locale: enGB })
-			}
-		}			
-	);
+	let filteredScheduleItems = scheduleItems.filter((i) => {
+		// set initial areaGroup
+		if (scheduleItems.length > 1 && !areaGroup) {
+			setAreaGroup(scheduleItems[0].group_name);
+		}
+		if (props.groupName && i.group_name === props.groupName) {
+			return (
+				i.starting_period.substring(0, 10) ===
+				format(date, "yyyy-MM-dd", { locale: enGB })
+			);
+		} else if (areaGroup && i.group_name === areaGroup) {
+			return (
+				i.starting_period.substring(0, 10) ===
+				format(date, "yyyy-MM-dd", { locale: enGB })
+			);
+		}
+	});
 
 	// Remove duplicates
 	filteredScheduleItems = Array.from(
@@ -104,18 +104,6 @@ const Schedule = (props) => {
 			(a) => a.starting_period === starting_period
 		);
 	});
-
-	// Calculating total hours of power cuts
-	const totalHrs = filteredScheduleItems.reduce(
-		(a, item) =>
-			(a =
-				a +
-				Math.abs(
-					new Date(item.starting_period) - new Date(item.ending_period)
-				) /
-					36e5),
-		0
-	);
 
 	const modifiers = {
 		// Displays only two weeks (Current week and next week)
@@ -178,19 +166,19 @@ const Schedule = (props) => {
 				open={open}
 				handleClose={handleClose}
 				groupName={props.groupName}
-				areaGroup = {areaGroup}
+				areaGroup={areaGroup}
 			/>
-			<ScheduleContainer 
-				groupName={props.groupName} 
-				AreaGroup={areaGroup} 
-				handleClickOpen={handleClickOpen}>
+			<ScheduleContainer
+				groupName={props.groupName}
+				AreaGroup={areaGroup}
+				handleClickOpen={handleClickOpen}
+			>
 				<ScheduleItemsContainer
 					scheduleItemData={scheduleItems}
 					date={date}
 					groupName={props.groupName}
-					totalHrs={totalHrs}
 					district={props.district}
-					groupList={[...new Set(scheduleItems.map(item => item.group_name))]}
+					groupList={[...new Set(scheduleItems.map((item) => item.group_name))]}
 					setAreaGroup={setAreaGroup}
 				>
 					{/* {console.log('------------filteredScheduleItems: ', filteredScheduleItems)} */}

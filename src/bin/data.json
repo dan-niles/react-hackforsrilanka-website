@@ -1,0 +1,17 @@
+[
+	{
+		"starting_period": "2022-05-02T09:00:00+05:30",
+		"ending_period": "2022-05-02T11:30:00+05:30",
+		"group_name": "A"
+	},
+	{
+		"starting_period": "2022-05-03T09:00:00+05:30",
+		"ending_period": "2022-05-03T11:30:00+05:30",
+		"group_name": "A"
+	},
+	{
+		"starting_period": "2022-05-04T09:00:00+05:30",
+		"ending_period": "2022-05-04T11:30:00+05:30",
+		"group_name": "A"
+	}
+]
