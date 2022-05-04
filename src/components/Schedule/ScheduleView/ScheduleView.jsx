@@ -17,13 +17,16 @@ import { baseURL } from "../../../BaseApi";
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
+	const [areaGroup, setAreaGroup] = useState('');
+	// let areaGroup = '';
+	console.log('-------current date: ', date);
 
 	// Fetch schedule data from api
 	const fetchScheduleItems = () => {
 		console.log("date--------", date, "----schedul----", scheduleItems);
 		const startDate = moment(new Date(date)).format("yyyy-MM-DD");
 		const endDate = moment(new Date(date)).format("yyyy-MM-DD");
-		console.log("-------datees ---------", startDate, endDate);
+		// console.log("-------datees ---------", startDate, endDate);
 		return axios
 			.get(
 				baseURL +
@@ -35,16 +38,55 @@ const Schedule = (props) => {
 			});
 	};
 
+	// Fetch schedule data from api using state and city
+	const fetchDistrictAreaScheduleItems = () => {
+		console.log("date--------", date, "----schedul----", scheduleItems);
+		const startDate = moment(new Date(date)).format("yyyy-MM-DD");
+		const endDate = moment(new Date(date)).format("yyyy-MM-DD");
+		return axios
+			.get(
+				baseURL +
+					`/api/schedule-by-place/?district=${props.district}&area=${props.area}&from_date=${startDate}&to_date=${endDate}`
+			)
+			.then((res) => {
+				console.log("--------get schedule by district and area api -----", res);
+				setScheduleItems(res.data.data);
+			});
+	};
+
+
 	useEffect(() => {
 		fetchScheduleItems();
-	}, []);
+	}, [props.groupName]);
 
+	useEffect(() => {
+		fetchDistrictAreaScheduleItems();
+	}, [props.district || props.area]);
+
+	useEffect(() => {
+		if (props.district || props.area){
+			fetchDistrictAreaScheduleItems();
+		}else if (props.groupName){
+			fetchScheduleItems();
+		}
+	}, [date]);
+
+	
 	// Filter according to group and selected date
 	let filteredScheduleItems = scheduleItems.filter(
-		(i) =>
-			i.group_name === props.groupName &&
-			format(new Date(i.starting_period), "dd MMM yyyy", { locale: enGB }) ===
+		(i) => {
+			// set initial areaGroup
+			if (scheduleItems.length > 1 && !areaGroup){
+				setAreaGroup(scheduleItems[0].group_name);
+			}
+			if (props.groupName && i.group_name === props.groupName){
+				return format(new Date(i.starting_period), "dd MMM yyyy", { locale: enGB }) ===
 				format(date, "dd MMM yyyy", { locale: enGB })
+			}else if(areaGroup && i.group_name === areaGroup){
+				return format(new Date(i.starting_period), "dd MMM yyyy", { locale: enGB }) ===
+				format(date, "dd MMM yyyy", { locale: enGB })
+			}
+		}			
 	);
 
 	// Remove duplicates
@@ -96,15 +138,20 @@ const Schedule = (props) => {
 		orangeClass: "-orange-ring",
 		grayClass: "-gray-ring",
 	};
+    // console.log("------area group -------",areaGroup);
 
 	return (
-		<ScheduleContainer groupName={props.groupName}>
+		<ScheduleContainer groupName={props.groupName} AreaGroup = {areaGroup}>
 			<ScheduleItemsContainer
 				scheduleItemData={scheduleItems}
 				date={date}
 				groupName={props.groupName}
 				totalHrs={totalHrs}
+				district={props.district}
+				groupList={[...new Set(scheduleItems.map(item => item.group_name))]}
+				setAreaGroup={setAreaGroup}
 			>
+				{/* {console.log('------------filteredScheduleItems: ', filteredScheduleItems)} */}
 				{filteredScheduleItems.map((i) => (
 					<ScheduleItem
 						key={i.unique_id}

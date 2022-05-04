@@ -1,11 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Button from "@mui/material/Button";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import AlertDialog from "../../Alert/AlertDialog";
 
-const ScheduleContainer = (props) => {
-	const myRef = useRef(null);
+// let statusCode = ""
 
+const ScheduleContainer = (props) => {
+	const [subscribed, setSubscribed] = useState();
+	const myRef = useRef(null);
+    console.log("-----props-------",props);
 	if (myRef.current != null) {
 		myRef.current.scrollIntoView();
 	}
@@ -20,12 +23,35 @@ const ScheduleContainer = (props) => {
 		setOpen(false);
 	};
 
+ const subscribeBtn = 	<Button
+							variant="outlined"
+							startIcon={<NotificationsActiveIcon />}
+							size="large"
+							onClick={handleClickOpen}
+							color="success"
+						>
+						Subscribe To This Group
+						</Button>;
+
+const subscribedBtn = 	<Button
+							variant="outlined"
+							startIcon={<NotificationsActiveIcon />}
+							size="large"
+							onClick={handleClickOpen}
+							color="success"
+						>
+						Subscribed
+						</Button> 
+
+
+
 	return (
 		<>
 			<AlertDialog
 				open={open}
 				handleClose={handleClose}
 				groupName={props.groupName}
+				areaGroup={props.AreaGroup}
 			/>
 			<header className="header-center py-4 bg-dark" ref={myRef}>
 				<div className="container my-2">
@@ -34,15 +60,8 @@ const ScheduleContainer = (props) => {
 							<h2 className="fw-bolder">Power-Cut Schedule</h2>
 						</div>
 						<div className="col-12 col-md-6 text-center text-md-end">
-							<Button
-								variant="outlined"
-								startIcon={<NotificationsActiveIcon />}
-								size="large"
-								onClick={handleClickOpen}
-								color="success"
-							>
-								Subscribe To This Group
-							</Button>
+							{/* {subscribeBtn} */}
+							{localStorage.getItem("status")?subscribedBtn:subscribeBtn}
 						</div>
 					</div>
 

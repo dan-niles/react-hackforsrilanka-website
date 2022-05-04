@@ -26,12 +26,26 @@ const ScheduleItemsContainer = (props) => {
       })
     : "";
 
-  console.log("-------ssdfsds", props.scheduleItemData);
   useEffect(() => {
     setScheduleTime(props.scheduleItemData);
   }, [props.scheduleItemData]);
 
+
   console.log("---------data--------", scheduleTime);
+
+  let getGroupScheduleBadge = <span className="badge bg-warning text-dark">
+                                  {props.groupName}
+                                </span>;
+
+  let getAreaSheduleSelectBadge = <select 
+                                    className="badge bg-warning text-dark" 
+                                    onChange={(event) => {
+                                      props.setAreaGroup(event.target.value);
+                                    }}>
+                                    {props.groupList.map((item, index) => {
+                                      return <option key={index} value={item}>{item}</option>
+                                    })}
+                                  </select>
 
   return (
     <div className="col-sm-6 col-12 d-flex pa-sm order-md-2">
@@ -48,9 +62,10 @@ const ScheduleItemsContainer = (props) => {
               <div className="text-end">
                 Group{" "}
                 <h3 className="d-inlines">
-                  <span className="badge bg-warning text-dark">
+                  {(props.district) ? getAreaSheduleSelectBadge : getGroupScheduleBadge}
+                  {/* <span className="badge bg-warning text-dark">
                     {props.groupName}
-                  </span>
+                  </span> */}
                 </h3>
               </div>
             </div>

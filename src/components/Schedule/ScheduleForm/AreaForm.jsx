@@ -31,7 +31,7 @@ const AreaForm = () => {
 		e.preventDefault();
 		navigate({
 			pathname: "/schedule",
-			search: "?group=A",
+			search: `?group=&district=${districtSelect}&area=${areaSelect}`,
 		});
 	};
 
@@ -39,7 +39,7 @@ const AreaForm = () => {
 		axios
 			.get(baseURL + "/api/all-gcc/?gcc=")
 			.then((res) => {
-				console.log("-------district--------", res);
+				 console.log("-------district--------", res);
 				setDistrictList(res.data.data);
 			})
 			.catch((errr) => {
@@ -88,7 +88,7 @@ const AreaForm = () => {
 							required
 						>
 							{districtList?.map((item, index) => {
-								console.log("------dist namesssss", item);
+								// console.log("------dist namesssss", item);
 								return (
 									<MenuItem value={item} key={index}>
 										{item}

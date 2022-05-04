@@ -7,10 +7,14 @@ import ScheduleForm from "../components/Schedule/ScheduleForm/ScheduleForm";
 const Schedule = () => {
 	// selecting group from URL
 	let groupName = "";
+	let district = "";
+	let area = "";
 
 	const [searchParams, setSearchParams] = useSearchParams();
 	if (searchParams.get("group") != null) {
 		groupName = searchParams.get("group");
+		district = searchParams.get("district");
+		area = searchParams.get("area")
 		console.log("-------group name----------",groupName);
 	}
 
@@ -19,7 +23,7 @@ const Schedule = () => {
 			<ScheduleForm groupName={groupName} />
 
 			{/* shows calender and power-cut times after the group is selected */}
-			{groupName && <ScheduleView groupName={groupName} />}
+			{(groupName || district) && <ScheduleView groupName={groupName} district={district} area={area} />}
 		</AnimatedPage>
 	);
 };
