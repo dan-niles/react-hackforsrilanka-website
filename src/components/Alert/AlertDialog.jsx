@@ -179,7 +179,7 @@ const AlertDialog = (props) => {
 								value={otp}
 								placeholder="______"
 								onChange={(e) => setOtp(e)}
-								// numInputs={6}
+								numInputs={6}
 								errorStyle={{
 									width: "60px",
 									height: "60px",
