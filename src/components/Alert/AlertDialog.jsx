@@ -145,8 +145,8 @@ const AlertDialog = (props) => {
 				<DialogTitle>Subscribe to Group {props.groupName}</DialogTitle>
 				<DialogContent>
 					<DialogContentText>
-						To subscribe to this group, please enter your phone number here. We
-						will send updates occasionally.
+						To subscribe to this group, please enter your name and phone number
+						here. We will send updates occasionally.
 					</DialogContentText>
 					<span className="text-danger">{allRegErr}</span>
 					<TextField
@@ -203,7 +203,7 @@ const AlertDialog = (props) => {
 								className="otp_value"
 								name="otp"
 								isInputNum={true}
-								numInputs={true}
+								// numInputs={true}
 								hasErrored={otpErr}
 								value={otp}
 								placeholder="______"
