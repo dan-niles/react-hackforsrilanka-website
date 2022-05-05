@@ -44,16 +44,6 @@ const ScheduleContainer = (props) => {
 							variant="outlined"
 							startIcon={<NotificationsActiveIcon />}
 							size="large"
-							onClick={props.handleClickUnsubscribe}
-							color="info"
-							className="fw-bold d-none mx-2 d-md-inline"
-						>
-							Unsubscribe for Notifications
-						</Button>
-						<Button
-							variant="outlined"
-							startIcon={<NotificationsActiveIcon />}
-							size="large"
 							onClick={props.handleClickOpen}
 							color="info"
 							className="fw-bold d-none d-md-inline"

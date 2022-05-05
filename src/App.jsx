@@ -7,6 +7,7 @@ import Schedule from "./routes/Schedule";
 import About from "./routes/About";
 import Contact from "./routes/Contact";
 import ErrorPage from "./routes/ErrorPage";
+import Unsubscribe from "./components/Unsubscribe/Unsubscribe"
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -34,6 +35,7 @@ function App() {
 						<Route path="about" element={<About />} />
 						<Route path="contact" element={<Contact />} />
 						<Route path="*" element={<ErrorPage />} />
+						<Route path="/unsubscribe" element={<Unsubscribe />} />
 					</Routes>
 					<Footer />
 				</main>
