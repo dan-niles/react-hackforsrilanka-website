@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ReactGA from "react-ga";
 
 import Home from "./routes/Home";
 import Schedule from "./routes/Schedule";
@@ -9,11 +11,17 @@ import ErrorPage from "./routes/ErrorPage";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
+import { ColorModeContextProvider } from "./contexts/color-mode";
 import "./assets/css/styles.css";
 
-import { ColorModeContextProvider } from "./contexts/color-mode";
+const TRACKING_ID = "UA-225410687-1";
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
+	useEffect(() => {
+		ReactGA.pageview(window.location.pathname + window.location.search);
+	}, []);
+
 	return (
 		<ColorModeContextProvider>
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
