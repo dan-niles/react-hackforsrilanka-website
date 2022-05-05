@@ -17,7 +17,7 @@ function App() {
 	return (
 		<ColorModeContextProvider>
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
-				<main className="flex-shrink-0">
+				<main className="d-flex flex-column flex-shrink-0 min-vh-100 h-100">
 					<Navbar />
 					<Routes>
 						{/* these pages can be found within the './routes' folder */}
@@ -27,8 +27,8 @@ function App() {
 						<Route path="contact" element={<Contact />} />
 						<Route path="*" element={<ErrorPage />} />
 					</Routes>
+					<Footer />
 				</main>
-				<Footer />
 			</BrowserRouter>
 		</ColorModeContextProvider>
 	);

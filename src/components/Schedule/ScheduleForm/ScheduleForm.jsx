@@ -27,7 +27,7 @@ const ScheduleForm = (props) => {
 	};
 
 	return (
-		<header className="header-center py-5">
+		<header className="header-centers py-5">
 			<div className="container px-3 px-md-5">
 				<div className="text-center mb-5">
 					<h1 className="fw-bolder">Select Your Group / Area</h1>

@@ -90,7 +90,7 @@ const Home = () => {
 									>
 										Get Started
 									</Button>
-									<Button
+									{/* <Button
 										className="text-capitalize text-lowercase fw-bold fs-6"
 										color="info"
 										variant="outlined"
@@ -98,7 +98,7 @@ const Home = () => {
 										onClick={handleOpenGuide}
 									>
 										Get Help
-									</Button>
+									</Button> */}
 								</div>
 							</div>
 						</div>
