@@ -73,7 +73,7 @@ const Navbar = () => {
 							component="div"
 							sx={{
 								flexGrow: 1,
-								ml: 1,
+								ml:1,
 								color: appTheme.palette.mode === "dark" ? "white" : "black",
 								fontWeight: 600,
 							}}

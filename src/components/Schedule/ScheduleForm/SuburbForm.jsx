@@ -45,7 +45,7 @@ const SuburbForm = () => {
 
 	useEffect(() => {
 		axios
-			.get(baseURL + "/api/all-gcc/?gcc=")
+			.get(baseURL + "/api/all-gss/?gss=")
 			.then((res) => {
 				setDistrictList(res.data.data);
 				setisLoading(false);
@@ -56,7 +56,7 @@ const SuburbForm = () => {
 	useEffect(() => {
 		if (districtSelect) {
 			axios
-				.get(baseURL + `/api/all-area/?gcc=${districtSelect}`)
+				.get(baseURL + `/api/all-area/?gss=${districtSelect}`)
 				.then((res) => {
 					setAreaList(res.data.data);
 				})

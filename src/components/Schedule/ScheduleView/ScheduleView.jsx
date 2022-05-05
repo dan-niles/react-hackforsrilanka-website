@@ -169,18 +169,25 @@ const Schedule = (props) => {
 	});
 	// For opening/closing subscribe modal
 	const [open, setOpen] = React.useState(false);
+	const [unSub, setUnSub] = useState(false);
 
 	const handleClickOpen = () => {
+		setUnSub(false);
 		setOpen(true);
 	};
 
 	const handleClose = () => {
 		setOpen(false);
 	};
+	const handleClickUnsubscribe = ()=>{
+		setUnSub(true);
+         setOpen(true); 
+	}
 
 	return (
 		<>
 			<AlertDialog
+			    unSub={unSub}
 				open={open}
 				handleClose={handleClose}
 				groupName={props.groupName}
@@ -190,9 +197,11 @@ const Schedule = (props) => {
 				groupName={props.groupName}
 				AreaGroup={areaGroup}
 				handleClickOpen={handleClickOpen}
+				handleClickUnsubscribe = {handleClickUnsubscribe}
 			>
 				<ScheduleItemsContainer
 					handleClickOpen={handleClickOpen}
+					handleClickUnsubscribe={handleClickUnsubscribe}
 					scheduleItemData={scheduleItems}
 					date={date}
 					groupName={props.groupName}

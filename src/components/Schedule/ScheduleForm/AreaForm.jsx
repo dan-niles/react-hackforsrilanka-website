@@ -38,7 +38,7 @@ const AreaForm = () => {
 
 	useEffect(() => {
 		axios
-			.get(baseURL + "/api/all-gcc/?gcc=")
+			.get(baseURL + "/api/all-gss/")
 			.then((res) => {
 				setDistrictList(res.data.data);
 				setisLoading(false);
@@ -49,7 +49,7 @@ const AreaForm = () => {
 	useEffect(() => {
 		if (districtSelect) {
 			axios
-				.get(baseURL + `/api/all-area/?gcc=${districtSelect}`)
+				.get(baseURL + `/api/all-area/?gss=${districtSelect}`)
 				.then((res) => {
 					setAreaList(res.data.data);
 				})

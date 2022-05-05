@@ -6,7 +6,6 @@ import { useTheme } from "@mui/material/styles";
 // let statusCode = ""
 
 const ScheduleContainer = (props) => {
-	const [subscribed, setSubscribed] = useState();
 	const appTheme = useTheme();
 	const myRef = useRef(null);
 	if (myRef.current != null) {
@@ -14,6 +13,7 @@ const ScheduleContainer = (props) => {
 	}
 
 	const [open, setOpen] = React.useState(false);
+	const [sub, setSub] = useState(true);
 
 	const handleClickOpen = () => {
 		setOpen(true);
@@ -22,6 +22,9 @@ const ScheduleContainer = (props) => {
 	const handleClose = () => {
 		setOpen(false);
 	};
+    const handleClickUnsubscribe = ()=>{
+		setSub(false);
+	}
 
 	return (
 		<header
@@ -41,12 +44,22 @@ const ScheduleContainer = (props) => {
 							variant="outlined"
 							startIcon={<NotificationsActiveIcon />}
 							size="large"
+							onClick={props.handleClickUnsubscribe}
+							color="info"
+							className="fw-bold d-none mx-2 d-md-inline"
+						>
+							Unsubscribe for Notifications
+						</Button>
+						<Button
+							variant="outlined"
+							startIcon={<NotificationsActiveIcon />}
+							size="large"
 							onClick={props.handleClickOpen}
 							color="info"
 							className="fw-bold d-none d-md-inline"
 						>
 							Subscribe for Notifications
-						</Button>
+						</Button> 
 						{/* Mobile button */}
 						<Button
 							variant="outlined"
