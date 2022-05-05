@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import GroupForm from "./GroupForm";
 import AreaForm from "./AreaForm";
+import SuburbForm from "./SuburbForm";
 
 import { ToggleButtonGroup, ToggleButton } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
@@ -10,16 +11,18 @@ const ScheduleForm = (props) => {
 	const appTheme = useTheme();
 
 	const [toggle, setToggle] = useState("groupToggle");
-	const [showAreaForm, setShowAreaForm] = useState(false);
+	const [showFormType, setShowFormType] = useState("group");
 
 	const handleToggleChange = (event, newVal) => {
 		if (newVal !== null) {
 			setToggle(newVal);
 		}
 		if (newVal === "groupToggle") {
-			setShowAreaForm(false);
+			setShowFormType("group");
+		} else if (newVal === "suburbToggle") {
+			setShowFormType("suburb");
 		} else if (newVal === "areaToggle") {
-			setShowAreaForm(true);
+			setShowFormType("area");
 		}
 	};
 
@@ -38,6 +41,7 @@ const ScheduleForm = (props) => {
 							color={appTheme.palette.mode === "dark" ? "warning" : "error"}
 						>
 							<ToggleButton value="groupToggle">Search by Group</ToggleButton>
+							<ToggleButton value="suburbToggle">Search by Suburb</ToggleButton>
 							<ToggleButton value="areaToggle">Search by Location</ToggleButton>
 						</ToggleButtonGroup>
 					</div>
@@ -45,8 +49,11 @@ const ScheduleForm = (props) => {
 				<div className="row align-items-center justify-content-center">
 					<div className="col-12 col-lg-6">
 						<div className="card p-lg-5 p-4">
-							{!showAreaForm && <GroupForm groupName={props.groupName} />}
-							{showAreaForm && <AreaForm />}
+							{showFormType === "group" && (
+								<GroupForm groupName={props.groupName} />
+							)}
+							{showFormType === "suburb" && <SuburbForm />}
+							{showFormType === "area" && <AreaForm />}
 						</div>
 					</div>
 				</div>

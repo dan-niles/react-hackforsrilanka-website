@@ -2,22 +2,29 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import InputLabel from "@mui/material/InputLabel";
+import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useTheme } from "@mui/material/styles";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 
 import axios from "axios";
 import { baseURL } from "../../../BaseApi";
 
-const AreaForm = () => {
+const SuburbForm = () => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(false);
 
 	let navigate = useNavigate();
 	const [areaList, setAreaList] = useState();
 	const [districtList, setDistrictList] = useState();
+
+	const [suburbSelect, setSuburbSelect] = useState("");
+	const handleSuburbSelectChange = (event) => {
+		setSuburbSelect(event.target.value);
+	};
+
 	const [districtSelect, setDistrictSelect] = useState("");
 	const handleDistrictSelectChange = (event) => {
 		setDistrictSelect(event.target.value);
@@ -75,57 +82,68 @@ const AreaForm = () => {
 						justifyContent: "space-between",
 					}}
 				>
-					Search by Location <LocationOnIcon />
+					Search by Suburb <ApartmentIcon />
 				</h4>
-				<p className="text-white-50 fw-light mb-2">
-					Don't know your group? Try picking your district and city here...
+				<p
+					className="text-white-50 fw-light mb-2"
+					style={{ fontSize: "0.9em" }}
+				>
+					Do you live in any of the following suburbs?
+					<br /> Batticaloa, Colombo, Dehiwala-Mount Lavinia, Jaffna, Negombo,
+					Kotte or Moratuwa. If so, search for schedule below...
 				</p>
 				<div className="form-group col-12">
-					<FormControl fullWidth>
-						<InputLabel id="district-select">District</InputLabel>
-						<Select
-							labelId="district-select-label"
-							id="district-select"
-							label="District"
-							value={districtSelect}
-							onChange={handleDistrictSelectChange}
-							name="district"
-							required
-						>
-							{districtList?.map((item, index) => {
-								//
-								return (
-									<MenuItem value={item} key={index}>
-										{item}
-									</MenuItem>
-								);
-							})}
-							{/* <MenuItem value="Colombo">Colombo</MenuItem> */}
-						</Select>
-					</FormControl>
+					<TextField
+						size="small"
+						label="Suburb"
+						select
+						value={suburbSelect}
+						onChange={handleSuburbSelectChange}
+						required
+						fullWidth
+					>
+						<MenuItem value="Colombo">Colombo</MenuItem>
+					</TextField>
 				</div>
 				<div className="form-group col-12 mt-3">
-					<FormControl fullWidth>
-						<InputLabel id="district-select">Area</InputLabel>
-						<Select
-							labelId="area-select-label"
-							id="area-select"
-							label="Area"
-							value={areaSelect}
-							onChange={handleAreaSelectChange}
-							name="area"
-							required
-						>
-							{areaList?.map((item, index) => {
-								return (
-									<MenuItem value={item} key={index}>
-										{item}
-									</MenuItem>
-								);
-							})}
-							{/* <MenuItem value="Mount Lavinia">Mount Lavinia</MenuItem> */}
-						</Select>
-					</FormControl>
+					<TextField
+						select
+						size="small"
+						label="GSS"
+						value={districtSelect}
+						onChange={handleDistrictSelectChange}
+						name="district"
+						required
+						fullWidth
+					>
+						{districtList?.map((item, index) => {
+							return (
+								<MenuItem value={item} key={index}>
+									{item}
+								</MenuItem>
+							);
+						})}
+					</TextField>
+				</div>
+				<div className="form-group col-12 mt-3">
+					<TextField
+						select
+						size="small"
+						label="Area"
+						value={areaSelect}
+						onChange={handleAreaSelectChange}
+						name="area"
+						required
+						fullWidth
+					>
+						{areaList?.map((item, index) => {
+							return (
+								<MenuItem value={item} key={index}>
+									{item}
+								</MenuItem>
+							);
+						})}
+					</TextField>
 				</div>
 				<div className="form-group col-12 mt-4 text-center">
 					<button
@@ -141,4 +159,4 @@ const AreaForm = () => {
 	);
 };
 
-export default AreaForm;
+export default SuburbForm;
