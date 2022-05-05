@@ -28,6 +28,8 @@ const AlertDialog = (props) => {
 	const [nameErr, setNameErr] = useState();
 	const [showLoad, setShowLoad] = useState(false);
 	const [allRegErr, setAllRegErr] = useState();
+	const [reSubBtn, setReSubBtn] = useState(false);
+	const [showSubBtn, setShowSubBtn] = useState(false);
 
 
 	useEffect(() => {
@@ -64,17 +66,41 @@ const AlertDialog = (props) => {
 				)
 				.then((res) => {
 					setShowLoad(false);
+					setShowSubBtn(true);
 					setError("");
 					setShowOtpBox(true);
 					setSecretKey(res.data.secret_key);
 				})
 				.catch((errr) => {
-                    console.log("-------errr-------------",errr.response)
+					setShowSubBtn(true)
 					setShowLoad(false);
 					setAllRegErr(errr.response.data.errors);
+					setReSubBtn(true)
+					setShowOtpBox(false);
 				});
 		}
 	};
+
+	const getReSubscription = ()=>{
+		setShowLoad(true);
+		setShowOtpBox(false);
+		return axios.post(baseURL + "/api/change-group/",
+		{
+			mobile_number: phoneNum,
+			name: name,
+			group_name: groupName,
+		},
+		{
+			headers: { Accept: "application/json" },
+		}
+		).then((res)=>{
+			setSecretKey(res.data.secret_key);
+			setReSubBtn(false);
+			setShowLoad(false);
+            setShowOtpBox(true)
+		}).catch((errr)=>{
+		})
+	}
 
 	const verifyOtp = () => {
 		const data = { otp, name, areaName, groupName, phoneNum, secretKey };
@@ -103,7 +129,6 @@ const AlertDialog = (props) => {
 				});
 				setName("");
 				setPhoneNum("");
-				setShowOtpBox(false);
 				setShowLoad(false);
 				setAllRegErr("");
 			})
@@ -168,7 +193,7 @@ const AlertDialog = (props) => {
 						color="info"
 					/>
 					<span className="text-danger">{error}</span>
-					{showOtpBox && (
+					{showOtpBox&& (
 						<div className="py-3">
 							<h5>Enter Otp</h5>
 							<OtpInput
@@ -222,12 +247,20 @@ const AlertDialog = (props) => {
 					<Button onClick={props.handleClose} color="secondary">
 						Cancel
 					</Button>
-					{!showOtpBox && (
+					{!showSubBtn &&(
 						<Button onClick={getSubscription} color="info" disabled={showLoad}>
 							{/* onClick={props.handleClose} */}
-							Subscribe
+							subscribe
 						</Button>
 					)}
+					{reSubBtn &&
+						(
+							<Button onClick={getReSubscription} color="info" disabled={showLoad}>
+								{/* onClick={props.handleClose} */}
+							 Resubscribe
+							</Button>
+						)
+					}
 				</DialogActions>
 			</FormControl>
 		</Dialog>
