@@ -28,7 +28,7 @@ const ScheduleContainer = (props) => {
 
 	return (
 		<header
-			className={`header-center py-1 py-md-4 ${
+			className={`header-centers py-1 py-md-4 ${
 				appTheme.palette.mode === "dark" ? "" : ""
 			}`}
 			ref={myRef}

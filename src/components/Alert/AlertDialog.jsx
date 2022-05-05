@@ -33,12 +33,11 @@ const AlertDialog = (props) => {
   const [mobileNum, setMobileNum] = useState();
   const [unSubErr, setUnSubErr] = useState();
 
-  console.log("---------props-------------", props);
 
   useEffect(() => {
     setGroupName(props.areaGroup);
   }, [props.areaGroup]);
-
+	
   useEffect(() => {
     setGroupName(props.groupName);
   }, [props.groupName]);
@@ -172,7 +171,6 @@ const AlertDialog = (props) => {
 	  })
 	}
   }
-
   return (
     <Dialog open={props.open} onClose={props.handleClose}>
       {!props.unSub ? (
@@ -317,7 +315,7 @@ const AlertDialog = (props) => {
           <DialogTitle>Unsubscribe to Notifications </DialogTitle>
           <DialogContent>
             <DialogContentText>
-              To unsubscribe to notifications, please enter your phone number here.
+              To unsubscribe from notifications, please enter your phone number here.
             </DialogContentText>
             <span className="text-danger">{allRegErr}</span>
             <TextField

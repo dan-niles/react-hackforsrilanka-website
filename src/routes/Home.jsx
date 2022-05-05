@@ -73,7 +73,7 @@ const Home = () => {
 									Find Your Power Cut Schedule!
 								</h1>
 								<p className="lead fw-normal text-white-50 mb-4 lh-sm">
-									Keep track of power-cuts and subscribe to receive
+									Keep track of power-cuts and subscribe to receive free text
 									notifications
 								</p>
 								<div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
@@ -90,7 +90,7 @@ const Home = () => {
 									>
 										Get Started
 									</Button>
-									<Button
+									{/* <Button
 										className="text-capitalize text-lowercase fw-bold fs-6"
 										color="info"
 										variant="outlined"
@@ -98,7 +98,7 @@ const Home = () => {
 										onClick={handleOpenGuide}
 									>
 										Get Help
-									</Button>
+									</Button> */}
 								</div>
 							</div>
 						</div>

@@ -105,7 +105,7 @@ const SuburbForm = () => {
 						<MenuItem value="Colombo">Colombo</MenuItem>
 					</TextField>
 				</div>
-				<div className="form-group col-12 mt-3">
+				<div className="form-group col-12 mt-2">
 					<TextField
 						select
 						size="small"
@@ -125,7 +125,7 @@ const SuburbForm = () => {
 						})}
 					</TextField>
 				</div>
-				<div className="form-group col-12 mt-3">
+				<div className="form-group col-12 mt-2">
 					<TextField
 						select
 						size="small"
