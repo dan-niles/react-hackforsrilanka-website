@@ -35,16 +35,16 @@ const Schedule = (props) => {
 	const [areaGroup, setAreaGroup] = useState('');
 	const forceUpdate = useForceUpdate();
 	const today = new Date();
+	const minDate = startOfWeek(today, { weekStartsOn: 1 });
+	const maxDate = endOfWeek(nextDay(today, getDay(today)), {
+		weekStartsOn: 1,
+	});
 
 	// Fetch schedule data from api
 	const fetchScheduleItems = () => {
-		const startDate = moment(
-			startOfWeek(new Date(), { weekStartsOn: 1 })
-		).format("yyyy-MM-DD");
+		const startDate = moment(minDate).format("yyyy-MM-DD");
 
-		const endDate = moment(
-			endOfWeek(nextDay(today, getDay(today)), { weekStartsOn: 1 })
-		).format("yyyy-MM-DD");
+		const endDate = moment(maxDate).format("yyyy-MM-DD");
 		return axios
 			.get(
 				baseURL +
@@ -57,13 +57,9 @@ const Schedule = (props) => {
 
 	// Fetch schedule data from api using state and city
 	const fetchDistrictAreaScheduleItems = () => {
-		const startDate = moment(
-			startOfWeek(new Date(), { weekStartsOn: 1 })
-		).format("yyyy-MM-DD");
+		const startDate = moment(minDate).format("yyyy-MM-DD");
 
-		const endDate = moment(
-			endOfWeek(nextDay(today, getDay(today)), { weekStartsOn: 1 })
-		).format("yyyy-MM-DD");
+		const endDate = moment(maxDate).format("yyyy-MM-DD");
 		return axios
 			.get(
 				baseURL +
@@ -99,25 +95,24 @@ const Schedule = (props) => {
 		}
 	}, [props.groupName]);
 
-	
 	// Filter according to group and selected date
-	
-	let filteredScheduleItems = scheduleItems.filter(
-		(i) => {
-			// set initial areaGroup
-			if (scheduleItems.length > 1 && !areaGroup){
-				setAreaGroup(scheduleItems[0].group_name);
-				console.log("--group__",scheduleItems[0].group_name)
-			}
-			if (props.groupName && i.group_name === props.groupName){
-				return format(new Date(i.starting_period), "dd MMM yyyy", { locale: enGB }) ===
-				format(date, "dd MMM yyyy", { locale: enGB })
-			}else if(areaGroup && i.group_name === areaGroup){
-				return format(new Date(i.starting_period), "dd MMM yyyy", { locale: enGB }) ===
-				format(date, "dd MMM yyyy", { locale: enGB })
-			}
-		}			
-	);
+	let filteredScheduleItems = scheduleItems.filter((i) => {
+		// set initial areaGroup
+		if (scheduleItems.length > 1 && !areaGroup) {
+			setAreaGroup(scheduleItems[0].group_name);
+		}
+		if (props.groupName && i.group_name === props.groupName) {
+			return (
+				i.starting_period.substring(0, 10) ===
+				format(date, "yyyy-MM-dd", { locale: enGB })
+			);
+		} else if (areaGroup && i.group_name === areaGroup) {
+			return (
+				i.starting_period.substring(0, 10) ===
+				format(date, "yyyy-MM-dd", { locale: enGB })
+			);
+		}
+	});
 
 	// Remove duplicates
 	filteredScheduleItems = Array.from(
@@ -127,18 +122,6 @@ const Schedule = (props) => {
 			(a) => a.starting_period === starting_period
 		);
 	});
-
-	// Calculating total hours of power cuts
-	const totalHrs = filteredScheduleItems.reduce(
-		(a, item) =>
-			(a =
-				a +
-				Math.abs(
-					new Date(item.starting_period) - new Date(item.ending_period)
-				) /
-					36e5),
-		0
-	);
 
 	const modifiers = {
 		// Displays only two weeks (Current week and next week)
@@ -201,19 +184,20 @@ const Schedule = (props) => {
 				open={open}
 				handleClose={handleClose}
 				groupName={props.groupName}
-				areaGroup = {areaGroup}
+				areaGroup={areaGroup}
 			/>
-			<ScheduleContainer 
-				groupName={props.groupName} 
-				AreaGroup={areaGroup} 
-				handleClickOpen={handleClickOpen}>
+			<ScheduleContainer
+				groupName={props.groupName}
+				AreaGroup={areaGroup}
+				handleClickOpen={handleClickOpen}
+			>
 				<ScheduleItemsContainer
+					handleClickOpen={handleClickOpen}
 					scheduleItemData={scheduleItems}
 					date={date}
 					groupName={props.groupName}
-					totalHrs={totalHrs}
 					district={props.district}
-					groupList={[...new Set(scheduleItems.map(item => item.group_name))]}
+					groupList={[...new Set(scheduleItems.map((item) => item.group_name))]}
 					setAreaGroup={setAreaGroup}
 				>
 					{/* {console.log('------------filteredScheduleItems: ', filteredScheduleItems)} */}
@@ -260,7 +244,12 @@ const Schedule = (props) => {
 
 				{/* Hide the calendar on mobile and show a datepicker */}
 				<div className="col-12 mt-4 mb-4 order-md-1 d-block d-md-none">
-					<ScheduleDatePicker date={date} setDate={setDate} />
+					<ScheduleDatePicker
+						date={date}
+						setDate={setDate}
+						maxDate={maxDate}
+						minDate={minDate}
+					/>
 				</div>
 			</ScheduleContainer>
 		</>

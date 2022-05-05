@@ -38,34 +38,42 @@ const ScheduleItemsContainer = (props) => {
 		setScheduleTime(props.scheduleItemData);
 	}, [props.scheduleItemData]);
 
-  useEffect(() => {
-    setScheduleTime(props.scheduleItemData);
-  }, [props.scheduleItemData]);
+	useEffect(() => {
+		setScheduleTime(props.scheduleItemData);
+	}, [props.scheduleItemData]);
 
+	let getGroupScheduleBadge = (
+		<span
+			className={`badge ${
+				appTheme.palette.mode === "dark"
+					? "bg-warning text-dark"
+					: "bg-danger text-light"
+			}`}
+		>
+			{props.groupName}
+		</span>
+	);
 
-
-  let getGroupScheduleBadge = <span className={`badge ${
-                                  appTheme.palette.mode === "dark"
-                                    ? "bg-warning text-dark"
-                                    : "bg-danger text-light"
-                                }`}>
-                                  {props.groupName}
-                                </span>;
-
-  let getAreaSheduleSelectBadge = <select 
-                                    className={`badge ${
-                                        appTheme.palette.mode === "dark"
-                                          ? "bg-warning text-dark"
-                                          : "bg-danger text-light"
-                                      }`} 
-                                    onChange={(event) => {
-                                      props.setAreaGroup(event.target.value);
-                                    }}>
-                                    {props.groupList.map((item, index) => {
-                                      return <option key={index} value={item}>{item}</option>
-                                    })}
-                                  </select>
-
+	let getAreaSheduleSelectBadge = (
+		<select
+			className={`badge ${
+				appTheme.palette.mode === "dark"
+					? "bg-warning text-dark"
+					: "bg-danger text-light"
+			}`}
+			onChange={(event) => {
+				props.setAreaGroup(event.target.value);
+			}}
+		>
+			{props.groupList.map((item, index) => {
+				return (
+					<option key={index} value={item}>
+						{item}
+					</option>
+				);
+			})}
+		</select>
+	);
 
 	const shareClickHandler = async () => {
 		const title = `${document.title} - Power Cut Schedule for Group ${props.groupName}`;
@@ -100,7 +108,9 @@ const ScheduleItemsContainer = (props) => {
 							<div className="text-end">
 								Group
 								<h3 className="d-inlines">
-               					    {(props.district) ? getAreaSheduleSelectBadge : getGroupScheduleBadge}
+									{props.district
+										? getAreaSheduleSelectBadge
+										: getGroupScheduleBadge}
 									{/* <span
 										className={`badge ${
 											appTheme.palette.mode === "dark"
@@ -158,17 +168,15 @@ const ScheduleItemsContainer = (props) => {
 						<div className="col">
 							<div className="text-end">
 								<h5 className="d-inline">
-									{props.children.length > 0 && (
-										<Button
-											variant="outlined"
-											startIcon={<ShareIcon />}
-											size="small"
-											color="success"
-											onClick={shareClickHandler}
-										>
-											Share
-										</Button>
-									)}
+									<Button
+										variant="outlined"
+										startIcon={<ShareIcon />}
+										size="small"
+										color="success"
+										onClick={shareClickHandler}
+									>
+										Share
+									</Button>
 								</h5>
 							</div>
 						</div>

@@ -8,14 +8,14 @@ const ScheduleItem = (props) => {
 		.toLocaleTimeString("en", {
 			timeStyle: "short",
 			hour12: true,
-			timeZone: "UTC",
+			timeZone: "Asia/Colombo",
 		})
 		.split(" ");
 	const [endTime1, endTime2] = endPeriod
 		.toLocaleTimeString("en", {
 			timeStyle: "short",
 			hour12: true,
-			timeZone: "UTC",
+			timeZone: "Asia/Colombo",
 		})
 		.split(" ");
 
