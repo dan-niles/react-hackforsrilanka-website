@@ -269,7 +269,7 @@ const Schedule = (props) => {
 				</div>
 
 				{/* Hide the calendar on mobile and show a datepicker */}
-				<div className="col-12 mt-4 mb-4 order-md-1 d-block d-md-none">
+				<div className="col-12 mt-2 mb-3 order-md-1 d-block d-md-none">
 					<ScheduleDatePicker
 						date={date}
 						setDate={setDate}

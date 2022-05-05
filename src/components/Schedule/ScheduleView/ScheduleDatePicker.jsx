@@ -77,27 +77,6 @@ const ScheduleDatePicker = (props) => {
 	return (
 		<>
 			<Stack
-				className="mb-2"
-				direction="row"
-				justifyContent="center"
-				alignItems="center"
-				spacing={1}
-			>
-				<Button
-					variant="outlined"
-					startIcon={<TodayIcon />}
-					size="small"
-					color="secondary"
-					onClick={() => {
-						props.setDate(today);
-						setDisableNext(false);
-						setDisablePrev(false);
-					}}
-				>
-					Today
-				</Button>
-			</Stack>
-			<Stack
 				direction="row"
 				justifyContent="center"
 				alignItems="center"
@@ -135,6 +114,27 @@ const ScheduleDatePicker = (props) => {
 				>
 					<ChevronRightIcon />
 				</IconButton>
+			</Stack>
+			<Stack
+				className="mt-2"
+				direction="row"
+				justifyContent="center"
+				alignItems="center"
+				spacing={1}
+			>
+				<Button
+					variant="outlined"
+					startIcon={<TodayIcon />}
+					size="small"
+					color="secondary"
+					onClick={() => {
+						props.setDate(today);
+						setDisableNext(false);
+						setDisablePrev(false);
+					}}
+				>
+					Today
+				</Button>
 			</Stack>
 		</>
 	);

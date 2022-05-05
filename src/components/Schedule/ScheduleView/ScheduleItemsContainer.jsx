@@ -155,7 +155,7 @@ const ScheduleItemsContainer = (props) => {
 						</div>
 					)}
 				</div>
-				<div className="card-footer d-none d-md-block">
+				<div className="card-footer ">
 					<div className="row">
 						<div className="col d-flex align-items-center">
 							<div>
