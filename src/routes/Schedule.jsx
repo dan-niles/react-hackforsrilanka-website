@@ -14,8 +14,7 @@ const Schedule = () => {
 	if (searchParams.get("group") != null) {
 		groupName = searchParams.get("group");
 		district = searchParams.get("district");
-		area = searchParams.get("area")
-		
+		area = searchParams.get("area");
 	}
 
 	return (
@@ -23,7 +22,9 @@ const Schedule = () => {
 			<ScheduleForm groupName={groupName} />
 
 			{/* shows calender and power-cut times after the group is selected */}
-			{(groupName || district) && <ScheduleView groupName={groupName} district={district} area={area} />}
+			{(groupName || district) && (
+				<ScheduleView groupName={groupName} district={district} area={area} />
+			)}
 		</AnimatedPage>
 	);
 };

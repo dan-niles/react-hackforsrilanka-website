@@ -14,7 +14,7 @@ import axios from "axios";
 
 const GroupForm = (props) => {
 	const appTheme = useTheme();
-	const [isLoading, setisLoading] = useState(true);
+	const [isLoading, setisLoading] = useState(false);
 
 	let navigate = useNavigate();
 
@@ -23,10 +23,13 @@ const GroupForm = (props) => {
 	const [getSchedule, setGetSchedule] = useState();
 
 	const fetchGroupNames = () => {
-		return axios.get(baseURL + "/api/all-group/").then((res) => {
-			setGroups(res.data.data);
-			setisLoading(false);
-		});
+		return axios
+			.get(baseURL + "/api/all-group/")
+			.then((res) => {
+				setGroups(res.data.data);
+				setisLoading(false);
+			})
+			.catch((errr) => {});
 	};
 
 	useEffect(() => {

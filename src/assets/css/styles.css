@@ -115,7 +115,8 @@ footer {
 }
 
 .header-center {
-	height: 85vh;
+	/* height: 85vh; */
+	height: 100%;
 	display: flex;
 	align-items: center;
 }
