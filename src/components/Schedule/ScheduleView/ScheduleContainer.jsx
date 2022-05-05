@@ -22,9 +22,9 @@ const ScheduleContainer = (props) => {
 	const handleClose = () => {
 		setOpen(false);
 	};
-    const handleClickUnsubscribe = ()=>{
+	const handleClickUnsubscribe = () => {
 		setSub(false);
-	}
+	};
 
 	return (
 		<header
@@ -49,7 +49,7 @@ const ScheduleContainer = (props) => {
 							className="fw-bold d-none d-md-inline"
 						>
 							Subscribe for Notifications
-						</Button> 
+						</Button>
 						{/* Mobile button */}
 						<Button
 							variant="outlined"

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
@@ -8,6 +9,8 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
+import TodayIcon from "@mui/icons-material/Today";
+import Button from "@mui/material/Button";
 
 import { isThisWeek, nextDay, getDay, isSameWeek } from "date-fns";
 import add from "date-fns/add";
@@ -72,45 +75,68 @@ const ScheduleDatePicker = (props) => {
 	};
 
 	return (
-		<Stack
-			direction="row"
-			justifyContent="center"
-			alignItems="center"
-			spacing={1}
-		>
-			<IconButton
-				className="date-picker-button"
-				onClick={handlePrevClick}
-				disabled={disablePrev}
+		<>
+			<Stack
+				className="mb-2"
+				direction="row"
+				justifyContent="center"
+				alignItems="center"
+				spacing={1}
 			>
-				<ChevronLeftIcon />
-			</IconButton>
-			<LocalizationProvider dateAdapter={AdapterDateFns}>
-				<MobileDatePicker
-					minDate={minDate}
-					maxDate={maxDate}
-					label=" "
-					inputFormat="dd-MM-yyyy"
-					value={date}
-					onChange={handleDateChange}
-					renderInput={(params) => (
-						<TextField
-							className="mobile-date-picker"
-							color="secondary"
-							{...params}
-						/>
-					)}
+				<Button
+					variant="outlined"
+					startIcon={<TodayIcon />}
+					size="small"
 					color="secondary"
-				/>
-			</LocalizationProvider>
-			<IconButton
-				className="date-picker-button"
-				onClick={handleNextClick}
-				disabled={disableNext}
+					onClick={() => {
+						props.setDate(today);
+						setDisableNext(false);
+						setDisablePrev(false);
+					}}
+				>
+					Today
+				</Button>
+			</Stack>
+			<Stack
+				direction="row"
+				justifyContent="center"
+				alignItems="center"
+				spacing={1}
 			>
-				<ChevronRightIcon />
-			</IconButton>
-		</Stack>
+				<IconButton
+					className="date-picker-button"
+					onClick={handlePrevClick}
+					disabled={disablePrev}
+				>
+					<ChevronLeftIcon />
+				</IconButton>
+				<LocalizationProvider dateAdapter={AdapterDateFns}>
+					<MobileDatePicker
+						minDate={minDate}
+						maxDate={maxDate}
+						label=" "
+						inputFormat="dd-MM-yyyy"
+						value={date}
+						onChange={handleDateChange}
+						renderInput={(params) => (
+							<TextField
+								className="mobile-date-picker"
+								color="secondary"
+								{...params}
+							/>
+						)}
+						color="secondary"
+					/>
+				</LocalizationProvider>
+				<IconButton
+					className="date-picker-button"
+					onClick={handleNextClick}
+					disabled={disableNext}
+				>
+					<ChevronRightIcon />
+				</IconButton>
+			</Stack>
+		</>
 	);
 };
 

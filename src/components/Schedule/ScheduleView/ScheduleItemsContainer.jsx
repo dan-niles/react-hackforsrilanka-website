@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { enUS } from "date-fns/locale";
 import { useLocation } from "react-router-dom";
-import moment from "moment";
 
 import Button from "@mui/material/Button";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
@@ -156,13 +155,11 @@ const ScheduleItemsContainer = (props) => {
 						</div>
 					)}
 				</div>
-				<div className="card-footer">
+				<div className="card-footer d-none d-md-block">
 					<div className="row">
 						<div className="col d-flex align-items-center">
 							<div>
-								<span className="text-muted">
-									{/* {props.children.length === 0 && "Total"} */}
-								</span>
+								<span className="text-muted"></span>
 							</div>
 						</div>
 						<div className="col">

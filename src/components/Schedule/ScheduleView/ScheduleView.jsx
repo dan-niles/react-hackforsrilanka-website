@@ -23,16 +23,18 @@ import axios from "axios";
 import { baseURL } from "../../../BaseApi";
 
 import AlertDialog from "../../Alert/AlertDialog";
+import TodayIcon from "@mui/icons-material/Today";
+import Button from "@mui/material/Button";
 
 export function useForceUpdate() {
-  const [value, setValue] = useState(0);
-  return () => setValue((value) => value + 1); // update the state to force render
+	const [value, setValue] = useState(0);
+	return () => setValue((value) => value + 1); // update the state to force render
 }
 
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
-	const [areaGroup, setAreaGroup] = useState('');
+	const [areaGroup, setAreaGroup] = useState("");
 	const forceUpdate = useForceUpdate();
 	const today = new Date();
 	const minDate = startOfWeek(today, { weekStartsOn: 1 });
@@ -67,30 +69,30 @@ const Schedule = (props) => {
 			)
 			.then((res) => {
 				setScheduleItems(res.data.data);
-				console.log("-----sechdule----------",scheduleItems)
+				console.log("-----sechdule----------", scheduleItems);
 				forceUpdate();
 			});
 	};
 
-	console.log("------area group name--------------",props.groupName)
+	console.log("------area group name--------------", props.groupName);
 	useEffect(() => {
 		forceUpdate();
-		if (props.district && props.area){
-			console.log("--------call area district api")
-			fetchDistrictAreaScheduleItems();
-		} 
-	}, [props.district || props.area]);
-    
-	useEffect(()=>{
-		console.log("--------call area district api")
-		if(props.area){
+		if (props.district && props.area) {
+			console.log("--------call area district api");
 			fetchDistrictAreaScheduleItems();
 		}
-	},[props.area])
+	}, [props.district || props.area]);
 
 	useEffect(() => {
-		console.log("------search group name api")
-		if(props.groupName){
+		console.log("--------call area district api");
+		if (props.area) {
+			fetchDistrictAreaScheduleItems();
+		}
+	}, [props.area]);
+
+	useEffect(() => {
+		console.log("------search group name api");
+		if (props.groupName) {
 			fetchScheduleItems();
 		}
 	}, [props.groupName]);
@@ -167,6 +169,7 @@ const Schedule = (props) => {
 			document.getElementsByClassName("-today")[0].appendChild(para);
 		}
 	});
+
 	// For opening/closing subscribe modal
 	const [open, setOpen] = React.useState(false);
 	const [unSub, setUnSub] = useState(false);
@@ -179,15 +182,15 @@ const Schedule = (props) => {
 	const handleClose = () => {
 		setOpen(false);
 	};
-	const handleClickUnsubscribe = ()=>{
+	const handleClickUnsubscribe = () => {
 		setUnSub(true);
-         setOpen(true); 
-	}
+		setOpen(true);
+	};
 
 	return (
 		<>
 			<AlertDialog
-			    unSub={unSub}
+				unSub={unSub}
 				open={open}
 				handleClose={handleClose}
 				groupName={props.groupName}
@@ -197,13 +200,14 @@ const Schedule = (props) => {
 				groupName={props.groupName}
 				AreaGroup={areaGroup}
 				handleClickOpen={handleClickOpen}
-				handleClickUnsubscribe = {handleClickUnsubscribe}
+				handleClickUnsubscribe={handleClickUnsubscribe}
 			>
 				<ScheduleItemsContainer
 					handleClickOpen={handleClickOpen}
 					handleClickUnsubscribe={handleClickUnsubscribe}
 					scheduleItemData={scheduleItems}
 					date={date}
+					setDate={setDate}
 					groupName={props.groupName}
 					district={props.district}
 					groupList={[...new Set(scheduleItems.map((item) => item.group_name))]}
@@ -211,16 +215,29 @@ const Schedule = (props) => {
 				>
 					{/* {console.log('------------filteredScheduleItems: ', filteredScheduleItems)} */}
 					{filteredScheduleItems.map((i) => {
-						console.log("----------------0----",i)
-						return(
-						<ScheduleItem
-							key={i.unique_id}
-							starting_period={i.starting_period}
-							ending_period={i.ending_period}
-						/>)
+						console.log("----------------0----", i);
+						return (
+							<ScheduleItem
+								key={i.unique_id}
+								starting_period={i.starting_period}
+								ending_period={i.ending_period}
+							/>
+						);
 					})}
 				</ScheduleItemsContainer>
 				<div className="col-sm-6 col-12 my-3 order-md-1 d-none d-md-block">
+					<Button
+						sx={{ position: "absolute", zIndex: 999, top: "1em", left: "1em" }}
+						variant="outlined"
+						startIcon={<TodayIcon />}
+						size="small"
+						color="secondary"
+						onClick={() => {
+							setDate(today);
+						}}
+					>
+						Today
+					</Button>
 					<ScheduleCalendar
 						date={date}
 						onDateChange={setDate}
