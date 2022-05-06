@@ -1,8 +1,14 @@
+import { useState } from "react";
+
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
 import { useTheme } from "@mui/material/styles";
 
 const Contact = () => {
 	const appTheme = useTheme();
+	const [name, setName] = useState("");
+	const [userEmail, setUserEmail] = useState("");
+	const [userPhoneNumber, setUserPhoneNumber] = useState("");
+	const [message, setMessage] = useState("");
 
 	return (
 		<AnimatedPage>
@@ -36,6 +42,7 @@ const Contact = () => {
 											type="text"
 											placeholder="Enter your name..."
 											data-sb-validations="required"
+											value={name}
 										/>
 										<label htmlFor="name">Full name</label>
 										<div
@@ -53,6 +60,7 @@ const Contact = () => {
 											type="email"
 											placeholder="name@example.com"
 											data-sb-validations="required,email"
+											value={userEmail}
 										/>
 										<label htmlFor="email">Email address</label>
 										<div
@@ -76,6 +84,7 @@ const Contact = () => {
 											type="tel"
 											placeholder="(123) 456-7890"
 											data-sb-validations="required"
+											value={userPhoneNumber}
 										/>
 										<label htmlFor="phone">Phone number</label>
 										<div
@@ -94,6 +103,7 @@ const Contact = () => {
 											placeholder="Enter your message here..."
 											style={{ height: "10rem" }}
 											data-sb-validations="required"
+											value={message}
 										/>
 										<label htmlFor="message">Message</label>
 										<div

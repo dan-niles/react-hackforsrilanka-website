@@ -17,8 +17,9 @@ const SuburbForm = () => {
 	const [isLoading, setisLoading] = useState(false);
 
 	let navigate = useNavigate();
-	const [areaList, setAreaList] = useState();
+	const [suburbList, setSuburbList] = useState();
 	const [districtList, setDistrictList] = useState();
+	const [areaList, setAreaList] = useState();
 
 	const [suburbSelect, setSuburbSelect] = useState("");
 	const handleSuburbSelectChange = (event) => {
@@ -39,28 +40,59 @@ const SuburbForm = () => {
 		e.preventDefault();
 		navigate({
 			pathname: "/schedule",
-			search: `?group=&district=${districtSelect}&area=${areaSelect}`,
+			search: `?group=&suburb=${suburbSelect}&district=${districtSelect}&area=${areaSelect}`,
 		});
 	};
 
 	useEffect(() => {
 		axios
-			.get(baseURL + "/api/all-gss/?gss=")
+			.get(baseURL + "/api/all-suburb/") //https://hfsl-backend.herokuapp.com/api/all-suburb/
 			.then((res) => {
-				setDistrictList(res.data.data);
+				setSuburbList(res.data.data);
 				setisLoading(false);
 			})
 			.catch((errr) => {});
 	}, []);
 
 	useEffect(() => {
-		if (districtSelect) {
+		if (suburbSelect) {
 			axios
-				.get(baseURL + `/api/all-area/?gss=${districtSelect}`)
+				.get(baseURL + `/api/search-by-suburb/?suburb=${suburbSelect}`)
 				.then((res) => {
-					setAreaList(res.data.data);
+					setDistrictList(res.data.data);
 				})
 				.catch((errr) => {});
+		}
+	}, [suburbSelect]);
+
+	// useEffect(() => {
+	// 	if (districtSelect) {
+	// 		axios
+	// 			.get(baseURL + `/api/all-area/?gss=${districtSelect}`)
+	// 			.then((res) => {
+	// 				setAreaList(res.data.data);
+	// 			})
+	// 			.catch((errr) => {});
+	// 	}
+	// }, [districtSelect]);
+
+	let gssList = null;
+	if (districtList) {
+		gssList = [
+			...new Map(districtList.map((item) => [item["gss"], item])).values(),
+		];
+		// console.log("suburbList---", suburbList);
+		console.log("districtList---", districtList);
+		// console.log("gssss---", gssList);
+	}
+
+	useEffect(() => {
+		if (districtSelect) {
+			setAreaList(
+				districtList.filter((item) => {
+					return item.gss === districtSelect;
+				})
+			);
 		}
 	}, [districtSelect]);
 
@@ -99,33 +131,42 @@ const SuburbForm = () => {
 						select
 						value={suburbSelect}
 						onChange={handleSuburbSelectChange}
+						name="suburb"
 						required
 						fullWidth
 					>
-						<MenuItem value="Colombo">Colombo</MenuItem>
+						{suburbList?.map((item, index) => {
+							return (
+								<MenuItem key={index} value={item}>
+									{item}
+								</MenuItem>
+							);
+						})}
+						{/* <MenuItem value="Colombo">Colombo</MenuItem> */}
 					</TextField>
 				</div>
-				<div className="form-group col-12 mt-2">
+				<div className="form-group col-12 mt-3">
 					<TextField
 						select
 						size="small"
-						label="GSS"
+						label="Grid Substation"
 						value={districtSelect}
 						onChange={handleDistrictSelectChange}
 						name="district"
 						required
 						fullWidth
 					>
-						{districtList?.map((item, index) => {
+						{gssList?.map((item, index) => {
 							return (
-								<MenuItem value={item} key={index}>
-									{item}
+								<MenuItem value={item.gss} key={index}>
+									{item.gss}
 								</MenuItem>
 							);
 						})}
+						{/* <MenuItem value="Colombo">Colombo</MenuItem> */}
 					</TextField>
 				</div>
-				<div className="form-group col-12 mt-2">
+				<div className="form-group col-12 mt-3">
 					<TextField
 						select
 						size="small"
@@ -138,11 +179,12 @@ const SuburbForm = () => {
 					>
 						{areaList?.map((item, index) => {
 							return (
-								<MenuItem value={item} key={index}>
-									{item}
+								<MenuItem value={item.area} key={index}>
+									{item.area}
 								</MenuItem>
 							);
 						})}
+						{/* <MenuItem value="Colombo">Colombo</MenuItem> */}
 					</TextField>
 				</div>
 				<div className="form-group col-12 mt-4 text-center">
