@@ -1,14 +1,24 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
 import { useTheme } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
 init("user_id");
 
+const Alert = forwardRef(function Alert(props, ref) {
+	return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 const Contact = () => {
 	const appTheme = useTheme();
+
+	const [open, setOpen] = useState(false);
+
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [userPhoneNumber, setUserPhoneNumber] = useState("");
@@ -38,13 +48,32 @@ const Contact = () => {
 			setUserPhoneNumber("");
 			setMessage("");
 			setEmailSent(true);
+			setOpen(true);
 		} else {
 			alert("Please fill in all fields.");
 		}
 	};
 
+	const handleClose = (event, reason) => {
+		if (reason === "clickaway") {
+			return;
+		}
+
+		setOpen(false);
+	};
+
 	return (
 		<AnimatedPage>
+			<Snackbar
+				anchorOrigin={{ vertical: "top", horizontal: "center" }}
+				open={open}
+				autoHideDuration={6000}
+				onClose={handleClose}
+			>
+				<Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+					Thank you for your message, we will be in touch in no time!
+				</Alert>
+			</Snackbar>
 			<section className="py-3 py-md-5">
 				<div className="container px-3 px-md-5">
 					{/* <!-- Contact form--> */}
