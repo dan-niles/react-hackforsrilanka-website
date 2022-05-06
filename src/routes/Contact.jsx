@@ -3,12 +3,45 @@ import { useState } from "react";
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
 import { useTheme } from "@mui/material/styles";
 
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+init("user_id");
+
 const Contact = () => {
 	const appTheme = useTheme();
 	const [name, setName] = useState("");
-	const [userEmail, setUserEmail] = useState("");
+	const [email, setEmail] = useState("");
 	const [userPhoneNumber, setUserPhoneNumber] = useState("");
 	const [message, setMessage] = useState("");
+
+	const [emailSent, setEmailSent] = useState(false);
+
+	const submitHandler = (e) => {
+		e.preventDefault();
+		if (name && email && message) {
+			const serviceId = "service_tizq51o";
+			const templateId = "template_qo3mxit";
+			const publicKey = "MINMFTdo3erEwqnFi";
+			const templateParams = {
+				name,
+				email,
+				message,
+			};
+
+			emailjs
+				.send(serviceId, templateId, templateParams, publicKey)
+				.then((response) => console.log(response))
+				.then((error) => console.log(error));
+
+			setName("");
+			setEmail("");
+			setUserPhoneNumber("");
+			setMessage("");
+			setEmailSent(true);
+		} else {
+			alert("Please fill in all fields.");
+		}
+	};
 
 	return (
 		<AnimatedPage>
@@ -33,7 +66,7 @@ const Contact = () => {
 						</div>
 						<div className="row justify-content-center">
 							<div className="col-lg-8 col-xl-6">
-								<form id="contactForm" data-sb-form-api-token="API_TOKEN">
+								<form id="contactForm" onSubmit={submitHandler}>
 									{/* <!-- Name input--> */}
 									<div className="form-floating mb-3">
 										<input
@@ -41,10 +74,11 @@ const Contact = () => {
 											id="name"
 											type="text"
 											placeholder="Enter your name..."
-											data-sb-validations="required"
+											required="required"
 											value={name}
+											onChange={(e) => setName(e.target.value)}
 										/>
-										<label htmlFor="name">Full name</label>
+										<label htmlFor="name">Name</label>
 										<div
 											className="invalid-feedback"
 											data-sb-feedback="name:required"
@@ -59,8 +93,9 @@ const Contact = () => {
 											id="email"
 											type="email"
 											placeholder="name@example.com"
-											data-sb-validations="required,email"
-											value={userEmail}
+											required="required"
+											value={email}
+											onChange={(e) => setEmail(e.target.value)}
 										/>
 										<label htmlFor="email">Email address</label>
 										<div
@@ -77,14 +112,14 @@ const Contact = () => {
 										</div>
 									</div>
 									{/* <!-- Phone number input--> */}
-									<div className="form-floating mb-3">
+									{/* <div className="form-floating mb-3">
 										<input
 											className="form-control"
 											id="phone"
 											type="tel"
 											placeholder="(123) 456-7890"
-											data-sb-validations="required"
 											value={userPhoneNumber}
+											onChange={(e) => setUserPhoneNumber(e.target.value)}
 										/>
 										<label htmlFor="phone">Phone number</label>
 										<div
@@ -93,7 +128,7 @@ const Contact = () => {
 										>
 											A phone number is required.
 										</div>
-									</div>
+									</div> */}
 									{/* <!-- Message input--> */}
 									<div className="form-floating mb-3">
 										<textarea
@@ -102,8 +137,9 @@ const Contact = () => {
 											type="text"
 											placeholder="Enter your message here..."
 											style={{ height: "10rem" }}
-											data-sb-validations="required"
+											required="required"
 											value={message}
+											onChange={(e) => setMessage(e.target.value)}
 										/>
 										<label htmlFor="message">Message</label>
 										<div
@@ -133,9 +169,10 @@ const Contact = () => {
                             <!---->
                             <!-- This is what your users will see when there is-->
                             <!-- an error submitting the form--> */}
-									<div className="d-none" id="submitErrorMessage">
-										<div className="text-center text-danger mb-3">
-											Error sending message!
+									<div className={emailSent ? "d-block" : "d-none"}>
+										<div className="text-center mb-3">
+											Thank you for your message, we will be in touch in no
+											time!
 										</div>
 									</div>
 									{/* <!-- Submit Button--> */}
@@ -145,7 +182,7 @@ const Contact = () => {
 												appTheme.palette.mode === "dark"
 													? "btn-warning"
 													: "btn-danger"
-											} btn-lg disabled fs-6 fw-bold`}
+											} btn-lg fs-6 fw-bold`}
 											id="submitButton"
 											type="submit"
 										>
@@ -157,7 +194,7 @@ const Contact = () => {
 						</div>
 					</div>
 					{/* <!-- Contact cards--> */}
-					<div className="form-group col-12 mt-4 text-center">
+					{/* <div className="form-group col-12 mt-4 text-center">
 						<h1>Coming Soon...</h1>
 					</div>
 					<div className="row row-cols-2 row-cols-lg-4 py-5">
@@ -221,7 +258,7 @@ const Contact = () => {
 								Call us during normal business hours at (555) 892-9403.
 							</p>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</section>
 		</AnimatedPage>

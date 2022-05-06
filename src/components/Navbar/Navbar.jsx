@@ -73,7 +73,7 @@ const Navbar = () => {
 							component="div"
 							sx={{
 								flexGrow: 1,
-								ml:1,
+								ml: 1,
 								color: appTheme.palette.mode === "dark" ? "white" : "black",
 								fontWeight: 600,
 							}}
@@ -88,7 +88,11 @@ const Navbar = () => {
 							justifyContent: { xs: "end", md: "none" },
 						}}
 					>
-						<IconButton size="large" onClick={handleOpenNavMenu}>
+						<IconButton
+							size="large"
+							onClick={handleOpenNavMenu}
+							sx={{ justifySelf: "end" }}
+						>
 							<MenuIcon />
 						</IconButton>
 						<Menu
