@@ -9,7 +9,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { FormControl, InputAdornment, switchClasses } from "@mui/material";
+import { FormControl, InputAdornment, switchClasses, useMediaQuery } from "@mui/material";
 import Swal from "sweetalert2";
 import Loader from "react-js-loader";
 
@@ -30,9 +30,8 @@ const AlertDialog = (props) => {
   const [allRegErr, setAllRegErr] = useState();
   const [reSubBtn, setReSubBtn] = useState(false);
   const [showSubBtn, setShowSubBtn] = useState(false);
-  const [mobileNum, setMobileNum] = useState();
-  const [unSubErr, setUnSubErr] = useState();
-
+  
+  const matches = useMediaQuery("(min-width:768px)");
   useEffect(() => {
     setGroupName(props.areaGroup);
   }, [props.areaGroup]);
@@ -75,7 +74,9 @@ const AlertDialog = (props) => {
         .catch((errr) => {
           setShowSubBtn(true);
           setShowLoad(false);
-          setAllRegErr(errr.response.data.errors);
+          if(errr){
+            setAllRegErr(errr.response.data.errors);
+          }
           setReSubBtn(true);
           setShowOtpBox(false);
         });
@@ -104,7 +105,8 @@ const AlertDialog = (props) => {
         setShowLoad(false);
         setShowOtpBox(true);
       })
-      .catch((errr) => {});
+      .catch((errr) => {
+      });
   };
 
   const verifyOtp = () => {
@@ -129,7 +131,8 @@ const AlertDialog = (props) => {
         Swal.fire({
           position: "top-center",
           icon: "info",
-          title: `Cell phone number ${number}xxxxx has been successfully subscribed to group ${data.groupName}`,
+          title: `Cell phone number ${number}xxxxx has been successfully subscribed to group 
+                  ${data.groupName}`,
           showConfirmButton: true,
         });
         setName("");
@@ -199,7 +202,7 @@ const AlertDialog = (props) => {
         <span className="text-danger">{error}</span>
         {showOtpBox && (
           <div className="py-3">
-            <h5>Enter Otp</h5>
+            <p>Enter Otp</p>
             <OtpInput
               className="otp_value"
               name="otp"
@@ -211,19 +214,19 @@ const AlertDialog = (props) => {
               onChange={(e) => setOtp(e)}
               numInputs={6}
               errorStyle={{
-                width: "60px",
-                height: "60px",
-                margin: "0 1rem",
-                fontSize: "2rem",
-                borderRadius: 12,
+                width: matches? "60px":"30px",
+                height: matches? "60px":"30px",
+                margin: "5px",
+                fontSize: matches?"2rem":"1rem",
+                borderRadius: matches? 12:6,
                 border: "2px solid red",
               }}
               inputStyle={{
-                width: "60px",
-                height: "60px",
-                margin: "0 1rem",
-                fontSize: "2rem",
-                borderRadius: 12,
+                width: matches? "60px":"30px",
+                height: matches? "60px":"30px",
+                margin: "5px",
+                fontSize: matches?"2rem":"1rem",
+                borderRadius: matches? 12:6,
                 border: "1px solid rgba(0,0,0,0.3)",
               }}
             />

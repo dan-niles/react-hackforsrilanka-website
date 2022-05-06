@@ -13,7 +13,7 @@ const ScheduleForm = (props) => {
 	const [toggle, setToggle] = useState("groupToggle");
 	const [showFormType, setShowFormType] = useState("group");
 
-	const handleToggleChange = (event, newVal) => {
+	const handleToggleChange = (event, newVal) => {	
 		if (newVal !== null) {
 			setToggle(newVal);
 		}

@@ -26,16 +26,10 @@ import AlertDialog from "../../Alert/AlertDialog";
 import TodayIcon from "@mui/icons-material/Today";
 import Button from "@mui/material/Button";
 
-export function useForceUpdate() {
-	const [value, setValue] = useState(0);
-	return () => setValue((value) => value + 1); // update the state to force render
-}
-
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
 	const [areaGroup, setAreaGroup] = useState("");
-	const forceUpdate = useForceUpdate();
 	const today = new Date();
 	const minDate = startOfWeek(today, { weekStartsOn: 1 });
 	const maxDate = endOfWeek(nextDay(today, getDay(today)), {
@@ -69,36 +63,30 @@ const Schedule = (props) => {
 			)
 			.then((res) => {
 				setScheduleItems(res.data.data);
-				console.log("-----sechdule----------", scheduleItems);
-				forceUpdate();
 			});
 	};
 
-	console.log("------area group name--------------", props.groupName);
 	useEffect(() => {
-		forceUpdate();
 		if (props.district && props.area) {
-			console.log("--------call area district api");
 			fetchDistrictAreaScheduleItems();
 		}
 	}, [props.district || props.area]);
 
 	useEffect(() => {
-		console.log("--------call area district api");
 		if (props.area) {
 			fetchDistrictAreaScheduleItems();
 		}
 	}, [props.area]);
 
 	useEffect(() => {
-		console.log("------search group name api");
 		if (props.groupName) {
 			fetchScheduleItems();
 		}
 	}, [props.groupName]);
-
+ 
+   if(date){
 	// Filter according to group and selected date
-	let filteredScheduleItems = scheduleItems.filter((i) => {
+	var filteredScheduleItems = scheduleItems.filter((i) => {
 		// set initial areaGroup
 		if (scheduleItems.length > 1 && !areaGroup) {
 			setAreaGroup(scheduleItems[0].group_name);
@@ -114,8 +102,11 @@ const Schedule = (props) => {
 				format(date, "yyyy-MM-dd", { locale: enGB })
 			);
 		}
-	});
-
+        
+	}
+	
+	);
+	
 	// Remove duplicates
 	filteredScheduleItems = Array.from(
 		new Set(filteredScheduleItems.map((a) => a.starting_period))
@@ -124,6 +115,8 @@ const Schedule = (props) => {
 			(a) => a.starting_period === starting_period
 		);
 	});
+
+}
 
 	const modifiers = {
 		// Displays only two weeks (Current week and next week)
@@ -215,7 +208,6 @@ const Schedule = (props) => {
 				>
 					{/* {console.log('------------filteredScheduleItems: ', filteredScheduleItems)} */}
 					{filteredScheduleItems.map((i) => {
-						console.log("----------------0----", i);
 						return (
 							<ScheduleItem
 								key={i.unique_id}
