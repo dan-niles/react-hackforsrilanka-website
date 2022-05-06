@@ -14,7 +14,7 @@ import axios from "axios";
 
 const GroupForm = (props) => {
 	const appTheme = useTheme();
-	const [isLoading, setisLoading] = useState(false);
+	const [isLoading, setisLoading] = useState(true);
 
 	let navigate = useNavigate();
 
@@ -74,7 +74,7 @@ const GroupForm = (props) => {
 					>
 						Search by Group <GroupsIcon />
 					</h4>
-					<p className="text-white-50 fw-light mb-2">
+					<p className="text-white-50 fw-light mb-3">
 						Pick the pre-assigned group letter for your area...
 					</p>
 					<FormControl fullWidth>

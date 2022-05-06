@@ -14,7 +14,7 @@ import { baseURL } from "../../../BaseApi";
 
 const SuburbForm = () => {
 	const appTheme = useTheme();
-	const [isLoading, setisLoading] = useState(false);
+	const [isLoading, setisLoading] = useState(true);
 
 	let navigate = useNavigate();
 	const [suburbList, setSuburbList] = useState();
@@ -46,7 +46,7 @@ const SuburbForm = () => {
 
 	useEffect(() => {
 		axios
-			.get(baseURL + "/api/all-suburb/") //https://hfsl-backend.herokuapp.com/api/all-suburb/
+			.get(baseURL + "/api/all-suburb/")
 			.then((res) => {
 				setSuburbList(res.data.data);
 				setisLoading(false);
@@ -65,25 +65,11 @@ const SuburbForm = () => {
 		}
 	}, [suburbSelect]);
 
-	// useEffect(() => {
-	// 	if (districtSelect) {
-	// 		axios
-	// 			.get(baseURL + `/api/all-area/?gss=${districtSelect}`)
-	// 			.then((res) => {
-	// 				setAreaList(res.data.data);
-	// 			})
-	// 			.catch((errr) => {});
-	// 	}
-	// }, [districtSelect]);
-
 	let gssList = null;
 	if (districtList) {
 		gssList = [
 			...new Map(districtList.map((item) => [item["gss"], item])).values(),
 		];
-		// console.log("suburbList---", suburbList);
-		console.log("districtList---", districtList);
-		// console.log("gssss---", gssList);
 	}
 
 	useEffect(() => {
@@ -117,7 +103,7 @@ const SuburbForm = () => {
 					Search by Suburb <ApartmentIcon />
 				</h4>
 				<p
-					className="text-white-50 fw-light mb-2"
+					className="text-white-50 fw-light mb-3"
 					style={{ fontSize: "0.9em" }}
 				>
 					Do you live in any of the following suburbs?
