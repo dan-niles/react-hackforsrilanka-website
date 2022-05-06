@@ -13,7 +13,7 @@ import { baseURL } from "../../../BaseApi";
 
 const AreaForm = () => {
 	const appTheme = useTheme();
-	const [isLoading, setisLoading] = useState(false);
+	const [isLoading, setisLoading] = useState(true);
 
 	let navigate = useNavigate();
 	const [areaList, setAreaList] = useState();
@@ -77,7 +77,7 @@ const AreaForm = () => {
 				>
 					Search by Location <LocationOnIcon />
 				</h4>
-				<p className="text-white-50 fw-light mb-2">
+				<p className="text-white-50 fw-light mb-3">
 					Don't know your group? Try picking your district and city here...
 				</p>
 				<div className="form-group col-12">
