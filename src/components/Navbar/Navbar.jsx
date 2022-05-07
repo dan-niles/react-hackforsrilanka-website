@@ -39,6 +39,11 @@ const Navbar = () => {
 		setAnchorElNav(null);
 	};
 
+	const handleColorSwitchMobile = () => {
+		colorMode.toggleColorMode();
+		handleCloseNavMenu();
+	};
+
 	return (
 		<AppBar
 			position="static"
@@ -127,7 +132,7 @@ const Navbar = () => {
 								</MenuItem>
 							))}
 							{/* Dark/Light mode switcher */}
-							<MenuItem onClick={colorMode.toggleColorMode}>
+							<MenuItem onClick={handleColorSwitchMobile}>
 								<IconButton
 									className="nav-link px-3"
 									sx={{
@@ -176,7 +181,7 @@ const Navbar = () => {
 						<IconButton
 							className="nav-link"
 							sx={{
-								ml: 2,
+								ml: 1,
 								color: appTheme.palette.mode === "dark" ? "white" : "black",
 							}}
 							onClick={colorMode.toggleColorMode}
