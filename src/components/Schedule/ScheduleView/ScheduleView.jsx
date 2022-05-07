@@ -127,8 +127,8 @@ const Schedule = (props) => {
 			return seledate.includes(moment(new Date(date)).format("yyyy-MM-DD"));
 		},
 		orangeClass: (date) => {
-			if (filteredScheduleItems.length > 0) {
-				let obj = filteredScheduleItems.find(
+			if (scheduleItems.length > 0) {
+				let obj = scheduleItems.find(
 					(i) =>
 						i.starting_period.substring(0, 10) ===
 						moment(new Date(date)).format("yyyy-MM-DD")
@@ -136,7 +136,7 @@ const Schedule = (props) => {
 				if (obj !== undefined) return true;
 			}
 		},
-		grayClass: () => true,
+		grayClass: (date) => true,
 	};
 	const modifiersClassNames = {
 		hideDays: "d-none",
