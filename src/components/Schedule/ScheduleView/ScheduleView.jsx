@@ -63,6 +63,12 @@ const Schedule = (props) => {
 			)
 			.then((res) => {
 				setScheduleItems(res.data.data);
+				// set initial areaGroup
+				if (res.data.data.length > 0 && !areaGroup) {
+					setAreaGroup(res.data.data[0].group_name);
+				} else {
+					setAreaGroup(null);
+				}
 				console.log("Data from api--------", res.data.data);
 			});
 	};
@@ -70,7 +76,6 @@ const Schedule = (props) => {
 	useEffect(() => {
 		if (props.district && props.area) {
 			fetchDistrictAreaScheduleItems();
-			setAreaGroup(null);
 		}
 	}, [props.district, props.area]);
 
@@ -81,10 +86,7 @@ const Schedule = (props) => {
 	}, [props.groupName]);
 
 	console.log("scheduleItems--------", scheduleItems);
-	// set initial areaGroup
-	if (scheduleItems.length > 0 && !areaGroup) {
-		setAreaGroup(scheduleItems[0].group_name);
-	}
+
 	if (date) {
 		console.log("areaGroup--------", areaGroup);
 		console.log("props.groupName--------", props.groupName);
