@@ -92,7 +92,7 @@ const ScheduleItemsContainer = (props) => {
 	};
 
 	return (
-		<div className="col-sm-6 col-12 d-flex pa-sm order-md-2">
+		<div className="col-lg-6 col-12 d-flex pa-md order-lg-2">
 			<div className="card border-0 mt-0 flex-fill">
 				<div className="card-header">
 					<div className="row">

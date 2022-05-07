@@ -10,7 +10,7 @@ const FooterContainer = (props) => {
 			} py-3 mt-auto`}
 		>
 			<div className="container px-5">
-				<div className="row align-items-center justify-content-between flex-column flex-sm-row">
+				<div className="row align-items-center justify-content-between flex-column flex-lg-row">
 					<div className="col-auto">
 						<div className="small m-0">
 							Copyright &copy; Code for the Globe 2022

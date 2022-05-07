@@ -83,40 +83,36 @@ const Schedule = (props) => {
 			fetchScheduleItems();
 		}
 	}, [props.groupName]);
- 
-   if(date){
-	// Filter according to group and selected date
-	var filteredScheduleItems = scheduleItems.filter((i) => {
-		// set initial areaGroup
-		if (scheduleItems.length > 1 && !areaGroup) {
-			setAreaGroup(scheduleItems[0].group_name);
-		}
-		if (props.groupName && i.group_name === props.groupName) {
-			return (
-				i.starting_period.substring(0, 10) ===
-				format(date, "yyyy-MM-dd", { locale: enGB })
-			);
-		} else if (areaGroup && i.group_name === areaGroup) {
-			return (
-				i.starting_period.substring(0, 10) ===
-				format(date, "yyyy-MM-dd", { locale: enGB })
-			);
-		}
-        
-	}
-	
-	);
-	
-	// Remove duplicates
-	filteredScheduleItems = Array.from(
-		new Set(filteredScheduleItems.map((a) => a.starting_period))
-	).map((starting_period) => {
-		return filteredScheduleItems.find(
-			(a) => a.starting_period === starting_period
-		);
-	});
 
-}
+	if (date) {
+		// Filter according to group and selected date
+		var filteredScheduleItems = scheduleItems.filter((i) => {
+			// set initial areaGroup
+			if (scheduleItems.length > 1 && !areaGroup) {
+				setAreaGroup(scheduleItems[0].group_name);
+			}
+			if (props.groupName && i.group_name === props.groupName) {
+				return (
+					i.starting_period.substring(0, 10) ===
+					format(date, "yyyy-MM-dd", { locale: enGB })
+				);
+			} else if (areaGroup && i.group_name === areaGroup) {
+				return (
+					i.starting_period.substring(0, 10) ===
+					format(date, "yyyy-MM-dd", { locale: enGB })
+				);
+			}
+		});
+
+		// Remove duplicates
+		filteredScheduleItems = Array.from(
+			new Set(filteredScheduleItems.map((a) => a.starting_period))
+		).map((starting_period) => {
+			return filteredScheduleItems.find(
+				(a) => a.starting_period === starting_period
+			);
+		});
+	}
 
 	const modifiers = {
 		// Displays only two weeks (Current week and next week)
@@ -217,7 +213,7 @@ const Schedule = (props) => {
 						);
 					})}
 				</ScheduleItemsContainer>
-				<div className="col-sm-6 col-12 my-3 order-md-1 d-none d-md-block">
+				<div className="col-lg-6 col-12 my-3 order-md-1 d-none d-lg-block">
 					<Button
 						sx={{ position: "absolute", zIndex: 999, top: "1em", left: "1em" }}
 						variant="outlined"
@@ -261,7 +257,7 @@ const Schedule = (props) => {
 				</div>
 
 				{/* Hide the calendar on mobile and show a datepicker */}
-				<div className="col-12 mt-2 mb-3 order-md-1 d-block d-md-none">
+				<div className="col-12 mt-2 mb-3 order-md-1 d-block d-lg-none">
 					<ScheduleDatePicker
 						date={date}
 						setDate={setDate}

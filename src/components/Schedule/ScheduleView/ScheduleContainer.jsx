@@ -46,7 +46,7 @@ const ScheduleContainer = (props) => {
 							size="large"
 							onClick={props.handleClickOpen}
 							color="info"
-							className="fw-bold d-none d-md-inline"
+							className="fw-bold d-none d-lg-inline"
 						>
 							Subscribe for Notifications
 						</Button>
@@ -57,7 +57,7 @@ const ScheduleContainer = (props) => {
 							size="large"
 							onClick={props.handleClickOpen}
 							color="info"
-							className="subsribe-button fw-bold d-inline d-md-none"
+							className="subsribe-button fw-bold d-inline d-lg-none"
 						></Button>
 					</div>
 				</div>
