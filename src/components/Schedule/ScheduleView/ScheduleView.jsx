@@ -70,6 +70,7 @@ const Schedule = (props) => {
 	useEffect(() => {
 		if (props.district && props.area) {
 			fetchDistrictAreaScheduleItems();
+			setAreaGroup(null);
 		}
 	}, [props.district, props.area]);
 
@@ -198,7 +199,6 @@ const Schedule = (props) => {
 			/>
 			<ScheduleContainer
 				groupName={props.groupName}
-				AreaGroup={areaGroup}
 				handleClickOpen={handleClickOpen}
 				handleClickUnsubscribe={handleClickUnsubscribe}
 			>
