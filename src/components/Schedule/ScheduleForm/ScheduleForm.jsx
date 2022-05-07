@@ -13,7 +13,7 @@ const ScheduleForm = (props) => {
 	const [toggle, setToggle] = useState("groupToggle");
 	const [showFormType, setShowFormType] = useState("group");
 
-	const handleToggleChange = (event, newVal) => {	
+	const handleToggleChange = (event, newVal) => {
 		if (newVal !== null) {
 			setToggle(newVal);
 		}
@@ -33,7 +33,7 @@ const ScheduleForm = (props) => {
 					<h1 className="fw-bolder">Select Your Group / Area</h1>
 				</div>
 				<div className="row align-items-center justify-content-center">
-					<div className="col-12 col-md-6 text-center">
+					<div className="col-12 col-lg-6 text-center">
 						<ToggleButtonGroup
 							value={toggle}
 							exclusive

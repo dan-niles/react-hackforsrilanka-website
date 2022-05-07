@@ -12000,3 +12000,8 @@ html {
 .MuiPickersDay-root.Mui-disabled {
 	color: rgb(255 255 255 / 11%) !important;
 }
+
+.sl-spinner3 {
+	width: 3em; 
+	height: 3em;
+}
