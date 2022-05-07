@@ -29,7 +29,7 @@ import Button from "@mui/material/Button";
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
-	const [areaGroup, setAreaGroup] = useState("");
+	const [areaGroup, setAreaGroup] = useState(null);
 	const today = new Date();
 	const minDate = startOfWeek(today, { weekStartsOn: 1 });
 	const maxDate = endOfWeek(nextDay(today, getDay(today)), {
@@ -89,7 +89,7 @@ const Schedule = (props) => {
 		// Filter according to group and selected date
 		var filteredScheduleItems = scheduleItems.filter((i) => {
 			// set initial areaGroup
-			if (scheduleItems.length > 1 && !areaGroup) {
+			if (scheduleItems.length > 0 && !areaGroup) {
 				setAreaGroup(scheduleItems[0].group_name);
 			}
 
@@ -98,7 +98,8 @@ const Schedule = (props) => {
 					i.starting_period.substring(0, 10) ===
 					format(date, "yyyy-MM-dd", { locale: enGB })
 				);
-			} else if (areaGroup && i.group_name === areaGroup) {
+			}
+			if (areaGroup && i.group_name === areaGroup) {
 				return (
 					i.starting_period.substring(0, 10) ===
 					format(date, "yyyy-MM-dd", { locale: enGB })
