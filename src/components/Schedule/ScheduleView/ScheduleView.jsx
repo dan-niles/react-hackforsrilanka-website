@@ -131,7 +131,8 @@ const Schedule = (props) => {
 				let obj = scheduleItems.find(
 					(i) =>
 						i.starting_period.substring(0, 10) ===
-						moment(new Date(date)).format("yyyy-MM-DD")
+							moment(new Date(date)).format("yyyy-MM-DD") &&
+						i.group_name === areaGroup
 				);
 				if (obj !== undefined) return true;
 			}

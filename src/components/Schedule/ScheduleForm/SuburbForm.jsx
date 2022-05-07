@@ -12,7 +12,7 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import axios from "axios";
 import { baseURL } from "../../../BaseApi";
 
-const SuburbForm = () => {
+const SuburbForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
 
@@ -38,6 +38,13 @@ const SuburbForm = () => {
 
 	const submitHandler = (e) => {
 		e.preventDefault();
+		const forLocalStorage = {
+			groupName: "",
+			suburb: suburbSelect,
+			district: districtSelect,
+			area: areaSelect,
+		};
+		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
 		navigate({
 			pathname: "/schedule",
 			search: `?group=&suburb=${suburbSelect}&district=${districtSelect}&area=${areaSelect}`,
@@ -49,6 +56,9 @@ const SuburbForm = () => {
 			.get(baseURL + "/api/all-suburb/")
 			.then((res) => {
 				setSuburbList(res.data.data);
+				if (props.suburb !== "") {
+					setSuburbSelect(props.suburb);
+				}
 				setisLoading(false);
 			})
 			.catch((errr) => {});
@@ -60,6 +70,9 @@ const SuburbForm = () => {
 				.get(baseURL + `/api/search-by-suburb/?suburb=${suburbSelect}`)
 				.then((res) => {
 					setDistrictList(res.data.data);
+					if (props.district !== "") {
+						setDistrictSelect(props.district);
+					}
 				})
 				.catch((errr) => {});
 		}
@@ -79,6 +92,9 @@ const SuburbForm = () => {
 					return item.gss === districtSelect;
 				})
 			);
+			if (props.area !== "") {
+				setAreaSelect(props.area);
+			}
 		}
 	}, [districtSelect]);
 
@@ -135,7 +151,7 @@ const SuburbForm = () => {
 								</MenuItem>
 							);
 						})}
-						{/* <MenuItem value="Colombo">Colombo</MenuItem> */}
+						{/* <MenuItem value="Colombo">Jaffna</MenuItem> */}
 					</TextField>
 				</div>
 				<div className="form-group col-12 mt-3">
@@ -161,7 +177,7 @@ const SuburbForm = () => {
 								</MenuItem>
 							);
 						})}
-						{/* <MenuItem value="Colombo">Colombo</MenuItem> */}
+						{/* <MenuItem value="Colombo">Chunnakam</MenuItem> */}
 					</TextField>
 				</div>
 				<div className="form-group col-12 mt-3">
@@ -187,7 +203,7 @@ const SuburbForm = () => {
 								</MenuItem>
 							);
 						})}
-						{/* <MenuItem value="Colombo">Colombo</MenuItem> */}
+						{/* <MenuItem value="Colombo">Manipay</MenuItem> */}
 					</TextField>
 				</div>
 				<div className="form-group col-12 mt-4 text-center">
