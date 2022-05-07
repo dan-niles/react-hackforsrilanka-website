@@ -70,7 +70,7 @@ const Schedule = (props) => {
 		if (props.district && props.area) {
 			fetchDistrictAreaScheduleItems();
 		}
-	}, [props.district || props.area]);
+	}, [props.district, props.area]);
 
 	// useEffect(() => {
 	// 	if (props.area) {
