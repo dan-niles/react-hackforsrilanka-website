@@ -64,7 +64,7 @@ const Schedule = (props) => {
 			.then((res) => {
 				setScheduleItems(res.data.data);
 				// set initial areaGroup
-				if (res.data.data.length > 0 && !areaGroup) {
+				if (res.data.data.length > 0) {
 					setAreaGroup(res.data.data[0].group_name);
 				} else {
 					setAreaGroup(null);
