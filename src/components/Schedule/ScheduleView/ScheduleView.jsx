@@ -72,11 +72,11 @@ const Schedule = (props) => {
 		}
 	}, [props.district || props.area]);
 
-	useEffect(() => {
-		if (props.area) {
-			fetchDistrictAreaScheduleItems();
-		}
-	}, [props.area]);
+	// useEffect(() => {
+	// 	if (props.area) {
+	// 		fetchDistrictAreaScheduleItems();
+	// 	}
+	// }, [props.area]);
 
 	useEffect(() => {
 		if (props.groupName) {
@@ -160,7 +160,7 @@ const Schedule = (props) => {
 	});
 
 	// For opening/closing subscribe modal
-	const [open, setOpen] = React.useState(false);
+	const [open, setOpen] = useState(false);
 	const [unSub, setUnSub] = useState(false);
 
 	const handleClickOpen = () => {

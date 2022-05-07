@@ -93,6 +93,7 @@ const AreaForm = () => {
 							onChange={handleDistrictSelectChange}
 							name="district"
 							required
+							sx={{ textTransform: "capitalize" }}
 						>
 							{districtList?.map((item, index) => {
 								//
@@ -121,6 +122,7 @@ const AreaForm = () => {
 							onChange={handleAreaSelectChange}
 							name="area"
 							required
+							sx={{ textTransform: "capitalize" }}
 						>
 							{areaList?.map((item, index) => {
 								return (

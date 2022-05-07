@@ -122,6 +122,7 @@ const SuburbForm = () => {
 						name="suburb"
 						required
 						fullWidth
+						sx={{ textTransform: "capitalize" }}
 					>
 						{suburbList?.map((item, index) => {
 							return (
@@ -147,6 +148,7 @@ const SuburbForm = () => {
 						name="district"
 						required
 						fullWidth
+						sx={{ textTransform: "capitalize" }}
 					>
 						{gssList?.map((item, index) => {
 							return (
@@ -172,6 +174,7 @@ const SuburbForm = () => {
 						name="area"
 						required
 						fullWidth
+						sx={{ textTransform: "capitalize" }}
 					>
 						{areaList?.map((item, index) => {
 							return (
