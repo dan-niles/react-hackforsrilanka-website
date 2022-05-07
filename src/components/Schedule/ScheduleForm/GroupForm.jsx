@@ -26,7 +26,7 @@ const GroupForm = (props) => {
 		return axios
 			.get(baseURL + "/api/all-group/")
 			.then((res) => {
-				setGroups(res.data.data);
+				setGroups(res.data.data.sort());
 				setisLoading(false);
 			})
 			.catch((errr) => {});

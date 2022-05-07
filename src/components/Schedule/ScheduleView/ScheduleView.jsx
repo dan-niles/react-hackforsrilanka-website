@@ -63,7 +63,7 @@ const Schedule = (props) => {
 			)
 			.then((res) => {
 				setScheduleItems(res.data.data);
-				console.log(res.data.data);
+				console.log("Data from api--------", res.data.data);
 			});
 	};
 
@@ -85,6 +85,7 @@ const Schedule = (props) => {
 		}
 	}, [props.groupName]);
 
+	console.log("scheduleItems--------", scheduleItems);
 	if (date) {
 		// Filter according to group and selected date
 		var filteredScheduleItems = scheduleItems.filter((i) => {
@@ -93,13 +94,18 @@ const Schedule = (props) => {
 				setAreaGroup(scheduleItems[0].group_name);
 			}
 
+			console.log("areaGroup--------", areaGroup);
+			console.log("props.groupName--------", props.groupName);
+
 			if (props.groupName && i.group_name === props.groupName) {
+				console.log("inside group if clause");
 				return (
 					i.starting_period.substring(0, 10) ===
 					format(date, "yyyy-MM-dd", { locale: enGB })
 				);
 			}
 			if (areaGroup && i.group_name === areaGroup) {
+				console.log("inside area if clause");
 				return (
 					i.starting_period.substring(0, 10) ===
 					format(date, "yyyy-MM-dd", { locale: enGB })
@@ -107,7 +113,7 @@ const Schedule = (props) => {
 			}
 		});
 
-		console.log(filteredScheduleItems);
+		console.log("filteredScheduleItems--------", filteredScheduleItems);
 
 		// Remove duplicates
 		filteredScheduleItems = Array.from(
@@ -207,7 +213,6 @@ const Schedule = (props) => {
 					groupList={[...new Set(scheduleItems.map((item) => item.group_name))]}
 					setAreaGroup={setAreaGroup}
 				>
-					{/* {console.log('------------filteredScheduleItems: ', filteredScheduleItems)} */}
 					{filteredScheduleItems.map((i) => {
 						return (
 							<ScheduleItem
