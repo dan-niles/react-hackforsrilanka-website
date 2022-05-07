@@ -14,7 +14,7 @@ import axios from "axios";
 
 const GroupForm = (props) => {
 	const appTheme = useTheme();
-	const [isLoading, setisLoading] = useState(false);
+	const [isLoading, setisLoading] = useState(true);
 
 	let navigate = useNavigate();
 
@@ -27,9 +27,6 @@ const GroupForm = (props) => {
 			.get(baseURL + "/api/all-group/")
 			.then((res) => {
 				setGroups(res.data.data.sort());
-				if (props.groupName !== "") {
-					setGroupSelect(props.groupName);
-				}
 				setisLoading(false);
 			})
 			.catch((errr) => {});
@@ -39,20 +36,13 @@ const GroupForm = (props) => {
 		fetchGroupNames();
 	}, []);
 
-	const [groupSelect, setGroupSelect] = useState("");
+	const [groupSelect, setGroupSelect] = useState(props.groupName);
 	const handleGroupSelectChange = (event) => {
 		setGroupSelect(event.target.value);
 	};
 
 	const submitHandler = (e) => {
 		e.preventDefault();
-		const forLocalStorage = {
-			groupName: groupSelect,
-			suburb: "",
-			district: "",
-			area: "",
-		};
-		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
 		navigate(
 			{
 				pathname: "/schedule",
