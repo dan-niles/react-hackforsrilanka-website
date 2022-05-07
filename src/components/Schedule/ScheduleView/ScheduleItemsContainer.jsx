@@ -58,7 +58,7 @@ const ScheduleItemsContainer = (props) => {
 
 	const shareClickHandler = async () => {
 		const title = `${document.title} - Power Cut Schedule for Group ${props.groupName}`;
-		const text = "Check this out!";
+		const text = "Subscribe to receive free text notifications!";
 		const url = window.location.href;
 		if (navigator.share !== undefined) {
 			await navigator
@@ -67,7 +67,7 @@ const ScheduleItemsContainer = (props) => {
 					text,
 					url,
 				})
-				.then(() => console.log("Shared!"))
+				.then(() => {})
 				.catch((err) => console.error(err));
 		} else {
 			window.location = `mailto:?subject=${title}&body=${text}%0A${url}`;

@@ -69,7 +69,6 @@ const Schedule = (props) => {
 				} else {
 					setAreaGroup(null);
 				}
-				console.log("Data from api--------", res.data.data);
 			});
 	};
 
@@ -85,11 +84,7 @@ const Schedule = (props) => {
 		}
 	}, [props.groupName]);
 
-	console.log("scheduleItems--------", scheduleItems);
-
 	if (date) {
-		console.log("areaGroup--------", areaGroup);
-		console.log("props.groupName--------", props.groupName);
 		// Filter according to group and selected date
 		var filteredScheduleItems = scheduleItems.filter((i) => {
 			if (props.groupName && i.group_name === props.groupName) {
@@ -105,8 +100,6 @@ const Schedule = (props) => {
 				);
 			}
 		});
-
-		console.log("filteredScheduleItems--------", filteredScheduleItems);
 
 		// Remove duplicates
 		filteredScheduleItems = Array.from(
@@ -134,8 +127,8 @@ const Schedule = (props) => {
 			return seledate.includes(moment(new Date(date)).format("yyyy-MM-DD"));
 		},
 		orangeClass: (date) => {
-			if (scheduleItems.length > 0) {
-				let obj = scheduleItems.find(
+			if (filteredScheduleItems.length > 0) {
+				let obj = filteredScheduleItems.find(
 					(i) =>
 						i.starting_period.substring(0, 10) ===
 						moment(new Date(date)).format("yyyy-MM-DD")
