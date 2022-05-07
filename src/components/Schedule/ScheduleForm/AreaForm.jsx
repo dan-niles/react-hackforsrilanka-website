@@ -62,7 +62,9 @@ const AreaForm = () => {
 			{isLoading && (
 				<div className="row d-flex align-items-center justify-content-center">
 					<div className="spinner-border text-center" role="status">
-						<span className="visually-hidden">Loading...</span>
+						<span className="visually-hidden" style={{ color: "transparent" }}>
+							Loading...
+						</span>
 					</div>
 				</div>
 			)}
@@ -95,7 +97,11 @@ const AreaForm = () => {
 							{districtList?.map((item, index) => {
 								//
 								return (
-									<MenuItem value={item} key={index}>
+									<MenuItem
+										value={item}
+										key={index}
+										sx={{ textTransform: "capitalize" }}
+									>
 										{item}
 									</MenuItem>
 								);
@@ -118,7 +124,11 @@ const AreaForm = () => {
 						>
 							{areaList?.map((item, index) => {
 								return (
-									<MenuItem value={item} key={index}>
+									<MenuItem
+										value={item}
+										key={index}
+										sx={{ textTransform: "capitalize" }}
+									>
 										{item}
 									</MenuItem>
 								);

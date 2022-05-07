@@ -54,6 +54,7 @@ const ScheduleItemsContainer = (props) => {
 
 	let getAreaSheduleSelectBadge = (
 		<select
+			style={{ border: 0 }}
 			className={`badge ${
 				appTheme.palette.mode === "dark"
 					? "bg-warning text-dark"

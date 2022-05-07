@@ -87,7 +87,9 @@ const SuburbForm = () => {
 			{isLoading && (
 				<div className="row d-flex align-items-center justify-content-center">
 					<div className="spinner-border text-center" role="status">
-						<span className="visually-hidden">Loading...</span>
+						<span className="visually-hidden" style={{ color: "transparent" }}>
+							Loading...
+						</span>
 					</div>
 				</div>
 			)}
@@ -123,7 +125,11 @@ const SuburbForm = () => {
 					>
 						{suburbList?.map((item, index) => {
 							return (
-								<MenuItem key={index} value={item}>
+								<MenuItem
+									key={index}
+									value={item}
+									sx={{ textTransform: "capitalize" }}
+								>
 									{item}
 								</MenuItem>
 							);
@@ -144,7 +150,11 @@ const SuburbForm = () => {
 					>
 						{gssList?.map((item, index) => {
 							return (
-								<MenuItem value={item.gss} key={index}>
+								<MenuItem
+									value={item.gss}
+									key={index}
+									sx={{ textTransform: "capitalize" }}
+								>
 									{item.gss}
 								</MenuItem>
 							);
@@ -165,7 +175,11 @@ const SuburbForm = () => {
 					>
 						{areaList?.map((item, index) => {
 							return (
-								<MenuItem value={item.area} key={index}>
+								<MenuItem
+									value={item.area}
+									key={index}
+									sx={{ textTransform: "capitalize" }}
+								>
 									{item.area}
 								</MenuItem>
 							);
