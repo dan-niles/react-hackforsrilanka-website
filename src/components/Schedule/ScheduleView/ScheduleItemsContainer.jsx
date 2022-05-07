@@ -92,15 +92,6 @@ const ScheduleItemsContainer = (props) => {
 									{props.district
 										? getAreaSheduleSelectBadge
 										: getGroupScheduleBadge}
-									{/* <span
-										className={`badge ${
-											appTheme.palette.mode === "dark"
-												? "bg-warning text-dark"
-												: "bg-danger text-light"
-										}`}
-									>
-										{props.groupName}
-									</span> */}
 								</h3>
 							</div>
 						</div>

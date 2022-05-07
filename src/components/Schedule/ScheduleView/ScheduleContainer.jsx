@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Button from "@mui/material/Button";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import { useTheme } from "@mui/material/styles";
@@ -11,20 +11,6 @@ const ScheduleContainer = (props) => {
 	if (myRef.current != null) {
 		myRef.current.scrollIntoView();
 	}
-
-	const [open, setOpen] = React.useState(false);
-	const [sub, setSub] = useState(true);
-
-	const handleClickOpen = () => {
-		setOpen(true);
-	};
-
-	const handleClose = () => {
-		setOpen(false);
-	};
-	const handleClickUnsubscribe = () => {
-		setSub(false);
-	};
 
 	return (
 		<header

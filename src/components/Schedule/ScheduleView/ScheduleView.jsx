@@ -74,12 +74,6 @@ const Schedule = (props) => {
 		}
 	}, [props.district, props.area]);
 
-	// useEffect(() => {
-	// 	if (areaGroup) {
-	// 		fetchDistrictAreaScheduleItems();
-	// 	}
-	// }, [areaGroup]);
-
 	useEffect(() => {
 		if (props.groupName) {
 			fetchScheduleItems();
@@ -87,26 +81,22 @@ const Schedule = (props) => {
 	}, [props.groupName]);
 
 	console.log("scheduleItems--------", scheduleItems);
+	// set initial areaGroup
+	if (scheduleItems.length > 0 && !areaGroup) {
+		setAreaGroup(scheduleItems[0].group_name);
+	}
 	if (date) {
+		console.log("areaGroup--------", areaGroup);
+		console.log("props.groupName--------", props.groupName);
 		// Filter according to group and selected date
 		var filteredScheduleItems = scheduleItems.filter((i) => {
-			// set initial areaGroup
-			if (scheduleItems.length > 0 && !areaGroup) {
-				setAreaGroup(scheduleItems[0].group_name);
-			}
-
-			console.log("areaGroup--------", areaGroup);
-			console.log("props.groupName--------", props.groupName);
-
 			if (props.groupName && i.group_name === props.groupName) {
-				console.log("inside group if clause");
 				return (
 					i.starting_period.substring(0, 10) ===
 					format(date, "yyyy-MM-dd", { locale: enGB })
 				);
 			}
 			if (areaGroup && i.group_name === areaGroup) {
-				console.log("inside area if clause");
 				return (
 					i.starting_period.substring(0, 10) ===
 					format(date, "yyyy-MM-dd", { locale: enGB })
@@ -151,7 +141,7 @@ const Schedule = (props) => {
 				if (obj !== undefined) return true;
 			}
 		},
-		grayClass: (date) => true,
+		grayClass: () => true,
 	};
 	const modifiersClassNames = {
 		hideDays: "d-none",
@@ -183,10 +173,6 @@ const Schedule = (props) => {
 	const handleClose = () => {
 		setOpen(false);
 	};
-	const handleClickUnsubscribe = () => {
-		setUnSub(true);
-		setOpen(true);
-	};
 
 	return (
 		<>
@@ -197,17 +183,10 @@ const Schedule = (props) => {
 				groupName={props.groupName}
 				areaGroup={areaGroup}
 			/>
-			<ScheduleContainer
-				groupName={props.groupName}
-				handleClickOpen={handleClickOpen}
-				handleClickUnsubscribe={handleClickUnsubscribe}
-			>
+			<ScheduleContainer handleClickOpen={handleClickOpen}>
 				<ScheduleItemsContainer
 					handleClickOpen={handleClickOpen}
-					handleClickUnsubscribe={handleClickUnsubscribe}
-					scheduleItemData={scheduleItems}
 					date={date}
-					setDate={setDate}
 					groupName={props.groupName}
 					district={props.district}
 					groupList={[...new Set(scheduleItems.map((item) => item.group_name))]}
