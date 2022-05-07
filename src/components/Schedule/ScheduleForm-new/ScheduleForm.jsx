@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import GroupForm from "./GroupForm";
 import AreaForm from "./AreaForm";
@@ -26,6 +26,28 @@ const ScheduleForm = (props) => {
 		}
 	};
 
+	let formParameters = {
+		groupName: "",
+		suburb: "",
+		district: "",
+		area: "",
+	};
+	if (localStorage.getItem("form-parameters") !== null) {
+		formParameters = JSON.parse(localStorage.getItem("form-parameters"));
+	}
+	useEffect(() => {
+		if (formParameters.groupName !== "") {
+			setShowFormType("group");
+			setToggle("groupToggle");
+		} else if (formParameters.suburb !== "") {
+			setShowFormType("suburb");
+			setToggle("suburbToggle");
+		} else if (formParameters.district !== "") {
+			setShowFormType("area");
+			setToggle("areaToggle");
+		}
+	}, []);
+
 	return (
 		<header className="header-centers py-5">
 			<div className="container px-3 px-md-5">
@@ -50,10 +72,21 @@ const ScheduleForm = (props) => {
 					<div className="col-12 col-lg-6">
 						<div className="card p-lg-5 p-4">
 							{showFormType === "group" && (
-								<GroupForm groupName={props.groupName} />
+								<GroupForm groupName={formParameters.groupName} />
 							)}
-							{showFormType === "suburb" && <SuburbForm />}
-							{showFormType === "area" && <AreaForm />}
+							{showFormType === "suburb" && (
+								<SuburbForm
+									suburb={formParameters.suburb}
+									district={formParameters.district}
+									area={formParameters.area}
+								/>
+							)}
+							{showFormType === "area" && (
+								<AreaForm
+									district={formParameters.district}
+									area={formParameters.area}
+								/>
+							)}
 						</div>
 					</div>
 				</div>

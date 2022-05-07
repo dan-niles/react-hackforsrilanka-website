@@ -11,14 +11,13 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import axios from "axios";
 import { baseURL } from "../../../BaseApi";
 
-const AreaForm = (props) => {
+const AreaForm = () => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
 
 	let navigate = useNavigate();
 	const [areaList, setAreaList] = useState();
 	const [districtList, setDistrictList] = useState();
-
 	const [districtSelect, setDistrictSelect] = useState("");
 	const handleDistrictSelectChange = (event) => {
 		setDistrictSelect(event.target.value);
@@ -31,13 +30,6 @@ const AreaForm = (props) => {
 
 	const submitHandler = (e) => {
 		e.preventDefault();
-		const forLocalStorage = {
-			groupName: "",
-			suburb: "",
-			district: districtSelect,
-			area: areaSelect,
-		};
-		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
 		navigate({
 			pathname: "/schedule",
 			search: `?group=&district=${districtSelect}&area=${areaSelect}`,
@@ -49,9 +41,6 @@ const AreaForm = (props) => {
 			.get(baseURL + "/api/all-gss/")
 			.then((res) => {
 				setDistrictList(res.data.data);
-				if (props.district !== "") {
-					setDistrictSelect(props.district);
-				}
 				setisLoading(false);
 			})
 			.catch((errr) => {});
@@ -63,9 +52,6 @@ const AreaForm = (props) => {
 				.get(baseURL + `/api/all-area/?gss=${districtSelect}`)
 				.then((res) => {
 					setAreaList(res.data.data);
-					if (props.area !== "") {
-						setAreaSelect(props.area);
-					}
 				})
 				.catch((errr) => {});
 		}
