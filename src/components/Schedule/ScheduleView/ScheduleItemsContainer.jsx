@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from "react";
-
 import { format } from "date-fns";
 import { enUS } from "date-fns/locale";
-import { useLocation } from "react-router-dom";
 
 import Button from "@mui/material/Button";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
@@ -13,13 +10,6 @@ import { useTheme } from "@mui/material/styles";
 const ScheduleItemsContainer = (props) => {
 	const appTheme = useTheme();
 
-	const [scheduleData, setScheduleData] = useState(true);
-	const [scheduleTime, setScheduleTime] = useState();
-	const [startTime, setStartTime] = useState();
-	const [endTime, setEndTime] = useState();
-	const location = useLocation;
-	const data = location?.state?.data;
-	const [getTime, setGetTime] = useState();
 	const dateText = props.date
 		? format(props.date, "dd MMM yyyy", {
 				locale: enUS,
@@ -31,14 +21,6 @@ const ScheduleItemsContainer = (props) => {
 				weekday: "long",
 		  })
 		: "";
-
-	useEffect(() => {
-		setScheduleTime(props.scheduleItemData);
-	}, [props.scheduleItemData]);
-
-	useEffect(() => {
-		setScheduleTime(props.scheduleItemData);
-	}, [props.scheduleItemData]);
 
 	let getGroupScheduleBadge = (
 		<span

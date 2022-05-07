@@ -1,4 +1,1 @@
-export const  baseURL ="https://hfsl-backend.herokuapp.com"
-
-
-
+export const baseURL = "https://hfsl-backend.herokuapp.com";

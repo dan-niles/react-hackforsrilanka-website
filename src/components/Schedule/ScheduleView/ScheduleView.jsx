@@ -63,6 +63,7 @@ const Schedule = (props) => {
 			)
 			.then((res) => {
 				setScheduleItems(res.data.data);
+				console.log(res.data.data);
 			});
 	};
 
@@ -73,10 +74,10 @@ const Schedule = (props) => {
 	}, [props.district, props.area]);
 
 	// useEffect(() => {
-	// 	if (props.area) {
+	// 	if (areaGroup) {
 	// 		fetchDistrictAreaScheduleItems();
 	// 	}
-	// }, [props.area]);
+	// }, [areaGroup]);
 
 	useEffect(() => {
 		if (props.groupName) {
@@ -91,6 +92,7 @@ const Schedule = (props) => {
 			if (scheduleItems.length > 1 && !areaGroup) {
 				setAreaGroup(scheduleItems[0].group_name);
 			}
+
 			if (props.groupName && i.group_name === props.groupName) {
 				return (
 					i.starting_period.substring(0, 10) ===
@@ -103,6 +105,8 @@ const Schedule = (props) => {
 				);
 			}
 		});
+
+		console.log(filteredScheduleItems);
 
 		// Remove duplicates
 		filteredScheduleItems = Array.from(
