@@ -14,7 +14,7 @@ import { baseURL } from "../../../BaseApi";
 
 const SuburbForm = (props) => {
 	const appTheme = useTheme();
-	const [isLoading, setisLoading] = useState(false);
+	const [isLoading, setisLoading] = useState(true);
 
 	let navigate = useNavigate();
 	const [suburbList, setSuburbList] = useState();

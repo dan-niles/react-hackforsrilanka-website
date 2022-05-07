@@ -14,7 +14,7 @@ import axios from "axios";
 
 const GroupForm = (props) => {
 	const appTheme = useTheme();
-	const [isLoading, setisLoading] = useState(false);
+	const [isLoading, setisLoading] = useState(true);
 
 	let navigate = useNavigate();
 

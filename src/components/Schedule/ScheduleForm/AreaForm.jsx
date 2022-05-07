@@ -13,7 +13,7 @@ import { baseURL } from "../../../BaseApi";
 
 const AreaForm = (props) => {
 	const appTheme = useTheme();
-	const [isLoading, setisLoading] = useState(false);
+	const [isLoading, setisLoading] = useState(true);
 
 	let navigate = useNavigate();
 	const [areaList, setAreaList] = useState();
