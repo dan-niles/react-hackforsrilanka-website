@@ -198,12 +198,12 @@ const Contact = () => {
                             <!---->
                             <!-- This is what your users will see when there is-->
                             <!-- an error submitting the form--> */}
-									<div className={emailSent ? "d-block" : "d-none"}>
+									{/* <div className={emailSent ? "d-block" : "d-none"}>
 										<div className="text-center mb-3">
 											Thank you for your message, we will be in touch in no
 											time!
 										</div>
-									</div>
+									</div> */}
 									{/* <!-- Submit Button--> */}
 									<div className="d-grid">
 										<button

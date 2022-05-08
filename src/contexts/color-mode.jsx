@@ -54,6 +54,8 @@ export const ColorModeContextProvider = (props) => {
 					"Roboto",
 					'"Helvetica Neue"',
 					"Arial",
+					"Noto Sans",
+					"Liberation Sans",
 					"sans-serif",
 					'"Apple Color Emoji"',
 					'"Segoe UI Emoji"',

@@ -58,6 +58,12 @@ const Unsubscribe = () => {
 		}
 	};
 
+	Swal.fire({
+		position: "top-center",
+		icon: "success",
+		title: "Unsubscribed successfully",
+	});
+
 	return (
 		<Grid>
 			<Container
@@ -73,9 +79,9 @@ const Unsubscribe = () => {
 							<DialogContent>
 								<DialogContentText>
 									To unsubscribe from notifications, please enter your phone
-									number here.
+									number here
 								</DialogContentText>
-								<span className="text-danger"></span>
+								<span className="text-error"></span>
 								<TextField
 									autoFocus
 									margin="dense"
@@ -104,7 +110,7 @@ const Unsubscribe = () => {
 									autoComplete="off"
 									color="info"
 								/>
-								<span className="text-danger">{error}</span>
+								<span className="text-error">{error}</span>
 							</DialogContent>
 							<DialogActions>
 								<Button onClick={handleClose} color="secondary">

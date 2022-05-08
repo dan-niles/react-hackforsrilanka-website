@@ -48,7 +48,7 @@
 	--bs-black-rgb: 0, 0, 0;
 	--bs-body-color-rgb: 33, 37, 41;
 	--bs-body-bg-rgb: 255, 255, 255;
-	--bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+	--bs-font-sans-serif: -apple-system, "BlinkMacSystemFont", "Segoe UI", Roboto,
 		"Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
@@ -8237,6 +8237,14 @@ fieldset:disabled .btn {
 	color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-error {
+	color: #ff6767 !important;
+}
+
+.light-mode .text-error {
+	color: #d32f2e !important;
+}
+
 .text-light {
 	--bs-text-opacity: 1;
 	color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
@@ -12002,6 +12010,10 @@ html {
 }
 
 .sl-spinner3 {
-	width: 3em; 
+	width: 3em;
 	height: 3em;
+}
+
+.swal2-styled.swal2-confirm {
+	background-color: #424242 !important;
 }

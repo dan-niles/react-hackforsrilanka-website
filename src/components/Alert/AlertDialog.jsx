@@ -9,16 +9,12 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import {
-	FormControl,
-	InputAdornment,
-	switchClasses,
-	useMediaQuery,
-} from "@mui/material";
+import { InputAdornment, useMediaQuery } from "@mui/material";
 import Swal from "sweetalert2";
 import Loader from "react-js-loader";
 
 import { baseURL } from "../../BaseApi";
+import { useTheme } from "@mui/material/styles";
 
 const AlertDialog = (props) => {
 	const [name, setName] = useState("");
@@ -35,6 +31,7 @@ const AlertDialog = (props) => {
 	const [allRegErr, setAllRegErr] = useState();
 	const [reSubBtn, setReSubBtn] = useState(false);
 	const [showSubBtn, setShowSubBtn] = useState(false);
+	const appTheme = useTheme();
 
 	const matches = useMediaQuery("(min-width:768px)");
 	useEffect(() => {
@@ -150,14 +147,14 @@ const AlertDialog = (props) => {
 	};
 
 	return (
-		<Dialog open={props.open} onClose={props.handleClose}>
+		<Dialog sx={{ margin: 0 }} open={props.open} onClose={props.handleClose}>
 			<DialogTitle>Subscribe to Group {props.groupName}</DialogTitle>
 			<DialogContent>
 				<DialogContentText>
 					To subscribe to this group, please enter your name and phone number
 					here. We will send updates occasionally.
 				</DialogContentText>
-				<span className="text-danger">{allRegErr}</span>
+				<span className="text-error">{allRegErr}</span>
 				<TextField
 					autoFocus
 					margin="dense"
@@ -178,7 +175,7 @@ const AlertDialog = (props) => {
 					color="info"
 					required
 				/>
-				<span className="text-danger">{nameErr}</span>
+				<span className="text-error">{nameErr}</span>
 				<TextField
 					margin="dense"
 					id="phone-number"
@@ -203,10 +200,10 @@ const AlertDialog = (props) => {
 					autoComplete="off"
 					color="info"
 				/>
-				<span className="text-danger">{error}</span>
+				<span className="text-error">{error}</span>
 				{showOtpBox && (
-					<div className="py-3">
-						<p>Enter Otp</p>
+					<div className="pt-3 d-flex flex-column align-items-center">
+						<p>Please enter the verification code sent to your phone</p>
 						<OtpInput
 							className="otp_value"
 							name="otp"
@@ -218,24 +215,24 @@ const AlertDialog = (props) => {
 							onChange={(e) => setOtp(e)}
 							numInputs={6}
 							errorStyle={{
-								width: matches ? "60px" : "30px",
-								height: matches ? "60px" : "30px",
-								margin: "5px",
+								width: matches ? "60px" : "40px",
+								height: matches ? "60px" : "40px",
+								margin: matches ? "5px" : "3px",
 								fontSize: matches ? "2rem" : "1rem",
 								borderRadius: matches ? 12 : 6,
 								border: "2px solid red",
 							}}
 							inputStyle={{
-								width: matches ? "60px" : "30px",
-								height: matches ? "60px" : "30px",
-								margin: "5px",
+								width: matches ? "60px" : "40px",
+								height: matches ? "60px" : "40px",
+								margin: matches ? "5px" : "3px",
 								fontSize: matches ? "2rem" : "1rem",
 								borderRadius: matches ? 12 : 6,
 								border: "1px solid rgba(0,0,0,0.3)",
 							}}
 						/>
 						<div className="pt-3">
-							<span className="text-danger">{otpErr}</span>
+							<span className="text-error">{otpErr}</span>
 						</div>
 					</div>
 				)}
@@ -253,7 +250,7 @@ const AlertDialog = (props) => {
 					Cancel
 				</Button>
 				{showOtpBox && (
-					<Button onClick={verifyOtp} color="secondary">
+					<Button onClick={verifyOtp} color="success">
 						Verify Otp
 					</Button>
 				)}
