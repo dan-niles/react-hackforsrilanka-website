@@ -3,8 +3,6 @@ import Button from "@mui/material/Button";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import { useTheme } from "@mui/material/styles";
 
-// let statusCode = ""
-
 const ScheduleContainer = (props) => {
 	const appTheme = useTheme();
 	const myRef = useRef(null);

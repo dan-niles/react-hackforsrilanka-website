@@ -2,9 +2,9 @@ import { useState, forwardRef } from "react";
 
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
 import { useTheme } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
@@ -86,7 +86,7 @@ const Contact = () => {
 										: "bg-danger text-light"
 								} rounded-3 mb-3`}
 							>
-								<i className="bi bi-envelope"></i>
+								<EmailOutlinedIcon />
 							</div>
 							<h1 className="fw-bolder">Get in touch</h1>
 							<p className="lead fw-normal text-white-50 mb-0">
