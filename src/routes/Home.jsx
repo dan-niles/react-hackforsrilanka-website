@@ -4,16 +4,16 @@ import { useNavigate } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
-import HelpSlider from "../components/HelpSlider/HelpSlider";
+// import HelpSlider from "../components/HelpSlider/HelpSlider";
 import { motion } from "framer-motion";
 
 import Button from "@mui/material/Button";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+// import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 
 const Home = () => {
 	const appTheme = useTheme();
 	const [imageLoading, setImageLoading] = useState(true); // for animating light bulb img
-	const [openGuide, setOpenGuide] = useState(false); // for help guide modal
+	// const [openGuide, setOpenGuide] = useState(false); // for help guide modal
 	const navigate = useNavigate();
 
 	const imageLoaded = () => {
@@ -21,13 +21,13 @@ const Home = () => {
 	};
 
 	// handling the help guide modal
-	const handleOpenGuide = () => {
-		setOpenGuide(true);
-	};
+	// const handleOpenGuide = () => {
+	// 	setOpenGuide(true);
+	// };
 
-	const handleCloseGuide = () => {
-		setOpenGuide(false);
-	};
+	// const handleCloseGuide = () => {
+	// 	setOpenGuide(false);
+	// };
 
 	// pre-selects group if user has previously selected a group
 	// const handleCTA = () => {
@@ -54,7 +54,7 @@ const Home = () => {
 
 	return (
 		<AnimatedPage>
-			<HelpSlider openGuide={openGuide} closeGuide={handleCloseGuide} />
+			{/* <HelpSlider openGuide={openGuide} closeGuide={handleCloseGuide} /> */}
 			<header
 				className="header-center"
 				style={{

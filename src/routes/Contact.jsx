@@ -21,10 +21,10 @@ const Contact = () => {
 
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
-	const [userPhoneNumber, setUserPhoneNumber] = useState("");
+	// const [userPhoneNumber, setUserPhoneNumber] = useState("");
 	const [message, setMessage] = useState("");
 
-	const [emailSent, setEmailSent] = useState(false);
+	// const [emailSent, setEmailSent] = useState(false);
 
 	const submitHandler = (e) => {
 		e.preventDefault();
@@ -45,9 +45,9 @@ const Contact = () => {
 
 			setName("");
 			setEmail("");
-			setUserPhoneNumber("");
+			// setUserPhoneNumber("");
 			setMessage("");
-			setEmailSent(true);
+			// setEmailSent(true);
 			setOpen(true);
 		} else {
 			alert("Please fill in all fields.");

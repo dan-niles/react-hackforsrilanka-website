@@ -10,6 +10,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import TodayIcon from "@mui/icons-material/Today";
 import Button from "@mui/material/Button";
+import { enGB } from "date-fns/locale";
 
 import { isThisWeek, nextDay, getDay, isSameWeek } from "date-fns";
 import add from "date-fns/add";
@@ -88,7 +89,7 @@ const ScheduleDatePicker = (props) => {
 				>
 					<ChevronLeftIcon />
 				</IconButton>
-				<LocalizationProvider dateAdapter={AdapterDateFns}>
+				<LocalizationProvider locale={enGB} dateAdapter={AdapterDateFns}>
 					<MobileDatePicker
 						minDate={minDate}
 						maxDate={maxDate}

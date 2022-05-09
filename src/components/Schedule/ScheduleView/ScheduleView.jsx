@@ -16,7 +16,6 @@ import {
 import { enGB } from "date-fns/locale";
 import { DatePickerCalendar as ScheduleCalendar } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
-import moment from "moment";
 
 import ScheduleDatePicker from "./ScheduleDatePicker";
 import axios from "axios";
@@ -36,11 +35,11 @@ const Schedule = (props) => {
 		weekStartsOn: 1,
 	});
 
+	const startDate = format(minDate, "yyyy-MM-dd", { locale: enGB });
+	const endDate = format(maxDate, "yyyy-MM-dd", { locale: enGB });
+
 	// Fetch schedule data from api
 	const fetchScheduleItems = () => {
-		const startDate = moment(minDate).format("yyyy-MM-DD");
-
-		const endDate = moment(maxDate).format("yyyy-MM-DD");
 		return axios
 			.get(
 				baseURL +
@@ -53,9 +52,6 @@ const Schedule = (props) => {
 
 	// Fetch schedule data from api using state and city
 	const fetchDistrictAreaScheduleItems = () => {
-		const startDate = moment(minDate).format("yyyy-MM-DD");
-
-		const endDate = moment(maxDate).format("yyyy-MM-DD");
 		return axios
 			.get(
 				baseURL +
@@ -124,14 +120,14 @@ const Schedule = (props) => {
 		// Colour key system for dates
 		greenClass: (date) => {
 			let seledate = [];
-			return seledate.includes(moment(new Date(date)).format("yyyy-MM-DD"));
+			return seledate.includes(format(date, "yyyy-MM-dd", { locale: enGB }));
 		},
 		orangeClass: (date) => {
 			if (scheduleItems.length > 0) {
 				let obj = scheduleItems.find(
 					(i) =>
 						i.starting_period.substring(0, 10) ===
-						moment(new Date(date)).format("yyyy-MM-DD")
+						format(date, "yyyy-MM-dd", { locale: enGB })
 				);
 				if (obj !== undefined) return true;
 			}
