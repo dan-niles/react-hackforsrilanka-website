@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/src/assets/img/bin
 /.pnp
 .pnp.js
 

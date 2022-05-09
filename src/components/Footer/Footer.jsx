@@ -1,5 +1,5 @@
 import FooterContainer from "./FooterContainer";
-import FooterItem from "./FooterItem";
+// import FooterItem from "./FooterItem";
 
 const Footer = () => {
 	return (
