@@ -57,8 +57,12 @@ const ScheduleItemsContainer = (props) => {
 	);
 
 	const shareClickHandler = async () => {
-		const title = `${document.title} - Power Cut Schedule for Group ${props.groupName}`;
-		const text = "Subscribe to receive free text notifications!";
+		const title = `${document.title} | Power Cut Schedule for Group ${
+			props.groupName || props.areaGroup
+		}`;
+		const text = `${document.title} | Power Cut Schedule for Group ${
+			props.groupName || props.areaGroup
+		}`;
 		const url = window.location.href;
 		if (navigator.share !== undefined) {
 			await navigator

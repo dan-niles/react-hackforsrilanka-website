@@ -179,6 +179,7 @@ const Schedule = (props) => {
 					handleClickOpen={handleClickOpen}
 					date={date}
 					groupName={props.groupName}
+					areaGroup={areaGroup}
 					district={props.district}
 					groupList={[...new Set(scheduleItems.map((item) => item.group_name))]}
 					setAreaGroup={setAreaGroup}
