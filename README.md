@@ -29,10 +29,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Things To Do
 
-- **Integrate Alert System:** Created a form for users to subscribe to a particular group. Need to integrate it with Team Illuminati's alert system.
-- **Search by Location:** Currently search by location form exists, but need to get data from api and populate the select fields.
-- **Contact:** Contact form needs to be set up with a recipient email address.
+- ~~**Integrate Alert System:** Created a form for users to subscribe to a particular group. Need to integrate it with Team Illuminati's alert system.~~
+- ~~**Search by Location:** Currently search by location form exists, but need to get data from api and populate the select fields.~~
+- ~~**Contact:** Contact form needs to be set up with a recipient email address.~~
 - **Privacy/Terms:** Need to decide whether to create new pages for privacy/terms or else remove links from footer.
-- **Language Translation:** Add option to translate page into Sinhala and Tamil languages.
+- ~~**Language Translation:** Add option to translate page into Sinhala and Tamil languages.~~
 - **Help:** I created a Help Dialog Modal, need to fill it in with screenshots and directions for users on how to use the app.
-- **Spinners:** Need to display spinners when loading data from api and submitting forms
+- ~~**Spinners:** Need to display spinners when loading data from api and submitting forms~~
