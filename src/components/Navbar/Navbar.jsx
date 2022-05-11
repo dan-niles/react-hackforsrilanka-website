@@ -37,9 +37,9 @@ const pages = [
 		key: "About",
 	},
 	{
-		title: <FormattedMessage id="nav.contact" defaultMessage="Contact" />,
-		link: "contact",
-		key: "Contact",
+		title: <FormattedMessage id="nav.contact" defaultMessage="Suggestions" />,
+		link: "suggestions",
+		key: "Suggestions",
 	},
 ];
 

@@ -100,7 +100,7 @@ const Contact = () => {
 							<p className="lead fw-normal text-white-50 mb-0">
 								<FormattedMessage
 									id="contact.subTitle"
-									defaultMessage="We'd love to hear from you"
+									defaultMessage="Help us improve. Please send us your suggestions."
 								/>
 							</p>
 						</div>
