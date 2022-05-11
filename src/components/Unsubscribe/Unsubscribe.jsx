@@ -10,7 +10,6 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { Container, Grid, InputAdornment } from "@mui/material";
 import Swal from "sweetalert2";
 
-import { baseURL } from "../../BaseApi";
 import { useNavigate } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 
@@ -34,7 +33,7 @@ const Unsubscribe = () => {
 		} else {
 			axios
 				.post(
-					baseURL + "/api/unsubscribe/",
+					process.env.REACT_APP_API_URL + "/api/unsubscribe/",
 					{
 						mobile_number: mobileNum,
 					},

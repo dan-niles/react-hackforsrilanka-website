@@ -9,7 +9,6 @@ import { useTheme } from "@mui/material/styles";
 
 import GroupsIcon from "@mui/icons-material/Groups";
 
-import { baseURL } from "../../../BaseApi";
 import axios from "axios";
 
 import { FormattedMessage } from "react-intl";
@@ -26,7 +25,7 @@ const GroupForm = (props) => {
 
 	const fetchGroupNames = () => {
 		return axios
-			.get(baseURL + "/api/all-group/")
+			.get(process.env.REACT_APP_API_URL + "/api/all-group/")
 			.then((res) => {
 				setGroups(res.data.data.sort());
 				if (props.groupName !== "") {

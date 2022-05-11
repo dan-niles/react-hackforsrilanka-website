@@ -7,7 +7,6 @@ import { useTheme } from "@mui/material/styles";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 
 import axios from "axios";
-import { baseURL } from "../../../BaseApi";
 
 import { FormattedMessage } from "react-intl";
 
@@ -52,7 +51,7 @@ const SuburbForm = (props) => {
 
 	useEffect(() => {
 		axios
-			.get(baseURL + "/api/all-suburb/")
+			.get(process.env.REACT_APP_API_URL + "/api/all-suburb/")
 			.then((res) => {
 				setSuburbList(res.data.data);
 				if (props.suburb !== "") {
@@ -66,7 +65,10 @@ const SuburbForm = (props) => {
 	useEffect(() => {
 		if (suburbSelect) {
 			axios
-				.get(baseURL + `/api/search-by-suburb/?suburb=${suburbSelect}`)
+				.get(
+					process.env.REACT_APP_API_URL +
+						`/api/search-by-suburb/?suburb=${suburbSelect}`
+				)
 				.then((res) => {
 					setDistrictList(res.data.data);
 					if (props.district !== "") {

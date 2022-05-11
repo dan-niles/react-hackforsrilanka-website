@@ -9,7 +9,6 @@ import { useTheme } from "@mui/material/styles";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 import axios from "axios";
-import { baseURL } from "../../../BaseApi";
 
 import { FormattedMessage } from "react-intl";
 
@@ -48,7 +47,7 @@ const AreaForm = (props) => {
 
 	useEffect(() => {
 		axios
-			.get(baseURL + "/api/all-gss/")
+			.get(process.env.REACT_APP_API_URL + "/api/all-gss/")
 			.then((res) => {
 				setDistrictList(res.data.data);
 				if (props.district !== "") {
@@ -62,7 +61,9 @@ const AreaForm = (props) => {
 	useEffect(() => {
 		if (districtSelect) {
 			axios
-				.get(baseURL + `/api/all-area/?gss=${districtSelect}`)
+				.get(
+					process.env.REACT_APP_API_URL + `/api/all-area/?gss=${districtSelect}`
+				)
 				.then((res) => {
 					setAreaList(res.data.data);
 					if (props.area !== "") {

@@ -19,7 +19,6 @@ import "react-nice-dates/build/style.css";
 
 import ScheduleDatePicker from "./ScheduleDatePicker";
 import axios from "axios";
-import { baseURL } from "../../../BaseApi";
 
 import AlertDialog from "../../Alert/AlertDialog";
 import TodayIcon from "@mui/icons-material/Today";
@@ -44,7 +43,7 @@ const Schedule = (props) => {
 	const fetchScheduleItems = () => {
 		return axios
 			.get(
-				baseURL +
+				process.env.REACT_APP_API_URL +
 					`/api/power-schedule/${props.groupName}/?from_date=${startDate}&to_date=${endDate}`
 			)
 			.then((res) => {
@@ -56,7 +55,7 @@ const Schedule = (props) => {
 	const fetchDistrictAreaScheduleItems = () => {
 		return axios
 			.get(
-				baseURL +
+				process.env.REACT_APP_API_URL +
 					`/api/schedule-by-place/?district=${props.district}&area=${props.area}&from_date=${startDate}&to_date=${endDate}`
 			)
 			.then((res) => {

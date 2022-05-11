@@ -13,7 +13,6 @@ import { InputAdornment, useMediaQuery } from "@mui/material";
 import Swal from "sweetalert2";
 import Loader from "react-js-loader";
 
-import { baseURL } from "../../BaseApi";
 import { FormattedMessage } from "react-intl";
 
 const AlertDialog = (props) => {
@@ -65,7 +64,7 @@ const AlertDialog = (props) => {
 			setShowLoad(true);
 			return axios
 				.post(
-					baseURL + "/api/subscribe/",
+					process.env.REACT_APP_API_URL + "/api/subscribe/",
 					{
 						mobile_number: phoneNum,
 						name: name,
@@ -100,7 +99,7 @@ const AlertDialog = (props) => {
 		setError("");
 		return axios
 			.post(
-				baseURL + "/api/change-group/",
+				process.env.REACT_APP_API_URL + "/api/change-group/",
 				{
 					mobile_number: phoneNum,
 					name: name,
@@ -124,7 +123,7 @@ const AlertDialog = (props) => {
 		const number = data.phoneNum.toString().slice(0, 4);
 		return axios
 			.post(
-				baseURL + "/api/verify-otp/",
+				process.env.REACT_APP_API_URL + "/api/verify-otp/",
 				{
 					otp: data.otp,
 					secret_key: data.secretKey,

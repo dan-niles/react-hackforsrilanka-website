@@ -56,7 +56,7 @@ const ScheduleContainer = (props) => {
 					</div>
 				</div>
 
-				<div className="row align-items-center justify-content-center">
+				<div className="row mt-0 mt-md-4 align-items-center justify-content-center">
 					<div className="col-lg-12 col-xl-12 col-xxl-12">
 						<div className="card">
 							<div className="container px-1">
