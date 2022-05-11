@@ -14,7 +14,7 @@ import Swal from "sweetalert2";
 import Loader from "react-js-loader";
 
 import { baseURL } from "../../BaseApi";
-import { useTheme } from "@mui/material/styles";
+import { FormattedMessage } from "react-intl";
 
 const AlertDialog = (props) => {
 	const [name, setName] = useState("");
@@ -31,7 +31,6 @@ const AlertDialog = (props) => {
 	const [allRegErr, setAllRegErr] = useState();
 	const [reSubBtn, setReSubBtn] = useState(false);
 	const [showSubBtn, setShowSubBtn] = useState(false);
-	const appTheme = useTheme();
 
 	const matches = useMediaQuery("(min-width:768px)");
 	useEffect(() => {
@@ -49,9 +48,19 @@ const AlertDialog = (props) => {
 	const getSubscription = () => {
 		let username = name.trim();
 		if (username === undefined || username === "" || username == null) {
-			setNameErr("Please enter a name");
+			setNameErr(
+				<FormattedMessage
+					id="schedule.subscribe.nameError"
+					defaultMessage="Please enter a name"
+				/>
+			);
 		} else if (phoneNum.toString().length !== 9) {
-			setError("Please Enter a 9 digit valid number");
+			setError(
+				<FormattedMessage
+					id="schedule.subscribe.phoneError"
+					defaultMessage="Please enter a valid 9 digit number"
+				/>
+			);
 		} else {
 			setShowLoad(true);
 			return axios
@@ -148,18 +157,32 @@ const AlertDialog = (props) => {
 
 	return (
 		<Dialog sx={{ margin: 0 }} open={props.open} onClose={props.handleClose}>
-			<DialogTitle>Subscribe to Group {props.groupName}</DialogTitle>
+			<DialogTitle>
+				<FormattedMessage
+					id="schedule.subscribe.title"
+					defaultMessage="Subscribe to Group {groupName}"
+					values={{ groupName: props.groupName }}
+				/>
+			</DialogTitle>
 			<DialogContent>
 				<DialogContentText>
-					To subscribe to this group, please enter your name and phone number
-					here. We will send updates occasionally.
+					<FormattedMessage
+						id="schedule.subscribe.text"
+						defaultMessage="To subscribe to this group, please enter your name and phone number
+						here. We will send updates occasionally."
+					/>
 				</DialogContentText>
 				<span className="text-error">{allRegErr}</span>
 				<TextField
 					autoFocus
 					margin="dense"
 					id="name"
-					label="Name"
+					label={
+						<FormattedMessage
+							id="schedule.subscribe.name"
+							defaultMessage="Name"
+						/>
+					}
 					type="text"
 					disabled={showOtpBox}
 					value={name}
@@ -179,7 +202,12 @@ const AlertDialog = (props) => {
 				<TextField
 					margin="dense"
 					id="phone-number"
-					label="Phone Number"
+					label={
+						<FormattedMessage
+							id="schedule.subscribe.phoneNumber"
+							defaultMessage="Phone Number"
+						/>
+					}
 					type="tel"
 					disabled={showOtpBox}
 					value={phoneNum}
@@ -203,12 +231,17 @@ const AlertDialog = (props) => {
 				<span className="text-error">{error}</span>
 				{showOtpBox && (
 					<div className="pt-3 d-flex flex-column align-items-center">
-						<p>Please enter the verification code sent to your phone</p>
+						<p>
+							<FormattedMessage
+								id="schedule.subscribe.verifyText"
+								defaultMessage="Please enter the verification code sent to your phone"
+							/>
+						</p>
 						<OtpInput
 							className="otp_value"
 							name="otp"
 							isInputNum={true}
-							numInputs={true}
+							// numInputs={true}
 							hasErrored={otpErr}
 							value={otp}
 							placeholder="______"
@@ -247,23 +280,35 @@ const AlertDialog = (props) => {
 					/>
 				)}
 				<Button onClick={props.handleClose} color="secondary">
-					Cancel
+					<FormattedMessage
+						id="schedule.subscribe.cancelBtn"
+						defaultMessage="Cancel"
+					/>
 				</Button>
 				{showOtpBox && (
 					<Button onClick={verifyOtp} color="success">
-						Verify Otp
+						<FormattedMessage
+							id="schedule.subscribe.verifyBtn"
+							defaultMessage="Verify Code"
+						/>
 					</Button>
 				)}
 				{!showSubBtn && (
 					<Button onClick={getSubscription} color="info" disabled={showLoad}>
 						{/* onClick={props.handleClose} */}
-						Subscribe
+						<FormattedMessage
+							id="schedule.subscribe.subBtn"
+							defaultMessage="Subscribe"
+						/>
 					</Button>
 				)}
 				{reSubBtn && (
 					<Button onClick={getReSubscription} color="info" disabled={showLoad}>
 						{/* onClick={props.handleClose} */}
-						Resubscribe
+						<FormattedMessage
+							id="schedule.subscribe.reSubBtn"
+							defaultMessage="Resubscribe"
+						/>
 					</Button>
 				)}
 			</DialogActions>

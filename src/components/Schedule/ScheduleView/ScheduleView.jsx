@@ -13,7 +13,7 @@ import {
 	startOfWeek,
 	endOfWeek,
 } from "date-fns";
-import { enGB } from "date-fns/locale";
+import { enGB, ta } from "date-fns/locale";
 import { DatePickerCalendar as ScheduleCalendar } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
 
@@ -24,6 +24,8 @@ import { baseURL } from "../../../BaseApi";
 import AlertDialog from "../../Alert/AlertDialog";
 import TodayIcon from "@mui/icons-material/Today";
 import Button from "@mui/material/Button";
+
+import { FormattedMessage } from "react-intl";
 
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
@@ -205,7 +207,10 @@ const Schedule = (props) => {
 							setDate(today);
 						}}
 					>
-						Today
+						<FormattedMessage
+							id="schedule.view.todayButton"
+							defaultMessage="Today"
+						/>
 					</Button>
 					<ScheduleCalendar
 						date={date}
@@ -221,15 +226,30 @@ const Schedule = (props) => {
 								<div className="calendar-legend">
 									<div className="calender-legend-item">
 										<div className="calender-legend-ring orange"></div>
-										<span className="mb-0">Schedule Available</span>
+										<span className="mb-0">
+											<FormattedMessage
+												id="schedule.view.legend.1"
+												defaultMessage="Schedule Available"
+											/>
+										</span>
 									</div>
 									<div className="calender-legend-item">
 										<div className="calender-legend-ring gray"></div>
-										<span className="mb-0">Not Available</span>
+										<span className="mb-0">
+											<FormattedMessage
+												id="schedule.view.legend.2"
+												defaultMessage="Not Available"
+											/>
+										</span>
 									</div>
 									<div className="calender-legend-item">
 										<div className="calender-legend-ring green"></div>
-										<span className="mb-0">No Power Cuts</span>
+										<span className="mb-0">
+											<FormattedMessage
+												id="schedule.view.legend.3"
+												defaultMessage="No Power Cuts"
+											/>
+										</span>
 									</div>
 								</div>
 							</div>

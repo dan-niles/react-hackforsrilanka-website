@@ -12,6 +12,7 @@ import Swal from "sweetalert2";
 
 import { baseURL } from "../../BaseApi";
 import { useNavigate } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 const Unsubscribe = () => {
 	const [mobileNum, setMobileNum] = useState();
@@ -24,7 +25,12 @@ const Unsubscribe = () => {
 	};
 	const getUnSubscribe = () => {
 		if (mobileNum.toString().length !== 9) {
-			setError("Please Enter a 9 digit valid number");
+			setError(
+				<FormattedMessage
+					id="schedule.unsubscribe.phoneError"
+					defaultMessage="Please enter a valid 9 digit number"
+				/>
+			);
 		} else {
 			axios
 				.post(
@@ -63,18 +69,31 @@ const Unsubscribe = () => {
 				<div className="row justify-content-center">
 					<div className="col-12 col-md-8 col-lg-6">
 						<div className="card">
-							<DialogTitle>Unsubscribe to Notifications </DialogTitle>
+							<DialogTitle>
+								<FormattedMessage
+									id="schedule.unsubscribe.title"
+									defaultMessage="Unsubscribe from Notifications"
+								/>
+							</DialogTitle>
 							<DialogContent>
 								<DialogContentText>
-									To unsubscribe from notifications, please enter your phone
-									number here
+									<FormattedMessage
+										id="schedule.unsubscribe.text"
+										defaultMessage="To unsubscribe from notifications, please enter your phone
+										number here"
+									/>
 								</DialogContentText>
 								<span className="text-error"></span>
 								<TextField
 									autoFocus
 									margin="dense"
 									id="phone-number"
-									label="Phone Number"
+									label={
+										<FormattedMessage
+											id="schedule.unsubscribe.phoneNumber"
+											defaultMessage="Phone Number"
+										/>
+									}
 									type="tel"
 									//   disabled={showOtpBox}
 									value={mobileNum}
@@ -102,11 +121,17 @@ const Unsubscribe = () => {
 							</DialogContent>
 							<DialogActions>
 								<Button onClick={handleClose} color="secondary">
-									Cancel
+									<FormattedMessage
+										id="schedule.unsubscribe.cancelBtn"
+										defaultMessage="Cancel"
+									/>
 								</Button>
 								<Button onClick={getUnSubscribe} color="info">
 									{/* onClick={props.handleClose} */}
-									Unsubscribe
+									<FormattedMessage
+										id="schedule.unsubscribe.unSubBtn"
+										defaultMessage="Unsubscribe"
+									/>
 								</Button>
 							</DialogActions>
 						</div>

@@ -6,6 +6,8 @@ import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 
+import { FormattedMessage } from "react-intl";
+
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
 init("user_id");
@@ -49,8 +51,6 @@ const Contact = () => {
 			setMessage("");
 			// setEmailSent(true);
 			setOpen(true);
-		} else {
-			alert("Please fill in all fields.");
 		}
 	};
 
@@ -71,7 +71,10 @@ const Contact = () => {
 				onClose={handleClose}
 			>
 				<Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
-					Thank you for your message, we will be in touch in no time!
+					<FormattedMessage
+						id="contact.successResponse"
+						defaultMessage="Thank you for your message, we will be in touch in no time!"
+					/>
 				</Alert>
 			</Snackbar>
 			<section className="py-3 py-md-5">
@@ -88,9 +91,17 @@ const Contact = () => {
 							>
 								<EmailOutlinedIcon />
 							</div>
-							<h1 className="fw-bolder">Get in touch</h1>
+							<h1 className="fw-bolder">
+								<FormattedMessage
+									id="contact.title"
+									defaultMessage="Get in touch"
+								/>
+							</h1>
 							<p className="lead fw-normal text-white-50 mb-0">
-								We'd love to hear from you
+								<FormattedMessage
+									id="contact.subTitle"
+									defaultMessage="We'd love to hear from you"
+								/>
 							</p>
 						</div>
 						<div className="row justify-content-center">
@@ -107,7 +118,12 @@ const Contact = () => {
 											value={name}
 											onChange={(e) => setName(e.target.value)}
 										/>
-										<label htmlFor="name">Name</label>
+										<label htmlFor="name">
+											<FormattedMessage
+												id="contact.name"
+												defaultMessage="Name"
+											/>
+										</label>
 										<div
 											className="invalid-feedback"
 											data-sb-feedback="name:required"
@@ -126,7 +142,12 @@ const Contact = () => {
 											value={email}
 											onChange={(e) => setEmail(e.target.value)}
 										/>
-										<label htmlFor="email">Email address</label>
+										<label htmlFor="email">
+											<FormattedMessage
+												id="contact.email"
+												defaultMessage="Email address"
+											/>
+										</label>
 										<div
 											className="invalid-feedback"
 											data-sb-feedback="email:required"
@@ -170,7 +191,12 @@ const Contact = () => {
 											value={message}
 											onChange={(e) => setMessage(e.target.value)}
 										/>
-										<label htmlFor="message">Message</label>
+										<label htmlFor="message">
+											<FormattedMessage
+												id="contact.message"
+												defaultMessage="Message"
+											/>
+										</label>
 										<div
 											className="invalid-feedback"
 											data-sb-feedback="message:required"
@@ -182,7 +208,7 @@ const Contact = () => {
                             <!---->
                             <!-- This is what your users will see when the form-->
                             <!-- has successfully submitted--> */}
-									<div className="d-none" id="submitSuccessMessage">
+									{/* <div className="d-none" id="submitSuccessMessage">
 										<div className="text-center mb-3">
 											<div className="fw-bolder">
 												Form submission successful!
@@ -193,7 +219,7 @@ const Contact = () => {
 												https://startbootstrap.com/solution/contact-forms
 											</a>
 										</div>
-									</div>
+									</div> */}
 									{/* <!-- Submit error message-->
                             <!---->
                             <!-- This is what your users will see when there is-->
@@ -215,7 +241,10 @@ const Contact = () => {
 											id="submitButton"
 											type="submit"
 										>
-											Submit
+											<FormattedMessage
+												id="contact.submit"
+												defaultMessage="Submit"
+											/>
 										</button>
 									</div>
 								</form>

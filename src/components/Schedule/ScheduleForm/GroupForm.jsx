@@ -12,6 +12,8 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import { baseURL } from "../../../BaseApi";
 import axios from "axios";
 
+import { FormattedMessage } from "react-intl";
+
 const GroupForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
@@ -84,13 +86,25 @@ const GroupForm = (props) => {
 							justifyContent: "space-between",
 						}}
 					>
-						Search by Group <GroupsIcon />
+						<FormattedMessage
+							id="schedule.form.toggle.group"
+							defaultMessage="Search by Group"
+						/>{" "}
+						<GroupsIcon />
 					</h4>
 					<p className="text-white-50 fw-light mb-3">
-						Pick the pre-assigned group letter for your area...
+						<FormattedMessage
+							id="schedule.form.group.subText"
+							defaultMessage="Pick the pre-assigned group letter for your area..."
+						/>
 					</p>
 					<FormControl fullWidth>
-						<InputLabel id="group-select">Group Name</InputLabel>
+						<InputLabel id="group-select">
+							<FormattedMessage
+								id="schedule.form.group.select"
+								defaultMessage="Group Name"
+							/>
+						</InputLabel>
 						<Select
 							labelId="group-select-label"
 							id="group-select"
@@ -118,7 +132,10 @@ const GroupForm = (props) => {
 							appTheme.palette.mode === "dark" ? "btn-warning" : "btn-danger"
 						} px-4 fw-bold`}
 					>
-						Search
+						<FormattedMessage
+							id="schedule.form.search"
+							defaultMessage="Search"
+						/>
 					</button>
 				</div>
 			</div>

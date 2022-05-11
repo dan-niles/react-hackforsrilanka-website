@@ -1,19 +1,28 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import LangContext from "../../contexts/lang-context";
+
 import { useTheme } from "@mui/material/styles";
 
 const FooterItem = (props) => {
+	const langContext = useContext(LangContext);
 	const appTheme = useTheme();
+
+	const handleClick = (e) => {
+		e.preventDefault();
+		langContext.selectLanguage(props.locale);
+	};
 
 	return (
 		<>
-			<Link
+			<a
 				className={`${
 					appTheme.palette.mode === "dark" ? "link-light" : "link-dark"
 				} small`}
-				to={props.href}
+				href={props.href}
+				onClick={handleClick}
 			>
 				{props.label}
-			</Link>
+			</a>
 			{props.lastItem === true ? (
 				""
 			) : (

@@ -16,6 +16,8 @@ import { isThisWeek, nextDay, getDay, isSameWeek } from "date-fns";
 import add from "date-fns/add";
 import sub from "date-fns/sub";
 
+import { FormattedMessage } from "react-intl";
+
 const ScheduleDatePicker = (props) => {
 	const setDate = props.setDate;
 	const date = props.date;
@@ -133,7 +135,10 @@ const ScheduleDatePicker = (props) => {
 						setDisablePrev(false);
 					}}
 				>
-					Today
+					<FormattedMessage
+						id="schedule.view.todayButton"
+						defaultMessage="Today"
+					/>
 				</Button>
 			</Stack>
 		</>

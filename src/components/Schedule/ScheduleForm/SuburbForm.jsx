@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import InputLabel from "@mui/material/InputLabel";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 import { useTheme } from "@mui/material/styles";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 
 import axios from "axios";
 import { baseURL } from "../../../BaseApi";
+
+import { FormattedMessage } from "react-intl";
 
 const SuburbForm = (props) => {
 	const appTheme = useTheme();
@@ -118,20 +117,30 @@ const SuburbForm = (props) => {
 						justifyContent: "space-between",
 					}}
 				>
-					Search by Suburb <ApartmentIcon />
+					<FormattedMessage
+						id="schedule.form.toggle.suburb"
+						defaultMessage="Search by Suburb"
+					/>{" "}
+					<ApartmentIcon />
 				</h4>
 				<p
 					className="text-white-50 fw-light mb-3"
 					style={{ fontSize: "0.9em" }}
 				>
-					Do you live in any of the following suburbs?
-					<br /> Batticaloa, Colombo, Dehiwala-Mount Lavinia, Jaffna, Negombo,
-					Kotte or Moratuwa. If so, search for schedule below...
+					<FormattedMessage
+						id="schedule.form.suburb.subText"
+						defaultMessage="Do you live in any of the following suburbs? Batticaloa, Colombo, Dehiwala-Mount Lavinia, Jaffna, Negombo, Kotte or Moratuwa. If so, search for schedule below..."
+					/>
 				</p>
 				<div className="form-group col-12">
 					<TextField
 						size="small"
-						label="Suburb"
+						label={
+							<FormattedMessage
+								id="schedule.form.suburb.select1"
+								defaultMessage="Suburb"
+							/>
+						}
 						select
 						value={suburbSelect}
 						onChange={handleSuburbSelectChange}
@@ -158,7 +167,12 @@ const SuburbForm = (props) => {
 					<TextField
 						select
 						size="small"
-						label="Grid Substation"
+						label={
+							<FormattedMessage
+								id="schedule.form.suburb.select2"
+								defaultMessage="Grid Substation"
+							/>
+						}
 						value={districtSelect}
 						onChange={handleDistrictSelectChange}
 						name="district"
@@ -184,7 +198,12 @@ const SuburbForm = (props) => {
 					<TextField
 						select
 						size="small"
-						label="Area"
+						label={
+							<FormattedMessage
+								id="schedule.form.suburb.select3"
+								defaultMessage="Area"
+							/>
+						}
 						value={areaSelect}
 						onChange={handleAreaSelectChange}
 						name="area"
@@ -212,7 +231,10 @@ const SuburbForm = (props) => {
 							appTheme.palette.mode === "dark" ? "btn-warning" : "btn-danger"
 						} px-4 fw-bold`}
 					>
-						Search
+						<FormattedMessage
+							id="schedule.form.search"
+							defaultMessage="Search"
+						/>
 					</button>
 				</div>
 			</div>

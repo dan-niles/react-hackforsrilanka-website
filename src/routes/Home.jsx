@@ -2,12 +2,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useTheme } from "@mui/material/styles";
-
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
-// import HelpSlider from "../components/HelpSlider/HelpSlider";
 import { motion } from "framer-motion";
-
 import Button from "@mui/material/Button";
+
+import { FormattedMessage } from "react-intl";
+
+// import HelpSlider from "../components/HelpSlider/HelpSlider";
 // import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 
 const Home = () => {
@@ -70,11 +71,16 @@ const Home = () => {
 						<div className="col-lg-8 col-xl-7 col-xxl-6">
 							<div className="mt-4 mb-3 my-md-5 text-center text-xl-start">
 								<h1 className="display-5 fw-bolder mb-2">
-									Find Your Power Cut Schedule!
+									<FormattedMessage
+										id="home.header"
+										defaultMessage="Find Your Power Cut Schedule!"
+									/>
 								</h1>
 								<p className="lead fw-normal text-white-50 mb-4 lh-sm">
-									Keep track of power-cuts and subscribe to receive free text
-									notifications
+									<FormattedMessage
+										id="home.headerSubText"
+										defaultMessage="Keep track of power-cuts and subscribe to receive free text notifications"
+									/>
 								</p>
 								<div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
 									<Button
@@ -88,7 +94,10 @@ const Home = () => {
 											appTheme.palette.mode === "dark" ? "warning" : "error"
 										}
 									>
-										Get Started
+										<FormattedMessage
+											id="home.mainButton"
+											defaultMessage="Get Started"
+										/>
 									</Button>
 									{/* <Button
 										className="text-capitalize text-lowercase fw-bold fs-6"

@@ -3,6 +3,8 @@ import Button from "@mui/material/Button";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import { useTheme } from "@mui/material/styles";
 
+import { FormattedMessage } from "react-intl";
+
 const ScheduleContainer = (props) => {
 	const appTheme = useTheme();
 	const myRef = useRef(null);
@@ -20,7 +22,12 @@ const ScheduleContainer = (props) => {
 			<div className="container my-2">
 				<div className="row mt-0 mb-2 px-1 px-md-0 align-items-center">
 					<div className="col-9 col-md-6 text-start">
-						<h2 className="fw-bolder mb-0">Power-Cut Schedule</h2>
+						<h2 className="fw-bolder mb-0">
+							<FormattedMessage
+								id="schedule.view.title"
+								defaultMessage="Power-Cut Schedule"
+							/>
+						</h2>
 					</div>
 					<div className="col-3 col-md-6 text-end">
 						{/* Desktop Button */}
@@ -32,7 +39,10 @@ const ScheduleContainer = (props) => {
 							color="info"
 							className="fw-bold d-none d-lg-inline"
 						>
-							Subscribe for Notifications
+							<FormattedMessage
+								id="schedule.view.subButton"
+								defaultMessage="Subscribe for Notifications"
+							/>
 						</Button>
 						{/* Mobile button */}
 						<Button

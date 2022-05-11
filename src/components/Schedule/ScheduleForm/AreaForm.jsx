@@ -11,6 +11,8 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import axios from "axios";
 import { baseURL } from "../../../BaseApi";
 
+import { FormattedMessage } from "react-intl";
+
 const AreaForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
@@ -91,14 +93,26 @@ const AreaForm = (props) => {
 						justifyContent: "space-between",
 					}}
 				>
-					Search by Location <LocationOnIcon />
+					<FormattedMessage
+						id="schedule.form.toggle.location"
+						defaultMessage="Search by Location"
+					/>{" "}
+					<LocationOnIcon />
 				</h4>
 				<p className="text-white-50 fw-light mb-3">
-					Don't know your group? Try picking your district and city here...
+					<FormattedMessage
+						id="schedule.form.location.subText"
+						defaultMessage="Don't know your group? Try picking your district and city here..."
+					/>
 				</p>
 				<div className="form-group col-12">
 					<FormControl fullWidth>
-						<InputLabel id="district-select">District</InputLabel>
+						<InputLabel id="district-select">
+							<FormattedMessage
+								id="schedule.form.location.select1"
+								defaultMessage="District"
+							/>
+						</InputLabel>
 						<Select
 							labelId="district-select-label"
 							id="district-select"
@@ -127,7 +141,12 @@ const AreaForm = (props) => {
 				</div>
 				<div className="form-group col-12 mt-3">
 					<FormControl fullWidth>
-						<InputLabel id="district-select">Area</InputLabel>
+						<InputLabel id="district-select">
+							<FormattedMessage
+								id="schedule.form.location.select2"
+								defaultMessage="Area"
+							/>
+						</InputLabel>
 						<Select
 							labelId="area-select-label"
 							id="area-select"
@@ -159,7 +178,10 @@ const AreaForm = (props) => {
 							appTheme.palette.mode === "dark" ? "btn-warning" : "btn-danger"
 						} px-4 fw-bold`}
 					>
-						Search
+						<FormattedMessage
+							id="schedule.form.search"
+							defaultMessage="Search"
+						/>
 					</button>
 				</div>
 			</div>

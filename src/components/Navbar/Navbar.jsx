@@ -18,11 +18,29 @@ import MenuItem from "@mui/material/MenuItem";
 
 import ColorModeContext from "../../contexts/color-mode";
 
+import { FormattedMessage } from "react-intl";
+
 const pages = [
-	{ title: "Home", link: "/" },
-	{ title: "Schedule", link: "schedule" },
-	{ title: "About", link: "about" },
-	{ title: "Contact", link: "contact" },
+	{
+		title: <FormattedMessage id="nav.home" defaultMessage="Home" />,
+		link: "/",
+		key: "Home",
+	},
+	{
+		title: <FormattedMessage id="nav.schedule" defaultMessage="Schedule" />,
+		link: "schedule",
+		key: "Schedule",
+	},
+	{
+		title: <FormattedMessage id="nav.about" defaultMessage="About" />,
+		link: "about",
+		key: "About",
+	},
+	{
+		title: <FormattedMessage id="nav.contact" defaultMessage="Contact" />,
+		link: "contact",
+		key: "Contact",
+	},
 ];
 
 const Navbar = () => {
@@ -83,7 +101,7 @@ const Navbar = () => {
 								fontWeight: 600,
 							}}
 						>
-							Ekata
+							<FormattedMessage id="nav.title" defaultMessage="Ekata" />
 						</Typography>
 					</Link>
 					<Box
@@ -120,7 +138,7 @@ const Navbar = () => {
 						>
 							{pages.map((page) => (
 								<MenuItem
-									key={page.title}
+									key={page.key}
 									onClick={handleCloseNavMenu}
 									component={NavLink}
 									to={page.link}
@@ -162,7 +180,7 @@ const Navbar = () => {
 							<Button
 								component={NavLink}
 								to={page.link}
-								key={page.title}
+								key={page.key}
 								onClick={handleCloseNavMenu}
 								sx={{
 									my: 2,

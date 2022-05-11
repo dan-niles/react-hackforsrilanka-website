@@ -7,6 +7,8 @@ import ShareIcon from "@mui/icons-material/Share";
 
 import { useTheme } from "@mui/material/styles";
 
+import { FormattedMessage } from "react-intl";
+
 const ScheduleItemsContainer = (props) => {
 	const appTheme = useTheme();
 
@@ -91,7 +93,10 @@ const ScheduleItemsContainer = (props) => {
 						</div>
 						<div className="col">
 							<div className="text-end">
-								Group
+								<FormattedMessage
+									id="schedule.view.group"
+									defaultMessage="Group"
+								/>
 								<h3 className="d-inlines">
 									{props.district
 										? getAreaSheduleSelectBadge
@@ -113,10 +118,17 @@ const ScheduleItemsContainer = (props) => {
 						<div className="row h-100">
 							<div className="d-flex justify-content-center align-items-center flex-column">
 								<p className="text-center">
-									Schedule not published yet
+									<FormattedMessage
+										id="schedule.view.naText"
+										defaultMessage="Schedule not published yet"
+									/>
 									<br />
+
 									<span className="text-muted">
-										Come back later or subcribe to receive a notification
+										<FormattedMessage
+											id="schedule.view.naSubText"
+											defaultMessage="Come back later or subcribe to receive a notification"
+										/>
 									</span>
 								</p>
 								<Button
@@ -126,7 +138,10 @@ const ScheduleItemsContainer = (props) => {
 									onClick={props.handleClickOpen}
 									color="secondary"
 								>
-									Subscribe
+									<FormattedMessage
+										id="schedule.view.subButton2"
+										defaultMessage="Subscribe"
+									/>
 								</Button>
 							</div>
 						</div>
@@ -149,7 +164,10 @@ const ScheduleItemsContainer = (props) => {
 										color="success"
 										onClick={shareClickHandler}
 									>
-										Share
+										<FormattedMessage
+											id="schedule.view.shareButton"
+											defaultMessage="Share"
+										/>
 									</Button>
 								</h5>
 							</div>
