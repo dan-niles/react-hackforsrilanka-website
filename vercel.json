@@ -1,0 +1,8 @@
+{
+	"rewrites": [
+		{
+			"source": "/api/:match*/",
+			"destination": "http://ekata-backend.codefortheglobe.org/api/:match*/"
+		}
+	]
+}
