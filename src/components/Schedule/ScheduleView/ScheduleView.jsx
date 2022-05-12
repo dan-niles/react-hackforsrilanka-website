@@ -106,6 +106,11 @@ const Schedule = (props) => {
 				(a) => a.starting_period === starting_period
 			);
 		});
+
+		// Sort time slots in ascending order
+		filteredScheduleItems.sort(
+			(a, b) => new Date(a.starting_period) - new Date(b.starting_period)
+		);
 	}
 
 	const modifiers = {
