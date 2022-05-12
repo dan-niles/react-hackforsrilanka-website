@@ -158,10 +158,10 @@ const ScheduleItemsContainer = (props) => {
 							<div className="text-end">
 								<h5 className="d-inline">
 									<Button
-										variant="outlined"
+										variant="text"
 										startIcon={<ShareIcon />}
 										size="small"
-										color="success"
+										color="secondary"
 										onClick={shareClickHandler}
 									>
 										<FormattedMessage

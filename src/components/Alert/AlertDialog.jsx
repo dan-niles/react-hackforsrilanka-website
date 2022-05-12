@@ -173,7 +173,7 @@ const AlertDialog = (props) => {
 				</DialogContentText>
 				<span className="text-error">{allRegErr}</span>
 				<TextField
-					autoFocus
+					// autoFocus
 					margin="dense"
 					id="name"
 					label={
@@ -186,7 +186,7 @@ const AlertDialog = (props) => {
 					disabled={showOtpBox}
 					value={name}
 					onChange={(event) => {
-						const regex = /^[a-zA-Z]*$/;
+						const regex = /^[a-zA-Z\s]*$/g;
 						if (event.target.value === "" || regex.test(event.target.value)) {
 							setName(event.target.value);
 						}

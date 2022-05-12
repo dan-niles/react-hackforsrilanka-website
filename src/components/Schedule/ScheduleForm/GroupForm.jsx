@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
+import FormHelperText from "@mui/material/FormHelperText";
 import Select from "@mui/material/Select";
 import { useTheme } from "@mui/material/styles";
 
@@ -42,11 +43,20 @@ const GroupForm = (props) => {
 
 	const [groupSelect, setGroupSelect] = useState("");
 	const handleGroupSelectChange = (event) => {
+		if (event.target.value) {
+			setGroupError(false);
+		}
 		setGroupSelect(event.target.value);
 	};
 
+	const [groupError, setGroupError] = useState(false);
+
 	const submitHandler = (e) => {
 		e.preventDefault();
+		if (!groupSelect) {
+			setGroupError(true);
+			return;
+		}
 		const forLocalStorage = {
 			groupName: groupSelect,
 			suburb: "",
@@ -97,7 +107,7 @@ const GroupForm = (props) => {
 							defaultMessage="Pick the pre-assigned group letter for your area..."
 						/>
 					</p>
-					<FormControl fullWidth>
+					<FormControl fullWidth error={groupError}>
 						<InputLabel id="group-select">
 							<FormattedMessage
 								id="schedule.form.group.select"
@@ -111,7 +121,6 @@ const GroupForm = (props) => {
 							value={groupSelect}
 							onChange={handleGroupSelectChange}
 							name="group"
-							required
 						>
 							{groups?.map((item, index) => {
 								return (
@@ -122,6 +131,9 @@ const GroupForm = (props) => {
 							})}
 							{/* <MenuItem value="A">A</MenuItem> */}
 						</Select>
+						<FormHelperText>
+							{groupError ? "Please fill in this field" : ""}
+						</FormHelperText>
 					</FormControl>
 				</div>
 				<div className="form-group col-12 mt-4 text-center">

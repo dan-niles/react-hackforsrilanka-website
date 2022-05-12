@@ -21,7 +21,12 @@ const Schedule = () => {
 
 	return (
 		<AnimatedPage>
-			<ScheduleForm groupName={groupName} />
+			<ScheduleForm
+				groupName={groupName}
+				suburb={suburb}
+				district={district}
+				area={area}
+			/>
 
 			{/* shows calender and power-cut times after the group is selected */}
 			{(groupName || district) && (

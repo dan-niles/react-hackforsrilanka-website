@@ -11859,8 +11859,12 @@ html {
 }
 
 .light-mode .schedule-list .badge {
-	background-color: #d0d0d0 !important;
+	background-color: #d0d0d045 !important;
 	color: #171818;
+}
+
+.light-mode .MuiButton-textSecondary {
+	color: #676868;
 }
 
 .nice-dates-day {

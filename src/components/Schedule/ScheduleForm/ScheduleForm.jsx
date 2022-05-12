@@ -38,15 +38,28 @@ const ScheduleForm = (props) => {
 		formParameters = JSON.parse(localStorage.getItem("form-parameters"));
 	}
 	useEffect(() => {
-		if (formParameters.groupName !== "") {
-			setShowFormType("group");
-			setToggle("groupToggle");
-		} else if (formParameters.suburb !== "") {
-			setShowFormType("suburb");
-			setToggle("suburbToggle");
-		} else if (formParameters.district !== "") {
-			setShowFormType("area");
-			setToggle("areaToggle");
+		if (!props.groupName && !props.suburb && !props.district) {
+			if (formParameters.groupName) {
+				setShowFormType("group");
+				setToggle("groupToggle");
+			} else if (formParameters.suburb) {
+				setShowFormType("suburb");
+				setToggle("suburbToggle");
+			} else if (formParameters.district) {
+				setShowFormType("area");
+				setToggle("areaToggle");
+			}
+		} else {
+			if (props.groupName) {
+				setShowFormType("group");
+				setToggle("groupToggle");
+			} else if (props.suburb) {
+				setShowFormType("suburb");
+				setToggle("suburbToggle");
+			} else if (props.district) {
+				setShowFormType("area");
+				setToggle("areaToggle");
+			}
 		}
 	}, []);
 
@@ -94,19 +107,21 @@ const ScheduleForm = (props) => {
 					<div className="col-12 col-lg-6">
 						<div className="card p-lg-5 p-4">
 							{showFormType === "group" && (
-								<GroupForm groupName={formParameters.groupName} />
+								<GroupForm
+									groupName={props.groupName || formParameters.groupName}
+								/>
 							)}
 							{showFormType === "suburb" && (
 								<SuburbForm
-									suburb={formParameters.suburb}
-									district={formParameters.district}
-									area={formParameters.area}
+									suburb={props.suburb || formParameters.suburb}
+									district={props.district || formParameters.district}
+									area={props.area || formParameters.area}
 								/>
 							)}
 							{showFormType === "area" && (
 								<AreaForm
-									district={formParameters.district}
-									area={formParameters.area}
+									district={props.district || formParameters.district}
+									area={props.area || formParameters.area}
 								/>
 							)}
 						</div>
