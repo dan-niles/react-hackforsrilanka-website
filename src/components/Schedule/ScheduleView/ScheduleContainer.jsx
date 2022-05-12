@@ -51,7 +51,7 @@ const ScheduleContainer = (props) => {
 							size="large"
 							onClick={props.handleClickOpen}
 							color="info"
-							className="subsribe-button fw-bold d-inline d-lg-none"
+							className="fw-bold d-inline d-lg-none"
 						>
 							<FormattedMessage
 								id="schedule.view.subButton"
