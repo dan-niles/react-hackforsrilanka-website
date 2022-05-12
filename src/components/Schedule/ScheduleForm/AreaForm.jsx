@@ -18,11 +18,11 @@ const AreaForm = (props) => {
 
 	let navigate = useNavigate();
 	const [areaList, setAreaList] = useState();
-	const [districtList, setDistrictList] = useState();
+	const [gssList, setGssList] = useState();
 
-	const [districtSelect, setDistrictSelect] = useState("");
-	const handleDistrictSelectChange = (event) => {
-		setDistrictSelect(event.target.value);
+	const [gssSelect, setGssSelect] = useState("");
+	const handleGssSelectChange = (event) => {
+		setGssSelect(event.target.value);
 	};
 
 	const [areaSelect, setAreaSelect] = useState("");
@@ -35,13 +35,13 @@ const AreaForm = (props) => {
 		const forLocalStorage = {
 			groupName: "",
 			suburb: "",
-			district: districtSelect,
+			gss: gssSelect,
 			area: areaSelect,
 		};
 		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
 		navigate({
 			pathname: "/schedule",
-			search: `?group=&district=${districtSelect}&area=${areaSelect}`,
+			search: `?group=&gss=${gssSelect}&area=${areaSelect}`,
 		});
 	};
 
@@ -49,9 +49,9 @@ const AreaForm = (props) => {
 		axios
 			.get(process.env.REACT_APP_API_URL + "/api/all-gss/")
 			.then((res) => {
-				setDistrictList(res.data.data);
-				if (props.district !== "") {
-					setDistrictSelect(props.district);
+				setGssList(res.data.data);
+				if (props.gss !== "") {
+					setGssSelect(props.gss);
 				}
 				setisLoading(false);
 			})
@@ -59,11 +59,9 @@ const AreaForm = (props) => {
 	}, []);
 
 	useEffect(() => {
-		if (districtSelect) {
+		if (gssSelect) {
 			axios
-				.get(
-					process.env.REACT_APP_API_URL + `/api/all-area/?gss=${districtSelect}`
-				)
+				.get(process.env.REACT_APP_API_URL + `/api/all-area/?gss=${gssSelect}`)
 				.then((res) => {
 					setAreaList(res.data.data);
 					if (props.area !== "") {
@@ -72,7 +70,7 @@ const AreaForm = (props) => {
 				})
 				.catch((errr) => {});
 		}
-	}, [districtSelect]);
+	}, [gssSelect]);
 
 	return (
 		<form action="" method="post" onSubmit={submitHandler}>
@@ -103,28 +101,28 @@ const AreaForm = (props) => {
 				<p className="text-white-50 fw-light mb-3">
 					<FormattedMessage
 						id="schedule.form.location.subText"
-						defaultMessage="Don't know your group? Try picking your district and city here..."
+						defaultMessage="Don't know your group? Try picking your gss and city here..."
 					/>
 				</p>
 				<div className="form-group col-12">
 					<FormControl fullWidth>
-						<InputLabel id="district-select">
+						<InputLabel id="gss-select">
 							<FormattedMessage
 								id="schedule.form.location.select1"
-								defaultMessage="District"
+								defaultMessage="Grid Substation"
 							/>
 						</InputLabel>
 						<Select
-							labelId="district-select-label"
-							id="district-select"
-							label="District"
-							value={districtSelect}
-							onChange={handleDistrictSelectChange}
-							name="district"
+							labelId="gss-select-label"
+							id="gss-select"
+							label="Grid Substation"
+							value={gssSelect}
+							onChange={handleGssSelectChange}
+							name="gss"
 							required
 							sx={{ textTransform: "capitalize" }}
 						>
-							{districtList?.map((item, index) => {
+							{gssList?.map((item, index) => {
 								//
 								return (
 									<MenuItem
@@ -142,7 +140,7 @@ const AreaForm = (props) => {
 				</div>
 				<div className="form-group col-12 mt-3">
 					<FormControl fullWidth>
-						<InputLabel id="district-select">
+						<InputLabel id="area-select">
 							<FormattedMessage
 								id="schedule.form.location.select2"
 								defaultMessage="Area"

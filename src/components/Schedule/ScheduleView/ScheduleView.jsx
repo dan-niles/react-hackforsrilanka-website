@@ -52,11 +52,11 @@ const Schedule = (props) => {
 	};
 
 	// Fetch schedule data from api using state and city
-	const fetchDistrictAreaScheduleItems = () => {
+	const fetchGssAreaScheduleItems = () => {
 		return axios
 			.get(
 				process.env.REACT_APP_API_URL +
-					`/api/schedule-by-place/?district=${props.district}&area=${props.area}&from_date=${startDate}&to_date=${endDate}`
+					`/api/schedule-by-place/?district=${props.gss}&area=${props.area}&from_date=${startDate}&to_date=${endDate}`
 			)
 			.then((res) => {
 				setScheduleItems(res.data.data);
@@ -70,10 +70,10 @@ const Schedule = (props) => {
 	};
 
 	useEffect(() => {
-		if (props.district && props.area) {
-			fetchDistrictAreaScheduleItems();
+		if (props.gss && props.area) {
+			fetchGssAreaScheduleItems();
 		}
-	}, [props.district, props.area]);
+	}, [props.gss, props.area]);
 
 	useEffect(() => {
 		if (props.groupName) {
@@ -186,7 +186,7 @@ const Schedule = (props) => {
 					date={date}
 					groupName={props.groupName}
 					areaGroup={areaGroup}
-					district={props.district}
+					gss={props.gss}
 					groupList={[...new Set(scheduleItems.map((item) => item.group_name))]}
 					setAreaGroup={setAreaGroup}
 				>

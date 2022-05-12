@@ -60,7 +60,7 @@ const GroupForm = (props) => {
 		const forLocalStorage = {
 			groupName: groupSelect,
 			suburb: "",
-			district: "",
+			gss: "",
 			area: "",
 		};
 		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));

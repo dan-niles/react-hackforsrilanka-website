@@ -98,7 +98,7 @@ const ScheduleItemsContainer = (props) => {
 									defaultMessage="Group"
 								/>
 								<h3 className="d-inlines">
-									{props.district
+									{props.gss
 										? getAreaSheduleSelectBadge
 										: getGroupScheduleBadge}
 								</h3>

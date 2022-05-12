@@ -16,7 +16,7 @@ const SuburbForm = (props) => {
 
 	let navigate = useNavigate();
 	const [suburbList, setSuburbList] = useState();
-	const [districtList, setDistrictList] = useState();
+	const [gssList, setGssList] = useState();
 	const [areaList, setAreaList] = useState();
 
 	const [suburbSelect, setSuburbSelect] = useState("");
@@ -24,9 +24,9 @@ const SuburbForm = (props) => {
 		setSuburbSelect(event.target.value);
 	};
 
-	const [districtSelect, setDistrictSelect] = useState("");
-	const handleDistrictSelectChange = (event) => {
-		setDistrictSelect(event.target.value);
+	const [gssSelect, setGssSelect] = useState("");
+	const handleGssSelectChange = (event) => {
+		setGssSelect(event.target.value);
 	};
 
 	const [areaSelect, setAreaSelect] = useState("");
@@ -39,13 +39,13 @@ const SuburbForm = (props) => {
 		const forLocalStorage = {
 			groupName: "",
 			suburb: suburbSelect,
-			district: districtSelect,
+			gss: gssSelect,
 			area: areaSelect,
 		};
 		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
 		navigate({
 			pathname: "/schedule",
-			search: `?group=&suburb=${suburbSelect}&district=${districtSelect}&area=${areaSelect}`,
+			search: `?group=&suburb=${suburbSelect}&gss=${gssSelect}&area=${areaSelect}`,
 		});
 	};
 
@@ -70,34 +70,34 @@ const SuburbForm = (props) => {
 						`/api/search-by-suburb/?suburb=${suburbSelect}`
 				)
 				.then((res) => {
-					setDistrictList(res.data.data);
-					if (props.district !== "") {
-						setDistrictSelect(props.district);
+					setGssList(res.data.data);
+					if (props.gss !== "") {
+						setGssSelect(props.gss);
 					}
 				})
 				.catch((errr) => {});
 		}
 	}, [suburbSelect]);
 
-	let gssList = null;
-	if (districtList) {
-		gssList = [
-			...new Map(districtList.map((item) => [item["gss"], item])).values(),
+	let gssNameList = null;
+	if (gssList) {
+		gssNameList = [
+			...new Map(gssList.map((item) => [item["gss"], item])).values(),
 		];
 	}
 
 	useEffect(() => {
-		if (districtSelect) {
+		if (gssSelect) {
 			setAreaList(
-				districtList.filter((item) => {
-					return item.gss === districtSelect;
+				gssList.filter((item) => {
+					return item.gss === gssSelect;
 				})
 			);
 			if (props.area !== "") {
 				setAreaSelect(props.area);
 			}
 		}
-	}, [districtSelect]);
+	}, [gssSelect]);
 
 	return (
 		<form action="" method="post" onSubmit={submitHandler}>
@@ -175,14 +175,14 @@ const SuburbForm = (props) => {
 								defaultMessage="Grid Substation"
 							/>
 						}
-						value={districtSelect}
-						onChange={handleDistrictSelectChange}
-						name="district"
+						value={gssSelect}
+						onChange={handleGssSelectChange}
+						name="gss"
 						required
 						fullWidth
 						sx={{ textTransform: "capitalize" }}
 					>
-						{gssList?.map((item, index) => {
+						{gssNameList?.map((item, index) => {
 							return (
 								<MenuItem
 									value={item.gss}

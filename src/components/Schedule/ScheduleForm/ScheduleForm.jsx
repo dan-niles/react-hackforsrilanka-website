@@ -31,21 +31,21 @@ const ScheduleForm = (props) => {
 	let formParameters = {
 		groupName: "",
 		suburb: "",
-		district: "",
+		gss: "",
 		area: "",
 	};
 	if (localStorage.getItem("form-parameters") !== null) {
 		formParameters = JSON.parse(localStorage.getItem("form-parameters"));
 	}
 	useEffect(() => {
-		if (!props.groupName && !props.suburb && !props.district) {
+		if (!props.groupName && !props.suburb && !props.gss) {
 			if (formParameters.groupName) {
 				setShowFormType("group");
 				setToggle("groupToggle");
 			} else if (formParameters.suburb) {
 				setShowFormType("suburb");
 				setToggle("suburbToggle");
-			} else if (formParameters.district) {
+			} else if (formParameters.gss) {
 				setShowFormType("area");
 				setToggle("areaToggle");
 			}
@@ -56,7 +56,7 @@ const ScheduleForm = (props) => {
 			} else if (props.suburb) {
 				setShowFormType("suburb");
 				setToggle("suburbToggle");
-			} else if (props.district) {
+			} else if (props.gss) {
 				setShowFormType("area");
 				setToggle("areaToggle");
 			}
@@ -114,13 +114,13 @@ const ScheduleForm = (props) => {
 							{showFormType === "suburb" && (
 								<SuburbForm
 									suburb={props.suburb || formParameters.suburb}
-									district={props.district || formParameters.district}
+									gss={props.gss || formParameters.gss}
 									area={props.area || formParameters.area}
 								/>
 							)}
 							{showFormType === "area" && (
 								<AreaForm
-									district={props.district || formParameters.district}
+									gss={props.gss || formParameters.gss}
 									area={props.area || formParameters.area}
 								/>
 							)}

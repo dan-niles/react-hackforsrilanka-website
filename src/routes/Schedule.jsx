@@ -8,14 +8,14 @@ const Schedule = () => {
 	// selecting group from URL
 	let groupName = "";
 	let suburb = "";
-	let district = "";
+	let gss = "";
 	let area = "";
 
 	const [searchParams, setSearchParams] = useSearchParams();
 	if (searchParams.get("group") != null) {
 		groupName = searchParams.get("group");
 		suburb = searchParams.get("suburb");
-		district = searchParams.get("district");
+		gss = searchParams.get("gss");
 		area = searchParams.get("area");
 	}
 
@@ -24,16 +24,16 @@ const Schedule = () => {
 			<ScheduleForm
 				groupName={groupName}
 				suburb={suburb}
-				district={district}
+				gss={gss}
 				area={area}
 			/>
 
 			{/* shows calender and power-cut times after the group is selected */}
-			{(groupName || district) && (
+			{(groupName || gss) && (
 				<ScheduleView
 					groupName={groupName}
 					suburb={suburb}
-					district={district}
+					gss={gss}
 					area={area}
 				/>
 			)}
