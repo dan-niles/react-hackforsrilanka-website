@@ -12,6 +12,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { InputAdornment, useMediaQuery } from "@mui/material";
 import Swal from "sweetalert2";
 import Loader from "react-js-loader";
+import { useTheme } from "@mui/material/styles";
 
 import { FormattedMessage } from "react-intl";
 
@@ -30,6 +31,9 @@ const AlertDialog = (props) => {
 	const [allRegErr, setAllRegErr] = useState();
 	const [reSubBtn, setReSubBtn] = useState(false);
 	const [showSubBtn, setShowSubBtn] = useState(false);
+
+	const theme = useTheme();
+	const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
 	const matches = useMediaQuery("(min-width:768px)");
 	useEffect(() => {
@@ -140,8 +144,7 @@ const AlertDialog = (props) => {
 				Swal.fire({
 					position: "top-center",
 					icon: "info",
-					title: `Cell phone number ${number}xxxxx has been successfully subscribed to group 
-                  ${data.groupName}`,
+					title: `Subscribed Successfully!`,
 					showConfirmButton: true,
 				});
 				setName("");
@@ -155,7 +158,12 @@ const AlertDialog = (props) => {
 	};
 
 	return (
-		<Dialog sx={{ margin: 0 }} open={props.open} onClose={props.handleClose}>
+		<Dialog
+			sx={{ margin: 0 }}
+			open={props.open}
+			onClose={props.handleClose}
+			fullScreen={fullScreen}
+		>
 			<DialogTitle>
 				<FormattedMessage
 					id="schedule.subscribe.title"
@@ -173,7 +181,7 @@ const AlertDialog = (props) => {
 				</DialogContentText>
 				<span className="text-error">{allRegErr}</span>
 				<TextField
-					// autoFocus
+					autoFocus
 					margin="dense"
 					id="name"
 					label={
@@ -226,6 +234,7 @@ const AlertDialog = (props) => {
 					variant="standard"
 					autoComplete="off"
 					color="info"
+					onKeyPress={(e) => e.key === "Enter" && getSubscription()}
 				/>
 				<span className="text-error">{error}</span>
 				{showOtpBox && (
@@ -237,6 +246,7 @@ const AlertDialog = (props) => {
 							/>
 						</p>
 						<OtpInput
+							shouldAutoFocus={true}
 							className="otp_value"
 							name="otp"
 							isInputNum={true}

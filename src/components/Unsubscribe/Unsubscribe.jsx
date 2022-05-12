@@ -46,7 +46,7 @@ const Unsubscribe = () => {
 					Swal.fire({
 						position: "top-center",
 						icon: "success",
-						title: "Unsubscribed successfully",
+						title: "Unsubscribed Successfully",
 						showConfirmButton: true,
 					});
 					setMobileNum("");
