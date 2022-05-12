@@ -19,17 +19,17 @@ const ScheduleContainer = (props) => {
 			}`}
 			ref={myRef}
 		>
-			<div className="container my-2">
-				<div className="row mt-0 mb-2 px-1 px-md-0 align-items-center">
-					<div className="col-9 col-md-6 text-start">
-						<h2 className="fw-bolder mb-0">
+			<div className="container my-3">
+				<div className="row mt-0 mb-3 px-1 px-md-0 align-items-center">
+					<div className="col-12 col-md-6 text-center text-lg-start">
+						<h2 className="fw-bolder mb-2 mb-lg-0">
 							<FormattedMessage
 								id="schedule.view.title"
 								defaultMessage="Power-Cut Schedule"
 							/>
 						</h2>
 					</div>
-					<div className="col-3 col-md-6 text-end">
+					<div className="col-12 col-md-6 text-center text-lg-end">
 						{/* Desktop Button */}
 						<Button
 							variant="outlined"
@@ -52,7 +52,12 @@ const ScheduleContainer = (props) => {
 							onClick={props.handleClickOpen}
 							color="info"
 							className="subsribe-button fw-bold d-inline d-lg-none"
-						></Button>
+						>
+							<FormattedMessage
+								id="schedule.view.subButton"
+								defaultMessage="Subscribe for Notifications"
+							/>
+						</Button>
 					</div>
 				</div>
 
