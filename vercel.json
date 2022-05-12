@@ -2,7 +2,7 @@
 	"rewrites": [
 		{
 			"source": "/api/:match*/",
-			"destination": "http://ekata-backend.codefortheglobe.org/api/:match*/"
+			"destination": "http://ekata-backend2.codefortheglobe.org/api/:match*/"
 		}
 	]
 }
