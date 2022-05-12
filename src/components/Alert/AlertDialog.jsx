@@ -143,7 +143,7 @@ const AlertDialog = (props) => {
 				props.handleClose();
 				Swal.fire({
 					position: "top-center",
-					icon: "info",
+					icon: "success",
 					title: `Subscribed Successfully!`,
 					showConfirmButton: true,
 				});
