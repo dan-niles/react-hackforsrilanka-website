@@ -34,7 +34,7 @@ const AreaForm = (props) => {
 		e.preventDefault();
 		const forLocalStorage = {
 			groupName: "",
-			suburb: "",
+			district: "",
 			gss: gssSelect,
 			area: areaSelect,
 		};

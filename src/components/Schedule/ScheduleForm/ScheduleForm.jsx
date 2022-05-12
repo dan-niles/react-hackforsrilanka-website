@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import GroupForm from "./GroupForm";
 import AreaForm from "./AreaForm";
-import SuburbForm from "./SuburbForm";
+import DistrictForm from "./DistrictForm";
 
 import { ToggleButtonGroup, ToggleButton } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
@@ -21,8 +21,8 @@ const ScheduleForm = (props) => {
 		}
 		if (newVal === "groupToggle") {
 			setShowFormType("group");
-		} else if (newVal === "suburbToggle") {
-			setShowFormType("suburb");
+		} else if (newVal === "districtToggle") {
+			setShowFormType("district");
 		} else if (newVal === "areaToggle") {
 			setShowFormType("area");
 		}
@@ -30,7 +30,7 @@ const ScheduleForm = (props) => {
 
 	let formParameters = {
 		groupName: "",
-		suburb: "",
+		district: "",
 		gss: "",
 		area: "",
 	};
@@ -38,13 +38,13 @@ const ScheduleForm = (props) => {
 		formParameters = JSON.parse(localStorage.getItem("form-parameters"));
 	}
 	useEffect(() => {
-		if (!props.groupName && !props.suburb && !props.gss) {
+		if (!props.groupName && !props.district && !props.gss) {
 			if (formParameters.groupName) {
 				setShowFormType("group");
 				setToggle("groupToggle");
-			} else if (formParameters.suburb) {
-				setShowFormType("suburb");
-				setToggle("suburbToggle");
+			} else if (formParameters.district) {
+				setShowFormType("district");
+				setToggle("districtToggle");
 			} else if (formParameters.gss) {
 				setShowFormType("area");
 				setToggle("areaToggle");
@@ -53,9 +53,9 @@ const ScheduleForm = (props) => {
 			if (props.groupName) {
 				setShowFormType("group");
 				setToggle("groupToggle");
-			} else if (props.suburb) {
-				setShowFormType("suburb");
-				setToggle("suburbToggle");
+			} else if (props.district) {
+				setShowFormType("district");
+				setToggle("districtToggle");
 			} else if (props.gss) {
 				setShowFormType("area");
 				setToggle("areaToggle");
@@ -88,10 +88,10 @@ const ScheduleForm = (props) => {
 									defaultMessage="Search by Group"
 								/>
 							</ToggleButton>
-							<ToggleButton value="suburbToggle">
+							<ToggleButton value="districtToggle">
 								<FormattedMessage
-									id="schedule.form.toggle.suburb"
-									defaultMessage="Search by Suburb"
+									id="schedule.form.toggle.district"
+									defaultMessage="Search by District"
 								/>
 							</ToggleButton>
 							<ToggleButton value="areaToggle">
@@ -111,9 +111,9 @@ const ScheduleForm = (props) => {
 									groupName={props.groupName || formParameters.groupName}
 								/>
 							)}
-							{showFormType === "suburb" && (
-								<SuburbForm
-									suburb={props.suburb || formParameters.suburb}
+							{showFormType === "district" && (
+								<DistrictForm
+									district={props.district || formParameters.district}
 									gss={props.gss || formParameters.gss}
 									area={props.area || formParameters.area}
 								/>

@@ -4,24 +4,24 @@ import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import { useTheme } from "@mui/material/styles";
-import ApartmentIcon from "@mui/icons-material/Apartment";
+import MapIcon from "@mui/icons-material/Map";
 
 import axios from "axios";
 
 import { FormattedMessage } from "react-intl";
 
-const SuburbForm = (props) => {
+const DistrictForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
 
 	let navigate = useNavigate();
-	const [suburbList, setSuburbList] = useState();
+	const [districtList, setDistrictList] = useState();
 	const [gssList, setGssList] = useState();
 	const [areaList, setAreaList] = useState();
 
-	const [suburbSelect, setSuburbSelect] = useState("");
-	const handleSuburbSelectChange = (event) => {
-		setSuburbSelect(event.target.value);
+	const [districtSelect, setDistrictSelect] = useState("");
+	const handleDistrictSelectChange = (event) => {
+		setDistrictSelect(event.target.value);
 	};
 
 	const [gssSelect, setGssSelect] = useState("");
@@ -38,24 +38,24 @@ const SuburbForm = (props) => {
 		e.preventDefault();
 		const forLocalStorage = {
 			groupName: "",
-			suburb: suburbSelect,
+			district: districtSelect,
 			gss: gssSelect,
 			area: areaSelect,
 		};
 		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
 		navigate({
 			pathname: "/schedule",
-			search: `?group=&suburb=${suburbSelect}&gss=${gssSelect}&area=${areaSelect}`,
+			search: `?group=&district=${districtSelect}&gss=${gssSelect}&area=${areaSelect}`,
 		});
 	};
 
 	useEffect(() => {
 		axios
-			.get(process.env.REACT_APP_API_URL + "/api/all-suburb/")
+			.get(process.env.REACT_APP_API_URL + "/api/all-district/")
 			.then((res) => {
-				setSuburbList(res.data.data);
-				if (props.suburb !== "") {
-					setSuburbSelect(props.suburb);
+				setDistrictList(res.data.data);
+				if (props.district !== "") {
+					setDistrictSelect(props.district);
 				}
 				setisLoading(false);
 			})
@@ -63,11 +63,11 @@ const SuburbForm = (props) => {
 	}, []);
 
 	useEffect(() => {
-		if (suburbSelect) {
+		if (districtSelect) {
 			axios
 				.get(
 					process.env.REACT_APP_API_URL +
-						`/api/search-by-suburb/?suburb=${suburbSelect}`
+						`/api/search-by-district/?district=${districtSelect}`
 				)
 				.then((res) => {
 					setGssList(res.data.data);
@@ -77,7 +77,7 @@ const SuburbForm = (props) => {
 				})
 				.catch((errr) => {});
 		}
-	}, [suburbSelect]);
+	}, [districtSelect]);
 
 	let gssNameList = null;
 	if (gssList) {
@@ -120,18 +120,18 @@ const SuburbForm = (props) => {
 					}}
 				>
 					<FormattedMessage
-						id="schedule.form.toggle.suburb"
-						defaultMessage="Search by Suburb"
+						id="schedule.form.toggle.district"
+						defaultMessage="Search by District"
 					/>{" "}
-					<ApartmentIcon />
+					<MapIcon />
 				</h4>
 				<p
 					className="text-white-50 fw-light mb-3"
 					style={{ fontSize: "0.9em" }}
 				>
 					<FormattedMessage
-						id="schedule.form.suburb.subText"
-						defaultMessage="Do you live in any of the following suburbs? Batticaloa, Colombo, Dehiwala-Mount Lavinia, Jaffna, Negombo, Kotte or Moratuwa. If so, search for schedule below..."
+						id="schedule.form.district.subText"
+						defaultMessage="Do you live in Anuradhapura, Batticaloa,  Colombo, Galle, Gampaha, Jaffna or Kandy? If so, search for schedule below..."
 					/>
 				</p>
 				<div className="form-group col-12">
@@ -139,19 +139,19 @@ const SuburbForm = (props) => {
 						size="small"
 						label={
 							<FormattedMessage
-								id="schedule.form.suburb.select1"
-								defaultMessage="Suburb"
+								id="schedule.form.district.select1"
+								defaultMessage="District"
 							/>
 						}
 						select
-						value={suburbSelect}
-						onChange={handleSuburbSelectChange}
-						name="suburb"
+						value={districtSelect}
+						onChange={handleDistrictSelectChange}
+						name="district"
 						required
 						fullWidth
 						sx={{ textTransform: "capitalize" }}
 					>
-						{suburbList?.map((item, index) => {
+						{districtList?.map((item, index) => {
 							return (
 								<MenuItem
 									key={index}
@@ -171,7 +171,7 @@ const SuburbForm = (props) => {
 						size="small"
 						label={
 							<FormattedMessage
-								id="schedule.form.suburb.select2"
+								id="schedule.form.district.select2"
 								defaultMessage="Grid Substation"
 							/>
 						}
@@ -202,7 +202,7 @@ const SuburbForm = (props) => {
 						size="small"
 						label={
 							<FormattedMessage
-								id="schedule.form.suburb.select3"
+								id="schedule.form.district.select3"
 								defaultMessage="Area"
 							/>
 						}
@@ -244,4 +244,4 @@ const SuburbForm = (props) => {
 	);
 };
 
-export default SuburbForm;
+export default DistrictForm;
