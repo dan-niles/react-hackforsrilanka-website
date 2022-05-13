@@ -14,6 +14,9 @@ import axios from "axios";
 
 import { FormattedMessage } from "react-intl";
 
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
+
 const GroupForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
@@ -106,12 +109,20 @@ const GroupForm = (props) => {
 						/>{" "}
 						<GroupsIcon />
 					</h4>
+					<Alert severity="warning" className="mb-3">
+						<AlertTitle>Note to user testers:</AlertTitle>
+						We intentionally only added groups [A - J] for this beta version.
+						<br />
+						<strong>All groups will be included in the launch version.</strong>
+					</Alert>
+
 					<p className="text-white-50 fw-light mb-3">
 						<FormattedMessage
 							id="schedule.form.group.subText"
 							defaultMessage="Pick the pre-assigned group letter for your area..."
 						/>
 					</p>
+
 					<FormControl fullWidth error={groupError}>
 						<InputLabel id="group-select">
 							<FormattedMessage
