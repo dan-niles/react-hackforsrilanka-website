@@ -73,6 +73,11 @@ const GroupForm = (props) => {
 		);
 	};
 
+	let temp_groups = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+	let new_groups = groups?.filter((i) => {
+		return temp_groups.includes(i);
+	});
+
 	return (
 		<form action="" method="get" onSubmit={submitHandler}>
 			{isLoading && (
@@ -122,7 +127,7 @@ const GroupForm = (props) => {
 							onChange={handleGroupSelectChange}
 							name="group"
 						>
-							{groups?.map((item, index) => {
+							{new_groups?.map((item, index) => {
 								return (
 									<MenuItem value={item} key={index}>
 										{item}
