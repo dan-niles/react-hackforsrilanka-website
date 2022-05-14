@@ -76,10 +76,10 @@ const GroupForm = (props) => {
 		);
 	};
 
-	let temp_groups = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
-	let new_groups = groups?.filter((i) => {
-		return temp_groups.includes(i);
-	});
+	// let temp_groups = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+	// let new_groups = groups?.filter((i) => {
+	// 	return temp_groups.includes(i);
+	// });
 
 	return (
 		<form action="" method="get" onSubmit={submitHandler}>
@@ -109,12 +109,12 @@ const GroupForm = (props) => {
 						/>{" "}
 						<GroupsIcon />
 					</h4>
-					<Alert severity="warning" className="mb-3">
+					{/* <Alert severity="warning" className="mb-3">
 						<AlertTitle>Note to user testers:</AlertTitle>
 						We intentionally only added groups [A - J] for this beta version.
 						<br />
 						<strong>All groups will be included in the launch version.</strong>
-					</Alert>
+					</Alert> */}
 
 					<p className="text-white-50 fw-light mb-3">
 						<FormattedMessage
@@ -138,7 +138,7 @@ const GroupForm = (props) => {
 							onChange={handleGroupSelectChange}
 							name="group"
 						>
-							{new_groups?.map((item, index) => {
+							{groups?.map((item, index) => {
 								return (
 									<MenuItem value={item} key={index}>
 										{item}
