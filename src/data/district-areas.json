@@ -1,0 +1,5605 @@
+{
+	"message": "",
+	"data": [
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Agaliya",
+			"groups": "A",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Kahaduwa",
+			"groups": "A",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Niyagama",
+			"groups": "B",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Porawagama",
+			"groups": "B",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Thilakapura",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Batapola road",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Delduwa road",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Kuleegoda road",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Thalgasgoda road",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Elpitiya road",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Andadola road",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Avittawa",
+			"groups": "E",
+			"feeders": "G2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Pitigala",
+			"groups": "E",
+			"feeders": "G2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Thelwatta",
+			"groups": "I",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Matiwala",
+			"groups": "I",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Kiralagahawela",
+			"groups": "I",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Thambahitiya",
+			"groups": "I",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Despemgama",
+			"groups": "I",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Kosgahawella",
+			"groups": "I",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Meetiyagoda",
+			"groups": "I",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Batapola",
+			"groups": "I",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Karandeniya",
+			"groups": "I",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Kotapitiya",
+			"groups": "K",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Andawala",
+			"groups": "K",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Meegama",
+			"groups": "K",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Bondupitiya",
+			"groups": "K",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Koswattagoda",
+			"groups": "K",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Warakagolla",
+			"groups": "K",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Ritiketiya",
+			"groups": "K",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Bolakella",
+			"groups": "K",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Welivita",
+			"groups": "A",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Awissawella road",
+			"groups": "A",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Nawagamuwa",
+			"groups": "A",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Walpola",
+			"groups": "A",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Ranala",
+			"groups": "A",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Vihara mw",
+			"groups": "B",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Angoda",
+			"groups": "B",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Mulleriyawa",
+			"groups": "B",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Pittugala",
+			"groups": "B",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Homagama",
+			"groups": "B",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Lake road",
+			"groups": "B",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Welivita road",
+			"groups": "B",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Hokandara",
+			"groups": "C",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Moratuhena road",
+			"groups": "C",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Habarakada",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Ranala road",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Udamapitigama",
+			"groups": "A",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Biochart",
+			"groups": "A",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pidaliyawatta",
+			"groups": "A",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Rockland",
+			"groups": "A",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Gangabadawatta",
+			"groups": "A",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Meepawita",
+			"groups": "A",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Kahatagoda",
+			"groups": "A",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Kirindiwela",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Meddegama",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Madakotuwa",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Urapola",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Nikahetikanda",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Karasnagala",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Dikkanda",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Udugama",
+			"groups": "D",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Madola",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Hewainna",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Minnana",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Batangala",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Panawala",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Yogama",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Napawala",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pambegama",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Thatuwalakanda",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Ranala",
+			"groups": "G",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Batawala",
+			"groups": "G",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Ambulgama",
+			"groups": "G",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Lewkewela",
+			"groups": "G",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Embilladeniya.",
+			"groups": "G",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pugoda",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pepiliwela",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Peragashandiya",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Mandawala",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Mahena",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Nedungolla",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Anuragoda",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Horagasdeka",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Lunugama",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pelahela",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Putupagala",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Rambutanwatta",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Banagala",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Kapugoda",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Giridara",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Mulatiyana",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Yataowita",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Samanabedda",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Meepe",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Madulawa",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Horagala",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Dampe",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Watareka",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Liyanwala",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Polwatta",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Naduhena",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Hettiyawatta",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Panagoda",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Artigala road",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Weralupagoda",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Udagewatta",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Rusirumal",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Kudaluwila",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pitumpe",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Wewelpanawa",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pinnawala",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Halpe",
+			"groups": "J",
+			"feeders": "2"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Nawalapitiya",
+			"area": "Ambuluwawa",
+			"groups": "E",
+			"feeders": "5"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Kandalama",
+			"groups": "B",
+			"feeders": "6"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Elahara",
+			"groups": "B",
+			"feeders": "6"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Hingurakgoda",
+			"groups": "C",
+			"feeders": "1"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Diyabeduma",
+			"groups": "C",
+			"feeders": "1"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Bakamoona",
+			"groups": "C",
+			"feeders": "1"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Galenbindunuwewa",
+			"groups": "E",
+			"feeders": "5"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Maradankadawala",
+			"groups": "E",
+			"feeders": "5"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Thirappane",
+			"groups": "E",
+			"feeders": "5"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Ganewalpola",
+			"groups": "E",
+			"feeders": "5"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Madatuagama",
+			"groups": "F",
+			"feeders": "7"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Galkiriyagama",
+			"groups": "F",
+			"feeders": "7"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Kalawewa",
+			"groups": "F",
+			"feeders": "7"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Palagala",
+			"groups": "F",
+			"feeders": "7"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Seegiriya",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Inamaluwa",
+			"groups": "H",
+			"feeders": "8"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Habarana",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Habarana",
+			"area": "Medirigiriya",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Panagamuwa",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Pilana",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Wanchawala",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Ankokkawala",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Bogahagoda",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Puswelkada",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Angulugaha",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Heenatigala",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Wawulugala",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Imaduwa",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Mayakaduwa",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Deegoda",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Polhena",
+			"groups": "B",
+			"feeders": "11"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Gonapura",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Sandarawala",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Baddegama town",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Dunwatta",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Ganegama",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Ampegama",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Agaliya",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Nayapamula",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Unanvitiya",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Hammaliya",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Pilagoda",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Polgahawila",
+			"groups": "C",
+			"feeders": "3"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Pettigalawatta",
+			"groups": "E",
+			"feeders": "6"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Thalapitiya",
+			"groups": "E",
+			"feeders": "6"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Wackwella",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Hapugala",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Molligoda",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Beraliadolawatta",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Dadalla",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Labuduwa",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Thotagoda",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Dakshinapaya",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Kodigalakanda",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Navinna",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Hirimbura",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Godakanda",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Kottewatta",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Takkiyawatta",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Humes road",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Wiskam road",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Kandewatta road",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Eliot road",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Wakunugoda road",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Unawatuna",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Roomassala",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Eramudugaha",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Bambagala",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Bataduwa",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Andugoda",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Dikumbura",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Indurannawila",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Nakanda",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Panugalgoda",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Meepegedara",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Yagala",
+			"groups": "H",
+			"feeders": "2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Mihiripanna",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Thalpe",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Kahawannagama",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Koggala",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Danduhala",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Digaradda",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Giniwella",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Kabalana",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Welhengoda",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Meegahagoda",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Ahangama",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Goviyapana",
+			"groups": "I",
+			"feeders": "8"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Pinnaduwa",
+			"groups": "J",
+			"feeders": "1"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Niyagama",
+			"groups": "J",
+			"feeders": "1"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Citrus",
+			"groups": "J",
+			"feeders": "1"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Gonapinuwala",
+			"groups": "K",
+			"feeders": "7"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Nalagasdeniya",
+			"groups": "K",
+			"feeders": "7"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Thelikada",
+			"groups": "K",
+			"feeders": "7"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Ginimellagaha",
+			"groups": "K",
+			"feeders": "7"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Boossa",
+			"groups": "K",
+			"feeders": "7"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Thiranagama",
+			"groups": "K",
+			"feeders": "7"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Kumarakanda",
+			"groups": "K",
+			"feeders": "7"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Dodanduwa",
+			"groups": "K",
+			"feeders": "7"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Walahanduwa",
+			"groups": "L",
+			"feeders": "9"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Ihalagoda",
+			"groups": "L",
+			"feeders": "9"
+		},
+		{
+			"district": "Galle",
+			"gss": "Galle",
+			"area": "Thalgampala",
+			"groups": "L",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Kesbewa",
+			"groups": "C",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Mandawila road",
+			"groups": "C",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Batakettara",
+			"groups": "C",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Kolamunna",
+			"groups": "C",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Halpita",
+			"groups": "C",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Siyabalagoda",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Polgasovita",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Galwaldeniya",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Dhigana",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Siddamulla",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Gorakapitiya",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Mahalwarawa",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Kirigampamunuwa",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Palanwatta",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Jayaliyagama",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Nampamunuwa",
+			"groups": "K",
+			"feeders": "3"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Pandulagama",
+			"groups": "P",
+			"feeders": "1"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Nochchiyagama",
+			"groups": "P",
+			"feeders": "1"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Kalaoya",
+			"groups": "P",
+			"feeders": "1"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Galkulama",
+			"groups": "R",
+			"feeders": "9"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Wijepura",
+			"groups": "S",
+			"feeders": "2"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Nachchadoowa",
+			"groups": "S",
+			"feeders": "2"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Wilachchiya",
+			"groups": "S",
+			"feeders": "2"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Mihintale",
+			"groups": "T",
+			"feeders": "6"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Rambewa",
+			"groups": "T",
+			"feeders": "6"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Saliyapura",
+			"groups": "U",
+			"feeders": "7"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Parasangaswewa",
+			"groups": "U",
+			"feeders": "7"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Medawachchiya",
+			"groups": "V",
+			"feeders": "8"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Poonewa",
+			"groups": "V",
+			"feeders": "8"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Anuradhapura",
+			"area": "Mannar road",
+			"groups": "V",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Dekatana",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Katulanda",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Moragala",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Demalagama",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kanduboda",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Pradeepagama",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Delgoda",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Meegahawatta",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Akurumaulla",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Naranwala",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kirikitta",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Etikehelgalla",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Henegama",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Wilimbula",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Dnawukanda",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Keragala",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Narampola",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kalukodayawa",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Ulahitiwala",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Malwana",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Yabaraluwa",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Paranagoda",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Indolamulla",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Dompe",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Darshaneeyawatta",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Dehigahahena",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Dambukanda",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Guruwala",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Palugama",
+			"groups": "P",
+			"feeders": "14"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Mahena road",
+			"groups": "Q",
+			"feeders": "7"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kolabahenawatta",
+			"groups": "Q",
+			"feeders": "7"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kottunna road",
+			"groups": "Q",
+			"feeders": "12"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Yatawatta",
+			"groups": "Q",
+			"feeders": "12"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Walekade",
+			"groups": "Q",
+			"feeders": "12"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Appugewatt",
+			"groups": "Q",
+			"feeders": "12"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Paranakanda",
+			"groups": "Q",
+			"feeders": "12"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Renagala",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Parakandeniya",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Batahena road",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Weboda",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Horawala",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kirillawatta",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Hamugehena",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Ambaraluwa",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Heenpanwila",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Pincowatta",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Mahena",
+			"groups": "T",
+			"feeders": "10"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Obawatta",
+			"groups": "U",
+			"feeders": "11"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Sapugaskanda",
+			"groups": "U",
+			"feeders": "11"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Sudarshana road",
+			"groups": "V",
+			"feeders": "1"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Waragoda road",
+			"groups": "V",
+			"feeders": "1"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Temple road",
+			"groups": "V",
+			"feeders": "1"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Koholwila road",
+			"groups": "V",
+			"feeders": "1"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Makola road",
+			"groups": "V",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Uswatta road",
+			"groups": "V",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Tewatta",
+			"groups": "V",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Dewananda road",
+			"groups": "V",
+			"feeders": "4"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Arawwala",
+			"groups": "Q",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Makuluduwa",
+			"groups": "Q",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Manpe",
+			"groups": "Q",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Maharagama road",
+			"groups": "Q",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Miriswatta road",
+			"groups": "Q",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Deepangoda",
+			"groups": "Q",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Munamale",
+			"groups": "Q",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Diyagama",
+			"groups": "Q",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Yakahaluwa",
+			"groups": "Q",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Magammana",
+			"groups": "Q",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Weera mw",
+			"groups": "R",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Temple road",
+			"groups": "R",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Pamunuwa road",
+			"groups": "R",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Wattegedara road",
+			"groups": "R",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Dhaham mw",
+			"groups": "R",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Makubura",
+			"groups": "T",
+			"feeders": "12"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Kalalgoda",
+			"groups": "T",
+			"feeders": "12"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Depanama",
+			"groups": "T",
+			"feeders": "12"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Horahena",
+			"groups": "T",
+			"feeders": "12"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Bangalawatta",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Palanwatta",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Polgasowita",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Makumbura",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Siddamulla",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Mabulgoda",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Erawwala",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Mahalwarawa",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Attidiya",
+			"groups": "P",
+			"feeders": "7"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Galle road",
+			"groups": "P",
+			"feeders": "7"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Attidiya road",
+			"groups": "P",
+			"feeders": "7"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Gangabada road",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Uyana road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Puwakaramba road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Anandarama road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Thelawala road",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Maligawa road",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Center road",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Borupana road",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Thissa mw",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Mayura mw",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Polkotuwa road",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Mill road",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Molpe road",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Rahula road",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Moratumulla",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Piliyandala road",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Madinnagoda road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Epitamulla road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Beddegana road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Mahindarama road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Rampart road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Angampiriya road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Mission road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Koswatta road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Jambugasmulla mw",
+			"groups": "R",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Pagoda road",
+			"groups": "R",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Dewala road",
+			"groups": "R",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Gemunu mw",
+			"groups": "T",
+			"feeders": "4"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Polduwa",
+			"groups": "T",
+			"feeders": "4"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Kubukgahaduwa road",
+			"groups": "T",
+			"feeders": "4"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Aggonawela",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Hospital road",
+			"groups": "W",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Madiwela road",
+			"groups": "W",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Wijerama road",
+			"groups": "W",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Wijerama",
+			"groups": "W",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Delkanda",
+			"groups": "W",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Kumbukgahapokuna road",
+			"groups": "W",
+			"feeders": "1"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Udugama",
+			"groups": "P",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Alawatta",
+			"groups": "P",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Nikadowatta",
+			"groups": "P",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Yatagama",
+			"groups": "P",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Nalapaha",
+			"groups": "P",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Madagampitiya",
+			"groups": "P",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Dewanwatta",
+			"groups": "R",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Higgollawatta",
+			"groups": "R",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Muddaragama",
+			"groups": "R",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Ilukhena",
+			"groups": "R",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Mangedara",
+			"groups": "R",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Boruggamuwa",
+			"groups": "R",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kinawala",
+			"groups": "R",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Galgamuwa",
+			"groups": "R",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Hunumulla",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Ballapana",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Rassapana",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Heralugedara",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Dombawinna",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Raniswala",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Bogamuwa",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kandahena",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Horagolla",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Thihariya town",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Pahalagama",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Nabiritta",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Godella",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Dunnela",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Dunumala",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Udugoda",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kalaotuwawa",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Warana",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Pilankada",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Weeragula",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Bonagala",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Gorakadeniya",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Ogodapola",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Nelligahamula",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Ambagaspitiya",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Warapalana",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kahabilihena",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kaburugalwatta",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Welagedara",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Haggalla",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Unagahadeniya",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Ruggahawila",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kaburugalla",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kahataowita",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Angampitiya",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Arupassa",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Walgammulla",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Ruwanpura",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Lawulupitiya",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Galboda",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Dematalanda",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Dikkanda",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Telecom",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Wataddara",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Gamameda",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Eluwapitiya",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Bangalawatta",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Vigoda",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Walpitamulla",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Uludeniyawatta",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Balabowa",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Pitakotuwa",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Korasa",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Korasawatta",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Paleeyatiyana",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Mabodala",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Metikotamulla",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Essalla",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Dewalapola",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Watinapaha.",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Wadurawa",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Mottunna",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kubaloluwa",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Paramulla",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Asiriuyana",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Wawulhena",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Magalegoda",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kandaoluwawa",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Marapola",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Walbolana",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Galgana",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Hansagiriya",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Malwatta",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Raddalgoda",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kaleliya",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Mallehewa",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Webadamulla",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Dumunnegedara",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Bolana",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Danselwatta",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Hapitigama",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Makkanigoda",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kotakanda",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Hiriwala",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Idiparape",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Siyabalagoda",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Wijayarajadahana",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Pohonnaruwa",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Napewatta",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Palmada",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Madampella road",
+			"groups": "V",
+			"feeders": "8"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Webodagalla",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Maduwegedara",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Wanuwagalawatta",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Nemsuji",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Panawala",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Wedagama",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Damro factory",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kalalpitiya",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Muhandiramwatta",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Nabuluwa",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kammalpitiya",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Danwala",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Abillapitiya road",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Bataleeya",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Radawadunna",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Dewalapitiya",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Galenda",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Debahara",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Penihela",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Tharadeniya",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kamburadeniya",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Mirigama road",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Millawala",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Yayagala",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Waduwatta",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Madabavita",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Danowita",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Kalukanda",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Pasyala",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Ellalamulla",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Miwitiya",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Katulandawatta",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Ellakkala",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Maibula road",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Ketakalapitiya",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Dambutuwa",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Madurapitiya",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Mahawela",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Godagama",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Weragoda",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Veyangoda",
+			"area": "Attanagalla",
+			"groups": "W",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Kolambage mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Nuwarawatta road",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Senanayaka mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Ghanendra mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Rodrigo mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Kirimandala mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Sudarshana mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Liyanage mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Millagahawatta",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Koswatta road",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Hemasinghe mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Uswatta mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Welikadawatta",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Polwatta",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Bandaranayakapura",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Nirmana mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Temple road",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Welipara",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Samagi mw",
+			"groups": "Q",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Moragasmulla road",
+			"groups": "U",
+			"feeders": "1or6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Rajagiriya road",
+			"groups": "U",
+			"feeders": "1or6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Kolonnawa road",
+			"groups": "U",
+			"feeders": "1or6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Vihara mw",
+			"groups": "U",
+			"feeders": "1or6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Wellampitiya",
+			"groups": "U",
+			"feeders": "1or6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Katupelella road",
+			"groups": "U",
+			"feeders": "1or6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Pallewawa",
+			"groups": "Q",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Unnaruwa",
+			"groups": "Q",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Gamangedara",
+			"groups": "Q",
+			"feeders": "6"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Church road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Moragoda",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Siyane road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Colombo road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Wijaya road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Court road",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Werellawatta",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Isuru mw",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Ambagahalanda",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Yongalmulla",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Hewaniwala",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Ambagaspitiya",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Pasgammana",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Baliwila",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Morahena",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Mahawita",
+			"groups": "Q",
+			"feeders": "9"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Convent road",
+			"groups": "R",
+			"feeders": "12"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Kaleliya road",
+			"groups": "R",
+			"feeders": "12"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Suduwella road",
+			"groups": "R",
+			"feeders": "12"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Nedurupitiya road",
+			"groups": "R",
+			"feeders": "12"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Dandugama",
+			"groups": "R",
+			"feeders": "12"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Minuwangoda",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Botiyawatta",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Galkanda",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Nilpanagoda",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Kotugoda",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Galoluwa",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Ellangala",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Burulpitiya",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Hendimahara",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Welhena",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Kehelbaddara",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Uggalboda",
+			"groups": "R",
+			"feeders": "13"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Dagonna",
+			"groups": "S",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Anomawatta",
+			"groups": "S",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Katiyala",
+			"groups": "S",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Walimulla",
+			"groups": "S",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Pattayamwatta",
+			"groups": "S",
+			"feeders": "10"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Minuwangoda road",
+			"groups": "T",
+			"feeders": "8"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Kimbulapitiya road",
+			"groups": "T",
+			"feeders": "8"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Parakrama road",
+			"groups": "T",
+			"feeders": "8"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Rajasinghe road",
+			"groups": "T",
+			"feeders": "8"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Amuna road",
+			"groups": "U",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Distillery road",
+			"groups": "U",
+			"feeders": "3"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Earlalai",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kuppilan",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kadduvan",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Uduvil",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Sanguvely",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Manippay",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Uppumadam",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Thaavady",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kokkuvil",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kulappiddy",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Anaikoddai",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Navaaly",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Addakiri",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Thirunelvely",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Urumpirai",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Inuvil",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kopay",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kondavil",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Urelu",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Neervely",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Achchelu",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Irupalai",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kalviyankadhu",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Nallur",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Nayanmarkaddu",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Ariyalai",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Chemmani",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Punnalaikadduvan",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Evinai",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Vahaiyadi",
+			"groups": "S",
+			"feeders": "12"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Sandilppay",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Chankanai",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Mahiyappiddy",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Ilavalai",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Jampukolappaddinam",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kaddupulam",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Chulipuram",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Thoddiladi",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Vaddukoddaai",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Moolai",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Araly",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Ponnalai",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Karainagar",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Thoppukadhu",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kayts",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Puliyankoodal",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Thurayoor",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Irupiddy",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kurikadduvan",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Velanai",
+			"groups": "T",
+			"feeders": "7"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Arukalmadam",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Viloonri",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Pannai",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kompyanmanal",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Koddady",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Grurnagar",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Mankumpan",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Allaipddy",
+			"groups": "U",
+			"feeders": "8"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Stanly road",
+			"groups": "U",
+			"feeders": "11"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Nilavarai",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Avarangal",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Achchuveli",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Idaikkadhu",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Thondamanaru",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kerudavil",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Akkarai",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Uduppidy",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Puraporukky",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Mandaan",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Polikandy",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Nediyakadhu",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Nelliyadi",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Karaveddy",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Jarkkaru",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Thikkam",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Vijaparimoolai",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Vallipuram",
+			"groups": "V",
+			"feeders": "10"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Earlalali",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Mallakam",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Alaveddy",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Pannalai",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Thellippalai",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Naguleswaram",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Keerimalai",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Maaviddapuram",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Palali",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Mayiliddi",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Vasavillan",
+			"groups": "W",
+			"feeders": "6"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Navatkuli",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Maravanpulavu",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Aruguveli",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Madduvil",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Nunavil",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kalvayal",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Sarasalai",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kachchai",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Arasady",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Allarai",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Ketpeli",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Vellampokaddi",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Meesalai",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Kodikamam",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Varani",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Navalady",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Jaffna",
+			"gss": "Chunnakam",
+			"area": "Mirusuvil",
+			"groups": "W",
+			"feeders": "9"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Kohuwala",
+			"groups": "S",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Nugegoda",
+			"groups": "S",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Vihara mw",
+			"groups": "W",
+			"feeders": "7"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Aberatna mw",
+			"groups": "W",
+			"feeders": "7"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Paropakara mw",
+			"groups": "W",
+			"feeders": "7"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Pirivena road",
+			"groups": "W",
+			"feeders": "7"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Embillawatta road",
+			"groups": "W",
+			"feeders": "7"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Galahaduwa",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Matagoda",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Kerawalapitiya",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Gunasekara mw",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Kudagahapitiya",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Nayakkanda",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Convert road",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Maradana",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Ananda mw",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Yashodara mw",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Bunt road",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Olandagama",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kelaniya",
+			"area": "Hendala road",
+			"groups": "P",
+			"feeders": "2"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Niwasipura",
+			"groups": "Q",
+			"feeders": "11"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Kotugoda",
+			"area": "Kasagahawatta",
+			"groups": "Q",
+			"feeders": "11"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Deniyaya",
+			"area": "Siyambalagoda",
+			"groups": "E",
+			"feeders": "G2"
+		},
+		{
+			"district": "Galle",
+			"gss": "Deniyaya",
+			"area": "Banagala",
+			"groups": "G",
+			"feeders": "4"
+		},
+		{
+			"district": "Galle",
+			"gss": "Deniyaya",
+			"area": "Dellawa",
+			"groups": "G",
+			"feeders": "4"
+		},
+		{
+			"district": "Galle",
+			"gss": "Deniyaya",
+			"area": "Warukandeniya",
+			"groups": "G",
+			"feeders": "4"
+		},
+		{
+			"district": "Galle",
+			"gss": "Deniyaya",
+			"area": "Neluwa",
+			"groups": "G",
+			"feeders": "4"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Deniyaya",
+			"area": "Habarakada",
+			"groups": "G",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Deniyaya",
+			"area": "Miriswatta",
+			"groups": "H",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Deniyaya",
+			"area": "Horagala",
+			"groups": "H",
+			"feeders": "3"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Kiribathkumbura",
+			"area": "Menikdiwela",
+			"groups": "B",
+			"feeders": "9"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Kiribathkumbura",
+			"area": "Ampitiya",
+			"groups": "F",
+			"feeders": "5"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Kiribathkumbura",
+			"area": "Wattappola",
+			"groups": "H",
+			"feeders": "3"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Kiribathkumbura",
+			"area": "Gelioya",
+			"groups": "K",
+			"feeders": "8"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Kiribathkumbura",
+			"area": "Hindagala",
+			"groups": "K",
+			"feeders": "8"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Kiribathkumbura",
+			"area": "Handessa",
+			"groups": "K",
+			"feeders": "8"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Kiribathkumbura",
+			"area": "Kadugannawa",
+			"groups": "L",
+			"feeders": "12"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Pallekele",
+			"area": "Kundasale",
+			"groups": "G",
+			"feeders": "9"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Pallekele",
+			"area": "Ampitiya",
+			"groups": "H",
+			"feeders": "11"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Panadura",
+			"area": "Yatiyana",
+			"groups": "C",
+			"feeders": "1"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Panadura",
+			"area": "Pamunugama",
+			"groups": "E",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Panadura",
+			"area": "Uggalboda",
+			"groups": "H",
+			"feeders": "7"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Ukuwela",
+			"area": "Jambugahapitiya",
+			"groups": "A",
+			"feeders": "1"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Ukuwela",
+			"area": "Hunnasgiriya",
+			"groups": "D",
+			"feeders": "9"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Ukuwela",
+			"area": "Ankumbura",
+			"groups": "I",
+			"feeders": "2"
+		},
+		{
+			"district": "Batticaloa",
+			"gss": "Valachchenai",
+			"area": "Vakarai",
+			"groups": "H",
+			"feeders": "3"
+		},
+		{
+			"district": "Batticaloa",
+			"gss": "Valachchenai",
+			"area": "Oddamavadi",
+			"groups": "J",
+			"feeders": "6"
+		},
+		{
+			"district": "Batticaloa",
+			"gss": "Valachchenai",
+			"area": "Kiran",
+			"groups": "J",
+			"feeders": "6"
+		},
+		{
+			"district": "Batticaloa",
+			"gss": "Valachchenai",
+			"area": "Vakaneri",
+			"groups": "L",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Beliatta",
+			"area": "Yatiyana",
+			"groups": "E",
+			"feeders": "1"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Beliatta",
+			"area": "Siyambalagoda",
+			"groups": "G",
+			"feeders": "7"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Beliatta",
+			"area": "Walgammulla",
+			"groups": "L",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Thulhiriya",
+			"area": "Giriulla",
+			"groups": "D",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Thulhiriya",
+			"area": "Ambepussa",
+			"groups": "E",
+			"feeders": "4"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Ampara",
+			"area": "Moragahapallama",
+			"groups": "P",
+			"feeders": "8"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Ampara",
+			"area": "Moragahapallama",
+			"groups": "P",
+			"feeders": "6"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Ampara",
+			"area": "Madawalalanda",
+			"groups": "P",
+			"feeders": "6"
+		},
+		{
+			"district": "Kandy",
+			"gss": "Ampara",
+			"area": "Mahanagapura",
+			"groups": "P",
+			"feeders": "6"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sapugaskanda",
+			"area": "Kopiyawatta",
+			"groups": "S",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Aniyakanda",
+			"area": "Ganemulla",
+			"groups": "R",
+			"feeders": "3"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Aniyakanda",
+			"area": "Gampaha",
+			"groups": "W",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Aniyakanda",
+			"area": "Udugampola",
+			"groups": "W",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Aniyakanda",
+			"area": "Madelgamuwa",
+			"groups": "W",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Aniyakanda",
+			"area": "Makewita",
+			"groups": "W",
+			"feeders": "5"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Mahiyanganaya",
+			"area": "Ihalagama",
+			"groups": "W",
+			"feeders": "4"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Mahiyanganaya",
+			"area": "Pahalagama",
+			"groups": "W",
+			"feeders": "4"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Trincomalee",
+			"area": "Galkadawala",
+			"groups": "S",
+			"feeders": "1"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Trincomalee",
+			"area": "Vellamanal",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Batticaloa",
+			"gss": "Vavunathivu",
+			"area": "Eravur",
+			"groups": "T",
+			"feeders": "2"
+		},
+		{
+			"district": "Batticaloa",
+			"gss": "Vavunathivu",
+			"area": "Thannamunai",
+			"groups": "T",
+			"feeders": "2"
+		},
+		{
+			"district": "Batticaloa",
+			"gss": "Vavunathivu",
+			"area": "Periyapullumalai",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Vavuniya",
+			"area": "Padaviya",
+			"groups": "W",
+			"feeders": "5"
+		},
+		{
+			"district": "Anuradhapura",
+			"gss": "Vavuniya",
+			"area": "Wahalkada",
+			"groups": "W",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Pannala",
+			"area": "Dunagaha",
+			"groups": "R",
+			"feeders": "4"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Pannala",
+			"area": "Mellawagedara",
+			"groups": "R",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Pannala",
+			"area": "Kotadeniyawa",
+			"groups": "R",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Pannala",
+			"area": "Divuldeniya",
+			"groups": "R",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Pannala",
+			"area": "Badalgama",
+			"groups": "R",
+			"feeders": "5"
+		},
+		{
+			"district": "Gampaha",
+			"gss": "Pannala",
+			"area": "Akaragama",
+			"groups": "R",
+			"feeders": "5"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Panadura",
+			"area": "Pirivena road",
+			"groups": "A",
+			"feeders": "2"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Panadura",
+			"area": "Galpotta",
+			"groups": "H",
+			"feeders": "7"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Beliatta",
+			"area": "Beligaskoratuwa",
+			"groups": "J",
+			"feeders": "3"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Bolawatta",
+			"area": "Daluwakotuwa",
+			"groups": "T",
+			"feeders": "8"
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sapugaskanda",
+			"area": "Jayasinghe road",
+			"groups": "S",
+			"feeders": "3"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Kattankudy",
+			"groups": "Q",
+			"feeders": "7"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Kalavanchikudy town",
+			"groups": "Q",
+			"feeders": "7"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Kallavala",
+			"groups": "Q",
+			"feeders": "7"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Chettipalayam",
+			"groups": "Q",
+			"feeders": "7"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Pudukuduirippu",
+			"groups": "Q",
+			"feeders": "7"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Manmuna",
+			"groups": "Q",
+			"feeders": "7"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Palamuna",
+			"groups": "Q",
+			"feeders": "7"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Illuppachenai",
+			"groups": "T",
+			"feeders": "2"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Kuruwamadu",
+			"groups": "T",
+			"feeders": "2"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Thalavai",
+			"groups": "T",
+			"feeders": "2"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Weeragama",
+			"groups": "T",
+			"feeders": "2"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Navinna",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Kakirihena",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Serankada",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Unnachchai",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Marapalam",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Kittul",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Kopavali",
+			"groups": "U",
+			"feeders": "4"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Kokkadicholai",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Palugamam",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vavunathivu",
+			"area": "Sungankerny",
+			"groups": "V",
+			"feeders": "5"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vaunathive",
+			"area": "Thandiady",
+			"groups": "V",
+			"feeders": "1"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vaunathive",
+			"area": "Pavapadichena",
+			"groups": "V",
+			"feeders": "1"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vaunathive",
+			"area": "Karavetty",
+			"groups": "V",
+			"feeders": "1"
+		},
+		{
+			"district": "Batticoloa",
+			"gss": "Vaunathive",
+			"area": "Nawalkadu",
+			"groups": "V",
+			"feeders": "1"
+		}
+	]
+}

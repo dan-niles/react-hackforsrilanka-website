@@ -15,6 +15,10 @@ import { FormattedMessage } from "react-intl";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 
+import allGSS from "../../../data/all-gss.json";
+import GSSAreas from "../../../data/gss-areas.json";
+import GSSgroups from "../../../data/gss-groups.json";
+
 const AreaForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
@@ -42,36 +46,56 @@ const AreaForm = (props) => {
 			area: areaSelect,
 		};
 		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
+
+		let obj = GSSgroups[gssSelect].find((i) => i.value === areaSelect);
+		let group_temp = obj.Group;
+
 		navigate({
 			pathname: "/schedule",
-			search: `?group=&gss=${gssSelect}&area=${areaSelect}`,
+			search: `?group=${group_temp}`,
 		});
+
+		// navigate({
+		// 	pathname: "/schedule",
+		// 	search: `?group=&gss=${gssSelect}&area=${areaSelect}`,
+		// });
 	};
 
 	useEffect(() => {
-		axios
-			.get(process.env.REACT_APP_API_URL + "/api/all-gss/")
-			.then((res) => {
-				setGssList(res.data.data);
-				if (props.gss !== "") {
-					setGssSelect(props.gss);
-				}
-				setisLoading(false);
-			})
-			.catch((errr) => {});
+		// axios
+		// 	.get(process.env.REACT_APP_API_URL + "/api/all-gss/")
+		// 	.then((res) => {
+		// 		setGssList(res.data.data);
+		// 		if (props.gss !== "") {
+		// 			setGssSelect(props.gss);
+		// 		}
+		// 		setisLoading(false);
+		// 	})
+		// 	.catch((errr) => {});
+
+		setGssList(allGSS.data);
+		if (props.gss !== "") {
+			setGssSelect(props.gss);
+		}
+		setisLoading(false);
 	}, []);
 
 	useEffect(() => {
 		if (gssSelect) {
-			axios
-				.get(process.env.REACT_APP_API_URL + `/api/all-area/?gss=${gssSelect}`)
-				.then((res) => {
-					setAreaList(res.data.data);
-					if (props.area !== "") {
-						setAreaSelect(props.area);
-					}
-				})
-				.catch((errr) => {});
+			// axios
+			// 	.get(process.env.REACT_APP_API_URL + `/api/all-area/?gss=${gssSelect}`)
+			// 	.then((res) => {
+			// 		setAreaList(res.data.data);
+			// 		if (props.area !== "") {
+			// 			setAreaSelect(props.area);
+			// 		}
+			// 	})
+			// 	.catch((errr) => {});
+
+			setAreaList(GSSAreas[gssSelect].sort());
+			if (props.area !== "") {
+				setAreaSelect(props.area);
+			}
 		}
 	}, [gssSelect]);
 
