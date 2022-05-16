@@ -31,9 +31,9 @@ const Contact = () => {
 	const submitHandler = (e) => {
 		e.preventDefault();
 		if (name && email && message) {
-			const serviceId = "service_tizq51o";
-			const templateId = "template_qo3mxit";
-			const publicKey = "MINMFTdo3erEwqnFi";
+			const serviceId = "service_bm6gw0b";
+			const templateId = "template_mvb80xl";
+			const publicKey = "4E_Y0EdeuHCjAiQdl";
 			const templateParams = {
 				name,
 				email,
