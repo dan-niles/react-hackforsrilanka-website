@@ -31,9 +31,9 @@ const Contact = () => {
 	const submitHandler = (e) => {
 		e.preventDefault();
 		if (name && email && message) {
-			const serviceId = process.env.REACT_APP_EMAIL_SERVICE_ID;
-			const templateId = process.env.REACT_APP_EMAIL_TEMPLATE_ID;
-			const publicKey = process.env.REACT_APP_EMAIL_PUBLIC_KEY;
+			const serviceId = "service_bm6gw0b";
+			const templateId = "template_mvb80xl";
+			const publicKey = "4E_Y0EdeuHCjAiQdl";
 			const templateParams = {
 				name,
 				email,
