@@ -157,14 +157,14 @@ const DistrictForm = (props) => {
 					/>{" "}
 					<MapIcon />
 				</h4>
-				<Alert severity="error" className="mb-3">
+				{/* <Alert severity="error" className="mb-3">
 					<AlertTitle>Please use these filters with some caution</AlertTitle>
 					We scraped and cleaned the PDF tables found on the CEB website
 					[https://ceb.lk/] to make it easy for users to find their group.
 					Unfortunately, the CEB data is sometimes unreliable. We are committed
 					to delivering you the most accurate information & apologize for the
 					inconvenience.
-				</Alert>
+				</Alert> */}
 				<p
 					className="text-white-50 fw-light mb-3"
 					style={{ fontSize: "0.9em" }}
