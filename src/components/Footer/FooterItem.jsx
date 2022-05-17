@@ -17,7 +17,7 @@ const FooterItem = (props) => {
 			<a
 				className={`${
 					appTheme.palette.mode === "dark" ? "link-light" : "link-dark"
-				} small`}
+				} small text-decoration-underline`}
 				href={props.href}
 				onClick={handleClick}
 			>

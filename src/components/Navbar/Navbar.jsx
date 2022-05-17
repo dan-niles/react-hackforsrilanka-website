@@ -20,6 +20,8 @@ import ColorModeContext from "../../contexts/color-mode";
 
 import { FormattedMessage } from "react-intl";
 
+import { useLocation } from "react-router-dom";
+
 const pages = [
 	{
 		title: <FormattedMessage id="nav.home" defaultMessage="Home" />,
@@ -30,6 +32,13 @@ const pages = [
 		title: <FormattedMessage id="nav.schedule" defaultMessage="Schedule" />,
 		link: "schedule",
 		key: "Schedule",
+	},
+	{
+		title: (
+			<FormattedMessage id="nav.find-my-group" defaultMessage="Find-My-Group" />
+		),
+		link: "find-my-group",
+		key: "FindMyGroup",
 	},
 	{
 		title: <FormattedMessage id="nav.about" defaultMessage="About" />,
@@ -61,6 +70,7 @@ const Navbar = () => {
 		colorMode.toggleColorMode();
 		handleCloseNavMenu();
 	};
+	const location = useLocation();
 
 	return (
 		<AppBar
@@ -75,6 +85,10 @@ const Navbar = () => {
 				px: { xs: 0, md: "3rem" },
 				mx: "auto",
 				py: { xs: 1, md: 0.5 },
+				position:
+					location.pathname === "/find-my-group" ? "absolute" : "static",
+				top: 0,
+				zIndex: 9999,
 			}}
 		>
 			<Container maxWidth="xl">
