@@ -10,12 +10,12 @@ import axios from "axios";
 
 import { FormattedMessage } from "react-intl";
 
-import Alert from "@mui/material/Alert";
-import AlertTitle from "@mui/material/AlertTitle";
+// import Alert from "@mui/material/Alert";
+// import AlertTitle from "@mui/material/AlertTitle";
 
-import allDistricts from "../../../data/all-district.json";
-import districtAreas from "../../../data/district-areas.json";
-import GSSgroups from "../../../data/gss-groups.json";
+// import allDistricts from "../../../data/all-district.json";
+// import districtAreas from "../../../data/district-areas.json";
+// import GSSgroups from "../../../data/gss-groups.json";
 
 const DistrictForm = (props) => {
 	const appTheme = useTheme();
@@ -51,60 +51,60 @@ const DistrictForm = (props) => {
 		};
 		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
 
-		let obj = GSSgroups[gssSelect].find((i) => i.value === areaSelect);
-		let group_temp = obj.Group;
-
-		navigate({
-			pathname: "/schedule",
-			search: `?group=${group_temp}`,
-		});
+		// let obj = GSSgroups[gssSelect].find((i) => i.value === areaSelect);
+		// let group_temp = obj.Group;
 
 		// navigate({
 		// 	pathname: "/schedule",
-		// 	search: `?group=&district=${districtSelect}&gss=${gssSelect}&area=${areaSelect}`,
+		// 	search: `?group=${group_temp}`,
 		// });
+
+		navigate({
+			pathname: "/schedule",
+			search: `?group=&district=${districtSelect}&gss=${gssSelect}&area=${areaSelect}`,
+		});
 	};
 
 	useEffect(() => {
-		// axios
-		// 	.get(process.env.REACT_APP_API_URL + "/api/all-district/")
-		// 	.then((res) => {
-		// 		setDistrictList(res.data.data);
-		// 		if (props.district !== "") {
-		// 			setDistrictSelect(props.district);
-		// 		}
-		// 		setisLoading(false);
-		// 	})
-		// 	.catch((errr) => {});
+		axios
+			.get(process.env.REACT_APP_API_URL + "/api/all-district/")
+			.then((res) => {
+				setDistrictList(res.data.data);
+				if (props.district !== "") {
+					setDistrictSelect(props.district);
+				}
+				setisLoading(false);
+			})
+			.catch((errr) => {});
 
-		setDistrictList(allDistricts.data);
-		if (props.district !== "") {
-			setDistrictSelect(props.district);
-		}
-		setisLoading(false);
+		// setDistrictList(allDistricts.data);
+		// if (props.district !== "") {
+		// 	setDistrictSelect(props.district);
+		// }
+		// setisLoading(false);
 	}, []);
 
 	useEffect(() => {
 		if (districtSelect) {
-			// axios
-			// 	.get(
-			// 		process.env.REACT_APP_API_URL +
-			// 			`/api/search-by-district/?district=${districtSelect}`
-			// 	)
-			// 	.then((res) => {
-			// 		setGssList(res.data.data);
-			// 		if (props.gss !== "") {
-			// 			setGssSelect(props.gss);
-			// 		}
-			// 	})
-			// 	.catch((errr) => {});
+			axios
+				.get(
+					process.env.REACT_APP_API_URL +
+						`/api/search-by-district/?district=${districtSelect}`
+				)
+				.then((res) => {
+					setGssList(res.data.data);
+					if (props.gss !== "") {
+						setGssSelect(props.gss);
+					}
+				})
+				.catch((errr) => {});
 
-			setGssList(
-				districtAreas.data.filter((i) => i.district === districtSelect)
-			);
-			if (props.gss !== "") {
-				setGssSelect(props.gss);
-			}
+			// setGssList(
+			// 	districtAreas.data.filter((i) => i.district === districtSelect)
+			// );
+			// if (props.gss !== "") {
+			// 	setGssSelect(props.gss);
+			// }
 		}
 	}, [districtSelect]);
 
