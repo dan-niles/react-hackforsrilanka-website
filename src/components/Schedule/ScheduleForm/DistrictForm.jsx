@@ -10,6 +10,13 @@ import axios from "axios";
 
 import { FormattedMessage } from "react-intl";
 
+// import Alert from "@mui/material/Alert";
+// import AlertTitle from "@mui/material/AlertTitle";
+
+// import allDistricts from "../../../data/all-district.json";
+// import districtAreas from "../../../data/district-areas.json";
+// import GSSgroups from "../../../data/gss-groups.json";
+
 const DistrictForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
@@ -43,6 +50,15 @@ const DistrictForm = (props) => {
 			area: areaSelect,
 		};
 		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
+
+		// let obj = GSSgroups[gssSelect].find((i) => i.value === areaSelect);
+		// let group_temp = obj.Group;
+
+		// navigate({
+		// 	pathname: "/schedule",
+		// 	search: `?group=${group_temp}`,
+		// });
+
 		navigate({
 			pathname: "/schedule",
 			search: `?group=&district=${districtSelect}&gss=${gssSelect}&area=${areaSelect}`,
@@ -60,6 +76,12 @@ const DistrictForm = (props) => {
 				setisLoading(false);
 			})
 			.catch((errr) => {});
+
+		// setDistrictList(allDistricts.data);
+		// if (props.district !== "") {
+		// 	setDistrictSelect(props.district);
+		// }
+		// setisLoading(false);
 	}, []);
 
 	useEffect(() => {
@@ -76,6 +98,13 @@ const DistrictForm = (props) => {
 					}
 				})
 				.catch((errr) => {});
+
+			// setGssList(
+			// 	districtAreas.data.filter((i) => i.district === districtSelect)
+			// );
+			// if (props.gss !== "") {
+			// 	setGssSelect(props.gss);
+			// }
 		}
 	}, [districtSelect]);
 
@@ -83,15 +112,18 @@ const DistrictForm = (props) => {
 	if (gssList) {
 		gssNameList = [
 			...new Map(gssList.map((item) => [item["gss"], item])).values(),
-		];
+		].sort((a, b) => (a.gss > b.gss ? 1 : b.gss > a.gss ? -1 : 0));
+		console.log("----gssNameList", gssNameList);
 	}
 
 	useEffect(() => {
 		if (gssSelect) {
 			setAreaList(
-				gssList.filter((item) => {
-					return item.gss === gssSelect;
-				})
+				gssList
+					.filter((item) => {
+						return item.gss === gssSelect;
+					})
+					.sort((a, b) => (a.area > b.area ? 1 : b.area > a.area ? -1 : 0))
 			);
 			if (props.area !== "") {
 				setAreaSelect(props.area);
@@ -125,6 +157,14 @@ const DistrictForm = (props) => {
 					/>{" "}
 					<MapIcon />
 				</h4>
+				{/* <Alert severity="error" className="mb-3">
+					<AlertTitle>Please use these filters with some caution</AlertTitle>
+					We scraped and cleaned the PDF tables found on the CEB website
+					[https://ceb.lk/] to make it easy for users to find their group.
+					Unfortunately, the CEB data is sometimes unreliable. We are committed
+					to delivering you the most accurate information & apologize for the
+					inconvenience.
+				</Alert> */}
 				<p
 					className="text-white-50 fw-light mb-3"
 					style={{ fontSize: "0.9em" }}

@@ -4,6 +4,7 @@
 	"nav.schedule": "කාලසටහන",
 	"nav.about": "ගැන",
 	"nav.contact": "අමතන්න",
+	"nav.find-my-group": "මගේ-සමූහය-සොයන්න",
 	"footer.copyright": "අයිතිය",
 	"home.header": "ඔබේ බල කප්පාදු කාලසටහන සොයා ගන්න!",
 	"home.headerSubText": "විදුලිය විසන්ධි කිරීම් පිළිබඳව නිරීක්ෂණය කර නොමිලේ පෙළ දැනුම්දීම් ලබා ගැනීමට දායක වන්න",
@@ -65,5 +66,10 @@
 	"schedule.unsubscribe.phoneError": "කරුණාකර වලංගු ඉලක්කම් 9 අංකයක් ඇතුළත් කරන්න",
 	"schedule.unsubscribe.cancelBtn": "අවලංගු කරන්න",
 	"schedule.unsubscribe.unSubBtn": "දායක නොවන්න",
-	"schedule.unsubscribe.successText": "සාර්ථකව දායකත්වයෙන් ඉවත් විය"
+	"schedule.unsubscribe.successText": "සාර්ථකව දායකත්වයෙන් ඉවත් විය",
+	"find-my-group.title": "මගේ සමූහය සොයන්න",
+	"find-my-group.subTitle": "ඔබගේ වත්මන් ස්ථානය භාවිතා කිරීමට සහ ඔබගේ ලංවිම කණ්ඩායම සොයා ගැනීමට පහත බොත්තම ක්ලික් කරන්න",
+	"find-my-group.locateBtn": "මගේ ස්ථානය භාවිතා කරන්න",
+	"find-my-group.formText1": "සමූහය:",
+	"find-my-group.formText2": "හැකි කණ්ඩායම්:"
 }

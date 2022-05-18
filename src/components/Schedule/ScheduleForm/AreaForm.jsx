@@ -12,6 +12,13 @@ import axios from "axios";
 
 import { FormattedMessage } from "react-intl";
 
+// import Alert from "@mui/material/Alert";
+// import AlertTitle from "@mui/material/AlertTitle";
+
+// import allGSS from "../../../data/all-gss.json";
+// import GSSAreas from "../../../data/gss-areas.json";
+// import GSSgroups from "../../../data/gss-groups.json";
+
 const AreaForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
@@ -39,6 +46,15 @@ const AreaForm = (props) => {
 			area: areaSelect,
 		};
 		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
+
+		// let obj = GSSgroups[gssSelect].find((i) => i.value === areaSelect);
+		// let group_temp = obj.Group;
+
+		// navigate({
+		// 	pathname: "/schedule",
+		// 	search: `?group=${group_temp}`,
+		// });
+
 		navigate({
 			pathname: "/schedule",
 			search: `?group=&gss=${gssSelect}&area=${areaSelect}`,
@@ -56,6 +72,12 @@ const AreaForm = (props) => {
 				setisLoading(false);
 			})
 			.catch((errr) => {});
+
+		// setGssList(allGSS.data);
+		// if (props.gss !== "") {
+		// 	setGssSelect(props.gss);
+		// }
+		// setisLoading(false);
 	}, []);
 
 	useEffect(() => {
@@ -69,6 +91,11 @@ const AreaForm = (props) => {
 					}
 				})
 				.catch((errr) => {});
+
+			// setAreaList(GSSAreas[gssSelect].sort());
+			// if (props.area !== "") {
+			// 	setAreaSelect(props.area);
+			// }
 		}
 	}, [gssSelect]);
 
@@ -98,12 +125,21 @@ const AreaForm = (props) => {
 					/>{" "}
 					<LocationOnIcon />
 				</h4>
+				{/* <Alert severity="error" className="mb-3">
+					<AlertTitle>Please use these filters with some caution</AlertTitle>
+					We scraped and cleaned the PDF tables found on the CEB website
+					[https://ceb.lk/] to make it easy for users to find their group.
+					Unfortunately, the CEB data is sometimes unreliable. We are committed
+					to delivering you the most accurate information & apologize for the
+					inconvenience.
+				</Alert> */}
 				<p className="text-white-50 fw-light mb-3">
 					<FormattedMessage
 						id="schedule.form.location.subText"
 						defaultMessage="Don't know your group? Try picking your gss and city here..."
 					/>
 				</p>
+
 				<div className="form-group col-12">
 					<FormControl fullWidth>
 						<InputLabel id="gss-select">
@@ -123,7 +159,6 @@ const AreaForm = (props) => {
 							sx={{ textTransform: "capitalize" }}
 						>
 							{gssList?.map((item, index) => {
-								//
 								return (
 									<MenuItem
 										value={item}

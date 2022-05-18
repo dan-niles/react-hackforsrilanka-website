@@ -1,0 +1,2952 @@
+{
+	"message": "",
+	"data": [
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Agaliya",
+			"groups": [["A"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Ahungalle to bentota in galle road and by roads",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Andawala",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Avittawa",
+			"groups": [["E"]],
+			"feeders": ["G2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Batapola",
+			"groups": [["I"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Batapola road",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Bolakella",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Bondupitiya",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Ceb areas : warapitiya",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Despemgama",
+			"groups": [["I"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Elpitiya & pituwala",
+			"groups": [["L"]],
+			"feeders": ["7 (G1)"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Elpitiya road",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Heenatiya road  and all connected by roads",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Kahaduwa",
+			"groups": [["A"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Karandeniya",
+			"groups": [["I"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Karuwala bedda",
+			"groups": [["I"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Kiralagahawela",
+			"groups": [["I"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Kosgahawella",
+			"groups": [["I"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Koswattagoda",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Kotapitiya",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Kurundugaha hethepma",
+			"groups": [["E"]],
+			"feeders": ["G2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Mathugama road from aluthgama town to dharga town and all connected by roads",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Matiwala",
+			"groups": [["I"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Meegama",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Meetiyagoda",
+			"groups": [["I"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Niyagama",
+			"groups": [["B"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Pitigala",
+			"groups": [["E"]],
+			"feeders": ["G2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Porawagama",
+			"groups": [["B"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Ritiketiya",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Thalgaswala new town",
+			"groups": [["B"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Thambahitiya",
+			"groups": [["I"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Thelwatta",
+			"groups": [["I"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Thilakapura",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Uragasmanhandiya to ahungalla by roads",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Uragasmanhandiya town",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Warakagolla",
+			"groups": [["K"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ambalangoda",
+			"area": "Wathuruwila",
+			"groups": [["B"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "1st post",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "2nd post",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Angoda",
+			"groups": [["B"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Athurugiriya",
+			"groups": [["C"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Gamunupura - kothalawala",
+			"groups": [["B"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Govinna mw",
+			"groups": [["C"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Habarakada",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Hewagama",
+			"groups": [["A"], ["B"]],
+			"feeders": ["2", "1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Hokandara",
+			"groups": [["C"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Hokandara north",
+			"groups": [["C"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Homagama",
+			"groups": [["B"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Kaduwela",
+			"groups": [["A"], ["C"], ["B"]],
+			"feeders": ["1", "6", "2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Korathota kaduwela",
+			"groups": [["C"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Kothalawala",
+			"groups": [["A"], ["B"]],
+			"feeders": ["1", "2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Malabe",
+			"groups": [["C"], ["B"]],
+			"feeders": ["6", "2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Millenium 4",
+			"groups": [["C"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Mullegama",
+			"groups": [["B"], ["F"]],
+			"feeders": ["5", "2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Mulleriyawa",
+			"groups": [["B"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Mulleriyawa north",
+			"groups": [["A"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Nawagamuwa",
+			"groups": [["A"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Nawagamuwa hospital",
+			"groups": [["B"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Near bus stand",
+			"groups": [["A"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Nevil fernando hospital",
+			"groups": [["J"]],
+			"feeders": ["4"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Old junction",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Oruwala",
+			"groups": [["C"], ["F"]],
+			"feeders": ["5", "6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Oruwala athurugiriya",
+			"groups": [["C"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Pahala bomiriya",
+			"groups": [["A"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Pittugala",
+			"groups": [["B"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Podi handiya",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Pore athurugiriya",
+			"groups": [["C"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Ranala",
+			"groups": [["A"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Ranala road",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Rathuvilawatta",
+			"groups": [["C"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Sampath timber-athurugiriya",
+			"groups": [["C"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Vihara mw",
+			"groups": [["B"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Walpola",
+			"groups": [["A"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Welihinda",
+			"groups": [["A"], ["B"]],
+			"feeders": ["2", "1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Athurugiriya",
+			"area": "Welivita",
+			"groups": [["A"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Beliatta",
+			"area": "Beligaskoratuwa",
+			"groups": [["J"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Beliatta",
+			"area": "Siyambalagoda",
+			"groups": [["G"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Akurumaulla",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Ambaraluwa",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Appugewatt",
+			"groups": [["N"]],
+			"feeders": ["12"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Araliyagaha jn",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Bandarawatta j/n",
+			"groups": [["N"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Dambukanda",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Darshaneeyawatta",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Dehigahahena",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Dekatana",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Delgoda",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Demalagama",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Dnawukanda",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Dompe",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Etikehelgalla",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Galakona",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Galwala jn",
+			"groups": [["R"]],
+			"feeders": ["11"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Giridara pasal mw",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Gongithota",
+			"groups": [["N"]],
+			"feeders": ["12"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Gunarathna mw",
+			"groups": [["R"]],
+			"feeders": ["11"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Guruwala",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Hamugehena",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Heenpanwila",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Henegama",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Horawala",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Indolamulla",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kalukodayawa",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kandakapapu jn",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kanduboda",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Katulanda",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Keragala",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Keselpadura jn",
+			"groups": [["R"]],
+			"feeders": ["11"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kirikitta",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kirillawatta",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kokiskade jn",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Kolabahenawatta",
+			"groups": [["N"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Mahena",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Malwana",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Mawaramandiya town",
+			"groups": [["R"]],
+			"feeders": ["11"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Meegahawatta",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Mihidu mw",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Moragala",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Narampola",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Naranwala",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Obawatta",
+			"groups": [["R"]],
+			"feeders": ["11"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Palugama",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Parakandeniya",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Paranagoda",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Paranakanda",
+			"groups": [["N"]],
+			"feeders": ["12"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Peragas j/n",
+			"groups": [["N"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Pincowatta",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Pradeepagama",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Ranmuthugala",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Renagala",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Sagabo mw",
+			"groups": [["R"]],
+			"feeders": ["11"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Samagi mw",
+			"groups": [["N"]],
+			"feeders": ["12"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Sampaya mw",
+			"groups": [["N"]],
+			"feeders": ["12"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Sapugaskanda",
+			"groups": [["R"]],
+			"feeders": ["11"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Siyabalpe j/n",
+			"groups": [["N"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Udupila",
+			"groups": [["M"], ["Q"]],
+			"feeders": ["14", "10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Ulahitiwala",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Walekade",
+			"groups": [["N"]],
+			"feeders": ["12"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Weboda",
+			"groups": [["Q"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Weliweriya",
+			"groups": [["M"], ["Q"]],
+			"feeders": ["14", "10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Wilimbula",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Yabaraluwa",
+			"groups": [["M"]],
+			"feeders": ["14"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Biyagama",
+			"area": "Yatawatta",
+			"groups": [["N"]],
+			"feeders": ["12"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Bolawatta",
+			"area": "Dalupotha",
+			"groups": [["Q"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Bolawatta",
+			"area": "Dalupotha galkatuwa",
+			"groups": [["Q"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Bolawatta",
+			"area": "Daluwakotuwa",
+			"groups": [["Q"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Bolawatta",
+			"area": "Lewis place",
+			"groups": [["T"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Bolawatta",
+			"area": "Palagathure",
+			"groups": [["Q"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Bolawatta",
+			"area": "Rukmani devi road",
+			"groups": [["T"]],
+			"feeders": ["10"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Aberatna mw",
+			"groups": [["T"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Attidiya pss and dehiwala pss",
+			"groups": [["S"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Campus road from raththanapitiya to wijerama",
+			"groups": [["T"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Dehiwala",
+			"groups": [["Q"], ["P"]],
+			"feeders": ["8", "3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Dehiwala road from boralasgamu wewa to bellanthota junction via boralesgamuwa junction",
+			"groups": [["T"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Embillawatta road",
+			"groups": [["T"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Gramasanwardana road and all connected by roads",
+			"groups": [["T"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Kohuwala",
+			"groups": [["P"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Mount lavinia",
+			"groups": [["Q"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Nugegoda",
+			"groups": [["P"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Old kesbewa road from raththanapitiya towards delkada",
+			"groups": [["T"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Paropakara mw",
+			"groups": [["T"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Pepiliyana junction",
+			"groups": [["T"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Pirivena road",
+			"groups": [["T"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Dehiwala",
+			"area": "Vihara mw",
+			"groups": [["T"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Deniyaya",
+			"area": "Habarakada",
+			"groups": [["G"]],
+			"feeders": ["4"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Deniyaya",
+			"area": "Horagala",
+			"groups": [["H"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Deniyaya",
+			"area": "Siyambalagoda",
+			"groups": [["E"]],
+			"feeders": ["G2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Batakettara",
+			"groups": [["C"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Dhigana",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Galwaldeniya",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Gorakapitiya",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Halpita",
+			"groups": [["C"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Jayaliyagama",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Kesbewa",
+			"groups": [["C"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Kirigampamunuwa",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Kolamunna",
+			"groups": [["C"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Mahalwarawa",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Maththegoda housing scheme",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Maththtegoda",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Nampamunuwa",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Palanwatta",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Polgasovita",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Siddamulla",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Sikuradha pola",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kesbewa",
+			"area": "Siyabalagoda",
+			"groups": [["K"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "1st and 2nd lanes",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "1st lane",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "4th and 6th lanes",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "4th lane",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "5th and 7th lanes",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "7th and 8th lanes",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Araliya gardens",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Avissawella road from baseline to kotikawatta junction via orugodawatta",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Bandaranayakapura",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Chandra wetthasinghe mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Gajabapura scheme",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Ghanendra mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Gunasekara gardens",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Hemasinghe mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Idh road from kolonnawa to idh junction",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Jesmin gardens",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Katupelella road",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Kirimandala mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Kittampahuwa road  and all connected by roads",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Kolambage mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Koswatta 2nd and 3rd lanes",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Kotte road from election commission to ayurweda roundabout",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Liyanage mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Meethotamulla gantry",
+			"groups": [["N"], ["P"]],
+			"feeders": ["7", "2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Meethotamulla road",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Megoda kolonnawa road",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Millagahawatta",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Narahenpita road  (portion)",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Nawala 2nd lane",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Nawala school lane",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "New kolonnawa road",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Nirmana mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Obesekarapura main road",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Park lane(portion)",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Polwatta",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Queens park and by roads",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Rajagiriya gardens",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Rajagiriya road",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Rathanajothi mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Rodrigo mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Samagi mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Sarasavi gardens(portion)",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Senanayaka mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Sirimal uyana",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Sri ghanengra mw(portion)",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Sudarshana mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Suwarna place",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Suwarnadisi place",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Uswatta mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Vihara mw",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Walter gunasekara mw",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Waluwatta place",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Welikadawatta",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Welipara",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Wellampitiya",
+			"groups": [["R"]],
+			"feeders": ["1 or 6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kolonnawa",
+			"area": "Wijeba mw(portion)",
+			"groups": [["N"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Ambulgama",
+			"groups": [["G"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Anuragoda",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Art enterprises",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Artigala road",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Aththanagalla",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Banagala",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Batangala",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Batawala",
+			"groups": [["G"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Biochart",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Chaina harbor-lenawatta",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Chiefway garment",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Dampe",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Debegala watta - millawa",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Dikkanda",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Embilladeniya.",
+			"groups": [["G"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Env eng.hingurupattala",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Gallegama devalaya",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Gangabadawatta",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Getaheththa",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Giridara",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Halpe",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Hanwella & kaluaggala",
+			"groups": [["G"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Hettiyawatta",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Hewainna",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "High level road  watareka",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Horagala",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Horagasdeka",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Jalthara",
+			"groups": [["G"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Jayamuthugama",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Kahatagoda",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Kapugoda",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Karasnagala",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Kirindiwela",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Kudaluwila",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Lanka wall tile",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Lewkewela",
+			"groups": [["G"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Liyanwala",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Lunugama",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Madakotuwa",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Madola",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Madulawa",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Mahena",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Mandawala",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Mawathagama",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Meddegama",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Meegoda weaving mill",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Meepawita",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Meepawita ii",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Meepe",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Meethirigala",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Minnana",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Mulatiyana",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Muthuhena watta",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Naduhena",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Napawala",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Nedungolla",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Nikahetikanda",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Nilaro hotel",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Old road  watareka",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Ovitigama",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Padukka road  meegoda",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pahala bope",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pahala mapitigama",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pahathgama",
+			"groups": [["G"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pambegama",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Panagoda",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Panawala",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pelahela",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pepiliwela",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Peragashandiya",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pidaliyawatta",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pidaliyawatta new",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pinnawala",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pitumpe",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Polwatta",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Pugoda",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Puranpoththa",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Putupagala",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Puwak watta  meegoda",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Radawana. wathurugama",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Rambutanwatta",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Ranala",
+			"groups": [["G"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Rockland",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Rusirumal",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Samanabedda",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "School lane galagedara",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Thatuwalakanda",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Thiththapaththara",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Udagewatta",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Udamapitigama",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Udugama",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Urapola",
+			"groups": [["D"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Watareka",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Water supply malwana",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Weralupagoda",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Wewelpanawa",
+			"groups": [["J"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Wolga natural",
+			"groups": [["A"]],
+			"feeders": ["6"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Yataowita",
+			"groups": [["H"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Kosgama",
+			"area": "Yogama",
+			"groups": [["F"]],
+			"feeders": ["5"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Panadura",
+			"area": "Galpotta",
+			"groups": [["H"]],
+			"feeders": ["7"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Panadura",
+			"area": "Kahathuduwa",
+			"groups": [["J"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Panadura",
+			"area": "Koralawella area (portion) and modara and all connected by roads.",
+			"groups": [["B"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Panadura",
+			"area": "Kothalawala",
+			"groups": [["E"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Panadura",
+			"area": "Pirivena road",
+			"groups": [["A"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Panadura",
+			"area": "Sanken overseas",
+			"groups": [["E"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Arawwala",
+			"groups": [["N"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Bangalawatta",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Borella road (portion)",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Deepangoda",
+			"groups": [["N"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Dehiwala road from maharagama town to lake road",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Dhaham mw",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Diyagama",
+			"groups": [["N"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Dole kade",
+			"groups": [["N"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Duwa temple pannipitiya",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Erawwala",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "High level road form pannipitiya junction to nawinna junction via maharagama town",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Hiripitiya",
+			"groups": [["N"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Katuwawala road",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Kiriwathtuduwa",
+			"groups": [["N"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Kottawa",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Mabulgoda",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Magammana",
+			"groups": [["N"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Mahalwarawa",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Makuluduwa",
+			"groups": [["N"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Makumbura",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Manpe",
+			"groups": [["N"]],
+			"feeders": ["1"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Moraketiya",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Munamale",
+			"groups": [["N"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Neelammahara road  and all connected by roads",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Old road  kottawa",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Palanwatta",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Pamunuwa road",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Pannipitiya",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Piliyandala road (portion)",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Polgasowita",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Pubudu uyana",
+			"groups": [["N"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Siddamulla",
+			"groups": [["R"]],
+			"feeders": ["8"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Temple road",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Wattegedara road",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Weera mw",
+			"groups": [["O"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Pannipitiya",
+			"area": "Yakahaluwa",
+			"groups": [["N"]],
+			"feeders": ["2"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Anandarama road",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Charles place",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Ihala indibedda",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "M.j.c. fernando mw",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Mendis lane",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Moratumulla (portion)",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Nelumpura",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Old galle road from kurusa junction to paratta junction via moratuwa town and digarolla bridge",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Pahala indibedda",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Puwakaramba road",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Rohanapura",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Sasana jothi mw",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Sri dewananda road",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Sudarmarama road (portion) and all connected by roads",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Sunil gallage mw",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Thelawala junction and by roads",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Thelawala road (portion)",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Uyana road",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Wewala",
+			"groups": [["S"]],
+			"feeders": ["4"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Willorawatta road",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Wimalasiri de mel mw",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Ratmalana",
+			"area": "Yogaswara mw",
+			"groups": [["N"]],
+			"feeders": ["9"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sapugaskanda",
+			"area": "Kopiyawatta",
+			"groups": [["P"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Ananda balika mw",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Dewala road",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Gansaba junction",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "High level road from fly over to delkada junction",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Jambugasmulla mw",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Kotte road from pitakotte to jubiliee post junction",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Mirihana road from kattiya junction to jubilee post junction",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Old kesbewa road from nugegoda supermarket to delkanda junction via kattiya junction",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Pagiriwatta road and lane",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Pagoda road",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Pepiliyana road (portion)",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Pitakotte junction",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Railway ave",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Rajamahavihara road  and all connected by roads",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Stanley thilakaratna mw from jubilee post junctin to fly over via nugegoda town",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		},
+		{
+			"district": "Colombo",
+			"gss": "Sri_Jpura",
+			"area": "Station ln",
+			"groups": [["O"]],
+			"feeders": ["3"]
+		}
+	]
+}

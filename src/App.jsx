@@ -8,6 +8,7 @@ import About from "./routes/About";
 import Contact from "./routes/Contact";
 import ErrorPage from "./routes/ErrorPage";
 import Unsubscribe from "./components/Unsubscribe/Unsubscribe";
+import FindMyGroup from "./routes/FindMyGroup";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -34,8 +35,9 @@ function App() {
 						<Route path="schedule" element={<Schedule />} />
 						<Route path="about" element={<About />} />
 						<Route path="suggestions" element={<Contact />} />
+						<Route path="unsubscribe" element={<Unsubscribe />} />
+						<Route path="find-my-group" element={<FindMyGroup />} />
 						<Route path="*" element={<ErrorPage />} />
-						<Route path="/unsubscribe" element={<Unsubscribe />} />
 					</Routes>
 					<Footer />
 				</main>

@@ -7,12 +7,14 @@ import { motion } from "framer-motion";
 import Button from "@mui/material/Button";
 
 import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
 
 // import HelpSlider from "../components/HelpSlider/HelpSlider";
 // import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 
 const Home = () => {
 	const appTheme = useTheme();
+	const intl = useIntl();
 	const [imageLoading, setImageLoading] = useState(true); // for animating light bulb img
 	// const [openGuide, setOpenGuide] = useState(false); // for help guide modal
 	const navigate = useNavigate();
@@ -70,7 +72,11 @@ const Home = () => {
 					<div className="row gx-5 align-items-center justify-content-center">
 						<div className="col-lg-8 col-xl-7 col-xxl-6">
 							<div className="mt-4 mb-3 my-md-5 text-center text-xl-start">
-								<h1 className="display-5 fw-bolder mb-2">
+								<h1
+									className={`${
+										intl.locale === "ta-LK" ? "display-6" : "display-5"
+									} fw-bolder mb-2`}
+								>
 									<FormattedMessage
 										id="home.header"
 										defaultMessage="Find Your Power Cut Schedule!"

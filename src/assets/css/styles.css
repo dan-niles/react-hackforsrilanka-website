@@ -339,7 +339,7 @@ sup {
 
 a {
 	color: #0d6efd;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:hover {
 	color: #0a58ca;
@@ -12020,4 +12020,8 @@ html {
 
 .swal2-styled.swal2-confirm {
 	background-color: #424242 !important;
+}
+
+.swal2-styled.swal2-confirm:focus {
+	box-shadow: 0 0 0 3px rgb(168 168 168 / 50%) !important;
 }

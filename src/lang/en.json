@@ -4,6 +4,7 @@
 	"nav.schedule": "Schedule",
 	"nav.about": "About",
 	"nav.contact": "Suggestions",
+	"nav.find-my-group": "Find-My-Group",
 	"footer.copyright": "Copyright",
 	"home.header": "Find Your Power Cut Schedule!",
 	"home.headerSubText": "Keep track of power-cuts and subscribe to receive free text notifications",
@@ -65,5 +66,10 @@
 	"schedule.unsubscribe.phoneError": "Please enter a valid 9 digit number",
 	"schedule.unsubscribe.cancelBtn": "Cancel",
 	"schedule.unsubscribe.unSubBtn": "Unsubscribe",
-	"schedule.unsubscribe.successText": "Unsubscribed successfully"
+	"schedule.unsubscribe.successText": "Unsubscribed successfully",
+	"find-my-group.title": "Find My Group",
+	"find-my-group.subTitle": "Click the button below to use your current location and find your CEB group",
+	"find-my-group.locateBtn": "Use My Location",
+	"find-my-group.formText1": "Group:",
+	"find-my-group.formText2": "Possible Groups:"
 }
