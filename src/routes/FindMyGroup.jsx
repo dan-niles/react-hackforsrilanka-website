@@ -2,7 +2,7 @@ import { useState } from "react";
 import FormWindow from "./../components/FindMyGroup/FormWindow/FormWindow";
 import MapLayer from "../components/FindMyGroup/Map/MapLayer";
 
-import { Grid, Container } from "@mui/material";
+import { Grid } from "@mui/material";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 
@@ -105,7 +105,7 @@ const FindMyGroup = () => {
 					isLoading={isLoading}
 					groupList={groupList}
 				/>
-				<Grid item xs={0} md={12}>
+				<Grid item xs={12} md={12}>
 					<MapLayer
 						latitude={latitude}
 						longitude={longitude}

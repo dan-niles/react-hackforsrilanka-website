@@ -1,9 +1,4 @@
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
 import Avatar from "@mui/material/Avatar";
@@ -11,37 +6,33 @@ import MyLocationIcon from "@mui/icons-material/MyLocation";
 
 import { FormattedMessage } from "react-intl";
 import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const FormWindow = (props) => {
 	const appTheme = useTheme();
+	const matches = useMediaQuery(appTheme.breakpoints.up("md"));
 
 	return (
 		<div
-			className="container"
+			className="container my-3 my-lg-0"
 			style={{
 				display: "flex",
-				position: "absolute",
-				zIndex: 99999,
+				position: matches ? "absolute" : "",
+				zIndex: matches ? 99999 : "",
 				alignSelf: "center",
 				alignItems: "center",
-				height: "100vh",
+				height: matches ? "100vh" : "",
 				pointerEvents: "none",
 			}}
 		>
-			<div
-				className="mx-0 mx-lg-4 col-12 col-lg-3"
-				style={{
-					position: "absolute",
-					zIndex: 99999,
-				}}
-			>
+			<div className="mx-0 mx-lg-4 col-12 col-lg-3">
 				<div
 					className="card"
 					style={{
 						borderRadius: "1.5em",
 						backgroundColor:
 							appTheme.palette.mode === "dark"
-								? "rgb(18 18 18 / 95%)"
+								? "rgb(23 24 24 / 95%)"
 								: "rgb(255 255 255 / 90%)",
 						pointerEvents: "all",
 					}}
@@ -82,31 +73,6 @@ const FormWindow = (props) => {
 									defaultMessage="Use My Location"
 								/>
 							</Button>
-							{/* <Stack
-								spacing={2}
-								sx={{
-									mx: 2,
-									my: 3,
-								}}
-								direction="row"
-							>
-								<TextField
-									label="Latitude"
-									variant="outlined"
-									value={props.latitude}
-									InputProps={{
-										readOnly: true,
-									}}
-								/>
-								<TextField
-									label="Longitude"
-									variant="outlined"
-									value={props.longitude}
-									InputProps={{
-										readOnly: true,
-									}}
-								/>
-							</Stack> */}
 							{props.isLoading && <CircularProgress />}
 							{!props.isLoading && props.groupList.length === 1 && (
 								<p className="font-light mt-1 mb-2">

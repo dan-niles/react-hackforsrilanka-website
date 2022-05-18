@@ -15,6 +15,7 @@ import Button from "@mui/material/Button";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import MenuItem from "@mui/material/MenuItem";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import ColorModeContext from "../../contexts/color-mode";
 
@@ -54,6 +55,7 @@ const pages = [
 
 const Navbar = () => {
 	const appTheme = useTheme();
+	const matches = useMediaQuery(appTheme.breakpoints.up("md"));
 	const colorMode = useContext(ColorModeContext);
 
 	const [anchorElNav, setAnchorElNav] = useState(null);
@@ -86,9 +88,11 @@ const Navbar = () => {
 				mx: "auto",
 				py: { xs: 1, md: 0.5 },
 				position:
-					location.pathname === "/find-my-group" ? "absolute" : "static",
+					location.pathname === "/find-my-group" && matches
+						? "absolute"
+						: "static",
 				top: 0,
-				zIndex: location.pathname === "/find-my-group" ? 9999 : "",
+				zIndex: location.pathname === "/find-my-group" && matches ? 9999 : "",
 			}}
 		>
 			<Container maxWidth="xl">

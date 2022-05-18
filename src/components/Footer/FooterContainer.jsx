@@ -1,9 +1,11 @@
 import { useTheme } from "@mui/material/styles";
 import { FormattedMessage } from "react-intl";
 import { useLocation } from "react-router-dom";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const FooterContainer = (props) => {
 	const appTheme = useTheme();
+	const matches = useMediaQuery(appTheme.breakpoints.up("md"));
 	const location = useLocation();
 
 	return (
@@ -13,8 +15,10 @@ const FooterContainer = (props) => {
 			} py-3 mt-auto`}
 			style={{
 				position:
-					location.pathname === "/find-my-group" ? "absolute" : "static",
-				zIndex: location.pathname === "/find-my-group" ? 9999 : "",
+					location.pathname === "/find-my-group" && matches
+						? "absolute"
+						: "static",
+				zIndex: location.pathname === "/find-my-group" && matches ? 9999 : "",
 				bottom: 0,
 				width: "100%",
 			}}
