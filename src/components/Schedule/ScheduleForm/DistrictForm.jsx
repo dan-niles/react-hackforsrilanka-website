@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import TextField from "@mui/material/TextField";
+import FormControl from "@mui/material/FormControl";
+import FormHelperText from "@mui/material/FormHelperText";
 import MenuItem from "@mui/material/MenuItem";
 import { useTheme } from "@mui/material/styles";
 import MapIcon from "@mui/icons-material/Map";
@@ -26,23 +28,47 @@ const DistrictForm = (props) => {
 	const [gssList, setGssList] = useState();
 	const [areaList, setAreaList] = useState();
 
+	const [districtError, setDistrictError] = useState(false);
 	const [districtSelect, setDistrictSelect] = useState("");
 	const handleDistrictSelectChange = (event) => {
+		if (event.target.value) {
+			setDistrictError(false);
+		}
 		setDistrictSelect(event.target.value);
 	};
 
+	const [gssError, setGSSError] = useState(false);
 	const [gssSelect, setGssSelect] = useState("");
 	const handleGssSelectChange = (event) => {
+		if (event.target.value) {
+			setGSSError(false);
+		}
 		setGssSelect(event.target.value);
 	};
 
+	const [areaError, setAreaError] = useState(false);
 	const [areaSelect, setAreaSelect] = useState("");
 	const handleAreaSelectChange = (event) => {
+		if (event.target.value) {
+			setAreaError(false);
+		}
 		setAreaSelect(event.target.value);
 	};
 
 	const submitHandler = (e) => {
 		e.preventDefault();
+		if (!districtSelect) {
+			setDistrictError(true);
+			return;
+		}
+		if (!gssSelect) {
+			setGSSError(true);
+			return;
+		}
+		if (!areaSelect) {
+			setAreaError(true);
+			return;
+		}
 		const forLocalStorage = {
 			groupName: "",
 			district: districtSelect,
@@ -69,7 +95,9 @@ const DistrictForm = (props) => {
 		axios
 			.get(process.env.REACT_APP_API_URL + "/api/all-district/")
 			.then((res) => {
-				setDistrictList(res.data.data);
+				let districtData = res.data.data;
+				districtData.splice(districtData.indexOf("Batticoloa"), 1);
+				setDistrictList(districtData);
 				if (props.district !== "") {
 					setDistrictSelect(props.district);
 				}
@@ -175,97 +203,133 @@ const DistrictForm = (props) => {
 					/>
 				</p>
 				<div className="form-group col-12">
-					<TextField
-						size="small"
-						label={
-							<FormattedMessage
-								id="schedule.form.district.select1"
-								defaultMessage="District"
-							/>
-						}
-						select
-						value={districtSelect}
-						onChange={handleDistrictSelectChange}
-						name="district"
-						required
-						fullWidth
-						sx={{ textTransform: "capitalize" }}
-					>
-						{districtList?.map((item, index) => {
-							return (
-								<MenuItem
-									key={index}
-									value={item}
-									sx={{ textTransform: "capitalize" }}
-								>
-									{item}
-								</MenuItem>
-							);
-						})}
-						{/* <MenuItem value="Colombo">Jaffna</MenuItem> */}
-					</TextField>
+					<FormControl fullWidth error={districtError}>
+						<TextField
+							error={districtError}
+							size="small"
+							label={
+								<FormattedMessage
+									id="schedule.form.district.select1"
+									defaultMessage="District"
+								/>
+							}
+							select
+							value={districtSelect}
+							onChange={handleDistrictSelectChange}
+							name="district"
+							fullWidth
+							sx={{ textTransform: "capitalize" }}
+						>
+							{districtList?.map((item, index) => {
+								return (
+									<MenuItem
+										key={index}
+										value={item}
+										sx={{ textTransform: "capitalize" }}
+									>
+										{item}
+									</MenuItem>
+								);
+							})}
+							{/* <MenuItem value="Colombo">Jaffna</MenuItem> */}
+						</TextField>
+						<FormHelperText>
+							{districtError ? (
+								<FormattedMessage
+									id="schedule.form.select-validation"
+									defaultMessage="Please fill in this field"
+								/>
+							) : (
+								""
+							)}
+						</FormHelperText>
+					</FormControl>
 				</div>
 				<div className="form-group col-12 mt-3">
-					<TextField
-						select
-						size="small"
-						label={
-							<FormattedMessage
-								id="schedule.form.district.select2"
-								defaultMessage="Grid Substation"
-							/>
-						}
-						value={gssSelect}
-						onChange={handleGssSelectChange}
-						name="gss"
-						required
-						fullWidth
-						sx={{ textTransform: "capitalize" }}
-					>
-						{gssNameList?.map((item, index) => {
-							return (
-								<MenuItem
-									value={item.gss}
-									key={index}
-									sx={{ textTransform: "capitalize" }}
-								>
-									{item.gss}
-								</MenuItem>
-							);
-						})}
-						{/* <MenuItem value="Colombo">Chunnakam</MenuItem> */}
-					</TextField>
+					<FormControl fullWidth error={gssError}>
+						<TextField
+							error={gssError}
+							select
+							size="small"
+							label={
+								<FormattedMessage
+									id="schedule.form.district.select2"
+									defaultMessage="Grid Substation"
+								/>
+							}
+							value={gssSelect}
+							onChange={handleGssSelectChange}
+							name="gss"
+							fullWidth
+							sx={{ textTransform: "capitalize" }}
+						>
+							{gssNameList?.map((item, index) => {
+								return (
+									<MenuItem
+										value={item.gss}
+										key={index}
+										sx={{ textTransform: "capitalize" }}
+									>
+										{item.gss}
+									</MenuItem>
+								);
+							})}
+							{/* <MenuItem value="Colombo">Chunnakam</MenuItem> */}
+						</TextField>
+						<FormHelperText>
+							{gssError ? (
+								<FormattedMessage
+									id="schedule.form.select-validation"
+									defaultMessage="Please fill in this field"
+								/>
+							) : (
+								""
+							)}
+						</FormHelperText>
+					</FormControl>
 				</div>
 				<div className="form-group col-12 mt-3">
-					<TextField
-						select
-						size="small"
-						label={
-							<FormattedMessage
-								id="schedule.form.district.select3"
-								defaultMessage="Area"
-							/>
-						}
-						value={areaSelect}
-						onChange={handleAreaSelectChange}
-						name="area"
-						required
-						fullWidth
-						sx={{ textTransform: "capitalize" }}
-					>
-						{areaList?.map((item, index) => {
-							return (
-								<MenuItem
-									value={item.area}
-									key={index}
-									sx={{ textTransform: "capitalize" }}
-								>
-									{item.area}
-								</MenuItem>
-							);
-						})}
-						{/* <MenuItem value="Colombo">Manipay</MenuItem> */}
-					</TextField>
+					<FormControl fullWidth error={areaError}>
+						<TextField
+							error={areaError}
+							select
+							size="small"
+							label={
+								<FormattedMessage
+									id="schedule.form.district.select3"
+									defaultMessage="Area"
+								/>
+							}
+							value={areaSelect}
+							onChange={handleAreaSelectChange}
+							name="area"
+							fullWidth
+							sx={{ textTransform: "capitalize" }}
+						>
+							{areaList?.map((item, index) => {
+								return (
+									<MenuItem
+										value={item.area}
+										key={index}
+										sx={{ textTransform: "capitalize" }}
+									>
+										{item.area}
+									</MenuItem>
+								);
+							})}
+							{/* <MenuItem value="Colombo">Manipay</MenuItem> */}
+						</TextField>
+						<FormHelperText>
+							{areaError ? (
+								<FormattedMessage
+									id="schedule.form.select-validation"
+									defaultMessage="Please fill in this field"
+								/>
+							) : (
+								""
+							)}
+						</FormHelperText>
+					</FormControl>
 				</div>
 				<div className="form-group col-12 mt-4 text-center">
 					<button

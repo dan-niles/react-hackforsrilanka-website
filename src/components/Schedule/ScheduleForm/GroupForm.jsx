@@ -148,7 +148,14 @@ const GroupForm = (props) => {
 							{/* <MenuItem value="A">A</MenuItem> */}
 						</Select>
 						<FormHelperText>
-							{groupError ? "Please fill in this field" : ""}
+							{groupError ? (
+								<FormattedMessage
+									id="schedule.form.select-validation"
+									defaultMessage="Please fill in this field"
+								/>
+							) : (
+								""
+							)}
 						</FormHelperText>
 					</FormControl>
 				</div>
