@@ -4,6 +4,7 @@
 	"nav.schedule": "கால அட்டவணை",
 	"nav.about": "எங்களைப்பற்றி",
 	"nav.contact": "பரிந்துரைகள்",
+	"nav.find-my-group": "என்-குழுவை-கண்டுபிடி",
 	"footer.copyright": "பதிப்புரிமை",
 	"home.header": "உங்கள் மின் வெட்டு அட்டவணையைக் கண்டறியுங்கள்!",
 	"home.headerSubText": "தொடர்ந்து மின் வெட்டுகளை அறிந்து கொள்ள, இலவச SMS அறிவிப்புகளைப் பெற பதிவு செய்யவும்",
@@ -65,5 +66,10 @@
 	"schedule.unsubscribe.phoneError": "சரியான 9 இலக்க எண்ணை உள்ளிடவும்",
 	"schedule.unsubscribe.cancelBtn": "ரத்து செய்",
 	"schedule.unsubscribe.unSubBtn": "பதிவிலிருந்து குழுவிலகவும்",
-	"schedule.unsubscribe.successText": "பதிவிலிருந்து வெற்றிகரமாக குழுவிலகப்பட்டது"
+	"schedule.unsubscribe.successText": "பதிவிலிருந்து வெற்றிகரமாக குழுவிலகப்பட்டது",
+	"find-my-group.title": "என் குழுவை கண்டுபிடி",
+	"find-my-group.subTitle": "உங்கள் தற்போதைய இருப்பிடத்தைப் பயன்படுத்தி உங்கள் CEB குழுவைக் கண்டறியுங்கள்",
+	"find-my-group.locateBtn": "என் இருப்பிடத்தைப் பயன்படுத்து",
+	"find-my-group.formText1": "குழு:",
+	"find-my-group.formText2": "சாத்தியமான குழுக்கள்:"
 }

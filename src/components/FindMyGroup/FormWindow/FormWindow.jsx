@@ -41,7 +41,7 @@ const FormWindow = (props) => {
 						borderRadius: "1.5em",
 						backgroundColor:
 							appTheme.palette.mode === "dark"
-								? "rgb(0 0 0 / 90%)"
+								? "rgb(18 18 18 / 95%)"
 								: "rgb(255 255 255 / 90%)",
 						pointerEvents: "all",
 					}}
@@ -129,7 +129,7 @@ const FormWindow = (props) => {
 									props.groupList?.map((grp, idx) => {
 										return (
 											<a
-												href={`https://www.ekata.lk/schedule?group=${grp}`}
+												href={`./schedule?group=${grp}`}
 												target="_blank"
 												key={idx}
 												rel="noreferrer"

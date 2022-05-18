@@ -14,7 +14,7 @@ const FooterContainer = (props) => {
 			style={{
 				position:
 					location.pathname === "/find-my-group" ? "absolute" : "static",
-				zIndex: 9999,
+				zIndex: location.pathname === "/find-my-group" ? 9999 : "",
 				bottom: 0,
 				width: "100%",
 			}}

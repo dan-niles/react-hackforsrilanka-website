@@ -88,7 +88,7 @@ const Navbar = () => {
 				position:
 					location.pathname === "/find-my-group" ? "absolute" : "static",
 				top: 0,
-				zIndex: 9999,
+				zIndex: location.pathname === "/find-my-group" ? 9999 : "",
 			}}
 		>
 			<Container maxWidth="xl">
