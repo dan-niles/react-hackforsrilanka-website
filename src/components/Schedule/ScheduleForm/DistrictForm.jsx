@@ -114,6 +114,9 @@ const DistrictForm = (props) => {
 
 	useEffect(() => {
 		if (districtSelect) {
+			setAreaList([]);
+			setGssSelect("");
+			setAreaSelect("");
 			axios
 				.get(
 					process.env.REACT_APP_API_URL +
@@ -146,6 +149,7 @@ const DistrictForm = (props) => {
 
 	useEffect(() => {
 		if (gssSelect) {
+			setAreaSelect("");
 			setAreaList(
 				gssList
 					.filter((item) => {
