@@ -30,6 +30,7 @@
 	"schedule.form.group.subText": "ඔබේ ප්‍රදේශය සඳහා කලින් පවරා ඇති කණ්ඩායම් ලිපිය තෝරන්න...",
 	"schedule.form.district.subText": "ඔබ ජීවත් වන්නේ පහත උපනගරයකද? මඩකලපුව, කොළඹ, දෙහිවල-ගල්කිස්ස, යාපනය, මීගමුව, කෝට්ටේ හෝ මොරටුව. එසේ නම්, පහත කාලසටහන සොයන්න...",
 	"schedule.form.location.subText": "ඔබේ කණ්ඩායම නොදන්නේද? ඔබේ දිස්ත්‍රික්කය සහ නගරය මෙතැනින් තෝරා ගැනීමට උත්සාහ කරන්න...",
+	"schedule.form.select-validation": "කරුණාකර මෙම පෝරමය පුරවන්න",
 	"schedule.form.group.select": "කණ්ඩායම් නම",
 	"schedule.form.district.select1": "උප නගර",
 	"schedule.form.district.select2": "ජාල උපපොළ",

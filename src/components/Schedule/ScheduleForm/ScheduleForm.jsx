@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import GroupForm from "./GroupForm";
 import AreaForm from "./AreaForm";
@@ -9,8 +10,11 @@ import { useTheme } from "@mui/material/styles";
 
 import { FormattedMessage } from "react-intl";
 
+import { Alert, Button } from "@mui/material";
+
 const ScheduleForm = (props) => {
 	const appTheme = useTheme();
+	const navigate = useNavigate();
 
 	const [toggle, setToggle] = useState("groupToggle");
 	const [showFormType, setShowFormType] = useState("group");
@@ -125,6 +129,33 @@ const ScheduleForm = (props) => {
 								/>
 							)}
 						</div>
+					</div>
+				</div>
+				<div className="row mt-4 mt-md-4 align-items-center justify-content-center">
+					<div className="col-12 col-lg-6">
+						<Alert
+							// variant="outlined"
+							severity="info"
+							action={
+								<Button
+									sx={{ lineHeight: "1.5em" }}
+									size="small"
+									variant="contained"
+									onClick={() =>
+										navigate({
+											pathname: "/suggestions",
+										})
+									}
+								>
+									Suggest Feature
+								</Button>
+							}
+							sx={{ alignItems: "center" }}
+						>
+							We will be adding more features to Ekata soon!
+							<br /> Please let us know what other features would be helpful for
+							Sri Lankan's in crisis.
+						</Alert>
 					</div>
 				</div>
 			</div>

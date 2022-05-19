@@ -27,6 +27,7 @@ const FindMyGroup = () => {
 			}, showError);
 		} else {
 			setAlertMessage("Geolocation is not supported by this browser.");
+			setIsLoading(false);
 			setOpenAlert(true);
 		}
 	};
@@ -35,18 +36,22 @@ const FindMyGroup = () => {
 		switch (error.code) {
 			case error.PERMISSION_DENIED:
 				setAlertMessage("User denied the request for Geolocation.");
+				setIsLoading(false);
 				setOpenAlert(true);
 				break;
 			case error.POSITION_UNAVAILABLE:
 				setAlertMessage("Location information is unavailable.");
+				setIsLoading(false);
 				setOpenAlert(true);
 				break;
 			case error.TIMEOUT:
 				setAlertMessage("The request to get user location timed out.");
+				setIsLoading(false);
 				setOpenAlert(true);
 				break;
 			case error.UNKNOWN_ERROR:
 				setAlertMessage("An unknown error occurred.");
+				setIsLoading(false);
 				setOpenAlert(true);
 				break;
 		}
@@ -83,6 +88,7 @@ const FindMyGroup = () => {
 				open={openAlert}
 				onClose={handleClose}
 				autoHideDuration={6000}
+				sx={{ zIndex: 9999 }}
 			>
 				<Alert
 					elevation={6}

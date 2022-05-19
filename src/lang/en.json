@@ -30,6 +30,7 @@
 	"schedule.form.group.subText": "Pick the pre-assigned group letter for your area...",
 	"schedule.form.district.subText": "Do you live in Anuradhapura, Batticaloa,  Colombo, Galle, Gampaha, Jaffna or Kandy? If so, search for schedule below...",
 	"schedule.form.location.subText": "Don't know your group? Try picking your grid substation and area here...",
+	"schedule.form.select-validation": "Please fill in this field",
 	"schedule.form.group.select": "Group Name",
 	"schedule.form.district.select1": "District",
 	"schedule.form.district.select2": "Grid Substation",

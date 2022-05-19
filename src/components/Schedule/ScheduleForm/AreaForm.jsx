@@ -99,6 +99,7 @@ const AreaForm = (props) => {
 
 	useEffect(() => {
 		if (gssSelect) {
+			setAreaSelect("");
 			axios
 				.get(process.env.REACT_APP_API_URL + `/api/all-area/?gss=${gssSelect}`)
 				.then((res) => {
