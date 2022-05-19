@@ -8,10 +8,6 @@ import { FormattedMessage } from "react-intl";
 const ScheduleContainer = (props) => {
 	const appTheme = useTheme();
 	const myRef = useRef(null);
-	if (myRef.current != null) {
-		myRef.current.scrollIntoView();
-	}
-
 	return (
 		<header
 			className={`header-centers py-1 py-md-4 ${
