@@ -92,12 +92,12 @@ const ScheduleForm = (props) => {
 									defaultMessage="Search by Group"
 								/>
 							</ToggleButton>
-							<ToggleButton value="districtToggle">
+							{/* <ToggleButton value="districtToggle">
 								<FormattedMessage
 									id="schedule.form.toggle.district"
 									defaultMessage="Search by District"
 								/>
-							</ToggleButton>
+							</ToggleButton> */}
 							<ToggleButton value="areaToggle">
 								<FormattedMessage
 									id="schedule.form.toggle.location"
