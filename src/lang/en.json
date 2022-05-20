@@ -73,5 +73,5 @@
 	"find-my-group.locateBtn": "Use My Location",
 	"find-my-group.formText1": "Group:",
 	"find-my-group.formText2": "Possible Groups:",
-	"find-my-group.formText3": "No group data currently available for this location."
+	"find-my-group.formText3": "Group data currently unavailable for this location."
 }

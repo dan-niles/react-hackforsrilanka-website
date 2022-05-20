@@ -48,12 +48,18 @@ const FormWindow = (props) => {
 							/>
 						</h2>
 					</div>
-					<div className="card-body mx-4 my-3">
+					<div className="card-body mx-4 my-3 text-center">
 						<p className="fw-light text-white-50 text-center">
 							<FormattedMessage
 								id="find-my-group.subTitle"
 								defaultMessage="Click the button below to use your current location and find your CEB group"
 							/>
+						</p>
+						<p
+							className="fw-light text-white-50 text-center lh-2"
+							style={{ fontSize: "0.8em" }}
+						>
+							*The Identified group may not be accurate if using a PC/desktop
 						</p>
 						<Stack
 							direction="column"
@@ -100,7 +106,7 @@ const FormWindow = (props) => {
 									<p className="font-light mt-1 mb-2 text-center">
 										<FormattedMessage
 											id="find-my-group.formText3"
-											defaultMessage="No group data currently available for this location."
+											defaultMessage="Group data currently unavailable for this location."
 										/>
 									</p>
 								)}
