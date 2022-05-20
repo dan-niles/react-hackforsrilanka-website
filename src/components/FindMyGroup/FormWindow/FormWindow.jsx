@@ -52,7 +52,7 @@ const FormWindow = (props) => {
 						<p className="fw-light text-white text-center">
 							<FormattedMessage
 								id="find-my-group.subTitle"
-								defaultMessage="Click the button below to use your current location and find your CEB group"
+								defaultMessage="Click the button below to use your current location or click on the map to find your CEB group"
 							/>
 						</p>
 						<p
