@@ -74,24 +74,39 @@ const FormWindow = (props) => {
 								/>
 							</Button>
 							{props.isLoading && <CircularProgress />}
-							{!props.isLoading && props.groupList.length === 1 && (
-								<p className="font-light mt-1 mb-2">
-									<FormattedMessage
-										id="find-my-group.formText1"
-										defaultMessage="Group:"
-									/>
-								</p>
-							)}
-							{!props.isLoading && props.groupList.length > 1 && (
-								<p className="font-light mt-1 mb-2">
-									<FormattedMessage
-										id="find-my-group.formText2"
-										defaultMessage="Possible Groups:"
-									/>
-								</p>
-							)}
+							{!props.isLoading &&
+								!props.hideText &&
+								props.groupList.length === 1 && (
+									<p className="font-light mt-1 mb-2">
+										<FormattedMessage
+											id="find-my-group.formText1"
+											defaultMessage="Group:"
+										/>
+									</p>
+								)}
+							{!props.isLoading &&
+								!props.hideText &&
+								props.groupList.length > 1 && (
+									<p className="font-light mt-1 mb-2">
+										<FormattedMessage
+											id="find-my-group.formText2"
+											defaultMessage="Possible Groups:"
+										/>
+									</p>
+								)}
+							{!props.isLoading &&
+								!props.hideText &&
+								props.groupList.length === 0 && (
+									<p className="font-light mt-1 mb-2 text-center">
+										<FormattedMessage
+											id="find-my-group.formText3"
+											defaultMessage="No group data currently available for this location."
+										/>
+									</p>
+								)}
 							<Stack spacing={1.5} direction="row">
 								{!props.isLoading &&
+									!props.hideText &&
 									props.groupList?.map((grp, idx) => {
 										return (
 											<a

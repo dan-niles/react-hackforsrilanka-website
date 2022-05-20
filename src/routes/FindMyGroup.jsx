@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormWindow from "./../components/FindMyGroup/FormWindow/FormWindow";
 import MapLayer from "../components/FindMyGroup/Map/MapLayer";
 
@@ -14,6 +14,7 @@ const FindMyGroup = () => {
 	const [latitude, setLattitude] = useState("");
 	const [longitude, setLongitude] = useState("");
 	const [groupList, setGroupList] = useState([]);
+	const [hideText, setHideText] = useState(true);
 	const [isLoading, setIsLoading] = useState(false);
 
 	const getLocation = () => {
@@ -58,6 +59,7 @@ const FindMyGroup = () => {
 	}
 
 	const locateGroup = (lat, lon) => {
+		setHideText(true);
 		setGroupList([]);
 		coordinates.forEach((group) => {
 			let group_name = group.group_name;
@@ -69,6 +71,7 @@ const FindMyGroup = () => {
 				}
 			});
 		});
+		setHideText(false);
 	};
 
 	const [openAlert, setOpenAlert] = useState(false);
@@ -110,6 +113,7 @@ const FindMyGroup = () => {
 					longitude={longitude}
 					isLoading={isLoading}
 					groupList={groupList}
+					hideText={hideText}
 				/>
 				<Grid item xs={12} md={12}>
 					<MapLayer
