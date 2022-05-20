@@ -135,6 +135,16 @@ const FormWindow = (props) => {
 										);
 									})}
 							</Stack>
+							{!props.isLoading &&
+								!props.hideText &&
+								props.groupList.length > 0 && (
+									<p
+										className="fw-light mt-2 text-white-50 text-center lh-2"
+										style={{ fontSize: "0.8em" }}
+									>
+										Click on a group letter to view the power-cut schedule
+									</p>
+								)}
 						</Stack>
 					</div>
 				</div>
