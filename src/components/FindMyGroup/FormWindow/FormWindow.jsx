@@ -49,7 +49,7 @@ const FormWindow = (props) => {
 						</h2>
 					</div>
 					<div className="card-body mx-4 my-3 text-center">
-						<p className="fw-light text-white-50 text-center">
+						<p className="fw-light text-white text-center">
 							<FormattedMessage
 								id="find-my-group.subTitle"
 								defaultMessage="Click the button below to use your current location and find your CEB group"
