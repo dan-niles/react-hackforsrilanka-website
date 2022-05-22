@@ -43,6 +43,8 @@
 	"schedule.view.subButton2": "Subscribe",
 	"schedule.view.naText": "Schedule not published yet",
 	"schedule.view.naSubText": "Come back later or subcribe to receive a notification",
+	"schedule.view.nopcText": "No power cuts scheduled",
+	"schedule.view.nopcSubText": "Enjoy your day!",
 	"schedule.view.shareButton": "Share",
 	"schedule.view.todayButton": "Today",
 	"schedule.view.group": "Group",

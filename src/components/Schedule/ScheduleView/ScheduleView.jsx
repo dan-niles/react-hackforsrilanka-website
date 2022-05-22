@@ -13,7 +13,7 @@ import {
 	startOfWeek,
 	endOfWeek,
 } from "date-fns";
-import { enGB, ta } from "date-fns/locale";
+import { enGB } from "date-fns/locale";
 import { DatePickerCalendar as ScheduleCalendar } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
 
@@ -22,7 +22,6 @@ import axios from "axios";
 
 import AlertDialog from "../../Alert/AlertDialog";
 import TodayIcon from "@mui/icons-material/Today";
-import Alert from "@mui/material/Alert";
 import Button from "@mui/material/Button";
 
 import { FormattedMessage } from "react-intl";
@@ -114,6 +113,7 @@ const Schedule = (props) => {
 		);
 	}
 
+	const NO_POWER_CUTS = ["2022-05-22", "2022-05-29"];
 	const modifiers = {
 		// Displays only two weeks (Current week and next week)
 		hideDays: (date) => {
@@ -126,8 +126,9 @@ const Schedule = (props) => {
 		},
 		// Colour key system for dates
 		greenClass: (date) => {
-			let seledate = [];
-			return seledate.includes(format(date, "yyyy-MM-dd", { locale: enGB }));
+			return NO_POWER_CUTS.includes(
+				format(date, "yyyy-MM-dd", { locale: enGB })
+			);
 		},
 		orangeClass: (date) => {
 			if (scheduleItems.length > 0) {
@@ -190,6 +191,7 @@ const Schedule = (props) => {
 					gss={props.gss}
 					groupList={[...new Set(scheduleItems.map((item) => item.group_name))]}
 					setAreaGroup={setAreaGroup}
+					NO_POWER_CUTS={NO_POWER_CUTS}
 				>
 					{filteredScheduleItems.map((i) => {
 						return (

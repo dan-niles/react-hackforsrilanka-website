@@ -43,6 +43,8 @@
 	"schedule.view.subButton2": "දායක වන්න",
 	"schedule.view.naText": "කාලසටහන තවම ප්‍රකාශයට පත් කර නැත",
 	"schedule.view.naSubText": "පසුව ආපසු එන්න හෝ දැනුම්දීමක් ලබා ගැනීමට දායක වන්න",
+	"schedule.view.nopcText": "විදුලි කප්පාදුවක් සැලසුම් කර නොමැත",
+	"schedule.view.nopcSubText": "ඔබේ දවස භුක්ති විඳින්න!",
 	"schedule.view.shareButton": "බෙදාගන්න",
 	"schedule.view.todayButton": "අද",
 	"schedule.view.group": "සමූහය",

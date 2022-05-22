@@ -43,6 +43,8 @@
 	"schedule.view.subButton2": "பதிவு செய்யவும்",
 	"schedule.view.naText": "அட்டவணை இன்னும் வெளியிடப்படவில்லை",
 	"schedule.view.naSubText": "திரும்பவும் வரவும் அல்லது அறிவிப்பைப்பெற பதிவு செய்யவும்",
+	"schedule.view.nopcText": "மின்வெட்டு எதுவும் திட்டமிடப்படவில்லை",
+	"schedule.view.nopcSubText": "எதிர்கால அறிவிப்புகளைப் பெற பதிவு செய்யவும்!",
 	"schedule.view.shareButton": "பகிரவும்",
 	"schedule.view.todayButton": "இன்று",
 	"schedule.view.group": "குழு",
