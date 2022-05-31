@@ -27,6 +27,7 @@ import Button from "@mui/material/Button";
 import { FormattedMessage } from "react-intl";
 
 import ScheduleObj from "../../../data/schedule.json";
+import NO_POWER_CUTS from "../../../data/no-power-cuts.json";
 
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
@@ -117,7 +118,6 @@ const Schedule = (props) => {
 		);
 	}
 
-	const NO_POWER_CUTS = ["2022-05-22", "2022-05-29"];
 	const modifiers = {
 		// Displays only two weeks (Current week and next week)
 		hideDays: (date) => {
@@ -130,17 +130,22 @@ const Schedule = (props) => {
 		},
 		// Colour key system for dates
 		greenClass: (date) => {
-			return NO_POWER_CUTS.includes(
-				format(date, "yyyy-MM-dd", { locale: enGB })
-			);
+			return NO_POWER_CUTS.find((item) => {
+				return (
+					item[1] === format(date, "yyyy-MM-dd", { locale: enGB }) &&
+					(item[0] === props.groupName || item[0] === areaGroup)
+				);
+			});
 		},
 		orangeClass: (date) => {
 			if (scheduleItems.length > 0) {
-				let obj = scheduleItems.find(
-					(i) =>
+				let obj = scheduleItems.find((i) => {
+					return (
 						i.starting_period.substring(0, 10) ===
-						format(date, "yyyy-MM-dd", { locale: enGB })
-				);
+							format(date, "yyyy-MM-dd", { locale: enGB }) &&
+						(i.group_name === props.groupName || i.group_name === areaGroup)
+					);
+				});
 				if (obj !== undefined) return true;
 			}
 		},

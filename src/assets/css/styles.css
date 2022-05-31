@@ -11883,12 +11883,12 @@ html {
 .nice-dates-grid {
 	height: 11em !important;
 }
-
-.nice-dates-day.-green-ring .nice-dates-day_date {
+.nice-dates-day.-orange-ring .nice-dates-day_date {
+	background: rgb(255 119 0 / 2%);
 	border-radius: 999px;
 	display: flex;
 	position: absolute;
-	border: 2px solid #17a76b !important;
+	border: 2px solid #f08426 !important;
 	top: 0;
 	bottom: 0;
 	left: 12.5%;
@@ -11898,12 +11898,11 @@ html {
 	align-items: center;
 }
 
-.nice-dates-day.-orange-ring .nice-dates-day_date {
-	background: rgb(255 119 0 / 2%);
+.nice-dates-day.-green-ring .nice-dates-day_date {
 	border-radius: 999px;
 	display: flex;
 	position: absolute;
-	border: 2px solid #f08426 !important;
+	border: 2px solid #17a76b !important;
 	top: 0;
 	bottom: 0;
 	left: 12.5%;

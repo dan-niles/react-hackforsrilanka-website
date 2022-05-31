@@ -82,9 +82,12 @@ const ScheduleItemsContainer = (props) => {
 
 	let containerText = "";
 	if (
-		props.NO_POWER_CUTS.includes(
-			format(props.date, "yyyy-MM-dd", { locale: enGB })
-		)
+		props.NO_POWER_CUTS.find((item) => {
+			return (
+				item[1] === format(props.date, "yyyy-MM-dd", { locale: enGB }) &&
+				(item[0] === props.groupName || item[0] === props.areaGroup)
+			);
+		})
 	) {
 		containerText = (
 			<p className="text-center">
