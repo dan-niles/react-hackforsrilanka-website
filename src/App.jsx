@@ -28,22 +28,22 @@ function App() {
 	return (
 		<ColorModeContextProvider>
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
-				<ScrollToTop>
-					<main className="d-flex flex-column flex-shrink-0 min-vh-100 h-100">
-						<Navbar />
-						<Routes>
-							{/* these pages can be found within the './routes' folder */}
-							<Route path="/" element={<Home />} />
-							<Route path="schedule" element={<Schedule />} />
-							<Route path="about" element={<About />} />
-							<Route path="suggestions" element={<Contact />} />
-							<Route path="unsubscribe" element={<Unsubscribe />} />
-							<Route path="find-my-group" element={<FindMyGroup />} />
-							<Route path="*" element={<ErrorPage />} />
-						</Routes>
-						<Footer />
-					</main>
-				</ScrollToTop>
+				{/* <ScrollToTop> */}
+				<main className="d-flex flex-column flex-shrink-0 min-vh-100 h-100">
+					<Navbar />
+					<Routes>
+						{/* these pages can be found within the './routes' folder */}
+						<Route path="/" element={<Home />} />
+						<Route path="schedule" element={<Schedule />} />
+						<Route path="about" element={<About />} />
+						<Route path="suggestions" element={<Contact />} />
+						<Route path="unsubscribe" element={<Unsubscribe />} />
+						<Route path="find-my-group" element={<FindMyGroup />} />
+						<Route path="*" element={<ErrorPage />} />
+					</Routes>
+					<Footer />
+				</main>
+				{/* </ScrollToTop> */}
 			</BrowserRouter>
 		</ColorModeContextProvider>
 	);
