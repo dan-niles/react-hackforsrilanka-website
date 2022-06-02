@@ -26,7 +26,7 @@ import Button from "@mui/material/Button";
 
 import { FormattedMessage } from "react-intl";
 
-import ScheduleObj from "../../../data/schedule.json";
+// import ScheduleObj from "../../../data/schedule.json";
 import NO_POWER_CUTS from "../../../data/no-power-cuts.json";
 
 const Schedule = (props) => {
@@ -44,16 +44,16 @@ const Schedule = (props) => {
 
 	// Fetch schedule data from api
 	const fetchScheduleItems = () => {
-		// return axios
-		// 	.get(
-		// 		process.env.REACT_APP_API_URL +
-		// 			`/api/power-schedule/${props.groupName}/?from_date=${startDate}&to_date=${endDate}`
-		// 	)
-		// 	.then((res) => {
-		// 		setScheduleItems(res.data.data);
-		// 	});
+		return axios
+			.get(
+				process.env.REACT_APP_API_URL +
+					`/api/power-schedule/${props.groupName}/?from_date=${startDate}&to_date=${endDate}`
+			)
+			.then((res) => {
+				setScheduleItems(res.data.data);
+			});
 
-		setScheduleItems(ScheduleObj);
+		// setScheduleItems(ScheduleObj);
 	};
 
 	// Fetch schedule data from api using state and city
