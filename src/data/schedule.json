@@ -1,0 +1,2137 @@
+[
+	{
+		"group_name": "A",
+		"starting_period": "2022-05-30 16:15",
+		"ending_period": "2022-05-30 18:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-01 14:10",
+		"ending_period": "2022-06-01 16:20"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-02 14:00",
+		"ending_period": "2022-06-02 15:00"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-02 18:00",
+		"ending_period": "2022-06-02 19:00"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-03 14:00",
+		"ending_period": "2022-06-03 15:00"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-03 18:00",
+		"ending_period": "2022-06-03 19:00"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-04 17:30",
+		"ending_period": "2022-06-04 18:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-06 17:15",
+		"ending_period": "2022-06-06 19:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-07 17:15",
+		"ending_period": "2022-06-07 19:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-08 17:15",
+		"ending_period": "2022-06-08 19:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-10 08:30",
+		"ending_period": "2022-06-10 10:45"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-11 19:30",
+		"ending_period": "2022-06-11 20:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-12 19:30",
+		"ending_period": "2022-06-12 20:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-13 17:15",
+		"ending_period": "2022-06-13 19:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-14 20:30",
+		"ending_period": "2022-06-14 21:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-15 17:15",
+		"ending_period": "2022-06-15 19:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-16 17:15",
+		"ending_period": "2022-06-16 19:30"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-17 15:00",
+		"ending_period": "2022-06-17 17:15"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-18 15:00",
+		"ending_period": "2022-06-18 17:15"
+	},
+	{
+		"group_name": "A",
+		"starting_period": "2022-06-19 20:30",
+		"ending_period": "2022-06-19 21:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-05-30 16:15",
+		"ending_period": "2022-05-30 18:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-01 14:10",
+		"ending_period": "2022-06-01 16:20"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-02 14:00",
+		"ending_period": "2022-06-02 15:00"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-02 18:00",
+		"ending_period": "2022-06-02 19:00"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-03 14:00",
+		"ending_period": "2022-06-03 15:00"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-03 18:00",
+		"ending_period": "2022-06-03 19:00"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-04 17:30",
+		"ending_period": "2022-06-04 18:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-06 17:15",
+		"ending_period": "2022-06-06 19:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-07 17:15",
+		"ending_period": "2022-06-07 19:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-08 17:15",
+		"ending_period": "2022-06-08 19:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-10 08:30",
+		"ending_period": "2022-06-10 10:45"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-11 20:30",
+		"ending_period": "2022-06-11 21:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-12 20:30",
+		"ending_period": "2022-06-12 21:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-13 17:15",
+		"ending_period": "2022-06-13 19:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-14 20:30",
+		"ending_period": "2022-06-14 21:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-15 17:15",
+		"ending_period": "2022-06-15 19:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-16 17:15",
+		"ending_period": "2022-06-16 19:30"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-17 15:00",
+		"ending_period": "2022-06-17 17:15"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-18 15:00",
+		"ending_period": "2022-06-18 17:15"
+	},
+	{
+		"group_name": "B",
+		"starting_period": "2022-06-19 20:30",
+		"ending_period": "2022-06-19 21:30"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-05-30 16:15",
+		"ending_period": "2022-05-30 18:30"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-01 14:10",
+		"ending_period": "2022-06-01 16:20"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-02 14:00",
+		"ending_period": "2022-06-02 15:00"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-02 18:00",
+		"ending_period": "2022-06-02 19:00"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-03 14:00",
+		"ending_period": "2022-06-03 15:00"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-03 18:00",
+		"ending_period": "2022-06-03 19:00"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-04 17:30",
+		"ending_period": "2022-06-04 18:30"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-06 17:15",
+		"ending_period": "2022-06-06 19:30"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-07 17:15",
+		"ending_period": "2022-06-07 19:30"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-08 17:15",
+		"ending_period": "2022-06-08 19:30"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-09 15:00",
+		"ending_period": "2022-06-09 17:15"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-10 15:00",
+		"ending_period": "2022-06-10 17:15"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-11 20:30",
+		"ending_period": "2022-06-11 21:30"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-12 20:30",
+		"ending_period": "2022-06-12 21:30"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-13 19:30",
+		"ending_period": "2022-06-13 21:45"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-14 17:30",
+		"ending_period": "2022-06-14 18:30"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-15 19:30",
+		"ending_period": "2022-06-15 21:45"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-16 19:30",
+		"ending_period": "2022-06-16 21:45"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-17 15:00",
+		"ending_period": "2022-06-17 17:15"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-18 15:00",
+		"ending_period": "2022-06-18 17:15"
+	},
+	{
+		"group_name": "C",
+		"starting_period": "2022-06-19 17:30",
+		"ending_period": "2022-06-19 18:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-05-31 16:15",
+		"ending_period": "2022-05-31 18:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-01 14:10",
+		"ending_period": "2022-06-01 16:20"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-02 15:00",
+		"ending_period": "2022-06-02 16:00"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-02 19:00",
+		"ending_period": "2022-06-02 20:00"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-03 15:00",
+		"ending_period": "2022-06-03 16:00"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-03 19:00",
+		"ending_period": "2022-06-03 20:00"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-04 18:30",
+		"ending_period": "2022-06-04 19:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-06 17:15",
+		"ending_period": "2022-06-06 19:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-07 17:15",
+		"ending_period": "2022-06-07 19:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-08 17:15",
+		"ending_period": "2022-06-08 19:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-09 15:00",
+		"ending_period": "2022-06-09 17:15"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-10 15:00",
+		"ending_period": "2022-06-10 17:15"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-11 20:30",
+		"ending_period": "2022-06-11 21:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-12 20:30",
+		"ending_period": "2022-06-12 21:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-13 19:30",
+		"ending_period": "2022-06-13 21:45"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-14 17:30",
+		"ending_period": "2022-06-14 18:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-15 19:30",
+		"ending_period": "2022-06-15 21:45"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-16 19:30",
+		"ending_period": "2022-06-16 21:45"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-17 17:15",
+		"ending_period": "2022-06-17 19:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-18 17:15",
+		"ending_period": "2022-06-18 19:30"
+	},
+	{
+		"group_name": "D",
+		"starting_period": "2022-06-19 17:30",
+		"ending_period": "2022-06-19 18:30"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-05-31 16:15",
+		"ending_period": "2022-05-31 18:30"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-01 16:20",
+		"ending_period": "2022-06-01 18:30"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-02 15:00",
+		"ending_period": "2022-06-02 16:00"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-02 19:00",
+		"ending_period": "2022-06-02 20:00"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-03 15:00",
+		"ending_period": "2022-06-03 16:00"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-03 19:00",
+		"ending_period": "2022-06-03 20:00"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-04 18:30",
+		"ending_period": "2022-06-04 19:30"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-06 19:30",
+		"ending_period": "2022-06-06 21:45"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-07 19:30",
+		"ending_period": "2022-06-07 21:45"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-08 19:30",
+		"ending_period": "2022-06-08 21:45"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-09 15:00",
+		"ending_period": "2022-06-09 17:15"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-10 15:00",
+		"ending_period": "2022-06-10 17:15"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-11 17:30",
+		"ending_period": "2022-06-11 18:30"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-12 17:30",
+		"ending_period": "2022-06-12 18:30"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-13 19:30",
+		"ending_period": "2022-06-13 21:45"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-14 17:30",
+		"ending_period": "2022-06-14 18:30"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-15 19:30",
+		"ending_period": "2022-06-15 21:45"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-16 19:30",
+		"ending_period": "2022-06-16 21:45"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-17 17:15",
+		"ending_period": "2022-06-17 19:30"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-18 17:15",
+		"ending_period": "2022-06-18 19:30"
+	},
+	{
+		"group_name": "E",
+		"starting_period": "2022-06-19 17:30",
+		"ending_period": "2022-06-19 18:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-05-31 16:15",
+		"ending_period": "2022-05-31 18:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-01 16:20",
+		"ending_period": "2022-06-01 18:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-02 15:00",
+		"ending_period": "2022-06-02 16:00"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-02 19:00",
+		"ending_period": "2022-06-02 20:00"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-03 15:00",
+		"ending_period": "2022-06-03 16:00"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-03 19:00",
+		"ending_period": "2022-06-03 20:00"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-04 18:30",
+		"ending_period": "2022-06-04 19:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-06 19:30",
+		"ending_period": "2022-06-06 21:45"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-07 19:30",
+		"ending_period": "2022-06-07 21:45"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-08 19:30",
+		"ending_period": "2022-06-08 21:45"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-09 17:15",
+		"ending_period": "2022-06-09 19:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-10 17:15",
+		"ending_period": "2022-06-10 19:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-11 17:30",
+		"ending_period": "2022-06-11 18:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-12 17:30",
+		"ending_period": "2022-06-12 18:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-13 08:30",
+		"ending_period": "2022-06-13 10:45"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-14 18:30",
+		"ending_period": "2022-06-14 19:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-15 08:30",
+		"ending_period": "2022-06-15 10:45"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-16 08:30",
+		"ending_period": "2022-06-16 10:45"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-17 17:15",
+		"ending_period": "2022-06-17 19:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-18 17:15",
+		"ending_period": "2022-06-18 19:30"
+	},
+	{
+		"group_name": "F",
+		"starting_period": "2022-06-19 18:30",
+		"ending_period": "2022-06-19 19:30"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-01 16:20",
+		"ending_period": "2022-06-01 18:30"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-02 16:00",
+		"ending_period": "2022-06-02 17:00"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-02 20:00",
+		"ending_period": "2022-06-02 21:00"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-03 16:00",
+		"ending_period": "2022-06-03 17:00"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-03 20:00",
+		"ending_period": "2022-06-03 21:00"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-04 19:30",
+		"ending_period": "2022-06-04 20:30"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-06 19:30",
+		"ending_period": "2022-06-06 21:45"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-07 19:30",
+		"ending_period": "2022-06-07 21:45"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-08 19:30",
+		"ending_period": "2022-06-08 21:45"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-09 17:15",
+		"ending_period": "2022-06-09 19:30"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-10 17:15",
+		"ending_period": "2022-06-10 19:30"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-11 17:30",
+		"ending_period": "2022-06-11 18:30"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-12 17:30",
+		"ending_period": "2022-06-12 18:30"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-13 08:30",
+		"ending_period": "2022-06-13 10:45"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-14 18:30",
+		"ending_period": "2022-06-14 19:30"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-15 08:30",
+		"ending_period": "2022-06-15 10:45"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-16 08:30",
+		"ending_period": "2022-06-16 10:45"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-17 17:15",
+		"ending_period": "2022-06-17 19:30"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-18 17:15",
+		"ending_period": "2022-06-18 19:30"
+	},
+	{
+		"group_name": "G",
+		"starting_period": "2022-06-19 18:30",
+		"ending_period": "2022-06-19 19:30"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-01 16:20",
+		"ending_period": "2022-06-01 18:30"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-02 16:00",
+		"ending_period": "2022-06-02 17:00"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-02 20:00",
+		"ending_period": "2022-06-02 21:00"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-03 16:00",
+		"ending_period": "2022-06-03 17:00"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-03 20:00",
+		"ending_period": "2022-06-03 21:00"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-04 19:30",
+		"ending_period": "2022-06-04 20:30"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-06 08:30",
+		"ending_period": "2022-06-06 10:45"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-07 08:30",
+		"ending_period": "2022-06-07 10:45"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-08 08:30",
+		"ending_period": "2022-06-08 10:45"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-09 08:30",
+		"ending_period": "2022-06-09 11:15"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-09 17:15",
+		"ending_period": "2022-06-09 19:30"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-10 17:15",
+		"ending_period": "2022-06-10 19:30"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-11 18:30",
+		"ending_period": "2022-06-11 19:30"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-12 18:30",
+		"ending_period": "2022-06-12 19:30"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-13 15:00",
+		"ending_period": "2022-06-13 17:15"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-14 18:30",
+		"ending_period": "2022-06-14 19:30"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-15 15:00",
+		"ending_period": "2022-06-15 17:15"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-16 15:00",
+		"ending_period": "2022-06-16 17:15"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-17 19:30",
+		"ending_period": "2022-06-17 21:45"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-18 19:30",
+		"ending_period": "2022-06-18 21:45"
+	},
+	{
+		"group_name": "H",
+		"starting_period": "2022-06-19 18:30",
+		"ending_period": "2022-06-19 19:30"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-01 12:00",
+		"ending_period": "2022-06-01 14:10"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-02 16:00",
+		"ending_period": "2022-06-02 17:00"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-02 20:00",
+		"ending_period": "2022-06-02 21:00"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-03 16:00",
+		"ending_period": "2022-06-03 17:00"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-03 20:00",
+		"ending_period": "2022-06-03 21:00"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-04 19:30",
+		"ending_period": "2022-06-04 20:30"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-06 08:30",
+		"ending_period": "2022-06-06 10:45"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-07 08:30",
+		"ending_period": "2022-06-07 10:45"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-08 08:30",
+		"ending_period": "2022-06-08 10:45"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-09 08:30",
+		"ending_period": "2022-06-09 11:15"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-09 17:15",
+		"ending_period": "2022-06-09 19:30"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-10 17:15",
+		"ending_period": "2022-06-10 19:30"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-11 18:30",
+		"ending_period": "2022-06-11 19:30"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-12 18:30",
+		"ending_period": "2022-06-12 19:30"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-13 15:00",
+		"ending_period": "2022-06-13 17:15"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-14 19:30",
+		"ending_period": "2022-06-14 20:30"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-15 15:00",
+		"ending_period": "2022-06-15 17:15"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-16 15:00",
+		"ending_period": "2022-06-16 17:15"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-17 19:30",
+		"ending_period": "2022-06-17 21:45"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-18 19:30",
+		"ending_period": "2022-06-18 21:45"
+	},
+	{
+		"group_name": "I",
+		"starting_period": "2022-06-19 19:30",
+		"ending_period": "2022-06-19 20:30"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-01 12:00",
+		"ending_period": "2022-06-01 14:10"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-02 17:00",
+		"ending_period": "2022-06-02 18:00"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-02 21:00",
+		"ending_period": "2022-06-02 22:00"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-03 17:00",
+		"ending_period": "2022-06-03 18:00"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-03 21:00",
+		"ending_period": "2022-06-03 22:00"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-04 20:30",
+		"ending_period": "2022-06-04 21:30"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-06 15:00",
+		"ending_period": "2022-06-06 17:15"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-07 15:00",
+		"ending_period": "2022-06-07 17:15"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-08 15:00",
+		"ending_period": "2022-06-08 17:15"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-09 19:30",
+		"ending_period": "2022-06-09 21:45"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-10 19:30",
+		"ending_period": "2022-06-10 21:45"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-11 18:30",
+		"ending_period": "2022-06-11 19:30"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-12 18:30",
+		"ending_period": "2022-06-12 19:30"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-13 15:00",
+		"ending_period": "2022-06-13 17:15"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-14 19:30",
+		"ending_period": "2022-06-14 20:30"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-15 15:00",
+		"ending_period": "2022-06-15 17:15"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-16 15:00",
+		"ending_period": "2022-06-16 17:15"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-17 19:30",
+		"ending_period": "2022-06-17 21:45"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-18 19:30",
+		"ending_period": "2022-06-18 21:45"
+	},
+	{
+		"group_name": "J",
+		"starting_period": "2022-06-19 19:30",
+		"ending_period": "2022-06-19 20:30"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-01 12:00",
+		"ending_period": "2022-06-01 14:10"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-02 17:00",
+		"ending_period": "2022-06-02 18:00"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-02 21:00",
+		"ending_period": "2022-06-02 22:00"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-03 17:00",
+		"ending_period": "2022-06-03 18:00"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-03 21:00",
+		"ending_period": "2022-06-03 22:00"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-04 20:30",
+		"ending_period": "2022-06-04 21:30"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-06 15:00",
+		"ending_period": "2022-06-06 17:15"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-07 15:00",
+		"ending_period": "2022-06-07 17:15"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-08 15:00",
+		"ending_period": "2022-06-08 17:15"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-09 19:30",
+		"ending_period": "2022-06-09 21:45"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-10 19:30",
+		"ending_period": "2022-06-10 21:45"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-11 19:30",
+		"ending_period": "2022-06-11 20:30"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-12 19:30",
+		"ending_period": "2022-06-12 20:30"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-13 17:15",
+		"ending_period": "2022-06-13 19:30"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-14 19:30",
+		"ending_period": "2022-06-14 20:30"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-15 17:15",
+		"ending_period": "2022-06-15 19:30"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-16 17:15",
+		"ending_period": "2022-06-16 19:30"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-17 08:30",
+		"ending_period": "2022-06-17 10:45"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-18 08:30",
+		"ending_period": "2022-06-18 10:45"
+	},
+	{
+		"group_name": "K",
+		"starting_period": "2022-06-19 19:30",
+		"ending_period": "2022-06-19 20:30"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-01 12:00",
+		"ending_period": "2022-06-01 14:10"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-02 17:00",
+		"ending_period": "2022-06-02 18:00"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-02 21:00",
+		"ending_period": "2022-06-02 22:00"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-03 17:00",
+		"ending_period": "2022-06-03 18:00"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-03 21:00",
+		"ending_period": "2022-06-03 22:00"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-04 20:30",
+		"ending_period": "2022-06-04 21:30"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-06 15:00",
+		"ending_period": "2022-06-06 17:15"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-07 15:00",
+		"ending_period": "2022-06-07 17:15"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-08 15:00",
+		"ending_period": "2022-06-08 17:15"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-09 19:30",
+		"ending_period": "2022-06-09 21:45"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-10 19:30",
+		"ending_period": "2022-06-10 21:45"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-11 19:30",
+		"ending_period": "2022-06-11 20:30"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-12 19:30",
+		"ending_period": "2022-06-12 20:30"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-13 17:15",
+		"ending_period": "2022-06-13 19:30"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-14 20:30",
+		"ending_period": "2022-06-14 21:30"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-15 17:15",
+		"ending_period": "2022-06-15 19:30"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-16 17:15",
+		"ending_period": "2022-06-16 19:30"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-17 08:30",
+		"ending_period": "2022-06-17 10:45"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-18 08:30",
+		"ending_period": "2022-06-18 10:45"
+	},
+	{
+		"group_name": "L",
+		"starting_period": "2022-06-19 20:30",
+		"ending_period": "2022-06-19 21:30"
+	},
+	{
+		"group_name": "M",
+		"starting_period": "2022-05-30 05:00",
+		"ending_period": "2022-05-30 08:00"
+	},
+	{
+		"group_name": "M",
+		"starting_period": "2022-05-31 05:00",
+		"ending_period": "2022-05-31 08:00"
+	},
+	{
+		"group_name": "M",
+		"starting_period": "2022-06-01 05:00",
+		"ending_period": "2022-06-01 08:00"
+	},
+	{
+		"group_name": "N",
+		"starting_period": "2022-05-30 05:00",
+		"ending_period": "2022-05-30 08:00"
+	},
+	{
+		"group_name": "N",
+		"starting_period": "2022-05-31 05:00",
+		"ending_period": "2022-05-31 08:00"
+	},
+	{
+		"group_name": "N",
+		"starting_period": "2022-06-01 05:00",
+		"ending_period": "2022-06-01 08:00"
+	},
+	{
+		"group_name": "O",
+		"starting_period": "2022-05-30 05:00",
+		"ending_period": "2022-05-30 08:00"
+	},
+	{
+		"group_name": "O",
+		"starting_period": "2022-05-31 05:00",
+		"ending_period": "2022-05-31 08:00"
+	},
+	{
+		"group_name": "O",
+		"starting_period": "2022-06-01 05:00",
+		"ending_period": "2022-06-01 08:00"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-05-30 16:15",
+		"ending_period": "2022-05-30 18:30"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-01 14:10",
+		"ending_period": "2022-06-01 16:20"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-02 17:00",
+		"ending_period": "2022-06-02 18:00"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-02 21:00",
+		"ending_period": "2022-06-02 22:00"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-03 17:00",
+		"ending_period": "2022-06-03 18:00"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-03 21:00",
+		"ending_period": "2022-06-03 22:00"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-04 20:30",
+		"ending_period": "2022-06-04 21:30"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-06 17:15",
+		"ending_period": "2022-06-06 19:30"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-07 17:15",
+		"ending_period": "2022-06-07 19:30"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-08 17:15",
+		"ending_period": "2022-06-08 19:30"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-09 15:00",
+		"ending_period": "2022-06-09 17:15"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-10 15:00",
+		"ending_period": "2022-06-10 17:15"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-11 20:30",
+		"ending_period": "2022-06-11 21:30"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-12 20:30",
+		"ending_period": "2022-06-12 21:30"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-13 19:30",
+		"ending_period": "2022-06-13 21:45"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-14 17:30",
+		"ending_period": "2022-06-14 18:30"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-15 19:30",
+		"ending_period": "2022-06-15 21:45"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-16 19:30",
+		"ending_period": "2022-06-16 21:45"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-17 17:15",
+		"ending_period": "2022-06-17 19:30"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-18 17:15",
+		"ending_period": "2022-06-18 19:30"
+	},
+	{
+		"group_name": "P",
+		"starting_period": "2022-06-19 17:30",
+		"ending_period": "2022-06-19 18:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-05-30 16:15",
+		"ending_period": "2022-05-30 18:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-01 14:10",
+		"ending_period": "2022-06-01 16:20"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-02 17:00",
+		"ending_period": "2022-06-02 18:00"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-02 21:00",
+		"ending_period": "2022-06-02 22:00"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-03 17:00",
+		"ending_period": "2022-06-03 18:00"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-03 21:00",
+		"ending_period": "2022-06-03 22:00"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-04 20:30",
+		"ending_period": "2022-06-04 21:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-06 17:15",
+		"ending_period": "2022-06-06 19:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-07 17:15",
+		"ending_period": "2022-06-07 19:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-08 17:15",
+		"ending_period": "2022-06-08 19:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-09 15:00",
+		"ending_period": "2022-06-09 17:15"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-10 15:00",
+		"ending_period": "2022-06-10 17:15"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-11 20:30",
+		"ending_period": "2022-06-11 21:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-12 20:30",
+		"ending_period": "2022-06-12 21:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-13 19:30",
+		"ending_period": "2022-06-13 21:45"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-14 17:30",
+		"ending_period": "2022-06-14 18:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-15 19:30",
+		"ending_period": "2022-06-15 21:45"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-16 19:30",
+		"ending_period": "2022-06-16 21:45"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-17 17:15",
+		"ending_period": "2022-06-17 19:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-18 17:15",
+		"ending_period": "2022-06-18 19:30"
+	},
+	{
+		"group_name": "Q",
+		"starting_period": "2022-06-19 17:30",
+		"ending_period": "2022-06-19 18:30"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-05-31 16:15",
+		"ending_period": "2022-05-31 18:30"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-01 14:10",
+		"ending_period": "2022-06-01 16:20"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-02 15:00",
+		"ending_period": "2022-06-02 16:00"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-02 19:00",
+		"ending_period": "2022-06-02 20:00"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-03 15:00",
+		"ending_period": "2022-06-03 16:00"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-03 19:00",
+		"ending_period": "2022-06-03 20:00"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-04 18:30",
+		"ending_period": "2022-06-04 19:30"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-06 19:30",
+		"ending_period": "2022-06-06 21:45"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-07 19:30",
+		"ending_period": "2022-06-07 21:45"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-08 19:30",
+		"ending_period": "2022-06-08 21:45"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-09 17:15",
+		"ending_period": "2022-06-09 19:30"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-10 17:15",
+		"ending_period": "2022-06-10 19:30"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-11 17:30",
+		"ending_period": "2022-06-11 18:30"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-12 17:30",
+		"ending_period": "2022-06-12 18:30"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-13 08:30",
+		"ending_period": "2022-06-13 10:45"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-14 18:30",
+		"ending_period": "2022-06-14 19:30"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-15 08:30",
+		"ending_period": "2022-06-15 10:45"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-16 08:30",
+		"ending_period": "2022-06-16 10:45"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-17 17:15",
+		"ending_period": "2022-06-17 19:30"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-18 17:15",
+		"ending_period": "2022-06-18 19:30"
+	},
+	{
+		"group_name": "R",
+		"starting_period": "2022-06-19 18:30",
+		"ending_period": "2022-06-19 19:30"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-05-31 16:15",
+		"ending_period": "2022-05-31 18:30"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-01 16:20",
+		"ending_period": "2022-06-01 18:30"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-02 16:00",
+		"ending_period": "2022-06-02 17:00"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-02 20:00",
+		"ending_period": "2022-06-02 21:00"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-03 16:00",
+		"ending_period": "2022-06-03 17:00"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-03 20:00",
+		"ending_period": "2022-06-03 21:00"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-04 19:30",
+		"ending_period": "2022-06-04 20:30"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-06 19:30",
+		"ending_period": "2022-06-06 21:45"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-07 19:30",
+		"ending_period": "2022-06-07 21:45"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-08 19:30",
+		"ending_period": "2022-06-08 21:45"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-09 17:15",
+		"ending_period": "2022-06-09 19:30"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-10 17:15",
+		"ending_period": "2022-06-10 19:30"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-11 17:30",
+		"ending_period": "2022-06-11 18:30"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-12 17:30",
+		"ending_period": "2022-06-12 18:30"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-13 15:00",
+		"ending_period": "2022-06-13 17:15"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-14 18:30",
+		"ending_period": "2022-06-14 19:30"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-15 15:00",
+		"ending_period": "2022-06-15 17:15"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-16 15:00",
+		"ending_period": "2022-06-16 17:15"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-17 19:30",
+		"ending_period": "2022-06-17 21:45"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-18 19:30",
+		"ending_period": "2022-06-18 21:45"
+	},
+	{
+		"group_name": "S",
+		"starting_period": "2022-06-19 18:30",
+		"ending_period": "2022-06-19 19:30"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-01 16:20",
+		"ending_period": "2022-06-01 18:30"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-02 16:00",
+		"ending_period": "2022-06-02 17:00"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-02 20:00",
+		"ending_period": "2022-06-02 21:00"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-03 16:00",
+		"ending_period": "2022-06-03 17:00"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-03 20:00",
+		"ending_period": "2022-06-03 21:00"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-04 19:30",
+		"ending_period": "2022-06-04 20:30"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-06 08:30",
+		"ending_period": "2022-06-06 10:45"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-07 08:30",
+		"ending_period": "2022-06-07 10:45"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-08 08:30",
+		"ending_period": "2022-06-08 10:45"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-09 08:30",
+		"ending_period": "2022-06-09 11:15"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-09 17:15",
+		"ending_period": "2022-06-09 19:30"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-10 17:15",
+		"ending_period": "2022-06-10 19:30"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-11 18:30",
+		"ending_period": "2022-06-11 19:30"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-12 18:30",
+		"ending_period": "2022-06-12 19:30"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-13 15:00",
+		"ending_period": "2022-06-13 17:15"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-14 19:30",
+		"ending_period": "2022-06-14 20:30"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-15 15:00",
+		"ending_period": "2022-06-15 17:15"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-16 15:00",
+		"ending_period": "2022-06-16 17:15"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-17 19:30",
+		"ending_period": "2022-06-17 21:45"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-18 19:30",
+		"ending_period": "2022-06-18 21:45"
+	},
+	{
+		"group_name": "T",
+		"starting_period": "2022-06-19 19:30",
+		"ending_period": "2022-06-19 20:30"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-01 16:20",
+		"ending_period": "2022-06-01 18:30"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-02 14:00",
+		"ending_period": "2022-06-02 15:00"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-02 18:00",
+		"ending_period": "2022-06-02 19:00"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-03 14:00",
+		"ending_period": "2022-06-03 15:00"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-03 18:00",
+		"ending_period": "2022-06-03 19:00"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-04 17:30",
+		"ending_period": "2022-06-04 18:30"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-06 15:00",
+		"ending_period": "2022-06-06 17:15"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-07 15:00",
+		"ending_period": "2022-06-07 17:15"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-08 15:00",
+		"ending_period": "2022-06-08 17:15"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-09 19:30",
+		"ending_period": "2022-06-09 21:45"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-10 19:30",
+		"ending_period": "2022-06-10 21:45"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-11 18:30",
+		"ending_period": "2022-06-11 19:30"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-12 18:30",
+		"ending_period": "2022-06-12 19:30"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-13 17:15",
+		"ending_period": "2022-06-13 19:30"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-14 19:30",
+		"ending_period": "2022-06-14 20:30"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-15 17:15",
+		"ending_period": "2022-06-15 19:30"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-16 17:15",
+		"ending_period": "2022-06-16 19:30"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-17 08:30",
+		"ending_period": "2022-06-17 10:45"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-18 08:30",
+		"ending_period": "2022-06-18 10:45"
+	},
+	{
+		"group_name": "U",
+		"starting_period": "2022-06-19 19:30",
+		"ending_period": "2022-06-19 20:30"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-01 12:00",
+		"ending_period": "2022-06-01 14:10"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-02 14:00",
+		"ending_period": "2022-06-02 15:00"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-02 18:00",
+		"ending_period": "2022-06-02 19:00"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-03 14:00",
+		"ending_period": "2022-06-03 15:00"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-03 18:00",
+		"ending_period": "2022-06-03 19:00"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-04 17:30",
+		"ending_period": "2022-06-04 18:30"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-06 15:00",
+		"ending_period": "2022-06-06 17:15"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-07 15:00",
+		"ending_period": "2022-06-07 17:15"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-08 15:00",
+		"ending_period": "2022-06-08 17:15"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-10 19:30",
+		"ending_period": "2022-06-10 21:45"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-11 19:30",
+		"ending_period": "2022-06-11 20:30"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-12 19:30",
+		"ending_period": "2022-06-12 20:30"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-13 17:15",
+		"ending_period": "2022-06-13 19:30"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-14 20:30",
+		"ending_period": "2022-06-14 21:30"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-15 17:15",
+		"ending_period": "2022-06-15 19:30"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-16 17:15",
+		"ending_period": "2022-06-16 19:30"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-17 15:00",
+		"ending_period": "2022-06-17 17:15"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-18 15:00",
+		"ending_period": "2022-06-18 17:15"
+	},
+	{
+		"group_name": "V",
+		"starting_period": "2022-06-19 20:30",
+		"ending_period": "2022-06-19 21:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-01 12:00",
+		"ending_period": "2022-06-01 14:10"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-02 15:00",
+		"ending_period": "2022-06-02 16:00"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-02 19:00",
+		"ending_period": "2022-06-02 20:00"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-03 15:00",
+		"ending_period": "2022-06-03 16:00"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-03 19:00",
+		"ending_period": "2022-06-03 20:00"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-04 18:30",
+		"ending_period": "2022-06-04 19:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-06 17:15",
+		"ending_period": "2022-06-06 19:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-07 17:15",
+		"ending_period": "2022-06-07 19:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-08 17:15",
+		"ending_period": "2022-06-08 19:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-10 08:30",
+		"ending_period": "2022-06-10 10:45"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-11 19:30",
+		"ending_period": "2022-06-11 20:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-12 19:30",
+		"ending_period": "2022-06-12 20:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-13 17:15",
+		"ending_period": "2022-06-13 19:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-14 20:30",
+		"ending_period": "2022-06-14 21:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-15 17:15",
+		"ending_period": "2022-06-15 19:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-16 17:15",
+		"ending_period": "2022-06-16 19:30"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-17 15:00",
+		"ending_period": "2022-06-17 17:15"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-18 15:00",
+		"ending_period": "2022-06-18 17:15"
+	},
+	{
+		"group_name": "W",
+		"starting_period": "2022-06-19 20:30",
+		"ending_period": "2022-06-19 21:30"
+	},
+	{
+		"group_name": "X",
+		"starting_period": "2022-05-30 05:00",
+		"ending_period": "2022-05-30 08:00"
+	},
+	{
+		"group_name": "X",
+		"starting_period": "2022-05-31 05:00",
+		"ending_period": "2022-05-31 08:00"
+	},
+	{
+		"group_name": "X",
+		"starting_period": "2022-06-01 05:00",
+		"ending_period": "2022-06-01 08:00"
+	},
+	{
+		"group_name": "Y",
+		"starting_period": "2022-05-30 05:00",
+		"ending_period": "2022-05-30 08:00"
+	},
+	{
+		"group_name": "Y",
+		"starting_period": "2022-05-31 05:00",
+		"ending_period": "2022-05-31 08:00"
+	},
+	{
+		"group_name": "Y",
+		"starting_period": "2022-06-01 05:00",
+		"ending_period": "2022-06-01 08:00"
+	},
+	{
+		"group_name": "Z",
+		"starting_period": "2022-05-30 05:00",
+		"ending_period": "2022-05-30 08:00"
+	},
+	{
+		"group_name": "Z",
+		"starting_period": "2022-05-31 05:00",
+		"ending_period": "2022-05-31 08:00"
+	},
+	{
+		"group_name": "Z",
+		"starting_period": "2022-06-01 05:00",
+		"ending_period": "2022-06-01 08:00"
+	}
+]

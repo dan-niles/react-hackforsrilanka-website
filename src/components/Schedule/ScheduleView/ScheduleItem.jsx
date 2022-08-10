@@ -1,4 +1,13 @@
-import differenceInHours from "date-fns/differenceInHours";
+const getTimeDiff = (start, end) => {
+	let diffMs = end - start; // milliseconds between now & Christmas
+	let diffDays = Math.floor(diffMs / 86400000); // days
+	let diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
+	let diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
+	let hrStr = "hrs";
+	if (diffHrs == 1) hrStr = "hr";
+	if (diffMins == 0) return `${diffHrs} ${hrStr}`;
+	else return `${diffHrs} ${hrStr} ${diffMins} mins`;
+};
 
 const ScheduleItem = (props) => {
 	const startPeriod = new Date(props.starting_period);
@@ -19,7 +28,7 @@ const ScheduleItem = (props) => {
 		})
 		.split(" ");
 
-	const hourDiff = differenceInHours(endPeriod, startPeriod);
+	const minDiff = getTimeDiff(startPeriod, endPeriod);
 
 	return (
 		<li className="border-1 list-group-item d-flex justify-content-between align-items-center py-3 my-2">
@@ -35,7 +44,7 @@ const ScheduleItem = (props) => {
 				</div>
 			</div>
 
-			<span className="badge bg-secondary">{hourDiff.toFixed(1)} hrs</span>
+			<span className="badge bg-secondary">{minDiff}</span>
 		</li>
 	);
 };

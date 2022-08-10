@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormWindow from "./../components/FindMyGroup/FormWindow/FormWindow";
 import MapLayer from "../components/FindMyGroup/Map/MapLayer";
 
@@ -14,6 +14,7 @@ const FindMyGroup = () => {
 	const [latitude, setLattitude] = useState("");
 	const [longitude, setLongitude] = useState("");
 	const [groupList, setGroupList] = useState([]);
+	const [hideText, setHideText] = useState(true);
 	const [isLoading, setIsLoading] = useState(false);
 
 	const getLocation = () => {
@@ -27,6 +28,7 @@ const FindMyGroup = () => {
 			}, showError);
 		} else {
 			setAlertMessage("Geolocation is not supported by this browser.");
+			setIsLoading(false);
 			setOpenAlert(true);
 		}
 	};
@@ -35,24 +37,29 @@ const FindMyGroup = () => {
 		switch (error.code) {
 			case error.PERMISSION_DENIED:
 				setAlertMessage("User denied the request for Geolocation.");
+				setIsLoading(false);
 				setOpenAlert(true);
 				break;
 			case error.POSITION_UNAVAILABLE:
 				setAlertMessage("Location information is unavailable.");
+				setIsLoading(false);
 				setOpenAlert(true);
 				break;
 			case error.TIMEOUT:
 				setAlertMessage("The request to get user location timed out.");
+				setIsLoading(false);
 				setOpenAlert(true);
 				break;
 			case error.UNKNOWN_ERROR:
 				setAlertMessage("An unknown error occurred.");
+				setIsLoading(false);
 				setOpenAlert(true);
 				break;
 		}
 	}
 
 	const locateGroup = (lat, lon) => {
+		setHideText(true);
 		setGroupList([]);
 		coordinates.forEach((group) => {
 			let group_name = group.group_name;
@@ -64,6 +71,7 @@ const FindMyGroup = () => {
 				}
 			});
 		});
+		setHideText(false);
 	};
 
 	const [openAlert, setOpenAlert] = useState(false);
@@ -83,6 +91,7 @@ const FindMyGroup = () => {
 				open={openAlert}
 				onClose={handleClose}
 				autoHideDuration={6000}
+				sx={{ zIndex: 9999 }}
 			>
 				<Alert
 					elevation={6}
@@ -104,6 +113,7 @@ const FindMyGroup = () => {
 					longitude={longitude}
 					isLoading={isLoading}
 					groupList={groupList}
+					hideText={hideText}
 				/>
 				<Grid item xs={12} md={12}>
 					<MapLayer

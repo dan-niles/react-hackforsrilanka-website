@@ -13,7 +13,7 @@ import {
 	startOfWeek,
 	endOfWeek,
 } from "date-fns";
-import { enGB, ta } from "date-fns/locale";
+import { enGB } from "date-fns/locale";
 import { DatePickerCalendar as ScheduleCalendar } from "react-nice-dates";
 import "react-nice-dates/build/style.css";
 
@@ -25,6 +25,9 @@ import TodayIcon from "@mui/icons-material/Today";
 import Button from "@mui/material/Button";
 
 import { FormattedMessage } from "react-intl";
+
+// import ScheduleObj from "../../../data/schedule.json";
+import NO_POWER_CUTS from "../../../data/no-power-cuts.json";
 
 const Schedule = (props) => {
 	const [date, setDate] = useState(new Date());
@@ -49,6 +52,8 @@ const Schedule = (props) => {
 			.then((res) => {
 				setScheduleItems(res.data.data);
 			});
+
+		// setScheduleItems(ScheduleObj);
 	};
 
 	// Fetch schedule data from api using state and city
@@ -125,16 +130,22 @@ const Schedule = (props) => {
 		},
 		// Colour key system for dates
 		greenClass: (date) => {
-			let seledate = [];
-			return seledate.includes(format(date, "yyyy-MM-dd", { locale: enGB }));
+			return NO_POWER_CUTS.find((item) => {
+				return (
+					item[1] === format(date, "yyyy-MM-dd", { locale: enGB }) &&
+					(item[0] === props.groupName || item[0] === areaGroup)
+				);
+			});
 		},
 		orangeClass: (date) => {
 			if (scheduleItems.length > 0) {
-				let obj = scheduleItems.find(
-					(i) =>
+				let obj = scheduleItems.find((i) => {
+					return (
 						i.starting_period.substring(0, 10) ===
-						format(date, "yyyy-MM-dd", { locale: enGB })
-				);
+							format(date, "yyyy-MM-dd", { locale: enGB }) &&
+						(i.group_name === props.groupName || i.group_name === areaGroup)
+					);
+				});
 				if (obj !== undefined) return true;
 			}
 		},
@@ -189,6 +200,7 @@ const Schedule = (props) => {
 					gss={props.gss}
 					groupList={[...new Set(scheduleItems.map((item) => item.group_name))]}
 					setAreaGroup={setAreaGroup}
+					NO_POWER_CUTS={NO_POWER_CUTS}
 				>
 					{filteredScheduleItems.map((i) => {
 						return (

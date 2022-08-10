@@ -1,5 +1,5 @@
 import { format } from "date-fns";
-import { enUS } from "date-fns/locale";
+import { enGB } from "date-fns/locale";
 
 import Button from "@mui/material/Button";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
@@ -14,7 +14,7 @@ const ScheduleItemsContainer = (props) => {
 
 	const dateText = props.date
 		? format(props.date, "dd MMM yyyy", {
-				locale: enUS,
+				locale: enGB,
 		  })
 		: "None Selected";
 
@@ -80,6 +80,47 @@ const ScheduleItemsContainer = (props) => {
 		}
 	};
 
+	let containerText = "";
+	if (
+		props.NO_POWER_CUTS.find((item) => {
+			return (
+				item[1] === format(props.date, "yyyy-MM-dd", { locale: enGB }) &&
+				(item[0] === props.groupName || item[0] === props.areaGroup)
+			);
+		})
+	) {
+		containerText = (
+			<p className="text-center">
+				<FormattedMessage
+					id="schedule.view.nopcText"
+					defaultMessage="No power cuts scheduled"
+				/>
+				<br />
+				<span className="text-muted">
+					<FormattedMessage
+						id="schedule.view.nopcSubText"
+						defaultMessage="Enjoy your day!"
+					/>
+				</span>
+			</p>
+		);
+	} else {
+		containerText = (
+			<p className="text-center">
+				<FormattedMessage
+					id="schedule.view.naText"
+					defaultMessage="Schedule not published yet"
+				/>
+				<br />
+				<span className="text-muted">
+					<FormattedMessage
+						id="schedule.view.naSubText"
+						defaultMessage="Come back later or subcribe to receive a notification"
+					/>
+				</span>
+			</p>
+		);
+	}
 	return (
 		<div className="col-lg-6 col-12 d-flex pa-md order-lg-2">
 			<div className="card border-0 mt-0 flex-fill">
@@ -117,20 +158,7 @@ const ScheduleItemsContainer = (props) => {
 					) : (
 						<div className="row h-100">
 							<div className="d-flex justify-content-center align-items-center flex-column">
-								<p className="text-center">
-									<FormattedMessage
-										id="schedule.view.naText"
-										defaultMessage="Schedule not published yet"
-									/>
-									<br />
-
-									<span className="text-muted">
-										<FormattedMessage
-											id="schedule.view.naSubText"
-											defaultMessage="Come back later or subcribe to receive a notification"
-										/>
-									</span>
-								</p>
+								{containerText}
 								<Button
 									variant="outlined"
 									startIcon={<NotificationsActiveIcon />}

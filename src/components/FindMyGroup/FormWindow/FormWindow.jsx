@@ -48,12 +48,18 @@ const FormWindow = (props) => {
 							/>
 						</h2>
 					</div>
-					<div className="card-body mx-4 my-3">
-						<p className="fw-light text-white-50 text-center">
+					<div className="card-body mx-4 my-3 text-center">
+						<p className="fw-light text-center">
 							<FormattedMessage
 								id="find-my-group.subTitle"
-								defaultMessage="Click the button below to use your current location and find your CEB group"
+								defaultMessage="Click the button below to use your current location or click on the map and find your CEB group"
 							/>
+						</p>
+						<p
+							className="fw-light text-white-50 text-center lh-2"
+							style={{ fontSize: "0.8em" }}
+						>
+							*The Identified group may not be accurate if using a PC/desktop
 						</p>
 						<Stack
 							direction="column"
@@ -74,24 +80,39 @@ const FormWindow = (props) => {
 								/>
 							</Button>
 							{props.isLoading && <CircularProgress />}
-							{!props.isLoading && props.groupList.length === 1 && (
-								<p className="font-light mt-1 mb-2">
-									<FormattedMessage
-										id="find-my-group.formText1"
-										defaultMessage="Group:"
-									/>
-								</p>
-							)}
-							{!props.isLoading && props.groupList.length > 1 && (
-								<p className="font-light mt-1 mb-2">
-									<FormattedMessage
-										id="find-my-group.formText2"
-										defaultMessage="Possible Groups:"
-									/>
-								</p>
-							)}
+							{!props.isLoading &&
+								!props.hideText &&
+								props.groupList.length === 1 && (
+									<p className="font-light mt-1 mb-2">
+										<FormattedMessage
+											id="find-my-group.formText1"
+											defaultMessage="Group:"
+										/>
+									</p>
+								)}
+							{!props.isLoading &&
+								!props.hideText &&
+								props.groupList.length > 1 && (
+									<p className="font-light mt-1 mb-2">
+										<FormattedMessage
+											id="find-my-group.formText2"
+											defaultMessage="Possible Groups:"
+										/>
+									</p>
+								)}
+							{!props.isLoading &&
+								!props.hideText &&
+								props.groupList.length === 0 && (
+									<p className="font-light mt-1 mb-2 text-center">
+										<FormattedMessage
+											id="find-my-group.formText3"
+											defaultMessage="Group data currently unavailable for this location."
+										/>
+									</p>
+								)}
 							<Stack spacing={1.5} direction="row">
 								{!props.isLoading &&
+									!props.hideText &&
 									props.groupList?.map((grp, idx) => {
 										return (
 											<a
@@ -114,6 +135,16 @@ const FormWindow = (props) => {
 										);
 									})}
 							</Stack>
+							{!props.isLoading &&
+								!props.hideText &&
+								props.groupList.length > 0 && (
+									<p
+										className="fw-light mt-2 text-white-50 text-center lh-2"
+										style={{ fontSize: "0.8em" }}
+									>
+										Click on a group letter to view the power-cut schedule
+									</p>
+								)}
 						</Stack>
 					</div>
 				</div>

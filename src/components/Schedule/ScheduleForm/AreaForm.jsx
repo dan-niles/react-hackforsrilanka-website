@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
+import FormHelperText from "@mui/material/FormHelperText";
 import Select from "@mui/material/Select";
 import { useTheme } from "@mui/material/styles";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -27,18 +28,34 @@ const AreaForm = (props) => {
 	const [areaList, setAreaList] = useState();
 	const [gssList, setGssList] = useState();
 
+	const [gssError, setGSSError] = useState(false);
 	const [gssSelect, setGssSelect] = useState("");
 	const handleGssSelectChange = (event) => {
+		if (event.target.value) {
+			setGSSError(false);
+		}
 		setGssSelect(event.target.value);
 	};
 
+	const [areaError, setAreaError] = useState(false);
 	const [areaSelect, setAreaSelect] = useState("");
 	const handleAreaSelectChange = (event) => {
+		if (event.target.value) {
+			setAreaError(false);
+		}
 		setAreaSelect(event.target.value);
 	};
 
 	const submitHandler = (e) => {
 		e.preventDefault();
+		if (!gssSelect) {
+			setGSSError(true);
+			return;
+		}
+		if (!areaSelect) {
+			setAreaError(true);
+			return;
+		}
 		const forLocalStorage = {
 			groupName: "",
 			district: "",
@@ -82,6 +99,7 @@ const AreaForm = (props) => {
 
 	useEffect(() => {
 		if (gssSelect) {
+			setAreaSelect("");
 			axios
 				.get(process.env.REACT_APP_API_URL + `/api/all-area/?gss=${gssSelect}`)
 				.then((res) => {
@@ -141,7 +159,7 @@ const AreaForm = (props) => {
 				</p>
 
 				<div className="form-group col-12">
-					<FormControl fullWidth>
+					<FormControl fullWidth error={gssError}>
 						<InputLabel id="gss-select">
 							<FormattedMessage
 								id="schedule.form.location.select1"
@@ -155,7 +173,6 @@ const AreaForm = (props) => {
 							value={gssSelect}
 							onChange={handleGssSelectChange}
 							name="gss"
-							required
 							sx={{ textTransform: "capitalize" }}
 						>
 							{gssList?.map((item, index) => {
@@ -171,10 +188,20 @@ const AreaForm = (props) => {
 							})}
 							{/* <MenuItem value="Colombo">Colombo</MenuItem> */}
 						</Select>
+						<FormHelperText>
+							{gssError ? (
+								<FormattedMessage
+									id="schedule.form.select-validation"
+									defaultMessage="Please fill in this field"
+								/>
+							) : (
+								""
+							)}
+						</FormHelperText>
 					</FormControl>
 				</div>
 				<div className="form-group col-12 mt-3">
-					<FormControl fullWidth>
+					<FormControl fullWidth error={areaError}>
 						<InputLabel id="area-select">
 							<FormattedMessage
 								id="schedule.form.location.select2"
@@ -188,7 +215,6 @@ const AreaForm = (props) => {
 							value={areaSelect}
 							onChange={handleAreaSelectChange}
 							name="area"
-							required
 							sx={{ textTransform: "capitalize" }}
 						>
 							{areaList?.map((item, index) => {
@@ -204,6 +230,16 @@ const AreaForm = (props) => {
 							})}
 							{/* <MenuItem value="Mount Lavinia">Mount Lavinia</MenuItem> */}
 						</Select>
+						<FormHelperText>
+							{areaError ? (
+								<FormattedMessage
+									id="schedule.form.select-validation"
+									defaultMessage="Please fill in this field"
+								/>
+							) : (
+								""
+							)}
+						</FormHelperText>
 					</FormControl>
 				</div>
 				<div className="form-group col-12 mt-4 text-center">

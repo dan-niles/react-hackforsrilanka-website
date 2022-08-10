@@ -15,6 +15,7 @@ import Footer from "./components/Footer/Footer";
 
 import { ColorModeContextProvider } from "./contexts/color-mode";
 import "./assets/css/styles.css";
+import ScrollToTop from "./components/UI/ScrollToTop";
 
 const TRACKING_ID = "UA-225410687-1";
 ReactGA.initialize(TRACKING_ID);
@@ -27,6 +28,7 @@ function App() {
 	return (
 		<ColorModeContextProvider>
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
+				{/* <ScrollToTop> */}
 				<main className="d-flex flex-column flex-shrink-0 min-vh-100 h-100">
 					<Navbar />
 					<Routes>
@@ -41,6 +43,7 @@ function App() {
 					</Routes>
 					<Footer />
 				</main>
+				{/* </ScrollToTop> */}
 			</BrowserRouter>
 		</ColorModeContextProvider>
 	);

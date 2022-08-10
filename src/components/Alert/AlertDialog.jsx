@@ -178,6 +178,14 @@ const AlertDialog = (props) => {
 						defaultMessage="To subscribe to this group, please enter your name and phone number
 						here. We will send updates occasionally."
 					/>
+					{/* <p
+						className="fw-light text-white-50 mt-2 lh-2"
+						style={{ fontSize: "0.8em" }}
+					>
+						*Dialog is having technical difficulties, but we're working to fix
+						the situation asap. If you enter your number, we'll message you as
+						soon as we're up and running again.
+					</p> */}
 				</DialogContentText>
 				<span className="text-error">{allRegErr}</span>
 				<TextField
