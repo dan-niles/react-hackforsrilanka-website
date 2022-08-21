@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -24,7 +24,8 @@ const AreaForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
 
-	let navigate = useNavigate();
+	const location = useLocation();
+	const navigate = useNavigate();
 	const [areaList, setAreaList] = useState();
 	const [gssList, setGssList] = useState();
 
@@ -73,7 +74,7 @@ const AreaForm = (props) => {
 		// });
 
 		navigate({
-			pathname: "/schedule",
+			pathname: location.pathname,
 			search: `?group=&gss=${gssSelect}&area=${areaSelect}`,
 		});
 	};

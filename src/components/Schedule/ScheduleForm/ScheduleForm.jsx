@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import GroupForm from "./GroupForm";
 import AreaForm from "./AreaForm";
@@ -14,6 +14,7 @@ import { Alert, Button } from "@mui/material";
 
 const ScheduleForm = (props) => {
 	const appTheme = useTheme();
+	const location = useLocation();
 	const navigate = useNavigate();
 
 	const [toggle, setToggle] = useState("groupToggle");
@@ -143,7 +144,7 @@ const ScheduleForm = (props) => {
 									variant="contained"
 									onClick={() =>
 										navigate({
-											pathname: "/suggestions",
+											pathname: location.pathname,
 										})
 									}
 								>

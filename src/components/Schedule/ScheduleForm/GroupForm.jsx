@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -21,6 +21,7 @@ const GroupForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
 
+	const location = useLocation();
 	let navigate = useNavigate();
 
 	// Fetch Group Names
@@ -69,7 +70,7 @@ const GroupForm = (props) => {
 		localStorage.setItem("form-parameters", JSON.stringify(forLocalStorage));
 		navigate(
 			{
-				pathname: "/schedule",
+				pathname: location.pathname,
 				search: "?group=" + groupSelect,
 			},
 			{ state: { data: getSchedule } }

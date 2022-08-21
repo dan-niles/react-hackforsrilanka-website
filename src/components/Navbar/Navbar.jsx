@@ -26,7 +26,7 @@ import { useLocation } from "react-router-dom";
 const pages = [
 	{
 		title: <FormattedMessage id="nav.home" defaultMessage="Home" />,
-		link: "/",
+		link: "home",
 		key: "Home",
 	},
 	{

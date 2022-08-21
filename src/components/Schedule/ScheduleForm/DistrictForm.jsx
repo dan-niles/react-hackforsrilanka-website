@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import TextField from "@mui/material/TextField";
 import FormControl from "@mui/material/FormControl";
@@ -23,7 +23,8 @@ const DistrictForm = (props) => {
 	const appTheme = useTheme();
 	const [isLoading, setisLoading] = useState(true);
 
-	let navigate = useNavigate();
+	const location = useLocation();
+	const navigate = useNavigate();
 	const [districtList, setDistrictList] = useState();
 	const [gssList, setGssList] = useState();
 	const [areaList, setAreaList] = useState();
@@ -86,7 +87,7 @@ const DistrictForm = (props) => {
 		// });
 
 		navigate({
-			pathname: "/schedule",
+			pathname: location.pathname,
 			search: `?group=&district=${districtSelect}&gss=${gssSelect}&area=${areaSelect}`,
 		});
 	};

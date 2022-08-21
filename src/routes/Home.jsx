@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { useTheme } from "@mui/material/styles";
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
@@ -17,6 +17,7 @@ const Home = () => {
 	const intl = useIntl();
 	const [imageLoading, setImageLoading] = useState(true); // for animating light bulb img
 	// const [openGuide, setOpenGuide] = useState(false); // for help guide modal
+	const location = useLocation();
 	const navigate = useNavigate();
 
 	const imageLoaded = () => {
@@ -51,7 +52,7 @@ const Home = () => {
 
 	const handleCTA = () => {
 		navigate({
-			pathname: "/schedule",
+			pathname: location.pathname,
 		});
 	};
 
