@@ -8,6 +8,9 @@ import Button from "@mui/material/Button";
 
 import { FormattedMessage } from "react-intl";
 import { useIntl } from "react-intl";
+import TranslatedMessage from "../components/UI/TranslatedMessage";
+
+import PageNames from "./PageNames"
 
 // import HelpSlider from "../components/HelpSlider/HelpSlider";
 // import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
@@ -52,7 +55,7 @@ const Home = () => {
 
 	const handleCTA = () => {
 		navigate({
-			pathname: "../schedule",
+			pathname: `../${PageNames.slug(PageNames.SCHEDULE)}`,
 		});
 	};
 

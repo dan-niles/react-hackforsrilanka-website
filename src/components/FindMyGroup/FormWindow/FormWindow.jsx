@@ -8,6 +8,9 @@ import { FormattedMessage } from "react-intl";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+import PageNames from "../../../routes/PageNames"
+
+
 const FormWindow = (props) => {
 	const appTheme = useTheme();
 	const matches = useMediaQuery(appTheme.breakpoints.up("md"));
@@ -116,7 +119,7 @@ const FormWindow = (props) => {
 									props.groupList?.map((grp, idx) => {
 										return (
 											<a
-												href={`./schedule?group=${grp}`}
+												href={`./${PageNames.slug(PageNames.SCHEDULE)}?group=${grp}`}
 												target="_blank"
 												key={idx}
 												rel="noreferrer"

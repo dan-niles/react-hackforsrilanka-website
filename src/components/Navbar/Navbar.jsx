@@ -23,32 +23,34 @@ import { FormattedMessage } from "react-intl";
 
 import { useLocation } from "react-router-dom";
 
+import PageNames from "../../routes/PageNames"
+
 const pages = [
 	{
 		title: <FormattedMessage id="nav.home" defaultMessage="Home" />,
-		link: "home",
+		link: PageNames.slug(PageNames.HOME),
 		key: "Home",
 	},
 	{
 		title: <FormattedMessage id="nav.schedule" defaultMessage="Schedule" />,
-		link: "schedule",
+		link: PageNames.slug(PageNames.SCHEDULE),
 		key: "Schedule",
 	},
 	{
 		title: (
 			<FormattedMessage id="nav.find-my-group" defaultMessage="Find-My-Group" />
 		),
-		link: "find-my-group",
+		link: PageNames.slug(PageNames.FIND_MY_GROUP),
 		key: "FindMyGroup",
 	},
 	{
 		title: <FormattedMessage id="nav.about" defaultMessage="About" />,
-		link: "about",
+		link: PageNames.slug(PageNames.ABOUT),
 		key: "About",
 	},
 	{
 		title: <FormattedMessage id="nav.contact" defaultMessage="Suggestions" />,
-		link: "suggestions",
+		link: PageNames.slug(PageNames.SUGGESTIONS),
 		key: "Suggestions",
 	},
 ];
@@ -91,11 +93,11 @@ const Navbar = () => {
 				mx: "auto",
 				py: { xs: 1, md: 0.5 },
 				position:
-				currentPageName === "find-my-group" && matches
+				currentPageName === PageNames.slug(PageNames.FIND_MY_GROUP) && matches
 						? "absolute"
 						: "static",
 				top: 0,
-				zIndex: currentPageName === "find-my-group" && matches ? 9999 : "",
+				zIndex: currentPageName === PageNames.slug(PageNames.FIND_MY_GROUP) && matches ? 9999 : "",
 			}}
 		>
 			<Container maxWidth="xl">

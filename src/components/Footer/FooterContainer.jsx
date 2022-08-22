@@ -1,7 +1,9 @@
-import { useTheme } from "@mui/material/styles";
-import { FormattedMessage } from "react-intl";
-import { useLocation } from "react-router-dom";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles"
+import { FormattedMessage } from "react-intl"
+import { useLocation } from "react-router-dom"
+import useMediaQuery from "@mui/material/useMediaQuery"
+
+import PageNames from "../../routes/PageNames"
 
 const FooterContainer = (props) => {
 	const appTheme = useTheme();
@@ -16,10 +18,10 @@ const FooterContainer = (props) => {
 			} py-3 mt-auto`}
 			style={{
 				position:
-					currentPageName === "find-my-group" && matches
+					currentPageName === PageNames.slug(PageNames.FIND_MY_GROUP) && matches
 						? "absolute"
 						: "static",
-				zIndex: currentPageName === "find-my-group" && matches ? 9999 : "",
+				zIndex: currentPageName === PageNames.slug(PageNames.FIND_MY_GROUP) && matches ? 9999 : "",
 				bottom: 0,
 				width: "100%",
 			}}
