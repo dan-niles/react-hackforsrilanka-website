@@ -25,7 +25,7 @@ const ErrorPage = () => {
 								</h1>
 							</div>
 						</div>
-						<div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+						<div className="d-grid gap-3 d-sm-flex justify-content-sm-center">
 									<Button
 										className={`${
 											appTheme.palette.mode === "dark" ? "btn-warning" : ""

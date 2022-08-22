@@ -7,6 +7,7 @@ const FooterContainer = (props) => {
 	const appTheme = useTheme();
 	const matches = useMediaQuery(appTheme.breakpoints.up("md"));
 	const location = useLocation();
+	let currentPageName = location.pathname.split("/").pop()
 
 	return (
 		<footer
@@ -15,10 +16,10 @@ const FooterContainer = (props) => {
 			} py-3 mt-auto`}
 			style={{
 				position:
-					location.pathname === "/find-my-group" && matches
+					currentPageName === "find-my-group" && matches
 						? "absolute"
 						: "static",
-				zIndex: location.pathname === "/find-my-group" && matches ? 9999 : "",
+				zIndex: currentPageName === "find-my-group" && matches ? 9999 : "",
 				bottom: 0,
 				width: "100%",
 			}}

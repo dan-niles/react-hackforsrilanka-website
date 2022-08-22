@@ -29,7 +29,7 @@ import { FormattedMessage } from "react-intl";
 // import ScheduleObj from "../../../data/schedule.json";
 import NO_POWER_CUTS from "../../../data/no-power-cuts.json";
 
-const Schedule = (props) => {
+const ScheduleView = (props) => {
 	const [date, setDate] = useState(new Date());
 	const [scheduleItems, setScheduleItems] = useState([]);
 	const [areaGroup, setAreaGroup] = useState(null);
@@ -287,4 +287,4 @@ const Schedule = (props) => {
 	);
 };
 
-export default Schedule;
+export default ScheduleView;

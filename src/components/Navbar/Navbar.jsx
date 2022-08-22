@@ -73,6 +73,9 @@ const Navbar = () => {
 		handleCloseNavMenu();
 	};
 	const location = useLocation();
+	const splittedPath = location.pathname.split("/");
+	let currentPageName = splittedPath.pop()
+	let basePath = splittedPath.join("/")
 
 	return (
 		<AppBar
@@ -88,11 +91,11 @@ const Navbar = () => {
 				mx: "auto",
 				py: { xs: 1, md: 0.5 },
 				position:
-					location.pathname === "/find-my-group" && matches
+				currentPageName === "find-my-group" && matches
 						? "absolute"
 						: "static",
 				top: 0,
-				zIndex: location.pathname === "/find-my-group" && matches ? 9999 : "",
+				zIndex: currentPageName === "find-my-group" && matches ? 9999 : "",
 			}}
 		>
 			<Container maxWidth="xl">
@@ -197,7 +200,7 @@ const Navbar = () => {
 						{pages.map((page) => (
 							<Button
 								component={NavLink}
-								to={page.link}
+								to={basePath + "/" + page.link}
 								key={page.key}
 								onClick={handleCloseNavMenu}
 								sx={{

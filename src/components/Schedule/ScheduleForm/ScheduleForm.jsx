@@ -144,7 +144,7 @@ const ScheduleForm = (props) => {
 									variant="contained"
 									onClick={() =>
 										navigate({
-											pathname: location.pathname,
+											pathname: "../suggestions",
 										})
 									}
 								>

@@ -52,7 +52,7 @@ const Home = () => {
 
 	const handleCTA = () => {
 		navigate({
-			pathname: location.pathname,
+			pathname: "../schedule",
 		});
 	};
 

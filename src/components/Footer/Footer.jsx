@@ -4,9 +4,9 @@ import FooterItem from "./FooterItem";
 const Footer = () => {
 	return (
 		<FooterContainer>
-			<FooterItem label="English" locale="en" href="#" />
-			<FooterItem label="සිංහල" locale="si-LK" href="#" />
-			<FooterItem label="தமிழ்" locale="ta-LK" href="#" lastItem={true} />
+			<FooterItem label="English" locale="en" />
+			<FooterItem label="සිංහල" locale="si-LK" />
+			<FooterItem label="தமிழ்" locale="ta-LK" lastItem={true} />
 		</FooterContainer>
 	);
 };

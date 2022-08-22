@@ -10,18 +10,17 @@ const FooterItem = (props) => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
+	const splittedPath = location.pathname.split("/");
+	splittedPath[1] = langContext.getLocalePath(props.locale)
+	const newPath = splittedPath.join("/")
+
 	const handleClick = (e) => {
 		e.preventDefault()
-		const splittedPath = location.pathname.split("/");
-		splittedPath[1] = langContext.getLocalePath(props.locale)
-		const newPath = splittedPath.join("/")
 		navigate({
 			pathname: newPath,
 		})
-		// TODO: Research why the following line is needed? 
-		// newPath contains language and should be set from there by the route
 		langContext.selectLanguage(props.locale);
-	};
+	}
 
 	return (
 		<>
@@ -29,9 +28,9 @@ const FooterItem = (props) => {
 				className={`${
 					appTheme.palette.mode === "dark" ? "link-light" : "link-dark"
 				} small ${
-					langContext.locale === props.locale ? "fw-bolder" : "text-decoration-underline"
+					langContext.locale !== props.locale ? "text-decoration-underline" : ""
 				}`}
-				href={props.href}
+				href={newPath}
 				onClick={handleClick}
 			>
 				{props.label}
@@ -42,7 +41,7 @@ const FooterItem = (props) => {
 				<span
 					className={`${
 						appTheme.palette.mode === "dark" ? "text-white" : "text-dark"
-					} mx-1`}
+					} mx-3`}
 				>
 					&middot;
 				</span>
