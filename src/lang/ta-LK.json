@@ -1,4 +1,9 @@
 {
+
+	"lang.route": "tamil",
+	"lang.locale": "ta-LK",
+	"lang.translated": "தமிழ்",
+
 	"nav.title": "Ekata",
 	"nav.home": "முகப்புப்பக்கம்",
 	"nav.schedule": "கால அட்டவணை",

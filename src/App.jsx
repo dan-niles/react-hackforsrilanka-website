@@ -17,7 +17,9 @@ import LangContext from "./contexts/lang-context";
 import { ColorModeContextProvider } from "./contexts/color-mode";
 import "./assets/css/styles.css";
 import ScrollToTop from "./components/UI/ScrollToTop";
+
 import PageNames from "./routes/PageNames"
+import LangRoutes from "./lang/LangRoutes"
 
 const TRACKING_ID = "UA-225410687-1";
 ReactGA.initialize(TRACKING_ID);
@@ -28,7 +30,7 @@ function App() {
 	}, []);
 
 	const langContext = useContext(LangContext)
-	const currentLangPath = langContext.localePath
+	const currentLangRoute = langContext.langRoute
 
 	return (
 		<ColorModeContextProvider>
@@ -37,25 +39,22 @@ function App() {
 				<main className="d-flex flex-column flex-shrink-0 min-vh-100 h-100">
 					<Navbar />
 					<Routes>
-						{/* Root redirection */}
-						<Route path="/" element={<Navigate to={`/${currentLangPath}/${PageNames.slug(PageNames.HOME)}`} />} />
+						<Route path="/" element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.HOME)}`} />} />
 
-						{/* Localized routes */}
-						<Route path="english/*" element={<LocalizedRoutes lang="en" />} />
-						<Route path="sinhala/*" element={<LocalizedRoutes lang="si-LK" />} />
-						<Route path="tamil/*" element={<LocalizedRoutes lang="ta-LK" />} /> 
+						<Route path={`${LangRoutes.ENGLISH}/*`} element={<LocalizedRoutes lang={LangRoutes.ENGLISH} />} />
+						<Route path={`${LangRoutes.SINHALA}/*`} element={<LocalizedRoutes lang={LangRoutes.SINHALA} />} />
+						<Route path={`${LangRoutes.TAMIL}/*`} element={<LocalizedRoutes lang={LangRoutes.TAMIL} />} />
 
-						{/* Old paths redirections */}
-						<Route path={PageNames.HOME} element={<Navigate to={`/${currentLangPath}/${PageNames.slug(PageNames.HOME)}`} />} />
-						<Route path={PageNames.SCHEDULE} element={<Navigate to={`/${currentLangPath}/${PageNames.slug(PageNames.SCHEDULE)}`} />} />
-						<Route path={PageNames.FIND_MY_GROUP} element={<Navigate to={`/${currentLangPath}/${PageNames.slug(PageNames.FIND_MY_GROUP)}`} />} />
-						<Route path={PageNames.UNSUBSCRIBE} element={<Navigate to={`/${currentLangPath}/${PageNames.slug(PageNames.UNSUBSCRIBE)}`} />} />
-						<Route path={PageNames.ABOUT} element={<Navigate to={`/${currentLangPath}/${PageNames.slug(PageNames.ABOUT)}`} />} />
-						<Route path={PageNames.SUGGESTIONS} element={<Navigate to={`/${currentLangPath}/${PageNames.slug(PageNames.SUGGESTIONS)}`} />} />
+						<Route path={PageNames.HOME} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.HOME)}`} />} />
+						<Route path={PageNames.SCHEDULE} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.SCHEDULE)}`} />} />
+						<Route path={PageNames.FIND_MY_GROUP} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.FIND_MY_GROUP)}`} />} />
+						<Route path={PageNames.UNSUBSCRIBE} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.UNSUBSCRIBE)}`} />} />
+						<Route path={PageNames.ABOUT} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.ABOUT)}`} />} />
+						<Route path={PageNames.SUGGESTIONS} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.SUGGESTIONS)}`} />} />
 						
-						{/* Wildcard for path not found */}
 						<Route path="*" element={<ErrorPage />} />
-						{/* <Route path="*" element={<Navigate to={"/"} />} /> */}
+						{/* TODO: I think for production is better to redirect * to home
+						 <Route path="*" element={<Navigate to={"/"} />} /> */}
 					</Routes>
 					<Footer />
 				</main>
@@ -66,12 +65,11 @@ function App() {
 }
 
 function LocalizedRoutes({ lang }) {
-	// Set the lang from the url to our lang provider
 	const langContext = useContext(LangContext)
+	let selectedLocale = LangRoutes.getLocale(lang)
 	useEffect(() => {
-		langContext.selectLanguage(lang)
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []) 
+		langContext.selectLanguage(selectedLocale)
+	}, [langContext, selectedLocale]) 
 	
 	return (
 		<Routes>

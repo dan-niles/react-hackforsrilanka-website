@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import LangContext from "../../contexts/lang-context";
+import LangRoutes from "../../lang/LangRoutes";
 
 import { useTheme } from "@mui/material/styles";
 
@@ -11,15 +12,15 @@ const FooterItem = (props) => {
 	const navigate = useNavigate();
 
 	const splittedPath = location.pathname.split("/");
-	splittedPath[1] = langContext.getLocalePath(props.locale)
-	const newPath = splittedPath.join("/")
+	splittedPath[1] = props.langRoute
+	const itemPath = splittedPath.join("/")
+	const itemLocale = LangRoutes.getLocale(props.langRoute)
 
 	const handleClick = (e) => {
 		e.preventDefault()
 		navigate({
-			pathname: newPath,
+			pathname: itemPath,
 		})
-		langContext.selectLanguage(props.locale);
 	}
 
 	return (
@@ -28,12 +29,12 @@ const FooterItem = (props) => {
 				className={`${
 					appTheme.palette.mode === "dark" ? "link-light" : "link-dark"
 				} small ${
-					langContext.locale !== props.locale ? "text-decoration-underline" : ""
+					langContext.locale !== itemLocale ? "text-decoration-underline" : ""
 				}`}
-				href={newPath}
+				href={itemPath}
 				onClick={handleClick}
 			>
-				{props.label}
+				{LangRoutes.getTranslatedName(props.langRoute)}
 			</a>
 			{props.lastItem === true ? (
 				""

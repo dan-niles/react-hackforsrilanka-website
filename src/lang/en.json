@@ -1,4 +1,8 @@
 {
+	"lang.route": "english",
+	"lang.locale": "en",
+	"lang.translated": "English",
+
 	"nav.title": "Ekata",
 	"nav.home": "Home",
 	"nav.schedule": "Schedule",

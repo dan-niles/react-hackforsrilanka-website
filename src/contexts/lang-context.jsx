@@ -1,55 +1,49 @@
 import { useState, createContext } from "react";
 
 import { IntlProvider } from "react-intl";
-import English from "../lang/en.json";
-import Tamil from "../lang/ta-LK.json";
-import Sinhala from "../lang/si-LK.json";
+import LangRoutes from "../lang/LangRoutes";
 
 const LangContext = createContext({
 	selectLanguage: () => {},
-	getLocalePath: () => {}
+	getLangRoute: () => {}
 });
 
 
 export const LangContextProvider = (props) => {
-	const defaultLocale = "en"
-	const langPath = {
-		"en": "english",
-		"ta-LK": "tamil",
-		"si-LK": "sinhala",
-	};
-	const langMessages = {
-		"en": English,
-		"ta-LK": Tamil,
-		"si-LK": Sinhala,
-	};
 
 	const initialLocale = localStorage.getItem("lang")
 		? localStorage.getItem("lang")
-		: defaultLocale;
+		: LangRoutes.DEFAULT_LOCALE;
+	const initialLangRoute = LangRoutes.getFromLocale(initialLocale)
 
 	const [locale, setLocale] = useState(initialLocale);
-	const [localePath, setLocalePath] = useState(langPath[initialLocale]);
-	const [messages, setMessages] = useState(langMessages[initialLocale]);
+	const [langRoute, setLangRoute] = useState(initialLangRoute);
+	const [messages, setMessages] = useState(LangRoutes.getMessages(initialLangRoute));	
 
 	function selectLanguage(newLocale) {
 		// Prevent changing the locale for same locale, LocalizedRoutes call this always
 		if (newLocale === locale)
 			return
 
+		const newLangRoute = LangRoutes.getFromLocale(newLocale)
 		setLocale(newLocale);
-		setLocalePath(langPath[newLocale])
-		setMessages(langMessages[newLocale])
+		setLangRoute(newLangRoute)
+		setMessages(LangRoutes.getMessages(newLangRoute))
 		localStorage.setItem("lang", newLocale);
 	}
 
-	function getLocalePath(locale) {
-		return langPath[locale]
+	function getLangRoute(locale) {
+		return LangRoutes.getFromLocale(locale)
+	}
+
 	}
 
 	return (
-			<IntlProvider defaultLocale="en" messages={messages} locale={locale}>
-		<LangContext.Provider value={{ locale, selectLanguage, localePath, getLocalePath }}>
+		<LangContext.Provider value={{ locale, selectLanguage, langRoute, getLangRoute }}>
+			<IntlProvider 
+					defaultLocale={LangRoutes.DEFAULT_LOCALE} 
+					messages={messages} 
+					locale={locale}>
 				{props.children}
 			</IntlProvider>
 		</LangContext.Provider>
