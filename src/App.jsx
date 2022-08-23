@@ -18,7 +18,7 @@ import { ColorModeContextProvider } from "./contexts/color-mode";
 import "./assets/css/styles.css";
 import ScrollToTop from "./components/UI/ScrollToTop";
 
-import PageNames from "./routes/PageNames"
+import PageRoutes from "./routes/PageRoutes"
 import LangRoutes from "./lang/LangRoutes"
 
 const TRACKING_ID = "UA-225410687-1";
@@ -39,18 +39,18 @@ function App() {
 				<main className="d-flex flex-column flex-shrink-0 min-vh-100 h-100">
 					<Navbar />
 					<Routes>
-						<Route path="/" element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.HOME)}`} />} />
+						<Route path="/" element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.HOME)}`} />} />
 
 						<Route path={`${LangRoutes.ENGLISH}/*`} element={<LocalizedRoutes lang={LangRoutes.ENGLISH} />} />
 						<Route path={`${LangRoutes.SINHALA}/*`} element={<LocalizedRoutes lang={LangRoutes.SINHALA} />} />
 						<Route path={`${LangRoutes.TAMIL}/*`} element={<LocalizedRoutes lang={LangRoutes.TAMIL} />} />
 
-						<Route path={PageNames.HOME} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.HOME)}`} />} />
-						<Route path={PageNames.SCHEDULE} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.SCHEDULE)}`} />} />
-						<Route path={PageNames.FIND_MY_GROUP} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.FIND_MY_GROUP)}`} />} />
-						<Route path={PageNames.UNSUBSCRIBE} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.UNSUBSCRIBE)}`} />} />
-						<Route path={PageNames.ABOUT} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.ABOUT)}`} />} />
-						<Route path={PageNames.SUGGESTIONS} element={<Navigate to={`/${currentLangRoute}/${PageNames.slug(PageNames.SUGGESTIONS)}`} />} />
+						<Route path={PageRoutes.HOME} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.HOME)}`} />} />
+						<Route path={PageRoutes.SCHEDULE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SCHEDULE)}`} />} />
+						<Route path={PageRoutes.FIND_MY_GROUP} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.FIND_MY_GROUP)}`} />} />
+						<Route path={PageRoutes.UNSUBSCRIBE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.UNSUBSCRIBE)}`} />} />
+						<Route path={PageRoutes.ABOUT} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.ABOUT)}`} />} />
+						<Route path={PageRoutes.SUGGESTIONS} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`} />} />
 						
 						<Route path="*" element={<ErrorPage />} />
 						{/* TODO: I think for production is better to redirect * to home
@@ -73,14 +73,14 @@ function LocalizedRoutes({ lang }) {
 	
 	return (
 		<Routes>
-			<Route path="/" element={<Navigate to={PageNames.slug(PageNames.HOME)} />} />
+			<Route path="/" element={<Navigate to={PageRoutes.slug(PageRoutes.HOME)} />} />
 
-			<Route path={PageNames.slug(PageNames.HOME)} element={<Home />} />
-			<Route path={PageNames.slug(PageNames.SCHEDULE)} element={<Schedule />} />
-			<Route path={PageNames.slug(PageNames.FIND_MY_GROUP)} element={<FindMyGroup />} />
-			<Route path={PageNames.slug(PageNames.UNSUBSCRIBE)} element={<Unsubscribe />} />
-			<Route path={PageNames.slug(PageNames.ABOUT)} element={<About />} />
-			<Route path={PageNames.slug(PageNames.SUGGESTIONS)} element={<Contact />} />
+			<Route path={PageRoutes.slug(PageRoutes.HOME)} element={<Home />} />
+			<Route path={PageRoutes.slug(PageRoutes.SCHEDULE)} element={<Schedule />} />
+			<Route path={PageRoutes.slug(PageRoutes.FIND_MY_GROUP)} element={<FindMyGroup />} />
+			<Route path={PageRoutes.slug(PageRoutes.UNSUBSCRIBE)} element={<Unsubscribe />} />
+			<Route path={PageRoutes.slug(PageRoutes.ABOUT)} element={<About />} />
+			<Route path={PageRoutes.slug(PageRoutes.SUGGESTIONS)} element={<Contact />} />
 
 			<Route path="*" element={<ErrorPage />} />
 		</Routes>

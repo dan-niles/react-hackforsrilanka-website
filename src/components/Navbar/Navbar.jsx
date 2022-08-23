@@ -23,34 +23,34 @@ import { FormattedMessage } from "react-intl";
 
 import { useLocation } from "react-router-dom";
 
-import PageNames from "../../routes/PageNames"
+import PageRoutes from "../../routes/PageRoutes"
 
 const pages = [
 	{
 		title: <FormattedMessage id="nav.home" defaultMessage="Home" />,
-		link: PageNames.slug(PageNames.HOME),
+		link: PageRoutes.slug(PageRoutes.HOME),
 		key: "Home",
 	},
 	{
 		title: <FormattedMessage id="nav.schedule" defaultMessage="Schedule" />,
-		link: PageNames.slug(PageNames.SCHEDULE),
+		link: PageRoutes.slug(PageRoutes.SCHEDULE),
 		key: "Schedule",
 	},
 	{
 		title: (
 			<FormattedMessage id="nav.find-my-group" defaultMessage="Find-My-Group" />
 		),
-		link: PageNames.slug(PageNames.FIND_MY_GROUP),
+		link: PageRoutes.slug(PageRoutes.FIND_MY_GROUP),
 		key: "FindMyGroup",
 	},
 	{
 		title: <FormattedMessage id="nav.about" defaultMessage="About" />,
-		link: PageNames.slug(PageNames.ABOUT),
+		link: PageRoutes.slug(PageRoutes.ABOUT),
 		key: "About",
 	},
 	{
 		title: <FormattedMessage id="nav.contact" defaultMessage="Suggestions" />,
-		link: PageNames.slug(PageNames.SUGGESTIONS),
+		link: PageRoutes.slug(PageRoutes.SUGGESTIONS),
 		key: "Suggestions",
 	},
 ];
@@ -93,11 +93,11 @@ const Navbar = () => {
 				mx: "auto",
 				py: { xs: 1, md: 0.5 },
 				position:
-				currentPageName === PageNames.slug(PageNames.FIND_MY_GROUP) && matches
+				currentPageName === PageRoutes.slug(PageRoutes.FIND_MY_GROUP) && matches
 						? "absolute"
 						: "static",
 				top: 0,
-				zIndex: currentPageName === PageNames.slug(PageNames.FIND_MY_GROUP) && matches ? 9999 : "",
+				zIndex: currentPageName === PageRoutes.slug(PageRoutes.FIND_MY_GROUP) && matches ? 9999 : "",
 			}}
 		>
 			<Container maxWidth="xl">

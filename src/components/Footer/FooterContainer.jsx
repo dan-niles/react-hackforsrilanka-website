@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl"
 import { useLocation } from "react-router-dom"
 import useMediaQuery from "@mui/material/useMediaQuery"
 
-import PageNames from "../../routes/PageNames"
+import PageRoutes from "../../routes/PageRoutes"
 
 const FooterContainer = (props) => {
 	const appTheme = useTheme();
@@ -18,10 +18,10 @@ const FooterContainer = (props) => {
 			} py-3 mt-auto`}
 			style={{
 				position:
-					currentPageName === PageNames.slug(PageNames.FIND_MY_GROUP) && matches
+					currentPageName === PageRoutes.slug(PageRoutes.FIND_MY_GROUP) && matches
 						? "absolute"
 						: "static",
-				zIndex: currentPageName === PageNames.slug(PageNames.FIND_MY_GROUP) && matches ? 9999 : "",
+				zIndex: currentPageName === PageRoutes.slug(PageRoutes.FIND_MY_GROUP) && matches ? 9999 : "",
 				bottom: 0,
 				width: "100%",
 			}}

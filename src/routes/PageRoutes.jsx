@@ -1,5 +1,5 @@
 
-class PageNames {
+class PageRoutes {
     static HOME = "home"
     static SCHEDULE = "schedule"
     static SUBSCRIBE = "subscribe"
@@ -23,4 +23,4 @@ class PageNames {
     }
 }
 
-export default PageNames 
+export default PageRoutes 

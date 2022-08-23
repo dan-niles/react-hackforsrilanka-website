@@ -8,7 +8,7 @@ import { FormattedMessage } from "react-intl";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-import PageNames from "../../../routes/PageNames"
+import PageRoutes from "../../../routes/PageRoutes"
 
 
 const FormWindow = (props) => {
@@ -119,7 +119,7 @@ const FormWindow = (props) => {
 									props.groupList?.map((grp, idx) => {
 										return (
 											<a
-												href={`./${PageNames.slug(PageNames.SCHEDULE)}?group=${grp}`}
+												href={`./${PageRoutes.slug(PageRoutes.SCHEDULE)}?group=${grp}`}
 												target="_blank"
 												key={idx}
 												rel="noreferrer"

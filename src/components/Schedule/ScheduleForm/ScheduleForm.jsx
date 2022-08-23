@@ -10,7 +10,7 @@ import { useTheme } from "@mui/material/styles";
 import { FormattedMessage } from "react-intl";
 import { Alert, Button } from "@mui/material";
 
-import PageNames from "../../../routes/PageNames"
+import PageRoutes from "../../../routes/PageRoutes"
 
 const ScheduleForm = (props) => {
 	const appTheme = useTheme();
@@ -144,7 +144,7 @@ const ScheduleForm = (props) => {
 									variant="contained"
 									onClick={() =>
 										navigate({
-											pathname: `../${PageNames.slug(PageNames.SUGGESTIONS)}`,
+											pathname: `../${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`,
 										})
 									}
 								>
