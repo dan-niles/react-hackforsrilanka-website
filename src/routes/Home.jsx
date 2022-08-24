@@ -8,7 +8,6 @@ import Button from "@mui/material/Button";
 
 import { FormattedMessage } from "react-intl";
 import { useIntl } from "react-intl";
-import TranslatedMessage from "../components/UI/TranslatedMessage";
 
 import PageRoutes from "./PageRoutes"
 
