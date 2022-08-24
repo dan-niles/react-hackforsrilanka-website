@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import GroupForm from "./GroupForm";
 import AreaForm from "./AreaForm";
@@ -11,6 +11,7 @@ import { FormattedMessage } from "react-intl";
 import { Alert, Button } from "@mui/material";
 
 import PageRoutes from "../../../routes/PageRoutes"
+import DefaultedMessage from "../../UI/DefaultedMessage";
 
 const ScheduleForm = (props) => {
 	const appTheme = useTheme();
@@ -77,6 +78,18 @@ const ScheduleForm = (props) => {
 							defaultMessage="Select Your Group / Area"
 						/>
 					</h1>
+					<p className="lead fw-normal text-white-50 mb-0">
+						<DefaultedMessage
+							id="schedule.form.subtitle"
+						/>
+						<Link to={`../${PageRoutes.slug(PageRoutes.FIND_MY_GROUP)}`} className={`${ 
+								appTheme.palette.mode === "dark" ? "link-light" : "link-dark"
+							} " text-decoration-underline" `}>
+							<DefaultedMessage
+								id="nav.find-my-group"
+							/>
+						</Link>
+					</p>
 				</div>
 				<div className="row align-items-center justify-content-center">
 					<div className="col-12 col-lg-6 text-center">
