@@ -36,6 +36,18 @@ export const LangContextProvider = (props) => {
 		return LangRoutes.getFromLocale(locale)
 	}
 
+	// Opt out errors when using default messages (from enblish via DefaultedMessage)
+	const handleTranslationError = (error, locale, message) => {
+		// TODO: use environment flags, it could be interesting to see the error while developing
+		const isDebug = false
+		if (error.code === "MISSING_DATA") {
+			if (isDebug) console.error("Missing translation", error);
+			return
+		} else if (error.code === "MISSING_TRANSLATION") {
+			if (isDebug) console.error("Missing translation", error);
+			return;
+		}
+		console.error(error)
 	}
 
 	return (
@@ -43,7 +55,8 @@ export const LangContextProvider = (props) => {
 			<IntlProvider 
 					defaultLocale={LangRoutes.DEFAULT_LOCALE} 
 					messages={messages} 
-					locale={locale}>
+					locale={locale}
+					onError={handleTranslationError}>
 				{props.children}
 			</IntlProvider>
 		</LangContext.Provider>
