@@ -4,8 +4,8 @@ const getTimeDiff = (start, end) => {
 	let diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
 	let diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
 	let hrStr = "hrs";
-	if (diffHrs == 1) hrStr = "hr";
-	if (diffMins == 0) return `${diffHrs} ${hrStr}`;
+	if (diffHrs === 1) hrStr = "hr";
+	if (diffMins === 0) return `${diffHrs} ${hrStr}`;
 	else return `${diffHrs} ${hrStr} ${diffMins} mins`;
 };
 

@@ -65,7 +65,7 @@ const FindMyGroup = () => {
 			let group_name = group.group_name;
 			group.zones.forEach((zone) => {
 				let result = classifyPoint(zone, [lat, lon]);
-				if (result == -1) {
+				if (result === -1) {
 					setGroupList((prev) => [...prev, group_name]);
 					return;
 				}

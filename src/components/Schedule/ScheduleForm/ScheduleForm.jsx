@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import GroupForm from "./GroupForm";
 import AreaForm from "./AreaForm";
@@ -14,7 +14,6 @@ import PageRoutes from "../../../routes/PageRoutes"
 
 const ScheduleForm = (props) => {
 	const appTheme = useTheme();
-	const location = useLocation();
 	const navigate = useNavigate();
 
 	const [toggle, setToggle] = useState("groupToggle");
