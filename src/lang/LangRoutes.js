@@ -27,6 +27,11 @@ class LangRoutes {
         return this.messages[langRoute]
     }
 
+    static getMessage(id, langRoute) {
+        const langMessages = this.getMessages(langRoute)
+        return langMessages.hasOwnProperty(id) ? langMessages[id] : this.getDefaultMessage(id)
+    }
+
     static getDefaultMessage(id) {
         const defaultMessages = this.getMessages(this.getFromLocale(this.DEFAULT_LOCALE))
         return defaultMessages.hasOwnProperty(id) ? defaultMessages[id] : id

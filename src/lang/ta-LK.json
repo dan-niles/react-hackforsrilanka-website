@@ -4,6 +4,9 @@
 	"lang.locale": "ta-LK",
 	"lang.translated": "தமிழ்",
 
+	"TODO: website.title": "Ekata | Find your power cut schedules!",
+	"TODO: website.description": "Easily find your power cut schedules in Sri Lanka! Identify your group by district or location, and subscribe to receive free SMS notifications on updates",
+
 	"nav.title": "Ekata",
 	"nav.home": "முகப்புப்பக்கம்",
 	"nav.schedule": "கால அட்டவணை",
@@ -79,5 +82,6 @@
 	"find-my-group.subTitle": "உங்கள் தற்போதைய இருப்பிடத்தைப் பயன்படுத்தி உங்கள் CEB குழுவைக் கண்டறியுங்கள்",
 	"find-my-group.locateBtn": "என் இருப்பிடத்தைப் பயன்படுத்து",
 	"find-my-group.formText1": "குழு:",
-	"find-my-group.formText2": "சாத்தியமான குழுக்கள்:"
+	"find-my-group.formText2": "சாத்தியமான குழுக்கள்:",
+	"TODO: find-my-group.formText3": "Group data currently unavailable for this location."
 }

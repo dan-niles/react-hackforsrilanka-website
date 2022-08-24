@@ -67,9 +67,26 @@ function App() {
 function LocalizedRoutes({ lang }) {
 	const langContext = useContext(LangContext)
 	let selectedLocale = LangRoutes.getLocale(lang)
+	
 	useEffect(() => {
 		langContext.selectLanguage(selectedLocale)
-	}, [langContext, selectedLocale]) 
+	}, [langContext, selectedLocale])
+
+	const setTitle = (text) => {
+		const el = document.querySelector('title');
+		el.innerText = text;
+	};
+	
+	const setDescription = (text) => {
+		const el = document.querySelector("meta[name='description']");
+		el.setAttribute('content', text)
+	}
+
+	useEffect(() => {
+		setTitle(LangRoutes.getMessage("website.title", lang))
+		setDescription(LangRoutes.getMessage("website.description", lang))
+	}, [lang])
+
 	
 	return (
 		<Routes>
