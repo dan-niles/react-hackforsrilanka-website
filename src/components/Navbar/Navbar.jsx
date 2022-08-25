@@ -164,7 +164,7 @@ const Navbar = () => {
 									key={page.key}
 									onClick={handleCloseNavMenu}
 									component={NavLink}
-									to={page.link}
+									to={basePath + "/" + page.link}
 									className="nav-link"
 								>
 									<Typography textAlign="center" textTransform="none">
