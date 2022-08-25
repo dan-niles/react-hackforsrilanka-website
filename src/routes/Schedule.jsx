@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 
 import AnimatedPage from "../components/AnimatedPage/AnimatedPage";
+import ScheduleHeader from "../components/Schedule/ScheduleHeader";
 import ScheduleView from "../components/Schedule/ScheduleView/ScheduleView";
 import ScheduleForm from "../components/Schedule/ScheduleForm/ScheduleForm";
 
@@ -21,6 +22,7 @@ const Schedule = () => {
 
 	return (
 		<AnimatedPage>
+			<ScheduleHeader/>
 			<ScheduleForm
 				groupName={groupName}
 				district={district}

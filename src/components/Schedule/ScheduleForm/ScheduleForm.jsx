@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import GroupForm from "./GroupForm";
 import AreaForm from "./AreaForm";
@@ -69,110 +69,88 @@ const ScheduleForm = (props) => {
 	}, []);
 
 	return (
-		<header className="header-centers py-5">
-			<div className="container px-3 px-md-5">
-				<div className="text-center mb-5">
-					<h1 className="fw-bolder">
-						<FormattedMessage
-							id="schedule.form.title"
-							defaultMessage="Select Your Group / Area"
-						/>
-					</h1>
-					<p className="lead fw-normal text-white-50 mb-0">
-						<DefaultedMessage
-							id="schedule.form.subtitle"
-						/>
-						<Link to={`../${PageRoutes.slug(PageRoutes.FIND_MY_GROUP)}`} className={`${ 
-								appTheme.palette.mode === "dark" ? "link-light" : "link-dark"
-							} " text-decoration-underline" `}>
-							<DefaultedMessage
-								id="nav.find-my-group"
+		<div className="container px-3 px-md-5">
+			<div className="row align-items-center justify-content-center">
+				<div className="col-12 col-lg-6 text-center">
+					<ToggleButtonGroup
+						value={toggle}
+						exclusive
+						onChange={handleToggleChange}
+						color={appTheme.palette.mode === "dark" ? "warning" : "error"}
+					>
+						<ToggleButton value="groupToggle">
+							<FormattedMessage
+								id="schedule.form.toggle.group"
+								defaultMessage="Search by Group"
 							/>
-						</Link>
-					</p>
+						</ToggleButton>
+						{/* <ToggleButton value="districtToggle">
+							<FormattedMessage
+								id="schedule.form.toggle.district"
+								defaultMessage="Search by District"
+							/>
+						</ToggleButton> */}
+						<ToggleButton value="areaToggle">
+							<FormattedMessage
+								id="schedule.form.toggle.location"
+								defaultMessage="Search by Location"
+							/>
+						</ToggleButton>
+					</ToggleButtonGroup>
 				</div>
-				<div className="row align-items-center justify-content-center">
-					<div className="col-12 col-lg-6 text-center">
-						<ToggleButtonGroup
-							value={toggle}
-							exclusive
-							onChange={handleToggleChange}
-							color={appTheme.palette.mode === "dark" ? "warning" : "error"}
-						>
-							<ToggleButton value="groupToggle">
-								<FormattedMessage
-									id="schedule.form.toggle.group"
-									defaultMessage="Search by Group"
-								/>
-							</ToggleButton>
-							{/* <ToggleButton value="districtToggle">
-								<FormattedMessage
-									id="schedule.form.toggle.district"
-									defaultMessage="Search by District"
-								/>
-							</ToggleButton> */}
-							<ToggleButton value="areaToggle">
-								<FormattedMessage
-									id="schedule.form.toggle.location"
-									defaultMessage="Search by Location"
-								/>
-							</ToggleButton>
-						</ToggleButtonGroup>
-					</div>
-				</div>
-				<div className="row align-items-center justify-content-center">
-					<div className="col-12 col-lg-6">
-						<div className="card p-lg-5 p-4">
-							{showFormType === "group" && (
-								<GroupForm
-									groupName={props.groupName || formParameters.groupName}
-								/>
-							)}
-							{showFormType === "district" && (
-								<DistrictForm
-									district={props.district || formParameters.district}
-									gss={props.gss || formParameters.gss}
-									area={props.area || formParameters.area}
-								/>
-							)}
-							{showFormType === "area" && (
-								<AreaForm
-									gss={props.gss || formParameters.gss}
-									area={props.area || formParameters.area}
-								/>
-							)}
-						</div>
-					</div>
-				</div>
-				<div className="row mt-4 mt-md-4 align-items-center justify-content-center">
-					<div className="col-12 col-lg-6">
-						<Alert
-							// variant="outlined"
-							severity="info"
-							action={
-								<Button
-									sx={{ lineHeight: "1.5em" }}
-									size="small"
-									variant="contained"
-									onClick={() =>
-										navigate({
-											pathname: `../${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`,
-										})
-									}
-								>
-									Suggest Feature
-								</Button>
-							}
-							sx={{ alignItems: "center" }}
-						>
-							We will be adding more features to Ekata soon!
-							<br /> Please let us know what other features would be helpful for
-							Sri Lankan's in crisis.
-						</Alert>
+			</div>
+			<div className="row align-items-center justify-content-center">
+				<div className="col-12 col-lg-6">
+					<div className="card p-lg-5 p-4">
+						{showFormType === "group" && (
+							<GroupForm
+								groupName={props.groupName || formParameters.groupName}
+							/>
+						)}
+						{showFormType === "district" && (
+							<DistrictForm
+								district={props.district || formParameters.district}
+								gss={props.gss || formParameters.gss}
+								area={props.area || formParameters.area}
+							/>
+						)}
+						{showFormType === "area" && (
+							<AreaForm
+								gss={props.gss || formParameters.gss}
+								area={props.area || formParameters.area}
+							/>
+						)}
 					</div>
 				</div>
 			</div>
-		</header>
+			<div className="row mt-4 mt-md-4 align-items-center justify-content-center">
+				<div className="col-12 col-lg-6">
+					<Alert
+						// variant="outlined"
+						severity="info"
+						action={
+							<Button
+								sx={{ lineHeight: "1.5em" }}
+								size="small"
+								variant="contained"
+								onClick={() =>
+									navigate({
+										pathname: `../${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`,
+									})
+								}
+							>
+								Suggest Feature
+							</Button>
+						}
+						sx={{ alignItems: "center" }}
+					>
+						We will be adding more features to Ekata soon!
+						<br /> Please let us know what other features would be helpful for
+						Sri Lankan's in crisis.
+					</Alert>
+				</div>
+			</div>
+		</div>
 	);
 };
 
