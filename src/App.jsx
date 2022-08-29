@@ -35,30 +35,30 @@ function App() {
 	return (
 		<ColorModeContextProvider>
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
-				{/* <ScrollToTop> */}
-				<main className="d-flex flex-column flex-shrink-0 min-vh-100 h-100">
-					<Navbar />
-					<Routes>
-						<Route path="/" element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.HOME)}`} />} />
+				<ScrollToTop>
+					<main className="d-flex flex-column flex-shrink-0 min-vh-100 h-100">
+						<Navbar />
+						<Routes>
+							<Route path="/" element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.HOME)}`} />} />
 
-						<Route path={`${LangRoutes.ENGLISH}/*`} element={<LocalizedRoutes lang={LangRoutes.ENGLISH} />} />
-						<Route path={`${LangRoutes.SINHALA}/*`} element={<LocalizedRoutes lang={LangRoutes.SINHALA} />} />
-						<Route path={`${LangRoutes.TAMIL}/*`} element={<LocalizedRoutes lang={LangRoutes.TAMIL} />} />
+							<Route path={`${LangRoutes.ENGLISH}/*`} element={<LocalizedRoutes lang={LangRoutes.ENGLISH} />} />
+							<Route path={`${LangRoutes.SINHALA}/*`} element={<LocalizedRoutes lang={LangRoutes.SINHALA} />} />
+							<Route path={`${LangRoutes.TAMIL}/*`} element={<LocalizedRoutes lang={LangRoutes.TAMIL} />} />
 
-						<Route path={PageRoutes.HOME} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.HOME)}`} />} />
-						<Route path={PageRoutes.SCHEDULE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SCHEDULE)}`} />} />
-						<Route path={PageRoutes.FIND_MY_GROUP} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.FIND_MY_GROUP)}`} />} />
-						<Route path={PageRoutes.UNSUBSCRIBE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.UNSUBSCRIBE)}`} />} />
-						<Route path={PageRoutes.ABOUT} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.ABOUT)}`} />} />
-						<Route path={PageRoutes.SUGGESTIONS} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`} />} />
-						
-						<Route path="*" element={<ErrorPage />} />
-						{/* TODO: I think for production is better to redirect * to home
-						 <Route path="*" element={<Navigate to={"/"} />} /> */}
-					</Routes>
-					<Footer />
-				</main>
-				{/* </ScrollToTop> */}
+							<Route path={PageRoutes.HOME} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.HOME)}`} />} />
+							<Route path={PageRoutes.SCHEDULE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SCHEDULE)}`} />} />
+							<Route path={PageRoutes.FIND_MY_GROUP} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.FIND_MY_GROUP)}`} />} />
+							<Route path={PageRoutes.UNSUBSCRIBE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.UNSUBSCRIBE)}`} />} />
+							<Route path={PageRoutes.ABOUT} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.ABOUT)}`} />} />
+							<Route path={PageRoutes.SUGGESTIONS} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`} />} />
+							
+							<Route path="*" element={<ErrorPage />} />
+							{/* TODO: I think for production is better to redirect * to home
+							<Route path="*" element={<Navigate to={"/"} />} /> */}
+						</Routes>
+						<Footer />
+					</main>
+				</ScrollToTop>
 			</BrowserRouter>
 		</ColorModeContextProvider>
 	);
