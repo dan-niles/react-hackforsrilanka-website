@@ -9,7 +9,7 @@ const animations = {
 const AnimatedPage = (props) => {
 	return (
 		<motion.div
-			style={{ flex: "1 1 auto" }}
+			style={{ flex: "1 1 auto", display: 'flex', flexDirection: 'column'}}
 			variants={animations}
 			initial="initial"
 			animate="animate"

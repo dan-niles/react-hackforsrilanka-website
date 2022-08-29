@@ -1,12 +1,32 @@
 
-New texts in English:
+New texts only added in English, missing SI and TA:
  - "website.title": "Ekata | Find your power cut schedules!",
  - "website.description": "Easily find your power cut schedules in Sri Lanka! Identify your group by district or location, and subscribe to receive free SMS notifications on updates",
  - "schedule.form.subtitle": "Enter your group if you already know it or use search by location to find it by substation and area. You can also use your geolocation at ",
 
+ - "home.secondary.subscribe.title": "Get updates by SMS",
+ - "home.secondary.subscribe.subtitle": "Subscribe to receive a SMS with each new schedule. Straight to your mobile and completely free!",
+ - "home.secondary.subscribe.button": "Subscribe",
+ - "home.secondary.find-my-group.title": "Find your group",
+ - "home.secondary.find-my-group.subtitle": "Use your geolocation or select a point in the map to find your groups",
+ - "home.secondary.find-my-group.button": "Find-My-Group",
+ - "home.secondary.about.title": "Know us",
+ - "home.secondary.about.subtitle": "Discover why, how and who has created this service.",
+ - "home.secondary.about.button": "About",
+ - "home.secondary.suggestions.title": "Contact",
+ - "home.secondary.suggestions.subtitle": "We want to do more, please let us know what other features would be helpful for Sri Lankan's in crisis.",
+ - "home.secondary.suggestions.button": "Suggestions", 
 
-Modified texts in English:
+
+Missing SI and TA translations from before:
+  - "find-my-group.formText3": "Group data currently unavailable for this location."
+
+Modified texts in English, SI and TA need tweak:
  - "schedule.form.title": "Find Your Power Cut Schedule!" was "Select Your Group / Area",
 
- Missing translations from before (SI and TA):
-  - "find-my-group.formText3": "Group data currently unavailable for this location."
+
+
+Key modified, nothing to do really:
+  - "home.primary.header": "Find Your Power Cut Schedule!",
+  - "home.primary.headerSubText": "Keep track of power-cuts and subscribe to receive free SMS notifications",
+  - "home.primary.mainButton": "Get Started",

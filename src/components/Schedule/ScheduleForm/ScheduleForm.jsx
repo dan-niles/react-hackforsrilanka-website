@@ -11,7 +11,6 @@ import { FormattedMessage } from "react-intl";
 import { Alert, Button } from "@mui/material";
 
 import PageRoutes from "../../../routes/PageRoutes"
-import DefaultedMessage from "../../UI/DefaultedMessage";
 
 const ScheduleForm = (props) => {
 	const appTheme = useTheme();

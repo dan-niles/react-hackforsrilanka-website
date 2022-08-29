@@ -7,7 +7,7 @@ import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 import Select from "@mui/material/Select";
 import { useTheme } from "@mui/material/styles";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LocationCityIcon from '@mui/icons-material/LocationCity';
 
 import axios from "axios";
 
@@ -142,7 +142,7 @@ const AreaForm = (props) => {
 						id="schedule.form.toggle.location"
 						defaultMessage="Search by Location"
 					/>{" "}
-					<LocationOnIcon />
+					<LocationCityIcon />
 				</h4>
 				{/* <Alert severity="error" className="mb-3">
 					<AlertTitle>Please use these filters with some caution</AlertTitle>

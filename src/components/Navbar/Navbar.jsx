@@ -97,8 +97,9 @@ const Navbar = () => {
 						? "absolute"
 						: "static",
 				top: 0,
-				zIndex: currentPageName === PageRoutes.slug(PageRoutes.FIND_MY_GROUP) && matches ? 9999 : "",
+				zIndex: currentPageName === PageRoutes.slug(PageRoutes.FIND_MY_GROUP) && matches ? 9999 : 1,
 			}}
+			className="shadow"
 		>
 			<Container maxWidth="xl">
 				<Toolbar>
