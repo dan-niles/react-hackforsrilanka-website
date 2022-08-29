@@ -26,7 +26,7 @@ const HomeSecondaryItem = (props) => {
 						component="img"
 						height="120"
 						image={props.image}
-						alt={LangRoutes.getDefaultMessage(props.title) + " | " + LangRoutes.getDefaultMessage(props.subtitle)}
+						alt={LangRoutes.getDefaultedMessage(props.title) + " | " + LangRoutes.getDefaultedMessage(props.subtitle)}
 					/>
 					<CardContent>
 						<Typography variant="h5" component="div" gutterBottom>
@@ -40,12 +40,12 @@ const HomeSecondaryItem = (props) => {
 				<CardActions>
 					<Button component={Link}
 							to={props.destination}>
-						{LangRoutes.getDefaultMessage(props.buttonText).toUpperCase()}
+						{LangRoutes.getDefaultedMessage(props.buttonText).toUpperCase()}
 					</Button>
 					{props.buttonText==="Subscribe" && (
 						<Button component={Link}
 								to={props.destination}>
-							{"UN" + LangRoutes.getDefaultMessage(props.buttonText).toUpperCase()}
+							{"UN" + LangRoutes.getDefaultedMessage(props.buttonText).toUpperCase()}
 						</Button>
 					)}
 				</CardActions>

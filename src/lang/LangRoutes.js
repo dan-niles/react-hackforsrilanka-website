@@ -29,15 +29,15 @@ class LangRoutes {
 
     static getMessage(id, langRoute) {
         const langMessages = this.getMessages(langRoute)
-        return langMessages.hasOwnProperty(id) ? langMessages[id] : this.getDefaultMessage(id)
+        return langMessages.hasOwnProperty(id) ? langMessages[id] : this.getDefaultedMessage(id)
     }
 
-    static getDefaultMessage(id) {
+    static getDefaultedMessage(id) {
         const defaultMessages = this.getMessages(this.getFromLocale(this.DEFAULT_LOCALE))
         return defaultMessages.hasOwnProperty(id) ? defaultMessages[id] : id
     }
 
-    static getTranslatedName(langRoute) {
+    static getTranslatedLangName(langRoute) {
         return this.getMessages(langRoute)["lang.translated"]
     }
 }

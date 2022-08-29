@@ -74,7 +74,7 @@ const HomePrimaryPanel = () => {
 								<Button
 									component={Link} 
 									to={`../${PageRoutes.slug(PageRoutes.SCHEDULE)}`}
-									alt={LangRoutes.getDefaultMessage("home.primary.bygroup.alt")}
+									alt={LangRoutes.getDefaultedMessage("home.primary.bygroup.alt")}
 									className={`${
 										appTheme.palette.mode === "dark" ? "btn-warning" : ""
 									} text-capitalize text-lowercase fw-bold fs-5`}
@@ -90,7 +90,7 @@ const HomePrimaryPanel = () => {
 								<Button
 									component={Link} 
 									to={`../${PageRoutes.slug(PageRoutes.SCHEDULE)}`}
-									alt={LangRoutes.getDefaultMessage("home.primary.byarea.alt")}
+									alt={LangRoutes.getDefaultedMessage("home.primary.byarea.alt")}
 									className={`${
 										appTheme.palette.mode === "dark" ? "btn-warning" : ""
 									} text-capitalize text-lowercase fw-bold fs-5`}
@@ -106,7 +106,7 @@ const HomePrimaryPanel = () => {
 								<Button
 									component={Link} 
 									to={`../${PageRoutes.slug(PageRoutes.FIND_MY_GROUP)}`}
-									alt={LangRoutes.getDefaultMessage("home.primary.bylocation.alt")}
+									alt={LangRoutes.getDefaultedMessage("home.primary.bylocation.alt")}
 									className={`${
 										appTheme.palette.mode === "dark" ? "btn-warning" : ""
 									} text-capitalize text-lowercase fw-bold fs-5`}

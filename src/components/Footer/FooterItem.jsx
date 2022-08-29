@@ -34,7 +34,7 @@ const FooterItem = (props) => {
 				href={itemPath}
 				onClick={handleClick}
 			>
-				{LangRoutes.getTranslatedName(props.langRoute)}
+				{LangRoutes.getTranslatedLangName(props.langRoute)}
 			</a>
 			{props.lastItem === true ? (
 				""
