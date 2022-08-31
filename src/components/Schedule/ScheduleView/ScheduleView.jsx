@@ -20,7 +20,7 @@ import "react-nice-dates/build/style.css";
 import ScheduleDatePicker from "./ScheduleDatePicker";
 import axios from "axios";
 
-import AlertDialog from "../../Alert/AlertDialog";
+import SubscribeDialog from "../../Subscription/SubscribeDialog";
 import TodayIcon from "@mui/icons-material/Today";
 import Button from "@mui/material/Button";
 
@@ -184,7 +184,7 @@ const ScheduleView = (props) => {
 
 	return (
 		<>
-			<AlertDialog
+			<SubscribeDialog
 				unSub={unSub}
 				open={open}
 				handleClose={handleClose}

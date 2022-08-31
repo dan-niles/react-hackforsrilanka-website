@@ -11,6 +11,7 @@ import { FormattedMessage } from "react-intl";
 import { Alert, Button } from "@mui/material";
 
 import PageRoutes from "../../../routes/PageRoutes"
+import DefaultedMessage from "../../UI/DefaultedMessage";
 
 const ScheduleForm = (props) => {
 	const appTheme = useTheme();
@@ -138,14 +139,14 @@ const ScheduleForm = (props) => {
 									})
 								}
 							>
-								Suggest Feature
+								<DefaultedMessage id="suggestions.feature.title"/>
 							</Button>
 						}
 						sx={{ alignItems: "center" }}
 					>
-						We will be adding more features to Ekata soon!
-						<br /> Please let us know what other features would be helpful for
-						Sri Lankan's in crisis.
+						<DefaultedMessage id="suggestions.feature.desc1"/>
+						<br />
+						<DefaultedMessage id="suggestions.feature.desc2"/>
 					</Alert>
 				</div>
 			</div>

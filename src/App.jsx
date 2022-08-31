@@ -7,8 +7,9 @@ import Schedule from "./routes/Schedule";
 import About from "./routes/About";
 import Contact from "./routes/Contact";
 import ErrorPage from "./routes/ErrorPage";
-import Unsubscribe from "./components/Unsubscribe/Unsubscribe";
 import FindMyGroup from "./routes/FindMyGroup";
+import SubscribePage from "./components/Subscription/SubscribePage";
+import UnsubscribePage from "./components/Subscription/UnsubscribePage";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -16,6 +17,7 @@ import Footer from "./components/Footer/Footer";
 import LangContext from "./contexts/lang-context";
 import { ColorModeContextProvider } from "./contexts/color-mode";
 import "./assets/css/styles.css";
+import "./assets/css/svg-icons-animate.css";
 import ScrollToTop from "./components/UI/ScrollToTop";
 
 import PageRoutes from "./routes/PageRoutes"
@@ -48,6 +50,7 @@ function App() {
 							<Route path={PageRoutes.HOME} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.HOME)}`} />} />
 							<Route path={PageRoutes.SCHEDULE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SCHEDULE)}`} />} />
 							<Route path={PageRoutes.FIND_MY_GROUP} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.FIND_MY_GROUP)}`} />} />
+							<Route path={PageRoutes.SUBSCRIBE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SUBSCRIBE)}`} />} />
 							<Route path={PageRoutes.UNSUBSCRIBE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.UNSUBSCRIBE)}`} />} />
 							<Route path={PageRoutes.ABOUT} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.ABOUT)}`} />} />
 							<Route path={PageRoutes.SUGGESTIONS} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`} />} />
@@ -95,7 +98,8 @@ function LocalizedRoutes({ lang }) {
 			<Route path={PageRoutes.slug(PageRoutes.HOME)} element={<Home />} />
 			<Route path={PageRoutes.slug(PageRoutes.SCHEDULE)} element={<Schedule />} />
 			<Route path={PageRoutes.slug(PageRoutes.FIND_MY_GROUP)} element={<FindMyGroup />} />
-			<Route path={PageRoutes.slug(PageRoutes.UNSUBSCRIBE)} element={<Unsubscribe />} />
+			<Route path={PageRoutes.slug(PageRoutes.SUBSCRIBE)} element={<SubscribePage />} />
+			<Route path={PageRoutes.slug(PageRoutes.UNSUBSCRIBE)} element={<UnsubscribePage />} />
 			<Route path={PageRoutes.slug(PageRoutes.ABOUT)} element={<About />} />
 			<Route path={PageRoutes.slug(PageRoutes.SUGGESTIONS)} element={<Contact />} />
 

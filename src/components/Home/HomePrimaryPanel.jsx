@@ -101,7 +101,7 @@ const HomePrimaryPanel = () => {
 										appTheme.palette.mode === "dark" ? "warning" : "error"
 									}
 								>
-									<DefaultedMessage id={"home.primary.bygroup.title"}/>
+									<DefaultedMessage id={"home.primary.byarea.title"}/>
 								</Button>
 								<Button
 									component={Link} 

@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { CardActionArea } from '@mui/material';
 import DefaultedMessage from '../UI/DefaultedMessage';
 import LangRoutes from '../../lang/LangRoutes'
+import PageRoutes from '../../routes/PageRoutes'
 
 const HomeSecondaryItem = (props) => {
 	const appTheme = useTheme();
@@ -42,9 +43,9 @@ const HomeSecondaryItem = (props) => {
 							to={props.destination}>
 						{LangRoutes.getDefaultedMessage(props.buttonText).toUpperCase()}
 					</Button>
-					{props.buttonText==="Subscribe" && (
+					{props.buttonText==="home.secondary.subscribe.button" && (
 						<Button component={Link}
-								to={props.destination}>
+								to={`../${PageRoutes.slug(PageRoutes.UNSUBSCRIBE)}`}>
 							{"UN" + LangRoutes.getDefaultedMessage(props.buttonText).toUpperCase()}
 						</Button>
 					)}

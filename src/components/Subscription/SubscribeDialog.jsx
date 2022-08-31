@@ -16,7 +16,7 @@ import { useTheme } from "@mui/material/styles";
 
 import { FormattedMessage } from "react-intl";
 
-const AlertDialog = (props) => {
+const SubscribeDialog = (props) => {
 	const [name, setName] = useState("");
 	const [areaName, setAreaName] = useState("");
 	const [phoneNum, setPhoneNum] = useState("");
@@ -333,4 +333,4 @@ const AlertDialog = (props) => {
 	);
 };
 
-export default AlertDialog;
+export default SubscribeDialog;

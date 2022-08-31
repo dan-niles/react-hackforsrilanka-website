@@ -1,21 +1,32 @@
 
 New texts only added in English, missing SI and TA:
- - "website.title": "Ekata | Find your power cut schedules!",
- - "website.description": "Easily find your power cut schedules in Sri Lanka! Identify your group by district or location, and subscribe to receive free SMS notifications on updates",
- - "schedule.form.subtitle": "Enter your group if you already know it or use search by location to find it by substation and area. You can also use your geolocation at ",
+  "website.title": "Ekata | Find your power cut schedules!",
+  "website.description": "Easily find your power cut schedules in Sri Lanka! Identify your group by district or location, and subscribe to receive free SMS notifications on updates",  
+  "home.secondary.subscribe.title": "Get updates by SMS",
+  "home.secondary.subscribe.subtitle": "Subscribe to receive a SMS with each new schedule. Straight to your mobile and completely free!",
+  "home.secondary.subscribe.button": "Subscribe",
+  "home.secondary.find-my-group.title": "Find your group",
+  "home.secondary.find-my-group.subtitle": "Use your geolocation or select a point in the map to find your groups",
+  "home.secondary.find-my-group.button": "Find-My-Group",
+  "home.secondary.about.title": "Know us",
+  "home.secondary.about.subtitle": "Discover why, how and who has created this service.",
+  "home.secondary.about.button": "About",
+  "home.secondary.suggestions.title": "Contact",
+  "home.secondary.suggestions.subtitle": "We want to do more, please let us know what other features would be helpful for Sri Lankan's in crisis.",
+  "home.secondary.suggestions.button": "Suggestions",   
+  "schedule.form.subtitle": "Enter your group if you already know it or use search by location to find it by substation and area. You can also use your geolocation at ",
+  
+  "schedule.unsubscribe.successButton": "OK",
+  "schedule.unsubscribe.step1": "Enter data",
+	"schedule.unsubscribe.step2": "Confirmation",
 
- - "home.secondary.subscribe.title": "Get updates by SMS",
- - "home.secondary.subscribe.subtitle": "Subscribe to receive a SMS with each new schedule. Straight to your mobile and completely free!",
- - "home.secondary.subscribe.button": "Subscribe",
- - "home.secondary.find-my-group.title": "Find your group",
- - "home.secondary.find-my-group.subtitle": "Use your geolocation or select a point in the map to find your groups",
- - "home.secondary.find-my-group.button": "Find-My-Group",
- - "home.secondary.about.title": "Know us",
- - "home.secondary.about.subtitle": "Discover why, how and who has created this service.",
- - "home.secondary.about.button": "About",
- - "home.secondary.suggestions.title": "Contact",
- - "home.secondary.suggestions.subtitle": "We want to do more, please let us know what other features would be helpful for Sri Lankan's in crisis.",
- - "home.secondary.suggestions.button": "Suggestions", 
+ 	"suggestions.feature.title": "Suggest Feature",
+	"suggestions.feature.desc1": "We will be adding more features to Ekata soon!",
+	"suggestions.feature.desc2": "Please let us know what other features would be helpful for Sri Lankan's in crisis.",
+	"suggestions.improvement.title": "Suggest Improvement",
+	"suggestions.improvement.desc1": "We are sorry to lost you",
+	"suggestions.improvement.desc2": "Please let us know why and how we could have done it better.",
+
 
 
 Missing SI and TA translations from before:
