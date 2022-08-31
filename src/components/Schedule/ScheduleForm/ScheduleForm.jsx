@@ -8,14 +8,12 @@ import DistrictForm from "./DistrictForm";
 import { ToggleButtonGroup, ToggleButton } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { FormattedMessage } from "react-intl";
-import { Alert, Button } from "@mui/material";
 
 import PageRoutes from "../../../routes/PageRoutes"
-import DefaultedMessage from "../../UI/DefaultedMessage";
+import InfoAlert from "../../UI/InfoAlert";
 
 const ScheduleForm = (props) => {
 	const appTheme = useTheme();
-	const navigate = useNavigate();
 
 	const [toggle, setToggle] = useState("groupToggle");
 	const [showFormType, setShowFormType] = useState("group");
@@ -125,29 +123,12 @@ const ScheduleForm = (props) => {
 			</div>
 			<div className="row mt-4 mt-md-4 align-items-center justify-content-center">
 				<div className="col-12 col-lg-6">
-					<Alert
-						// variant="outlined"
-						severity="info"
-						action={
-							<Button
-								sx={{ lineHeight: "1.5em" }}
-								size="small"
-								variant="contained"
-								onClick={() =>
-									navigate({
-										pathname: `../${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`,
-									})
-								}
-							>
-								<DefaultedMessage id="suggestions.feature.title"/>
-							</Button>
-						}
-						sx={{ alignItems: "center" }}
-					>
-						<DefaultedMessage id="suggestions.feature.desc1"/>
-						<br />
-						<DefaultedMessage id="suggestions.feature.desc2"/>
-					</Alert>
+					<InfoAlert
+						desc1TextId="suggestions.feature.desc1"
+						desc2TextId="suggestions.feature.desc2"
+						buttonTextId="suggestions.feature.title"
+						navigationPath={`../${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`}
+					/>
 				</div>
 			</div>
 		</div>

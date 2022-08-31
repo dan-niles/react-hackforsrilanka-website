@@ -1,27 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { Alert, Box, Container, Grid, InputAdornment } from "@mui/material";
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 
 import { useNavigate } from "react-router-dom";
-import AnimatedResult from "./AnimatedResult";
 import DefaultedMessage from "../UI/DefaultedMessage";
 import PageRoutes from "../../routes/PageRoutes";
 import LangRoutes from "../../lang/LangRoutes";
+import UnsubscribeStep1 from "./UnsubscribeStep1";
+import UnsubscribeStep2 from "./UnsubscribeStep2";
+import InfoAlert from "../UI/InfoAlert";
+import { Container, Grid } from "@mui/material";
 
 const UnsubscribePage = () => {
 	const isDryDock = process.env.NODE_ENV && process.env.NODE_ENV === 'development'
-	console.log(process.env.NODE_ENV)
 
 	const [mobileNum, setMobileNum] = useState("");
 	const [error, setError] = useState();
@@ -107,95 +102,29 @@ const UnsubscribePage = () => {
 							</Stepper>
 							
 							{step === 0 ? (	
-								<>
-								<DialogContent>			
-									<DialogContentText className="my-4">
-										<DefaultedMessage id="schedule.unsubscribe.text"/>
-									</DialogContentText>
-									<span className="text-error"></span>
-									<TextField
-										autoFocus
-										margin="dense"
-										id="phone-number"
-										label={
-											<DefaultedMessage id="schedule.unsubscribe.phoneNumber"/>
-										}
-										type="tel"
-										//   disabled={showOtpBox}
-										value={mobileNum}
-										onChange={handlePhoneInput}
-										fullWidth
-										required
-										InputProps={{
-											startAdornment: (
-												<InputAdornment position="start">+94</InputAdornment>
-											),
-										}}
-										variant="standard"
-										autoComplete="off"
-										color="info"
-									/>
-									<span className="text-error">{error}</span>
-								</DialogContent>
-								<DialogActions>
-									<Button onClick={handleClose} color="secondary">
-										<DefaultedMessage id="schedule.unsubscribe.cancelBtn"/>
-									</Button>
-									<Button onClick={handleSubmit} color="info">
-										<DefaultedMessage id="schedule.unsubscribe.unSubBtn"/>
-									</Button>
-								</DialogActions>
-								</>
+								<UnsubscribeStep1
+									mobileNumber={mobileNum}
+									error={error}
+									handlePhoneInput={handlePhoneInput}
+									handleClose={handleClose}
+									handleSubmit={handleSubmit}
+								/>
 							) : (
-								<>
-								<DialogContent>
-									<Box
-										sx={{
-											flex: "1 1 auto",
-											display: "flex",
-											flexDirection: "column",
-											alignItems: "center"
-										}}
-									>
-											<AnimatedResult type="success"/>
-											<Typography variant="h5" component="div" gutterBottom>
-												<DefaultedMessage id={"schedule.unsubscribe.successText"}/>
-											</Typography>
-									</Box>
-								</DialogContent>
-								<DialogActions>
-									<Button onClick={handleClose} color="info">
-										<DefaultedMessage id="schedule.unsubscribe.successButton"/>
-									</Button>
-								</DialogActions>
-								</>
+								<UnsubscribeStep2
+									handleClose={handleClose}
+								/>
 							)}
 						</div>
 					</div>
 				</div>
 				<div className="row justify-content-center mt-3">
 					<div className="col-12 col-md-8 col-lg-6">
-						<Alert
-							// variant="outlined"
-							severity="info"
-							action={
-								<Button
-									sx={{ lineHeight: "1.5em" }}
-									size="small"
-									variant="contained"
-									onClick={() =>
-										navigate({pathname: `../${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`,})
-									}
-								>
-									<DefaultedMessage id="suggestions.improvement.title"/>
-								</Button>
-							}
-							sx={{ alignItems: "center" }}
-						>
-							<DefaultedMessage id="suggestions.improvement.desc1"/>
-							<br />
-							<DefaultedMessage id="suggestions.improvement.desc2"/>
-						</Alert>
+						<InfoAlert
+							desc1TextId="suggestions.improvement.desc1"
+							desc2TextId="suggestions.improvement.desc2"
+							buttonTextId="suggestions.improvement.title"
+							navigationPath={`../${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`}
+						/>
 					</div>
 				</div>
 			</Container>
