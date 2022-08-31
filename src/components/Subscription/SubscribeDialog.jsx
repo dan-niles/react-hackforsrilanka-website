@@ -14,9 +14,11 @@ import Swal from "sweetalert2";
 import Loader from "react-js-loader";
 import { useTheme } from "@mui/material/styles";
 
-import { FormattedMessage } from "react-intl";
+import DefaultedMessage from "../UI/DefaultedMessage";
 
 const SubscribeDialog = (props) => {
+	const isDryDock = process.env.NODE_ENV && process.env.NODE_ENV === 'development'
+
 	const [name, setName] = useState("");
 	const [areaName, setAreaName] = useState("");
 	const [phoneNum, setPhoneNum] = useState("");
@@ -34,8 +36,8 @@ const SubscribeDialog = (props) => {
 
 	const theme = useTheme();
 	const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
-
 	const matches = useMediaQuery("(min-width:768px)");
+
 	useEffect(() => {
 		setGroupName(props.areaGroup);
 	}, [props.areaGroup]);
@@ -48,24 +50,25 @@ const SubscribeDialog = (props) => {
 		setNameErr("");
 	}, [name]);
 
-	const getSubscription = () => {
+	const handleSubscription = () => {
 		let username = name.trim();
 		if (username === undefined || username === "" || username == null) {
 			setNameErr(
-				<FormattedMessage
-					id="schedule.subscribe.nameError"
-					defaultMessage="Please enter a name"
-				/>
+				<DefaultedMessage id="schedule.subscribe.nameError"/>
 			);
 		} else if (phoneNum.toString().length !== 9) {
 			setError(
-				<FormattedMessage
-					id="schedule.subscribe.phoneError"
-					defaultMessage="Please enter a valid 9 digit number"
-				/>
+				<DefaultedMessage id="schedule.subscribe.phoneError" />
 			);
 		} else {
 			setShowLoad(true);
+			if (isDryDock){
+				setTimeout(function () { 
+					let fakeRes = {"data": {"secret_key": "0000"}}
+					onSubscriptionSuccess(fakeRes)
+				}, 3000);
+				return
+			}
 			return axios
 				.post(
 					process.env.REACT_APP_API_URL + "/api/subscribe/",
@@ -78,26 +81,30 @@ const SubscribeDialog = (props) => {
 						headers: { Accept: "application/json" },
 					}
 				)
-				.then((res) => {
-					setShowLoad(false);
-					setShowSubBtn(true);
-					setError("");
-					setShowOtpBox(true);
-					setSecretKey(res.data.secret_key);
-				})
-				.catch((errr) => {
-					setShowSubBtn(true);
-					setShowLoad(false);
-					if (errr) {
-						setAllRegErr(errr.response.data.errors);
-					}
-					setReSubBtn(true);
-					setShowOtpBox(false);
-				});
+				.then(onSubscriptionSuccess)
+				.catch(onSubscriptionError);
 		}
 	};
+	
+	const onSubscriptionSuccess = (res) => {
+		setShowLoad(false);
+		setShowSubBtn(true);
+		setError("");
+		setShowOtpBox(true);
+		setSecretKey(res.data.secret_key);
+	}
+	
+	const onSubscriptionError = (errr) => {
+		setShowSubBtn(true);
+		setShowLoad(false);
+		if (errr) {
+			setAllRegErr(errr.response.data.errors);
+		}
+		setReSubBtn(true);
+		setShowOtpBox(false);
+	}
 
-	const getReSubscription = () => {
+	const handleReSubscription = () => {
 		setShowLoad(true);
 		setShowOtpBox(false);
 		setError("");
@@ -113,18 +120,26 @@ const SubscribeDialog = (props) => {
 					headers: { Accept: "application/json" },
 				}
 			)
-			.then((res) => {
-				setSecretKey(res.data.secret_key);
-				setReSubBtn(false);
-				setShowLoad(false);
-				setShowOtpBox(true);
-			})
+			.then(onReSubscriptionSuccess)
 			.catch((errr) => {});
 	};
 
-	const verifyOtp = () => {
+	const onReSubscriptionSuccess = (res) => {
+		setSecretKey(res.data.secret_key);
+		setReSubBtn(false);
+		setShowLoad(false);
+		setShowOtpBox(true);
+	}
+
+	const handleVerifyOtp = () => {
 		const data = { otp, name, areaName, groupName, phoneNum, secretKey };
 		const number = data.phoneNum.toString().slice(0, 4);
+		if (isDryDock){
+			setTimeout(function () { 
+				onVerifyOtpSuccess()
+			}, 3000);
+			return
+		}
 		return axios
 			.post(
 				process.env.REACT_APP_API_URL + "/api/verify-otp/",
@@ -139,23 +154,27 @@ const SubscribeDialog = (props) => {
 					headers: { Accept: "application/json" },
 				}
 			)
-			.then((res) => {
-				props.handleClose();
-				Swal.fire({
-					position: "top-center",
-					icon: "success",
-					title: `Subscribed Successfully!`,
-					showConfirmButton: true,
-				});
-				setName("");
-				setPhoneNum("");
-				setShowLoad(false);
-				setAllRegErr("");
-			})
-			.catch((errr) => {
-				setOtpErr(errr.response.data.message);
-			});
+			.then(onVerifyOtpSuccess)
+			.catch(onVerifyOtpError);
 	};
+	
+	const onVerifyOtpSuccess = (res) => {
+		props.handleClose();
+		Swal.fire({
+			position: "top-center",
+			icon: "success",
+			title: `Subscribed Successfully!`,
+			showConfirmButton: true,
+		});
+		setName("");
+		setPhoneNum("");
+		setShowLoad(false);
+		setAllRegErr("");
+	}
+
+	const onVerifyOtpError = (errr) => {
+		setOtpErr(errr.response.data.message);
+	}
 
 	return (
 		<Dialog
@@ -165,19 +184,14 @@ const SubscribeDialog = (props) => {
 			fullScreen={fullScreen}
 		>
 			<DialogTitle>
-				<FormattedMessage
+				<DefaultedMessage
 					id="schedule.subscribe.title"
-					defaultMessage="Subscribe to Group {groupName}"
 					values={{ groupName: props.groupName }}
 				/>
 			</DialogTitle>
 			<DialogContent>
 				<DialogContentText>
-					<FormattedMessage
-						id="schedule.subscribe.text"
-						defaultMessage="To subscribe to this group, please enter your name and phone number
-						here. We will send updates occasionally."
-					/>
+					<DefaultedMessage id="schedule.subscribe.text"/>
 					{/* <p
 						className="fw-light text-white-50 mt-2 lh-2"
 						style={{ fontSize: "0.8em" }}
@@ -193,10 +207,7 @@ const SubscribeDialog = (props) => {
 					margin="dense"
 					id="name"
 					label={
-						<FormattedMessage
-							id="schedule.subscribe.name"
-							defaultMessage="Name"
-						/>
+						<DefaultedMessage id="schedule.subscribe.name"/>
 					}
 					type="text"
 					disabled={showOtpBox}
@@ -218,10 +229,7 @@ const SubscribeDialog = (props) => {
 					margin="dense"
 					id="phone-number"
 					label={
-						<FormattedMessage
-							id="schedule.subscribe.phoneNumber"
-							defaultMessage="Phone Number"
-						/>
+						<DefaultedMessage id="schedule.subscribe.phoneNumber"/>
 					}
 					type="tel"
 					disabled={showOtpBox}
@@ -242,16 +250,13 @@ const SubscribeDialog = (props) => {
 					variant="standard"
 					autoComplete="off"
 					color="info"
-					onKeyPress={(e) => e.key === "Enter" && getSubscription()}
+					onKeyPress={(e) => e.key === "Enter" && handleSubscription()}
 				/>
 				<span className="text-error">{error}</span>
 				{showOtpBox && (
 					<div className="pt-3 d-flex flex-column align-items-center">
 						<p>
-							<FormattedMessage
-								id="schedule.subscribe.verifyText"
-								defaultMessage="Please enter the verification code sent to your phone"
-							/>
+							<DefaultedMessage id="schedule.subscribe.verifyText"/>
 						</p>
 						<OtpInput
 							shouldAutoFocus={true}
@@ -297,35 +302,21 @@ const SubscribeDialog = (props) => {
 					/>
 				)}
 				<Button onClick={props.handleClose} color="secondary">
-					<FormattedMessage
-						id="schedule.subscribe.cancelBtn"
-						defaultMessage="Cancel"
-					/>
+					<DefaultedMessage id="schedule.subscribe.cancelBtn"/>
 				</Button>
 				{showOtpBox && (
-					<Button onClick={verifyOtp} color="success">
-						<FormattedMessage
-							id="schedule.subscribe.verifyBtn"
-							defaultMessage="Verify Code"
-						/>
+					<Button onClick={handleVerifyOtp} color="success">
+						<DefaultedMessage id="schedule.subscribe.verifyBtn"/>
 					</Button>
 				)}
 				{!showSubBtn && (
-					<Button onClick={getSubscription} color="info" disabled={showLoad}>
-						{/* onClick={props.handleClose} */}
-						<FormattedMessage
-							id="schedule.subscribe.subBtn"
-							defaultMessage="Subscribe"
-						/>
+					<Button onClick={handleSubscription} color="info" disabled={showLoad}>
+						<DefaultedMessage id="schedule.subscribe.subBtn"/>
 					</Button>
 				)}
 				{reSubBtn && (
-					<Button onClick={getReSubscription} color="info" disabled={showLoad}>
-						{/* onClick={props.handleClose} */}
-						<FormattedMessage
-							id="schedule.subscribe.reSubBtn"
-							defaultMessage="Resubscribe"
-						/>
+					<Button onClick={handleReSubscription} color="info" disabled={showLoad}>
+						<DefaultedMessage id="schedule.subscribe.reSubBtn"/>
 					</Button>
 				)}
 			</DialogActions>

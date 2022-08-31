@@ -6,6 +6,7 @@ const DefaultedMessage = (props) => {
 		<FormattedMessage
 			id={props.id}
 			defaultMessage={LangRoutes.getDefaultedMessage(props.id)}
+			values={props.values}
 		/>
 	);
 };
