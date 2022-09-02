@@ -9,7 +9,7 @@ import { Box } from "@mui/material";
 import AnimatedResultIcon from "../UI/AnimatedResultIcon";
 import DefaultedMessage from "../UI/DefaultedMessage";
 
-const UnsubscribeStep2 = (props) => {
+const SubscribeStep3 = (props) => {
 	return (
 		<>
 			<DialogContent>
@@ -23,7 +23,7 @@ const UnsubscribeStep2 = (props) => {
 				>
 						<AnimatedResultIcon type="success"/>
 						<Typography variant="h5" component="div" gutterBottom>
-							<DefaultedMessage id={"schedule.unsubscribe.successText"}/>
+							<DefaultedMessage id={"schedule.subscribe.successTitle"}/>
 						</Typography>
 				</Box>
 			</DialogContent>
@@ -35,4 +35,4 @@ const UnsubscribeStep2 = (props) => {
 		</>
 	);
 };
-export default UnsubscribeStep2;
+export default SubscribeStep3;

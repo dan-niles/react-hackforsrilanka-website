@@ -16,6 +16,10 @@ New texts only added in English, missing SI and TA:
   "home.secondary.suggestions.button": "Suggestions",   
   "schedule.form.subtitle": "Enter your group if you already know it or use search by location to find it by substation and area. You can also use your geolocation at ",
   
+  "schedule.subscribe.step1": "Enter data",
+	"schedule.subscribe.step2": "Validate phone number",
+	"schedule.subscribe.step3": "Confirmation",
+  "schedule.subscribe.successTitle": "Subscribed Successfully!",
   "schedule.unsubscribe.successButton": "OK",
   "schedule.unsubscribe.step1": "Enter data",
 	"schedule.unsubscribe.step2": "Confirmation",

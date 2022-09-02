@@ -1,42 +1,38 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import OtpInput from "react-otp-input";
 
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { InputAdornment, useMediaQuery } from "@mui/material";
-import Swal from "sweetalert2";
-import Loader from "react-js-loader";
+import { Step, StepLabel, Stepper, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import DefaultedMessage from "../UI/DefaultedMessage";
+import SubscribeStep1 from "./SubscribeStep1";
+import SubscribeStep2 from "./SubscribeStep2";
+import LangRoutes from "../../lang/LangRoutes";
+import SubscribeStep3 from "./SubscribeStep3";
 
 const SubscribeDialog = (props) => {
 	const isDryDock = process.env.NODE_ENV && process.env.NODE_ENV === 'development'
-
+	
+	const [step, setStep] = useState(0);
 	const [name, setName] = useState("");
 	const [areaName, setAreaName] = useState("");
 	const [phoneNum, setPhoneNum] = useState("");
 	const [groupName, setGroupName] = useState(props.groupName);
 	const [otp, setOtp] = useState();
 	const [otpErr, setOtpErr] = useState();
-	const [showOtpBox, setShowOtpBox] = useState(false);
 	const [secretKey, setSecretKey] = useState();
-	const [error, setError] = useState();
-	const [nameErr, setNameErr] = useState();
-	const [showLoad, setShowLoad] = useState(false);
 	const [allRegErr, setAllRegErr] = useState();
+	const [nameErr, setNameErr] = useState();
+	const [phoneNumError, setPhoneNumError] = useState();
+	const [showLoad, setShowLoad] = useState(false);
 	const [reSubBtn, setReSubBtn] = useState(false);
 	const [showSubBtn, setShowSubBtn] = useState(false);
 
 	const theme = useTheme();
 	const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
-	const matches = useMediaQuery("(min-width:768px)");
+	
 
 	useEffect(() => {
 		setGroupName(props.areaGroup);
@@ -50,6 +46,13 @@ const SubscribeDialog = (props) => {
 		setNameErr("");
 	}, [name]);
 
+	const cleanErrors = () => {
+		setAllRegErr("");
+		setNameErr("");
+		setPhoneNumError("");
+		setOtpErr("");
+	}
+
 	const handleSubscription = () => {
 		let username = name.trim();
 		if (username === undefined || username === "" || username == null) {
@@ -57,10 +60,11 @@ const SubscribeDialog = (props) => {
 				<DefaultedMessage id="schedule.subscribe.nameError"/>
 			);
 		} else if (phoneNum.toString().length !== 9) {
-			setError(
+			setPhoneNumError(
 				<DefaultedMessage id="schedule.subscribe.phoneError" />
 			);
 		} else {
+			cleanErrors()
 			setShowLoad(true);
 			if (isDryDock){
 				setTimeout(function () { 
@@ -87,27 +91,25 @@ const SubscribeDialog = (props) => {
 	};
 	
 	const onSubscriptionSuccess = (res) => {
+		setStep(1);
 		setShowLoad(false);
 		setShowSubBtn(true);
-		setError("");
-		setShowOtpBox(true);
+		cleanErrors()
 		setSecretKey(res.data.secret_key);
 	}
 	
 	const onSubscriptionError = (errr) => {
-		setShowSubBtn(true);
 		setShowLoad(false);
+		setShowSubBtn(true);
 		if (errr) {
 			setAllRegErr(errr.response.data.errors);
 		}
 		setReSubBtn(true);
-		setShowOtpBox(false);
 	}
 
 	const handleReSubscription = () => {
 		setShowLoad(true);
-		setShowOtpBox(false);
-		setError("");
+		setPhoneNumError("");
 		return axios
 			.post(
 				process.env.REACT_APP_API_URL + "/api/change-group/",
@@ -128,10 +130,11 @@ const SubscribeDialog = (props) => {
 		setSecretKey(res.data.secret_key);
 		setReSubBtn(false);
 		setShowLoad(false);
-		setShowOtpBox(true);
 	}
 
 	const handleVerifyOtp = () => {
+		cleanErrors()
+		setShowLoad(true);
 		const data = { otp, name, areaName, groupName, phoneNum, secretKey };
 		const number = data.phoneNum.toString().slice(0, 4);
 		if (isDryDock){
@@ -159,21 +162,52 @@ const SubscribeDialog = (props) => {
 	};
 	
 	const onVerifyOtpSuccess = (res) => {
-		props.handleClose();
-		Swal.fire({
-			position: "top-center",
-			icon: "success",
-			title: `Subscribed Successfully!`,
-			showConfirmButton: true,
-		});
-		setName("");
-		setPhoneNum("");
 		setShowLoad(false);
-		setAllRegErr("");
+		setStep(2)
 	}
 
 	const onVerifyOtpError = (errr) => {
 		setOtpErr(errr.response.data.message);
+	}
+
+	const steps = [
+		LangRoutes.getDefaultedMessage("schedule.subscribe.step1"),
+		LangRoutes.getDefaultedMessage("schedule.subscribe.step2"),
+		LangRoutes.getDefaultedMessage("schedule.subscribe.step3")
+	];
+
+	const renderStep = (step) => {
+		switch(step){
+			case 0: 
+				return <SubscribeStep1
+							allRegErr={allRegErr}
+							name={name}
+							setName={setName}
+							nameErr={nameErr}
+							phoneNum={phoneNum}
+							setPhoneNum={setPhoneNum}
+							phoneNumError={phoneNumError}
+							showLoad={showLoad}
+							showSubBtn={showSubBtn}
+							reSubBtn={reSubBtn}
+							handleClose={props.handleClose}
+							handleSubscription={handleSubscription}
+							handleReSubscription={handleReSubscription}
+						/>
+			case 1:
+				return <SubscribeStep2
+							otp={otp}
+							setOtp={setOtp}
+							otpErr={otpErr}
+							showLoad={showLoad}
+							handleClose={props.handleClose}
+							handleVerifyOtp={handleVerifyOtp}
+						/>
+			case 2:
+				return <SubscribeStep3
+							handleClose={props.handleClose}
+						/>
+		}
 	}
 
 	return (
@@ -189,137 +223,17 @@ const SubscribeDialog = (props) => {
 					values={{ groupName: props.groupName }}
 				/>
 			</DialogTitle>
-			<DialogContent>
-				<DialogContentText>
-					<DefaultedMessage id="schedule.subscribe.text"/>
-					{/* <p
-						className="fw-light text-white-50 mt-2 lh-2"
-						style={{ fontSize: "0.8em" }}
-					>
-						*Dialog is having technical difficulties, but we're working to fix
-						the situation asap. If you enter your number, we'll message you as
-						soon as we're up and running again.
-					</p> */}
-				</DialogContentText>
-				<span className="text-error">{allRegErr}</span>
-				<TextField
-					autoFocus
-					margin="dense"
-					id="name"
-					label={
-						<DefaultedMessage id="schedule.subscribe.name"/>
-					}
-					type="text"
-					disabled={showOtpBox}
-					value={name}
-					onChange={(event) => {
-						const regex = /^[a-zA-Z\s]*$/g;
-						if (event.target.value === "" || regex.test(event.target.value)) {
-							setName(event.target.value);
-						}
-					}}
-					fullWidth
-					variant="standard"
-					autoComplete="off"
-					color="info"
-					required
-				/>
-				<span className="text-error">{nameErr}</span>
-				<TextField
-					margin="dense"
-					id="phone-number"
-					label={
-						<DefaultedMessage id="schedule.subscribe.phoneNumber"/>
-					}
-					type="tel"
-					disabled={showOtpBox}
-					value={phoneNum}
-					onChange={(event) => {
-						const regex = /^[0-9]*$/;
-						if (event.target.value === "" || regex.test(event.target.value)) {
-							setPhoneNum(event.target.value);
-						}
-					}}
-					fullWidth
-					required
-					InputProps={{
-						startAdornment: (
-							<InputAdornment position="start">+94</InputAdornment>
-						),
-					}}
-					variant="standard"
-					autoComplete="off"
-					color="info"
-					onKeyPress={(e) => e.key === "Enter" && handleSubscription()}
-				/>
-				<span className="text-error">{error}</span>
-				{showOtpBox && (
-					<div className="pt-3 d-flex flex-column align-items-center">
-						<p>
-							<DefaultedMessage id="schedule.subscribe.verifyText"/>
-						</p>
-						<OtpInput
-							shouldAutoFocus={true}
-							className="otp_value"
-							name="otp"
-							isInputNum={true}
-							// numInputs={true}
-							hasErrored={otpErr}
-							value={otp}
-							placeholder="______"
-							onChange={(e) => setOtp(e)}
-							numInputs={6}
-							errorStyle={{
-								width: matches ? "60px" : "40px",
-								height: matches ? "60px" : "40px",
-								margin: matches ? "5px" : "3px",
-								fontSize: matches ? "2rem" : "1rem",
-								borderRadius: matches ? 12 : 6,
-								border: "2px solid red",
-							}}
-							inputStyle={{
-								width: matches ? "60px" : "40px",
-								height: matches ? "60px" : "40px",
-								margin: matches ? "5px" : "3px",
-								fontSize: matches ? "2rem" : "1rem",
-								borderRadius: matches ? 12 : 6,
-								border: "1px solid rgba(0,0,0,0.3)",
-							}}
-						/>
-						<div className="pt-3">
-							<span className="text-error">{otpErr}</span>
-						</div>
-					</div>
-				)}
-			</DialogContent>
-			<DialogActions>
-				{showLoad && (
-					<Loader
-						type="spinner-default"
-						bgColor={"#FFFFFF"}
-						color={"SlateBlue"}
-						size={30}
-					/>
-				)}
-				<Button onClick={props.handleClose} color="secondary">
-					<DefaultedMessage id="schedule.subscribe.cancelBtn"/>
-				</Button>
-				{showOtpBox && (
-					<Button onClick={handleVerifyOtp} color="success">
-						<DefaultedMessage id="schedule.subscribe.verifyBtn"/>
-					</Button>
-				)}
-				{!showSubBtn && (
-					<Button onClick={handleSubscription} color="info" disabled={showLoad}>
-						<DefaultedMessage id="schedule.subscribe.subBtn"/>
-					</Button>
-				)}
-				{reSubBtn && (
-					<Button onClick={handleReSubscription} color="info" disabled={showLoad}>
-						<DefaultedMessage id="schedule.subscribe.reSubBtn"/>
-					</Button>
-				)}
-			</DialogActions>
+
+			<Stepper activeStep={step} alternativeLabel>
+				{steps.map((label) => (
+					<Step key={label}>
+						<StepLabel>{label}</StepLabel>
+					</Step>
+				))}
+			</Stepper>
+
+			{renderStep(step)}
+			
 		</Dialog>
 	);
 };

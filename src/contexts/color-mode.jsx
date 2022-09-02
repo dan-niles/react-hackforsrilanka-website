@@ -6,14 +6,17 @@ import grey from "@mui/material/colors/grey";
 const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 export const ColorModeContextProvider = (props) => {
+
+	const toggleHtmlTagTheme = (isLight) => {
+		const htmlTagClasses = document.getElementsByTagName("html")[0].classList
+		isLight ? htmlTagClasses.add("light-mode") 
+			: htmlTagClasses.remove("light-mode");
+	}
+
 	let appColorMode = "dark";
 	if (localStorage.getItem("color-mode") !== null) {
 		appColorMode = localStorage.getItem("color-mode");
-		if (appColorMode === "light") {
-			document.getElementsByTagName("html")[0].classList.add("light-mode");
-		} else {
-			document.getElementsByTagName("html")[0].classList.remove("light-mode");
-		}
+		toggleHtmlTagTheme(appColorMode === "light")
 	}
 
 	const [mode, setMode] = useState(appColorMode);
@@ -21,19 +24,10 @@ export const ColorModeContextProvider = (props) => {
 		() => ({
 			toggleColorMode: () => {
 				setMode((prevMode) => {
-					if (prevMode === "light") {
-						localStorage.setItem("color-mode", "dark");
-						document
-							.getElementsByTagName("html")[0]
-							.classList.remove("light-mode");
-						return "dark";
-					} else {
-						localStorage.setItem("color-mode", "light");
-						document
-							.getElementsByTagName("html")[0]
-							.classList.add("light-mode");
-						return "light";
-					}
+					const nextMode = prevMode === "light" ? "dark" : "light"
+					localStorage.setItem("color-mode", nextMode);
+					toggleHtmlTagTheme(nextMode === "light")
+					return nextMode;
 				});
 			},
 		}),

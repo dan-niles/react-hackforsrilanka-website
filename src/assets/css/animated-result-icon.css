@@ -1,3 +1,8 @@
+/* 
+    AnimatedResultIcon styles
+    Extracted from https://github.com/Kamonlojn/svg-icons-animate
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +11,10 @@
 .svg-box {
     display:inline-block;
     position: relative;
+    width:150px;
+}
+
+.circular {
     width:150px;
 }
 

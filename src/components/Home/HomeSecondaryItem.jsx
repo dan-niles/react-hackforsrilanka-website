@@ -19,9 +19,14 @@ const HomeSecondaryItem = (props) => {
 	return (
 		<div style={{display: 'flex'}} className="p-3">
 			<Card
-					variant="outlined"
-					className='shadow'
-					sx={{ minWidth: 275, flex: '1 1 auto', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+				elevation={3}
+				className='shadow'
+				sx={{ minWidth: 275, 
+					flex: '1 1 auto', 
+					display: 'flex', 
+					flexDirection: 'column', 
+					justifyContent: 'space-between' }}
+			>
 				<CardActionArea component={Link} to={props.destination}>
 					<CardMedia
 						component="img"

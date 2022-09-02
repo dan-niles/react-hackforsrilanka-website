@@ -10,8 +10,8 @@ class PageRoutes {
 
     static slugs = {
         "home": "home",
-        "schedule": "find-power-cut-schedules",
-        "find-my-group": "find-your-group",
+        "schedule": "find-power-cut-schedules-in-sri-lanka",
+        "find-my-group": "find-your-group-by-location",
         "about": "about-ekata",
         "suggestions": "send-us-your-comments",
         "subscribe": "subscribe-to-receive-free-sms",

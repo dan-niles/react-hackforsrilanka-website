@@ -17,7 +17,7 @@ import Footer from "./components/Footer/Footer";
 import LangContext from "./contexts/lang-context";
 import { ColorModeContextProvider } from "./contexts/color-mode";
 import "./assets/css/styles.css";
-import "./assets/css/svg-icons-animate.css";
+import "./assets/css/animated-result-icon.css";
 import ScrollToTop from "./components/UI/ScrollToTop";
 
 import PageRoutes from "./routes/PageRoutes"
