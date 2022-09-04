@@ -210,13 +210,9 @@ const SubscribeDialog = (props) => {
 		}
 	}
 
-	return (
-		<Dialog
-			sx={{ margin: 0 }}
-			open={props.open}
-			onClose={props.handleClose}
-			fullScreen={fullScreen}
-		>
+	const renderContent = () => {
+		return (
+			<>
 			<DialogTitle>
 				<DefaultedMessage
 					id="schedule.subscribe.title"
@@ -224,7 +220,7 @@ const SubscribeDialog = (props) => {
 				/>
 			</DialogTitle>
 
-			<Stepper activeStep={step} alternativeLabel>
+			<Stepper activeStep={step} alternativeLabel className="mb-3">
 				{steps.map((label) => (
 					<Step key={label}>
 						<StepLabel>{label}</StepLabel>
@@ -233,8 +229,25 @@ const SubscribeDialog = (props) => {
 			</Stepper>
 
 			{renderStep(step)}
-			
-		</Dialog>
+			</>
+		)
+	}
+
+	return (
+		<>
+			{!props.isStandalonePage ? (
+				<Dialog
+					sx={{ margin: 0 }}
+					open={props.open}
+					onClose={props.handleClose}
+					fullScreen={fullScreen}
+				>
+				{renderContent()}
+				</Dialog>
+			) : (
+				renderContent()
+			)}
+		</>
 	);
 };
 

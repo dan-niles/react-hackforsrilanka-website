@@ -28,6 +28,7 @@ const SubscribePage = () => {
 					<div className="col-12 col-md-8 col-lg-6">
 						<div className="card">
 						<SubscribeDialog
+							isStandalonePage={true}
 							unSub={unSub}
 							open={open}
 							handleClose={handleClose}
