@@ -25,7 +25,6 @@ const SubscribeStep1 = (props) => {
 	}, [userName]);
 
 	useEffect(() => {
-		//TODO: if pohione number >9
 		setPhoneNumError("");
 	}, [phoneNum]);
 

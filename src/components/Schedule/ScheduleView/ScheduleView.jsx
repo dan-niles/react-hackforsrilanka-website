@@ -202,12 +202,12 @@ const ScheduleView = (props) => {
 					setAreaGroup={setAreaGroup}
 					NO_POWER_CUTS={NO_POWER_CUTS}
 				>
-					{filteredScheduleItems.map((i) => {
+					{filteredScheduleItems.map((item, index) => {
 						return (
 							<ScheduleItem
-								key={i.unique_id}
-								starting_period={i.starting_period}
-								ending_period={i.ending_period}
+								key={index}
+								starting_period={item.starting_period}
+								ending_period={item.ending_period}
 							/>
 						);
 					})}
