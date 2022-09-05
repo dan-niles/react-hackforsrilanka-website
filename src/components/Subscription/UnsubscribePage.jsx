@@ -10,24 +10,27 @@ import { useNavigate } from "react-router-dom";
 import DefaultedMessage from "../UI/DefaultedMessage";
 import PageRoutes from "../../routes/PageRoutes";
 import LangRoutes from "../../lang/LangRoutes";
-import UnsubscribeStep1 from "./UnsubscribeStep1";
-import UnsubscribeStep2 from "./UnsubscribeStep2";
+import UnsubscribeStepData from "./UnsubscribeStepData";
+import UnsubscribeStepConfirm from "./UnsubscribeStepConfirm";
 import InfoAlert from "../UI/InfoAlert";
 import { Container, Grid } from "@mui/material";
 
 const UnsubscribePage = () => {
 	const isDryDock = process.env.NODE_ENV && process.env.NODE_ENV === 'development'
+	
+	const STEP_DATA = 0;
+	const STEP_CONFIRM = 1;
+
+	const steps = [
+		LangRoutes.getDefaultedMessage("schedule.unsubscribe.step0"),
+		LangRoutes.getDefaultedMessage("schedule.unsubscribe.step1")
+	];
 
 	const [mobileNum, setMobileNum] = useState("");
 	const [error, setError] = useState();
 	const [open, setOpen] = useState(false);
-	const [step, setStep] = useState(0);
+	const [step, setStep] = useState(STEP_DATA);
 	const navigate = useNavigate();
-	
-	const steps = [
-		LangRoutes.getDefaultedMessage("schedule.unsubscribe.step1"),
-		LangRoutes.getDefaultedMessage("schedule.unsubscribe.step2")
-	  ];
 
 	const handlePhoneInput = (event) => {
 		const regex = /^[0-9]*$/;
@@ -73,7 +76,7 @@ const UnsubscribePage = () => {
 	};
 
 	const onSuccess = (res) => {
-		setStep(2)
+		setStep(STEP_CONFIRM + 1)
 		setMobileNum("");
 	}
 
@@ -102,7 +105,7 @@ const UnsubscribePage = () => {
 							</Stepper>
 							
 							{step === 0 ? (	
-								<UnsubscribeStep1
+								<UnsubscribeStepData
 									mobileNumber={mobileNum}
 									error={error}
 									handlePhoneInput={handlePhoneInput}
@@ -110,7 +113,7 @@ const UnsubscribePage = () => {
 									handleSubmit={handleSubmit}
 								/>
 							) : (
-								<UnsubscribeStep2
+								<UnsubscribeStepConfirm
 									handleClose={handleClose}
 								/>
 							)}

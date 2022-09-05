@@ -7,32 +7,28 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 import DefaultedMessage from "../UI/DefaultedMessage";
 import LangRoutes from "../../lang/LangRoutes";
-import SubscribeStep0 from "./SubscribeStep0";
-import SubscribeStep1 from "./SubscribeStep1";
-import SubscribeStep2 from "./SubscribeStep2";
-import SubscribeStep3 from "./SubscribeStep3";
+import SubscribeStepGroup from "./SubscribeStepGroup";
+import SubscribeStepData from "./SubscribeStepData";
+import SubscribeStepVerify from "./SubscribeStepVerify";
+import SubscribeStepConfirm from "./SubscribeStepConfirm";
 
 const SubscribeDialog = (props) => {
 	
-	//TODO: DELETE. Is areaName needed?
-	const [areaName, setAreaName] = useState("");
-	useEffect(() => {
-		setAreaName(props.areaGroup);
-	}, [props.areaGroup]);	
-	
-	const theme = useTheme();
-	const fullScreen = useMediaQuery(theme.breakpoints.down("md"));	
+	const STEP_GROUP = 0;
+	const STEP_DATA = 1;
+	const STEP_VERIFY = 2;
+	const STEP_CONFIRM = 3;
 
-	const [step, setStep] = useState(0);
-	const [stepGroupResult, setStepGroupResult] = useState("");
-	const [stepDataResult, setStepDataResult] = useState("");
-	
 	const steps = [
 		LangRoutes.getDefaultedMessage("schedule.subscribe.step0"),
 		LangRoutes.getDefaultedMessage("schedule.subscribe.step1"),
 		LangRoutes.getDefaultedMessage("schedule.subscribe.step2"),
 		LangRoutes.getDefaultedMessage("schedule.subscribe.step3")
 	];
+
+	const [step, setStep] = useState(STEP_GROUP);
+	const [stepGroupResult, setStepGroupResult] = useState("");
+	const [stepDataResult, setStepDataResult] = useState("");
 
 	useEffect(() => {
 		if (!props.isStandalonePage) {
@@ -41,41 +37,55 @@ const SubscribeDialog = (props) => {
 		}
 	}, []);
 
+	//TODO: DELETE. Is areaName needed?
+	const [areaName, setAreaName] = useState("");
+	useEffect(() => {
+		setAreaName(props.areaGroup);
+	}, [props.areaGroup]);	
+
+	const theme = useTheme();
+	const fullScreen = useMediaQuery(theme.breakpoints.down("md"));	
+	
 	const handleNext = (result) => {
 		switch (step) {
-			case 0:
+			case STEP_GROUP:
 				setStepGroupResult(result);
-			case 1:
+				break
+			case STEP_DATA:
 				setStepDataResult(result);
+				break
+			default:
+				break
 		}
 		setStep(step + 1);
 	};
 
 	const renderStep = (step) => {
-		//const realStep = props.isStandalonePage ? step : step + 1;
 		switch(step){
-			case 0: 
-				return <SubscribeStep0
+			case STEP_GROUP: 
+				return <SubscribeStepGroup
 							handleClose={props.handleClose}
 							handleNext={handleNext}
 						/>
-			case 1: 
-				return <SubscribeStep1
+			case STEP_DATA: 
+				return <SubscribeStepData
 							groupName={stepGroupResult}
 							handleClose={props.handleClose}
 							handleNext={handleNext}
 						/>
-			case 2:
-				return <SubscribeStep2
+			case STEP_VERIFY:
+				return <SubscribeStepVerify
 							groupName={stepGroupResult}
 							stepDataResult={stepDataResult}
 							handleClose={props.handleClose}
 							handleNext={handleNext}
 						/>
-			case 3:
-				return <SubscribeStep3
+			case STEP_CONFIRM:
+				return <SubscribeStepConfirm
 							handleClose={props.handleClose}
 						/>
+			default:
+				return
 		}
 	}
 

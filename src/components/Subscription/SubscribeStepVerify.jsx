@@ -8,7 +8,7 @@ import axios from "axios";
 
 import DefaultedMessage from "../UI/DefaultedMessage";
 
-const SubscribeStep2 = (props) => {
+const SubscribeStepVerify = (props) => {
 	const isDryDock = process.env.NODE_ENV && process.env.NODE_ENV === 'development'
 	const matches = useMediaQuery("(min-width:768px)");
 
@@ -112,4 +112,4 @@ const SubscribeStep2 = (props) => {
 		</>
 	);
 };
-export default SubscribeStep2;
+export default SubscribeStepVerify;

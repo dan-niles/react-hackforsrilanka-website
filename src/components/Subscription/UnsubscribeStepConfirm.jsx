@@ -9,7 +9,7 @@ import { Box } from "@mui/material";
 import AnimatedResultIcon from "../UI/AnimatedResultIcon";
 import DefaultedMessage from "../UI/DefaultedMessage";
 
-const UnsubscribeStep2 = (props) => {
+const UnsubscribeStepConfirm = (props) => {
 	return (
 		<>
 			<DialogContent>
@@ -35,4 +35,4 @@ const UnsubscribeStep2 = (props) => {
 		</>
 	);
 };
-export default UnsubscribeStep2;
+export default UnsubscribeStepConfirm;

@@ -8,7 +8,7 @@ import { InputAdornment } from "@mui/material";
 
 import DefaultedMessage from "../UI/DefaultedMessage";
 
-const UnsubscribeStep1 = (props) => {
+const UnsubscribeStepData = (props) => {
 	return (
 		<>
 			<DialogContent>			
@@ -51,4 +51,4 @@ const UnsubscribeStep1 = (props) => {
 		</>
 	);
 };
-export default UnsubscribeStep1;
+export default UnsubscribeStepData;

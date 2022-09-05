@@ -13,7 +13,7 @@ import Select from "@mui/material/Select";
 
 import DefaultedMessage from "../UI/DefaultedMessage";
 
-const SubscribeStep0 = (props) => {
+const SubscribeStepGroup = (props) => {
 	const [showLoad, setShowLoad] = useState(true);
 	const [groups, setGroups] = useState([]);
 	const [group, setGroup] = useState("");
@@ -118,4 +118,4 @@ const SubscribeStep0 = (props) => {
 		</>
 	);
 };
-export default SubscribeStep0;
+export default SubscribeStepGroup;

@@ -9,7 +9,7 @@ import axios from "axios";
 
 import DefaultedMessage from "../UI/DefaultedMessage";
 
-const SubscribeStep1 = (props) => {
+const SubscribeStepData = (props) => {
 	const isDryDock = process.env.NODE_ENV && process.env.NODE_ENV === 'development'
 
 	const [submitError, setSubmitError] = useState();
@@ -200,4 +200,4 @@ const SubscribeStep1 = (props) => {
 		</>
 	);
 };
-export default SubscribeStep1;
+export default SubscribeStepData;

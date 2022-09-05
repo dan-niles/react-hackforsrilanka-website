@@ -25,8 +25,8 @@ New texts only added in English, missing SI and TA:
   "schedule.subscribe.step0.desc1": "Pick the pre-assigned group letter for your area...",
   "schedule.subscribe.step0.desc2": "If you dont know your group, you can easily locate it by area or by geolocation. Then press subscribe over the schedule page",
   "schedule.unsubscribe.successButton": "OK",
-  "schedule.unsubscribe.step1": "Enter data",
-	"schedule.unsubscribe.step2": "Confirmation",
+  "schedule.unsubscribe.step0": "Enter data",
+	"schedule.unsubscribe.step1": "Confirmation",
 
  	"suggestions.feature.title": "Suggest Feature",
 	"suggestions.feature.desc1": "We will be adding more features to Ekata soon!",
