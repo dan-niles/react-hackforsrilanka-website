@@ -1,209 +1,78 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
 import { Step, StepLabel, Stepper, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
 
 import DefaultedMessage from "../UI/DefaultedMessage";
+import LangRoutes from "../../lang/LangRoutes";
+import SubscribeStep0 from "./SubscribeStep0";
 import SubscribeStep1 from "./SubscribeStep1";
 import SubscribeStep2 from "./SubscribeStep2";
-import LangRoutes from "../../lang/LangRoutes";
 import SubscribeStep3 from "./SubscribeStep3";
 
 const SubscribeDialog = (props) => {
-	const isDryDock = process.env.NODE_ENV && process.env.NODE_ENV === 'development'
 	
-	const [step, setStep] = useState(0);
-	const [name, setName] = useState("");
+	//TODO: DELETE. Is areaName needed?
 	const [areaName, setAreaName] = useState("");
-	const [phoneNum, setPhoneNum] = useState("");
-	const [groupName, setGroupName] = useState(props.groupName);
-	const [otp, setOtp] = useState();
-	const [otpErr, setOtpErr] = useState();
-	const [secretKey, setSecretKey] = useState();
-	const [allRegErr, setAllRegErr] = useState();
-	const [nameErr, setNameErr] = useState();
-	const [phoneNumError, setPhoneNumError] = useState();
-	const [showLoad, setShowLoad] = useState(false);
-	const [reSubBtn, setReSubBtn] = useState(false);
-	const [showSubBtn, setShowSubBtn] = useState(false);
-
+	useEffect(() => {
+		setAreaName(props.areaGroup);
+	}, [props.areaGroup]);	
+	
 	const theme = useTheme();
-	const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+	const fullScreen = useMediaQuery(theme.breakpoints.down("md"));	
+
+	const [step, setStep] = useState(0);
+	const [stepGroupResult, setStepGroupResult] = useState("");
+	const [stepDataResult, setStepDataResult] = useState("");
 	
-
-	useEffect(() => {
-		setGroupName(props.areaGroup);
-	}, [props.areaGroup]);
-
-	useEffect(() => {
-		setGroupName(props.groupName);
-	}, [props.groupName]);
-
-	useEffect(() => {
-		setNameErr("");
-	}, [name]);
-
-	const cleanErrors = () => {
-		setAllRegErr("");
-		setNameErr("");
-		setPhoneNumError("");
-		setOtpErr("");
-	}
-
-	const handleSubscription = () => {
-		let username = name.trim();
-		if (username === undefined || username === "" || username == null) {
-			setNameErr(
-				<DefaultedMessage id="schedule.subscribe.nameError"/>
-			);
-		} else if (phoneNum.toString().length !== 9) {
-			setPhoneNumError(
-				<DefaultedMessage id="schedule.subscribe.phoneError" />
-			);
-		} else {
-			cleanErrors()
-			setShowLoad(true);
-			if (isDryDock){
-				setTimeout(function () { 
-					let fakeRes = {"data": {"secret_key": "0000"}}
-					onSubscriptionSuccess(fakeRes)
-				}, 3000);
-				return
-			}
-			return axios
-				.post(
-					process.env.REACT_APP_API_URL + "/api/subscribe/",
-					{
-						mobile_number: phoneNum,
-						name: name,
-						group_name: groupName,
-					},
-					{
-						headers: { Accept: "application/json" },
-					}
-				)
-				.then(onSubscriptionSuccess)
-				.catch(onSubscriptionError);
-		}
-	};
-	
-	const onSubscriptionSuccess = (res) => {
-		setStep(1);
-		setShowLoad(false);
-		setShowSubBtn(true);
-		cleanErrors()
-		setSecretKey(res.data.secret_key);
-	}
-	
-	const onSubscriptionError = (errr) => {
-		setShowLoad(false);
-		setShowSubBtn(true);
-		if (errr) {
-			setAllRegErr(errr.response.data.errors);
-		}
-		setReSubBtn(true);
-	}
-
-	const handleReSubscription = () => {
-		setShowLoad(true);
-		setPhoneNumError("");
-		return axios
-			.post(
-				process.env.REACT_APP_API_URL + "/api/change-group/",
-				{
-					mobile_number: phoneNum,
-					name: name,
-					group_name: groupName,
-				},
-				{
-					headers: { Accept: "application/json" },
-				}
-			)
-			.then(onReSubscriptionSuccess)
-			.catch((errr) => {});
-	};
-
-	const onReSubscriptionSuccess = (res) => {
-		setSecretKey(res.data.secret_key);
-		setReSubBtn(false);
-		setShowLoad(false);
-	}
-
-	const handleVerifyOtp = () => {
-		cleanErrors()
-		setShowLoad(true);
-		const data = { otp, name, areaName, groupName, phoneNum, secretKey };
-		const number = data.phoneNum.toString().slice(0, 4);
-		if (isDryDock){
-			setTimeout(function () { 
-				onVerifyOtpSuccess()
-			}, 3000);
-			return
-		}
-		return axios
-			.post(
-				process.env.REACT_APP_API_URL + "/api/verify-otp/",
-				{
-					otp: data.otp,
-					secret_key: data.secretKey,
-					mobile_number: data.phoneNum,
-					name: data.name,
-					group_name: data.groupName,
-				},
-				{
-					headers: { Accept: "application/json" },
-				}
-			)
-			.then(onVerifyOtpSuccess)
-			.catch(onVerifyOtpError);
-	};
-	
-	const onVerifyOtpSuccess = (res) => {
-		setShowLoad(false);
-		setStep(2)
-	}
-
-	const onVerifyOtpError = (errr) => {
-		setOtpErr(errr.response.data.message);
-	}
-
 	const steps = [
+		LangRoutes.getDefaultedMessage("schedule.subscribe.step0"),
 		LangRoutes.getDefaultedMessage("schedule.subscribe.step1"),
 		LangRoutes.getDefaultedMessage("schedule.subscribe.step2"),
 		LangRoutes.getDefaultedMessage("schedule.subscribe.step3")
 	];
 
+	useEffect(() => {
+		if (!props.isStandalonePage) {
+			setStepGroupResult(props.groupName)
+			setStep(1)
+		}
+	}, []);
+
+	const handleNext = (result) => {
+		switch (step) {
+			case 0:
+				setStepGroupResult(result);
+			case 1:
+				setStepDataResult(result);
+		}
+		setStep(step + 1);
+	};
+
 	const renderStep = (step) => {
+		//const realStep = props.isStandalonePage ? step : step + 1;
 		switch(step){
 			case 0: 
-				return <SubscribeStep1
-							allRegErr={allRegErr}
-							name={name}
-							setName={setName}
-							nameErr={nameErr}
-							phoneNum={phoneNum}
-							setPhoneNum={setPhoneNum}
-							phoneNumError={phoneNumError}
-							showLoad={showLoad}
-							showSubBtn={showSubBtn}
-							reSubBtn={reSubBtn}
+				return <SubscribeStep0
 							handleClose={props.handleClose}
-							handleSubscription={handleSubscription}
-							handleReSubscription={handleReSubscription}
+							handleNext={handleNext}
 						/>
-			case 1:
-				return <SubscribeStep2
-							otp={otp}
-							setOtp={setOtp}
-							otpErr={otpErr}
-							showLoad={showLoad}
+			case 1: 
+				return <SubscribeStep1
+							groupName={stepGroupResult}
 							handleClose={props.handleClose}
-							handleVerifyOtp={handleVerifyOtp}
+							handleNext={handleNext}
 						/>
 			case 2:
+				return <SubscribeStep2
+							groupName={stepGroupResult}
+							stepDataResult={stepDataResult}
+							handleClose={props.handleClose}
+							handleNext={handleNext}
+						/>
+			case 3:
 				return <SubscribeStep3
 							handleClose={props.handleClose}
 						/>
@@ -216,7 +85,7 @@ const SubscribeDialog = (props) => {
 			<DialogTitle>
 				<DefaultedMessage
 					id="schedule.subscribe.title"
-					values={{ groupName: props.groupName }}
+					values={{ groupName: stepGroupResult }}
 				/>
 			</DialogTitle>
 

@@ -1,13 +1,117 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import { Button, DialogActions, InputAdornment } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
-import { Button, DialogActions, InputAdornment } from "@mui/material";
 import Loader from "react-js-loader";
+import axios from "axios";
 
 import DefaultedMessage from "../UI/DefaultedMessage";
 
 const SubscribeStep1 = (props) => {
+	const isDryDock = process.env.NODE_ENV && process.env.NODE_ENV === 'development'
+
+	const [submitError, setSubmitError] = useState();
+	const [userName, setUserName] = useState("");
+	const [userNameError, setUserNameError] = useState();
+	const [phoneNum, setPhoneNum] = useState("");
+	const [phoneNumError, setPhoneNumError] = useState();
+	const [showLoad, setShowLoad] = useState(false);
+	const [isReSubmit, setIsReSubmit] = useState(false);
+
+	useEffect(() => {
+		setUserNameError("");
+	}, [userName]);
+
+	useEffect(() => {
+		//TODO: if pohione number >9
+		setPhoneNumError("");
+	}, [phoneNum]);
+
+	const validate = () => {
+		let username = userName.trim();
+		if (username === undefined || username === "" || username == null) {
+			setUserNameError(
+				<DefaultedMessage id="schedule.subscribe.nameError"/>
+			);
+			return false;
+		}
+		else if (phoneNum.toString().length !== 9) {
+			setPhoneNumError(
+				<DefaultedMessage id="schedule.subscribe.phoneError" />
+			);
+			return false;
+		}
+		cleanErrors()
+		return true;
+	}
+
+	const cleanErrors = () => {
+		setSubmitError("");
+		setUserNameError("");
+		setPhoneNumError("");
+	}
+
+	const handleSubscription = () => {
+		if (validate()){
+			cleanErrors()
+			setShowLoad(true);
+			const url = process.env.REACT_APP_API_URL + "/api/subscribe/"
+			const data = {
+				mobile_number: phoneNum,
+				name: userName,
+				group_name: props.groupName,
+			}
+			if (isDryDock){
+				setTimeout(() => {
+					console.log("Skipped POST to " + url + " with " + JSON.stringify(data));
+					let fakeRes = { "data": { "secret_key": "0000" } };
+					onSubscriptionSuccess(fakeRes);
+				}, 2000);
+				return
+			}
+			return axios
+				.post(url, data, { headers: { Accept: "application/json" } })
+				.then(onSubscriptionSuccess)
+				.catch(onSubscriptionError);
+		}
+	};
+
+	const handleReSubscription = () => {
+		if (validate()){
+			cleanErrors()
+			setShowLoad(true);
+			const url = process.env.REACT_APP_API_URL + "/api/change-group/"
+			const data = {
+				mobile_number: phoneNum,
+				name: userName,
+				group_name: props.groupName,
+			}
+			return axios
+				.post(url, data, { headers: { Accept: "application/json" } })
+				.then(onSubscriptionSuccess)
+				.catch((errr) => {});
+		}
+	};
+
+	const onSubscriptionSuccess = (res) => {
+		setShowLoad(false);
+		props.handleNext({
+			name: userName, 
+			phoneNum: phoneNum, 
+			secretKey: res.data.secret_key 
+		})
+	}
+	
+	const onSubscriptionError = (errr) => {
+		setShowLoad(false);
+		setIsReSubmit(true)
+		if (errr) {
+			setSubmitError(errr.response.data.errors);
+		}
+	}
+
 	return (
 		<>
 			<DialogContent>
@@ -22,7 +126,7 @@ const SubscribeStep1 = (props) => {
 						soon as we're up and running again.
 					</p> */}
 				</DialogContentText>
-				<span className="text-error">{props.allRegErr}</span>
+				<span className="text-error">{submitError}</span>
 				<TextField
 					autoFocus
 					margin="dense"
@@ -31,11 +135,11 @@ const SubscribeStep1 = (props) => {
 						<DefaultedMessage id="schedule.subscribe.name"/>
 					}
 					type="text"
-					value={props.name}
+					value={userName}
 					onChange={(event) => {
 						const regex = /^[a-zA-Z\s]*$/g;
 						if (event.target.value === "" || regex.test(event.target.value)) {
-							props.setName(event.target.value);
+							setUserName(event.target.value);
 						}
 					}}
 					fullWidth
@@ -44,7 +148,7 @@ const SubscribeStep1 = (props) => {
 					color="info"
 					required
 				/>
-				<span className="text-error">{props.nameErr}</span>
+				<span className="text-error">{userNameError}</span>
 				<TextField
 					margin="dense"
 					id="phone-number"
@@ -52,11 +156,11 @@ const SubscribeStep1 = (props) => {
 						<DefaultedMessage id="schedule.subscribe.phoneNumber"/>
 					}
 					type="tel"
-					value={props.phoneNum}
+					value={phoneNum}
 					onChange={(event) => {
 						const regex = /^[0-9]*$/;
 						if (event.target.value === "" || regex.test(event.target.value)) {
-							props.setPhoneNum(event.target.value);
+							setPhoneNum(event.target.value);
 						}
 					}}
 					fullWidth
@@ -69,12 +173,12 @@ const SubscribeStep1 = (props) => {
 					variant="standard"
 					autoComplete="off"
 					color="info"
-					onKeyPress={(e) => e.key === "Enter" && props.handleSubscription()}
+					onKeyPress={(e) => e.key === "Enter" && handleSubscription()}
 				/>
-				<span className="text-error">{props.phoneNumError}</span>
+				<span className="text-error">{phoneNumError}</span>
 			</DialogContent>
 			<DialogActions>
-				{props.showLoad && (
+				{showLoad && (
 					<Loader
 						type="spinner-default"
 						bgColor={"#29b6f6"}
@@ -84,13 +188,12 @@ const SubscribeStep1 = (props) => {
 				<Button onClick={props.handleClose} color="secondary">
 					<DefaultedMessage id="schedule.subscribe.cancelBtn"/>
 				</Button>
-				{!props.showSubBtn && (
-                    <Button onClick={props.handleSubscription} color="info" disabled={props.showLoad}>
-                        <DefaultedMessage id="schedule.subscribe.subBtn"/>
-                    </Button>
-                )}
-                {props.reSubBtn && (
-                    <Button onClick={props.handleReSubscription} color="info" disabled={props.showLoad}>
+                {!isReSubmit ? (
+					<Button onClick={handleSubscription} color="info" disabled={showLoad}>
+						<DefaultedMessage id="schedule.subscribe.subBtn"/>
+					</Button>
+				) : (
+                    <Button onClick={handleReSubscription} color="info" disabled={showLoad}>
                         <DefaultedMessage id="schedule.subscribe.reSubBtn"/>
                     </Button>
                 )}
