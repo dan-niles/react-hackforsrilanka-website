@@ -91,7 +91,7 @@ const ScheduleDatePicker = (props) => {
 				>
 					<ChevronLeftIcon />
 				</IconButton>
-				<LocalizationProvider locale={enGB} dateAdapter={AdapterDateFns}>
+				<LocalizationProvider adapterLocale={enGB} dateAdapter={AdapterDateFns}>
 					<MobileDatePicker
 						minDate={minDate}
 						maxDate={maxDate}
