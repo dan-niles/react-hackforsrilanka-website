@@ -34,6 +34,10 @@ function App() {
 	const langContext = useContext(LangContext)
 	const currentLangRoute = langContext.langRoute
 
+	const localizeRoute = (routeName) => {
+		return `/${currentLangRoute}/${PageRoutes.slug(routeName)}`
+	}
+
 	return (
 		<ColorModeContextProvider>
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -41,22 +45,34 @@ function App() {
 					<main className="d-flex flex-column flex-shrink-0 min-vh-100 h-100">
 						<Navbar />
 						<Routes>
-							<Route path="/" element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.HOME)}`} />} />
 
+							{/* Old Routes (domain/pagename)*/}
+							<Route path="/" element={<Navigate to={localizeRoute(PageRoutes.HOME)} />} />
+							<Route path={PageRoutes.HOME} element={<Navigate to={localizeRoute(PageRoutes.HOME)} />} />
+							<Route path={PageRoutes.SCHEDULE} element={<Navigate to={localizeRoute(PageRoutes.SCHEDULE)} />} />
+							<Route path={PageRoutes.FIND_MY_GROUP} element={<Navigate to={localizeRoute(PageRoutes.FIND_MY_GROUP)} />} />
+							<Route path={PageRoutes.SUBSCRIBE} element={<Navigate to={localizeRoute(PageRoutes.SUBSCRIBE)} />} />
+							<Route path={PageRoutes.UNSUBSCRIBE} element={<Navigate to={localizeRoute(PageRoutes.UNSUBSCRIBE)} />} />
+							<Route path={PageRoutes.ABOUT} element={<Navigate to={localizeRoute(PageRoutes.ABOUT)} />} />
+							<Route path={PageRoutes.SUGGESTIONS} element={<Navigate to={localizeRoute(PageRoutes.SUGGESTIONS)} />} />
+
+							{/* Default lang Routes (domain/slug)*/}
+							<Route path={PageRoutes.slug(PageRoutes.HOME)} element={<Navigate to={localizeRoute(PageRoutes.HOME)} />} />
+							<Route path={PageRoutes.slug(PageRoutes.SCHEDULE)} element={<Navigate to={localizeRoute(PageRoutes.SCHEDULE)} />} />
+							<Route path={PageRoutes.slug(PageRoutes.FIND_MY_GROUP)} element={<Navigate to={localizeRoute(PageRoutes.FIND_MY_GROUP)} />} />
+							<Route path={PageRoutes.slug(PageRoutes.SUBSCRIBE)} element={<Navigate to={localizeRoute(PageRoutes.SUBSCRIBE)} />} />
+							<Route path={PageRoutes.slug(PageRoutes.UNSUBSCRIBE)} element={<Navigate to={localizeRoute(PageRoutes.UNSUBSCRIBE)} />} />
+							<Route path={PageRoutes.slug(PageRoutes.ABOUT)} element={<Navigate to={localizeRoute(PageRoutes.ABOUT)} />} />
+							<Route path={PageRoutes.slug(PageRoutes.SUGGESTIONS)} element={<Navigate to={localizeRoute(PageRoutes.SUGGESTIONS)} />} />
+
+							{/* Localized Routes (domain/language/slug) */}
 							<Route path={`${LangRoutes.ENGLISH}/*`} element={<LocalizedRoutes lang={LangRoutes.ENGLISH} />} />
 							<Route path={`${LangRoutes.SINHALA}/*`} element={<LocalizedRoutes lang={LangRoutes.SINHALA} />} />
 							<Route path={`${LangRoutes.TAMIL}/*`} element={<LocalizedRoutes lang={LangRoutes.TAMIL} />} />
-
-							<Route path={PageRoutes.HOME} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.HOME)}`} />} />
-							<Route path={PageRoutes.SCHEDULE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SCHEDULE)}`} />} />
-							<Route path={PageRoutes.FIND_MY_GROUP} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.FIND_MY_GROUP)}`} />} />
-							<Route path={PageRoutes.SUBSCRIBE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SUBSCRIBE)}`} />} />
-							<Route path={PageRoutes.UNSUBSCRIBE} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.UNSUBSCRIBE)}`} />} />
-							<Route path={PageRoutes.ABOUT} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.ABOUT)}`} />} />
-							<Route path={PageRoutes.SUGGESTIONS} element={<Navigate to={`/${currentLangRoute}/${PageRoutes.slug(PageRoutes.SUGGESTIONS)}`} />} />
 							
+							{/* Wildcard Route (domain/anythingelse) */}
 							<Route path="*" element={<ErrorPage />} />
-							{/* TODO: I think for production is better to redirect * to home
+							{/* TODO: Could it be better for production to redirect to home?
 							<Route path="*" element={<Navigate to={"/"} />} /> */}
 						</Routes>
 						<Footer />
@@ -90,7 +106,6 @@ function LocalizedRoutes({ lang }) {
 		setDescription(LangRoutes.getMessage("website.description", lang))
 	}, [lang])
 
-	
 	return (
 		<Routes>
 			<Route path="/" element={<Navigate to={PageRoutes.slug(PageRoutes.HOME)} />} />
