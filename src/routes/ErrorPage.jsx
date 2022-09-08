@@ -20,7 +20,7 @@ const ErrorPage = () => {
 					<div className="row justify-content-center">
 						<div className="col-lg-8 col-xxl-6">
 							<div className="text-center my-5">
-								<h1 className="fw-bolder text-white text-white mb-3">
+								<h1 className="fw-bolder mb-3">
 									Page not found
 								</h1>
 							</div>
