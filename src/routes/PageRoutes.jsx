@@ -21,6 +21,10 @@ class PageRoutes {
     static slug(pageName) {
         return this.slugs[pageName]
     }
+
+    static getFromSlug(slug) {
+        return Object.keys(this.slugs).find(key => this.slugs[key] === slug)
+    }
 }
 
 export default PageRoutes 

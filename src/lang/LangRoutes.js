@@ -42,4 +42,4 @@ class LangRoutes {
     }
 }
 
-export default LangRoutes 
+export default LangRoutes 2

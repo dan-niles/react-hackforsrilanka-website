@@ -1,7 +1,22 @@
 
 New texts only added in English, missing SI and TA:
-  "website.title": "Ekata | Find your power cut schedules!",
-  "website.description": "Easily find your power cut schedules in Sri Lanka! Identify your group by district or location, and subscribe to receive free SMS notifications on updates",  
+
+	"global.tag.title": "Ekata.lk",
+	"home.tag.title": "Together to make sri lankan crisis smother",
+	"home.tag.desc": "Easily find your power cut schedules in Sri Lanka! Identify your group by district or location, and subscribe to receive free SMS notifications on updates",
+	"schedule.tag.title": "schedule title",
+	"schedule.tag.desc": "schedule description",
+	"find-my-group.tag.title": "find-my-group title",
+	"find-my-group.tag.desc": "find-my-group description",
+	"subscribe.tag.title": "subscribe title",
+	"subscribe.tag.desc": "subscribe description",
+	"unsubscribe.tag.title": "unsubscribe title",
+	"unsubscribe.tag.desc": "unsubscribe description",
+	"about.tag.title": "about title",
+	"about.tag.desc": "about description",
+	"suggestions.tag.title": "suggestions title",
+	"suggestions.tag.desc": "suggestions description",
+
   "home.secondary.subscribe.title": "Get updates by SMS",
   "home.secondary.subscribe.subtitle": "Subscribe to receive a SMS with each new schedule. Straight to your mobile and completely free!",
   "home.secondary.subscribe.button": "Subscribe",
@@ -14,6 +29,7 @@ New texts only added in English, missing SI and TA:
   "home.secondary.suggestions.title": "Contact",
   "home.secondary.suggestions.subtitle": "We want to do more, please let us know what other features would be helpful for Sri Lankan's in crisis.",
   "home.secondary.suggestions.button": "Suggestions",   
+  
   "schedule.form.subtitle": "Enter your group if you already know it or use search by location to find it by substation and area. You can also use your geolocation at ",
   
   "schedule.subscribe.step0": "Select Group",
@@ -23,29 +39,29 @@ New texts only added in English, missing SI and TA:
   "schedule.subscribe.successTitle": "Subscribed Successfully!",
   "schedule.subscribe.nextBtn": "Next",
   "schedule.subscribe.step0.desc1": "Pick the pre-assigned group letter for your area...",
-  "schedule.subscribe.step0.desc2": "If you dont know your group, you can easily locate it by area or by geolocation. Then press subscribe over the schedule page",
+  "schedule.subscribe.step0.desc2": "If you dont know your group, you can easily locate it by substation/area or by geolocation. Then press subscribe over the schedule page",
   "schedule.unsubscribe.successButton": "OK",
   "schedule.unsubscribe.step0": "Enter data",
-	"schedule.unsubscribe.step1": "Confirmation",
+  "schedule.unsubscribe.step1": "Confirmation",
 
- 	"suggestions.feature.title": "Suggest Feature",
-	"suggestions.feature.desc1": "We will be adding more features to Ekata soon!",
-	"suggestions.feature.desc2": "Please let us know what other features would be helpful for Sri Lankan's in crisis.",
-	"suggestions.improvement.title": "Suggest Improvement",
-	"suggestions.improvement.desc1": "We are sorry to lost you",
-	"suggestions.improvement.desc2": "Please let us know why and how we could have done it better.",
+  "suggestions.feature.title": "Suggest Feature",
+  "suggestions.feature.desc1": "We will be adding more features to Ekata soon!",
+  "suggestions.feature.desc2": "Please let us know what other features would be helpful for Sri Lankan's in crisis.",
+  "suggestions.improvement.title": "Suggest Improvement",
+  "suggestions.improvement.desc1": "We are sorry to lost you",
+  "suggestions.improvement.desc2": "Please let us know why and how we could have done it better.",
 
 
 
 Missing SI and TA translations from before:
-  - "find-my-group.formText3": "Group data currently unavailable for this location."
+  "find-my-group.formText3": "Group data currently unavailable for this location."
 
 Modified texts in English, SI and TA need tweak:
- - "schedule.form.title": "Find Your Power Cut Schedule!" was "Select Your Group / Area",
+ "schedule.form.title": "Find Your Power Cut Schedule!" was "Select Your Group / Area",
 
 
 
 Key modified, nothing to do really:
-  - "home.primary.header": "Find Your Power Cut Schedule!",
-  - "home.primary.headerSubText": "Keep track of power-cuts and subscribe to receive free SMS notifications",
-  - "home.primary.mainButton": "Get Started",
+ "home.primary.header": "Find Your Power Cut Schedule!",
+ "home.primary.headerSubText": "Keep track of power-cuts and subscribe to receive free SMS notifications",
+ "home.primary.mainButton": "Get Started",

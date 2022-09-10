@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 
 import Home from "./routes/Home";
@@ -84,6 +84,7 @@ function App() {
 }
 
 function LocalizedRoutes({ lang }) {
+	const location = useLocation();
 	const langContext = useContext(LangContext)
 	let selectedLocale = LangRoutes.getLocale(lang)
 	
@@ -91,25 +92,25 @@ function LocalizedRoutes({ lang }) {
 		langContext.selectLanguage(selectedLocale)
 	}, [langContext, selectedLocale])
 
-	const setTitle = (text) => {
-		const el = document.querySelector('title');
-		el.innerText = text;
+	const setTitleAndDesc = (title, desc) => {
+		const titleTag = document.querySelector('title');
+		titleTag.innerText = title;
+		const descTag = document.querySelector("meta[name='description']");
+		descTag.setAttribute('content', desc)
 	};
-	
-	const setDescription = (text) => {
-		const el = document.querySelector("meta[name='description']");
-		el.setAttribute('content', text)
-	}
 
 	useEffect(() => {
-		setTitle(LangRoutes.getMessage("website.title", lang))
-		setDescription(LangRoutes.getMessage("website.description", lang))
-	}, [lang])
+		const currentPageRoute = PageRoutes.getFromSlug(location.pathname.split('/').pop())
+		const titleKey = `${currentPageRoute}.tag.title` 
+		const title = `${LangRoutes.getMessage("global.tag.title", lang)} | ${LangRoutes.getMessage(titleKey, lang)}`
+		const descKey = `${currentPageRoute}.tag.desc` 
+		const desc = LangRoutes.getMessage(descKey, lang)
+		setTitleAndDesc(title, desc)
+	}, [location])
 
 	return (
 		<Routes>
 			<Route path="/" element={<Navigate to={PageRoutes.slug(PageRoutes.HOME)} />} />
-
 			<Route path={PageRoutes.slug(PageRoutes.HOME)} element={<Home />} />
 			<Route path={PageRoutes.slug(PageRoutes.SCHEDULE)} element={<Schedule />} />
 			<Route path={PageRoutes.slug(PageRoutes.FIND_MY_GROUP)} element={<FindMyGroup />} />
@@ -117,7 +118,6 @@ function LocalizedRoutes({ lang }) {
 			<Route path={PageRoutes.slug(PageRoutes.UNSUBSCRIBE)} element={<UnsubscribePage />} />
 			<Route path={PageRoutes.slug(PageRoutes.ABOUT)} element={<About />} />
 			<Route path={PageRoutes.slug(PageRoutes.SUGGESTIONS)} element={<Contact />} />
-
 			<Route path="*" element={<ErrorPage />} />
 		</Routes>
 	);
